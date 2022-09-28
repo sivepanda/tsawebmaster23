@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun&display=swap');
+html,
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: clip;
+    background-color: black;
+    color: white;
+    font-family: 'Sarabun', 'sans-serif';
+}
+
+.compactheader {
+    --hfont-size: 1.5vw;
+    --hlogo-size: 10vw;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 20vw 20vw 60vw;
+    align-items: center;
+}
+
+.fullheader {
+    --hfont-size: 1vw;
+    --hlogo-size: 9vw;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 20vw 20vw 60vw;
+    align-items: center;
+}
+
+.header {}
+
+.headerlogo {
+    grid-column: 1;
+    place-self: center;
+    width: 9vw;
+}
+
+.header ul {
+    grid-column: 3;
+    place-self: center;
+    font-family: 'Orbitron', sans-serif;
+    list-style: none;
+    z-index: 2;
+}
+
+.header ul li {
+    margin-top: calc(1vh + 10px);
+    font-size: 1vw;
+    float: left;
+    margin-right: 4vw;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 100;
+}
+
+.header ul li a:hover {
+    color: white;
+    transition: ease-in-out .2s .1s;
+}
+
+.header ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: -calc(1.4rem - 2rem);
+    height: 2px;
+    background: white;
+    transition: cubic-bezier(.65, .05, .36, 1) .3s;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
+    transition: ease-in-out .3s;
+}
+
+.videobox {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+#myVideo {
+    width: 100vw;
+    z-index: -1;
+}
+
+#ic0 {
+    /* scroll-snap-align: start center; */
+    /* position: absolute; */
+    /* left: 50vw; */
+    /* margin-right: 7vw; */
+    color: white;
+    word-spacing: 10px;
+}
+
+#ic0 p {
+    position: absolute;
+    margin-left: 50vw;
+    margin-right: 6vw;
+    margin-top: 10vh;
+    font-size: 1.5vw;
+    animation: show .5s .3s forwards;
+}
+
+#ic0 h1 {
+    margin-top: -1vh;
+    padding-top: 0vh;
+    margin-left: 50vw;
+    font-size: 3vw;
+    position: absolute;
+    font-weight: 500;
+    animation: show .5s forwards;
+    /* opacity: 100; */
+}
+
+.compactheader {
+    --hfont-size: 0.8vw;
+    --hlogo-size: 7vw;
+    --hbkg: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 1) 100%);
+    ;
+}
+
+.fullheader {
+    --hfont-size: 1vw;
+    --hlogo-size: 10vw;
+    --hbkg: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.header {
+    position: fixed;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 20vw 20vw 60vw;
+    align-items: center;
+    transition: all ease-in-out 0.2s;
+    background: var(--hbkg);
+    z-index: 1000;
+}
+
+.headerlogo {
+    grid-column: 1;
+    place-self: center;
+    transition: all ease-in-out 0.2s;
+    width: var(--hlogo-size);
+}
+
+.header ul {
+    grid-column: 3;
+    place-self: center end;
+    font-family: 'Orbitron', sans-serif;
+    list-style: none;
+    z-index: 2;
+}
+
+.header ul li {
+    transition: all ease-in-out 0.2s;
+    margin-top: calc(1vh + 10px);
+    font-size: var(--hfont-size);
+    float: left;
+    margin-right: 4vw;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 100;
+}
+
+.header ul li a:hover {
+    color: white;
+    transition: ease-in-out .2s .1s;
+}
+
+.header ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: -calc(1.4rem - 2rem);
+    height: 2px;
+    background: white;
+    transition: cubic-bezier(.65, .05, .36, 1) .3s;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
+    transition: ease-in-out .3s;
+}
+
+.contentbox {
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    width: 100vw;
+    overflow-x: clip;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+p {
+    font-family: 'Sarabun', sans-serif;
+}
+
+#ic1 {
+    /* scroll-snap-align: start center; */
+    margin-top: 0;
+    padding-top: 0;
+    background-image: url(../resources/images/cancun.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#ic1 h1 {
+    margin-top: 0;
+    padding-top: 40vh;
+    padding-left: 6vw;
+    font-size: 2vw;
+}
+
+#ic1 p {
+    font-size: 1vw;
+    padding-left: 6vw;
+    width: 20vw;
+    color: white;
+    text-shadow: black 0px 0px 8px;
+}
+
+#ic2 {
+    /* scroll-snap-align: start center; */
+    margin-top: 0;
+    padding-top: 0;
+    background-image: url(../resources/images/rock.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#ic2 h1 {
+    margin-top: 0;
+    padding-top: 40vh;
+    padding-left: 6vw;
+    font-size: 2vw;
+}
+
+#ic2 p {
+    font-size: 1vw;
+    padding-left: 6vw;
+    width: 20vw;
+    color: white;
+    text-shadow: black 0px 0px 8px;
+}
+
+.pageination {
+    /* margin-left: 95vw;
+    margin-top: -95vh; */
+    top: 15vh;
+    left: 95vw;
+    position: fixed;
+}
+
+.invis {
+    opacity: 0;
+    transition: 100ms all ease-in-out;
+}
+
+.vis {
+    opacity: 1;
+    transition: 100ms all ease-in-out;
+}
+
+.vrt {
+    border-left: 3px solid #2301a9;
+    height: 50vh;
+}
+
+.indicator {
+    margin-top: 14vh;
+    color: white;
+    display: grid;
+    grid-template-columns: 5vw 1vw 15px;
+    width: calc(5vw + 15px);
+    height: 15px;
+    margin-left: calc(-6vw + 2px);
+    place-content: center;
+    transition: all ease-in-out 250ms;
+}
+
+.active .dot {
+    background-color: blue;
+    transition: 100ms all ease-in-out;
+}
+
+.active span {
+    opacity: 1 !important;
+    transition: 100ms all ease-in-out;
+}
+
+.indicator span {
+    grid-column: 1;
+    align-self: center;
+    justify-self: end;
+    opacity: 0;
+}
+
+.dot {
+    grid-column: 3;
+    top: 0;
+    display: relative;
+    height: 15px;
+    width: 15px;
+    background-color: lightblue;
+    border-radius: 50%;
+    transition: 100ms all ease-in-out;
+}
+
+.extra {
+    height: 100%;
+}
+
+.full {
+    height: 100vh;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        top: 45%;
+    }
+    100% {
+        top: 40%;
+        opacity: 1;
+    }
+}
+
+.longdiv img {
+    width: 100vw;
+    height: 250vh;
+}
+
+.secondbkg img {
+    width: 100vw;
+    height: 300vh;
+}
+
+.rock {
+    position: absolute;
+    z-index: 1000;
+    margin-top: -90vh;
+}
