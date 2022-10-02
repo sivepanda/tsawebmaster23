@@ -207,8 +207,14 @@ p {
     font-family: 'Sarabun', sans-serif;
 }
 
+#mainpage {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
 #ic1 {
-    /* scroll-snap-align: start center; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     margin-top: 0;
     padding-top: 0;
     background-image: url(../resources/images/cancun.jpg);
@@ -232,7 +238,8 @@ p {
 }
 
 #ic2 {
-    /* scroll-snap-align: start center; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     margin-top: 0;
     padding-top: 0;
     background-image: url(../resources/images/rock.jpg);

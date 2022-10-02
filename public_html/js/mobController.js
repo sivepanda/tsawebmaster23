@@ -1,12 +1,8 @@
-//HI AHMAD. CHANGE THIS AND **ONLY** THIS :)
-newMobile = false; // <-THIS GUY. SEE IT? False for old mobile, true for new
-//YEP. THAT'S IT. STOP HERE
-
 var height = window.innerHeight;
 var width = window.innerWidth;
 var isOpen = false;
 var dtstyles = 'styles/desktopstyles.css';
-var mobstyles = newMobile ? 'styles/experimentalmobile.css' : 'styles/mobilestyles.css';
+var mobstyles = 'styles/mobilestyles.css';
 var styles = document.createElement('link');
 var isMobile;
 var initialLogoHeight;
