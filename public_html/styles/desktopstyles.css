@@ -207,9 +207,15 @@ p {
     font-family: 'Sarabun', sans-serif;
 }
 
-#mainpage {
-    scroll-snap-type: y mandatory;
+html {
     overflow-y: scroll;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+#ic0 {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 #ic1 {
@@ -359,3 +365,90 @@ p {
     z-index: 1000;
     margin-top: -90vh;
 }
+
+.scaletwo {
+    transform: scale(1.5);
+}
+
+.main section {
+    margin: 0;
+    height: 100vh;
+}
+
+.main section:nth-child(1) {
+    background-color: #3e5050;
+}
+
+.main section:nth-child(2) {
+    background-color: #495f5f;
+}
+
+.main section:nth-child(3) {
+    background-color: #546d6d;
+}
+
+.main section:nth-child(4) {
+    background-color: #5f7c7c;
+}
+
+.main section:nth-child(5) {
+    background-color: #6b8a8a;
+}
+
+.main section h1 {
+    font-size: 38px;
+    color: #fff;
+    margin: 0;
+    padding: 50px 0 20px;
+    /* text-align: center; */
+}
+
+#pagination {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3vw;
+    list-style: none;
+    border-right: 3px solid rgb(0, 0, 170);
+    height: 40vh;
+}
+
+#pagination li {
+    position: relative;
+    left: .55vw;
+    margin: 8vh 0px;
+    background: #fff;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    border: 3px solid rgb(0, 0, 170);
+    transition: all 0.2s ease;
+}
+
+#pagination li:hover {
+    transform: scale(1.5);
+}
+
+#pagination li:hover p {
+    opacity: 100;
+}
+
+#pagination li p {
+    opacity: 0;
+}
+
+#pagination a {
+    position: absolute;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+body.page-1 #pagination li:nth-of-type(1),
+body.page-2 #pagination li:nth-of-type(2),
+body.page-3 #pagination li:nth-of-type(3)
+/* body.page-4 #pagination li:nth-of-type(4),
+body.page-5 #pagination li:nth-of-type(5)*/
