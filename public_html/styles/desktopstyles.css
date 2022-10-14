@@ -28,7 +28,9 @@ body {
     align-items: center;
 }
 
-.header {}
+.header {
+  top:0;
+}
 
 .headerlogo {
     grid-column: 1;
@@ -338,6 +340,11 @@ html {
 
 .full {
     height: 100vh;
+}
+
+#mp0 {
+  height: 80vh;
+  margin-top: 20vh;
 }
 
 
