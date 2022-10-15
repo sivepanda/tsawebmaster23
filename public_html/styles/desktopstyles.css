@@ -188,15 +188,15 @@ body {
     position: relative;
     overflow-y: none;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
     width: 50vw !important;
 }
 
 .helement {
     position: absolute;
     width: 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    /* scroll-snap-align: start; */
+    /* scroll-snap-stop: always; */
 }
 
 .helement:nth-child(1) {
