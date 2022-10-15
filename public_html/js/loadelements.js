@@ -1,3 +1,55 @@
+//load logo and other header elements
+
+
+var fonts = document.createElement('link');
+fonts.setAttribute('rel', 'stylesheet');
+fonts.setAttribute('type', 'text/css');
+fonts.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun&display=swap');
+document.head.appendChild(fonts);
+//set header icon
+var icon = document.createElement('link');
+icon.setAttribute('rel', 'icon');
+icon.setAttribute('href', 'resources/images/favicon.ico');
+icon.setAttribute('type', 'image/x-icon');
+document.head.appendChild(icon);
+//set site title
+document.title = "Retrograde";
+//set local storage variable
+var localWebStorage = window.localStorage;
+
+
+const header = document.getElementById("header");
+
+
+//loading screen
+var isLoaded = false;
+var timerComplete = false;
+
+window.addEventListener('load', (event) => {
+    isLoaded = true;
+    loaded();
+});
+
+
+
+/*LOADING SCREEN */
+//remove loading screen upon load
+function loaded() {
+    if (isLoaded && timerComplete && document.getElementById("loadtank")) {
+        var load = document.getElementById("loadtank");
+        load.remove();
+        document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
+        document.getElementById("ic0") ? document.querySelector("#ic0 p").classList.add("showp") : console.log('ic0 not found');
+        window.clearTimeout(loadInterval);
+        console.log('Page loaded successfully');
+    }
+}
+
+loadInterval = setInterval(function() {
+    timerComplete = true;
+    loaded();
+}, 1500);
+
 function elementInViewport(el) {
     var top = el.offsetTop;
     var left = el.offsetLeft;
@@ -18,6 +70,19 @@ function elementInViewport(el) {
     );
 }
 
+window.addEventListener("scroll", function(e) {
+    if (window.scrollY > 200) {
+        header.classList.remove("fullheader");
+        header.classList.add("compactheader");
+    } else {
+        header.classList.remove("compactheader");
+        header.classList.add("fullheader");
+
+    }
+});
+
+
+//INDEX PAGE ANIMATIONS------------------------------------------------------------------------------------------------------------
 const ic0 = document.getElementById("ic0") ? document.getElementById("ic0") : console.log('ic0 not found');
 const ic1 = document.getElementById("ic1") ? document.getElementById("ic1") : console.log('ic1 not found');
 const ic2 = document.getElementById("ic2") ? document.getElementById("ic2") : console.log('ic2 not found');
@@ -40,7 +105,6 @@ window.addEventListener("scroll", function(e) {
         liic0.classList.remove("scaletwo");
         liic1.classList.remove("scaletwo");
     }
-
-
-
 });
+
+//MISSION PAGE ANIMATIONS----------------------------------------------------------------------------------------------------------
