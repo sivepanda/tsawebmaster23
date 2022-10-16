@@ -185,6 +185,7 @@ body {
 }
 
 .horiz {
+    height: 90vh;
     position: relative;
     overflow-y: none;
     overflow-x: scroll;
@@ -195,6 +196,7 @@ body {
 .helement {
     position: absolute;
     width: 100%;
+    height: 100%;
     /* scroll-snap-align: start; */
     /* scroll-snap-stop: always; */
 }

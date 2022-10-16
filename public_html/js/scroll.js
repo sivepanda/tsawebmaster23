@@ -27,7 +27,7 @@ window.addEventListener("scroll", function(e) {
     if (elementInViewport(scrollContainer)) {
         scrollContainer.addEventListener("wheel", (evt) => {
             evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.scrollLeft += .5 * (evt.deltaY);
         });
     }
 });
