@@ -194,20 +194,20 @@ body {
     width: 50vw !important;
 }
 
-.properties{
+.properties {
     position: absolute;
     left: 30%;
     top: 15vh;
     font-size: 25px;
 }
 
-.attributes{
+.attributes {
     list-style-type: none;
     margin-top: 35%;
     margin-left: 8vw;
 }
 
-.attributes li{
+.attributes li {
     opacity: 0;
     margin-top: 6%;
     font-size: 20px;
@@ -216,28 +216,27 @@ body {
     width: 30vw;
 }
 
-
-
-.attributes li:nth-child(1){
+.attributes li:nth-child(1) {
     animation: left 1s forwards;
     animation-delay: 1.5s;
 }
 
-.attributes li:nth-child(2){
+.attributes li:nth-child(2) {
     animation: left 1s forwards;
     animation-delay: 1.8s;
 }
 
-.attributes li:nth-child(3){
+.attributes li:nth-child(3) {
     animation: left 1s forwards;
     animation-delay: 2.1s;
 }
 
-.attributes li:nth-child(4){
+.attributes li:nth-child(4) {
     animation: left 1s forwards;
     animation-delay: 2.4s;
 }
-.attributes li:nth-child(5){
+
+.attributes li:nth-child(5) {
     animation: left 1s forwards;
     animation-delay: 2.7s;
 }
@@ -246,19 +245,18 @@ body {
     0% {
         opacity: 0;
         margin-left: 10vw;
-    } 100% {
+    }
+    100% {
         margin-left: 0;
         opacity: 1;
-        
     }
 }
 
-
-.attributes li span{
+.attributes li span {
     float: right;
 }
 
-.attributes li a{
+.attributes li a {
     float: right;
     opacity: .4;
     margin-left: .5vw;
@@ -268,8 +266,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* scroll-snap-align: start; */
-    /* scroll-snap-stop: always; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .helement:nth-child(1) {
@@ -282,6 +280,14 @@ body {
 
 .helement:nth-child(3) {
     margin-left: 100vw;
+}
+
+.helement:nth-child(4) {
+    margin-left: 150vw;
+}
+
+.helement:nth-child(5) {
+    margin-left: 200vw;
 }
 
 h1 {
@@ -836,7 +842,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     left: 90%;
 }
 
-.socials{
+.socials {
     display: flex;
     position: relative;
     left: 45vw;
@@ -844,15 +850,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .flex-child {
     flex: 1;
-}  
+}
 
-.sociallist{
+.sociallist {
     list-style-type: none;
     border-left: 1px solid white;
     padding-left: 1vw;
 }
 
-.sociallist li{
+.sociallist li {
     margin-top: 2vh;
     /* position: relative; */
     font-size: 60px;
@@ -864,12 +870,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .sociallist li::after {
-    content:"";
+    content: "";
     display: block;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
-    margin-left:300%;
-    margin-top:-115%;
+    margin-left: 300%;
+    margin-top: -115%;
     padding-bottom: 1vh;
     padding-top: 1vh;
     padding-right: 3vw;
@@ -879,30 +885,29 @@ body.page-5 #pagination li:nth-of-type(5)*/
     transition: all ease-in-out 100ms;
 }
 
-.sociallist li:hover::after{
+.sociallist li:hover::after {
     margin-left: -10%;
     transition: all ease-in-out 300ms;
     /* opacity: .8; */
 }
 
-.sociallist li:nth-child(1)::after{
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+.sociallist li:nth-child(1)::after {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     /* margin-left: 100%; */
 }
 
-
-
-.sociallist li:nth-child(2)::after{
+.sociallist li:nth-child(2)::after {
     background: linear-gradient(45deg, #66757F, #00ACEE, #36D8FF, #F5F8Fa, #FFFFFF)
 }
 
-.sociallist li:nth-child(3)::after{
+.sociallist li:nth-child(3)::after {
     background: linear-gradient(120deg, #3B5998, #FFFFFF)
 }
 
-.sociallist li:nth-child(4)::after{
-    background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(169,0,255,1) 49%, rgba(0,255,229,1) 100%); }
+.sociallist li:nth-child(4)::after {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(169, 0, 255, 1) 49%, rgba(0, 255, 229, 1) 100%);
+}
 
-.sociallist li:nth-child(5)::after{
+.sociallist li:nth-child(5)::after {
     background: linear-gradient(45deg, #0077B5, #000000, #313335, #CACCCE, #00A0DC)
 }
