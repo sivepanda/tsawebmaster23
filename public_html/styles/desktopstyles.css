@@ -185,12 +185,83 @@ body {
 }
 
 .horiz {
-    height: 90vh;
+    height: 100vh;
     position: relative;
+    left: 50%;
     overflow-y: none;
     overflow-x: scroll;
     /* scroll-snap-type: x mandatory; */
     width: 50vw !important;
+}
+
+.properties{
+    position: absolute;
+    left: 30%;
+    top: 15vh;
+    font-size: 25px;
+}
+
+.attributes{
+    list-style-type: none;
+    margin-top: 35%;
+    margin-left: 8vw;
+}
+
+.attributes li{
+    opacity: 0;
+    margin-top: 6%;
+    font-size: 20px;
+    padding-bottom: 3%;
+    border-bottom: 1px solid white;
+    width: 30vw;
+}
+
+
+
+.attributes li:nth-child(1){
+    animation: left 1s forwards;
+    animation-delay: 1.5s;
+}
+
+.attributes li:nth-child(2){
+    animation: left 1s forwards;
+    animation-delay: 1.8s;
+}
+
+.attributes li:nth-child(3){
+    animation: left 1s forwards;
+    animation-delay: 2.1s;
+}
+
+.attributes li:nth-child(4){
+    animation: left 1s forwards;
+    animation-delay: 2.4s;
+}
+.attributes li:nth-child(5){
+    animation: left 1s forwards;
+    animation-delay: 2.7s;
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        margin-left: 10vw;
+    } 100% {
+        margin-left: 0;
+        opacity: 1;
+        
+    }
+}
+
+
+.attributes li span{
+    float: right;
+}
+
+.attributes li a{
+    float: right;
+    opacity: .4;
+    margin-left: .5vw;
 }
 
 .helement {
@@ -590,7 +661,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .parallaxtext {
-    background: linear-gradient( rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 80%, rgba(1, 0, 0, 1) 100%);
+    background: linear-gradient( rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 80%, rgba(1, 0, 0, 1) 100%);
     background-size: cover;
     transform: translateZ(0) scale(1);
     z-index: 7;
@@ -763,4 +834,75 @@ body.page-5 #pagination li:nth-of-type(5)*/
     position: relative;
     top: 100%;
     left: 90%;
+}
+
+.socials{
+    display: flex;
+    position: relative;
+    left: 45vw;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.sociallist{
+    list-style-type: none;
+    border-left: 1px solid white;
+    padding-left: 1vw;
+}
+
+.sociallist li{
+    margin-top: 2vh;
+    /* position: relative; */
+    font-size: 60px;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    padding-right: 0vw;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+
+.sociallist li::after {
+    content:"";
+    display: block;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    margin-left:300%;
+    margin-top:-115%;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    padding-right: 3vw;
+    padding-left: .9vw;
+    width: 100%;
+    height: 80px;
+    transition: all ease-in-out 100ms;
+}
+
+.sociallist li:hover::after{
+    margin-left: -10%;
+    transition: all ease-in-out 300ms;
+    /* opacity: .8; */
+}
+
+.sociallist li:nth-child(1)::after{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    /* margin-left: 100%; */
+}
+
+
+
+.sociallist li:nth-child(2)::after{
+    background: linear-gradient(45deg, #66757F, #00ACEE, #36D8FF, #F5F8Fa, #FFFFFF)
+}
+
+.sociallist li:nth-child(3)::after{
+    background: linear-gradient(120deg, #3B5998, #FFFFFF)
+}
+
+.sociallist li:nth-child(4)::after{
+    background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(169,0,255,1) 49%, rgba(0,255,229,1) 100%); }
+
+.sociallist li:nth-child(5)::after{
+    background: linear-gradient(45deg, #0077B5, #000000, #313335, #CACCCE, #00A0DC)
 }
