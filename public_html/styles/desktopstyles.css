@@ -911,3 +911,210 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .sociallist li:nth-child(5)::after {
     background: linear-gradient(45deg, #0077B5, #000000, #313335, #CACCCE, #00A0DC)
 }
+
+.shoot{
+    position: absolute;
+    top: 120%;
+    z-index: 100;
+    right: 20%;
+    width: 100%;
+    height: 50vh;
+    /* background: url(./bg0.jpg); */
+    background-position-x: center;
+    background-size: cover;
+    animation: animateBg 50s linear infinite;
+}
+@keyframes animateBg {
+    0%,100%
+    {
+        transform:scale(1);
+    }
+    50%
+    {
+        transform:scale(1.2);
+    }
+}
+.shoot span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1)  ;
+    animation:  animate 3s linear infinite;
+}
+.shoot span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-900px);
+        opacity: 0;
+
+    }
+    
+}
+.shoot span:nth-child(1){
+    top: 0;
+    right: 0;
+    left:initial;
+    animation-delay:0 ;
+    animation-duration: 1s;
+}
+
+.shoot span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left:initial;
+    animation-delay:0.2s;
+    animation-duration: 3s;
+}
+
+.shoot span:nth-child(3){
+    top: 80px;
+    right: 0px;
+    left:initial;
+    animation-delay:0.4s ;
+    animation-duration: 2s;
+}
+
+.shoot span:nth-child(4){
+    top: 0;
+    right: 180px;
+    left:initial;
+    animation-delay:0.6s;
+    animation-duration: 1.5s;
+}
+
+.shoot span:nth-child(5){
+    top: 0;
+    right: 400px;
+    left:initial;
+    animation-delay:0.8s;
+    animation-duration: 2.5s;
+}
+
+.shoot span:nth-child(6){
+    top: 0;
+    right: 600px;
+    left:initial;
+    animation-delay:1s ;
+    animation-duration: 3s;
+}
+.shoot span:nth-child(7 ){
+    top: 300px;
+    right: 0px;
+    left:initial;
+    animation-delay:1s ;
+    animation-duration: 1.75s;
+}
+
+.shoot span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left:initial;
+    animation-delay:1.4s ;
+    animation-duration: 1.25s;
+}
+
+.shoot span:nth-child(9){
+    top: 0px;
+    right: 1000px;
+    left:initial;
+    animation-delay:0.75s ;
+    animation-duration: 2.25s;
+}
+
+.shoot span:nth-child(10){
+    top: 0px;
+    right: 1000px;
+    left:initial;
+    animation-delay:2.75s ;
+    animation-duration: 2.25s;
+}
+
+#fname{
+    width: 180%;
+    height: 4vh;
+    background: transparent;
+    border-top: #000;
+    border-left: #000;
+    border-right: #000;
+    color: white;
+    font-size: 20px;
+}
+
+.upper{
+    float: left;
+    margin-bottom: 3vh;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.mapcontainer {
+    float: left;
+    margin-left: 10vw;
+    /* margin-top: 3vh; */
+}
+
+.mapcontainer .iframeHeader {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.mapcontainer .map {
+    position: absolute;
+    grid-column: 2;
+    grid-row: 2;
+    border: none;
+    height: 65vh;
+    width: 37vw;
+    float: left;
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 47vw;
+}
+
+.flexy{
+    flex: 1;
+}
+
+.flexy:first-child{
+    margin-left: 150vw;
+}
