@@ -12,8 +12,12 @@ icon.setAttribute('rel', 'icon');
 icon.setAttribute('href', 'resources/images/favicon.ico');
 icon.setAttribute('type', 'image/x-icon');
 document.head.appendChild(icon);
+var path = window.location.pathname;
+path = path.substring(path.lastIndexOf("/") + 1)
+title = path.substring(0, 1).toUpperCase() + path.substring(1, path.lastIndexOf("."))
+title = (title == "Index") ? "Home" : title;
 //set site title
-document.title = "Retrograde";
+document.title = title + " - Retrograde";
 //set local storage variable
 var localWebStorage = window.localStorage;
 
@@ -80,6 +84,12 @@ window.addEventListener("scroll", function(e) {
 
     }
 });
+
+for (page in document.getElementsByClassName("mnuele")) {
+    if(document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
+        document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
+    }
+}
 
 
 //INDEX PAGE ANIMATIONS------------------------------------------------------------------------------------------------------------
