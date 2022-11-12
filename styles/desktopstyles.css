@@ -136,9 +136,8 @@ body {
 }
 
 .properties {
-    position: absolute;
-    left: 30%;
-    top: 15vh;
+    /* position: absolute; */
+    margin-left: 15vw;
     font-size: 25px;
 }
 
@@ -1129,28 +1128,39 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .amenities {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; */
 }
 
 .amenPara {
-    position: absolute;
-    width: 35vw;
-    margin-bottom: 20vh;
+    /* position: absolute; */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20vh; */
 }
 
 .amenPara p {
     font-size: 1.4vw;
+    width: 35vw;
+    
 }
-
 .boxes {
     margin-top: 10vh;
-    width: 15vw;
+    /* width: 15vw; */
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20%;
+}
+
+.water{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: none;
+    border-bottom:2px solid white;
 }
 
 #demo-canvas {
@@ -1470,4 +1480,28 @@ body.page-5 #pagination li:nth-of-type(5)*/
     #main-footer {
         padding-top: 1rem;
     }
+}
+
+.drinks{
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    /* width: 25%; */
+    margin-top: 5vh;
+    height: 40vh;
+}
+
+.coke{
+    background-image: url(../resources/images/Coke.png);
+    background-size: cover;
+    width: 95%;
+    /* background-color: green; */
+}
+
+.orange{
+    background: url(../resources/images/Cocktail.png) no-repeat;
+    background-size: contain;
+    width: 95%;
+    /* background-color: green; */
 }
