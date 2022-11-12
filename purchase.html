@@ -76,14 +76,14 @@
             <h1>Are you new?</h1>
             <div id="signin" class="win-btn">
 
-                <button type="button" id='accreate' class="button-main" onclick="checkUserLS()">Create an Account</button>
+                <button type="button" id='accreate' class="button-main retuser" onclick="openActModal()">Create an Account</button>
                 </form>
                 <div class="or">
                     <hr class="bar">
                     <span>OR</span>
                     <hr class="bar">
                 </div>
-                <button type="button" class="button-main" onclick="checkUserLS()">Continue as Guest</button>
+                <button type="button" class="button-main retuser" id='guest' onclick="checkUserLS()">Continue as Guest</button>
 
 
                 </footer>
@@ -115,19 +115,39 @@
                 </footer>
             </div>
         </div>
-    </div>
-    <!--  
-            <div id="right">
-                <div id="showcase">
-                    <div class="showcase-content">
-                        <h1 class="showcase-text"><strong>Hot</strong> New Artist This Week</h1>
-                        <a href="#" class="secondary-btn">Check Him Out</a>
-                    </div>
+        <div id="register">
+            <h1 id="error">Welcome Aboard!</h1>
+            <div id="regfields" class="win-btn">
+                <div class="regdv">
+                    <span class="mail">Full Name</span>
+                    <input type="text" class="text-input win-btn" placeholder="Enter your name" id="fullname" required>
                 </div>
-            </div>-->
+                <div class="regdv">
+                    <span class="mail">Username</span>
+                    <input type="text" class="text-input win-btn" placeholder="Enter your username" id="newUser" required autofocus>
+                </div>
+                <div class="regdv">
+                    <span class="details">Email</span>
+                    <input type="text" class="text-input" placeholder="Enter your email" required>
+                </div>
+                <div class="regdv">
+                    <span class="details">Phone Number</span>
+                    <input type="text" class="text-input" placeholder="Enter your phone number" required>
+                </div>
+                <div class="regdv">
+                    <span class="details">Password</span>
+                    <input type="password" class="text-input" placeholder="Enter your password" id="newPass" type="password" required>
+                </div>
+                <div class="regdv">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" class="text-input" placeholder="Confirm your password" id="newPassCheck" type="password" required>
+                </div>
+                <button type="button" class="button-main" onclick="register()">Create Account</button>
+            </div>
+            
+        </div>
     </div>
-    <div>Are you a returning user?</div>
-    </div>
+    
 
 
 
@@ -135,6 +155,8 @@
 </body>
 
 <script async src="js/mobController.js"></script>
+<script src="js//libraries/md5.min.js"></script>
+<script async src="js/validateLogin.js"></script>
 <script async src="js/hov_win.js"></script>
 <script async src="js/background.js"></script>
 <script async src="js/loadelements.js"></script>
