@@ -25,6 +25,15 @@ var localWebStorage = window.localStorage;
 const header = document.getElementById("header");
 
 
+function closeBox(a, b) {
+    a = document.getElementById(a);
+    b = document.getElementById(b);
+    a.style.display = a.style.display == "" ? "none" : "";
+    b.classList.toggle("undLineActive");
+    console.log(a.style.display)
+}
+
+
 //loading screen
 var isLoaded = false;
 var timerComplete = false;
@@ -86,7 +95,7 @@ window.addEventListener("scroll", function(e) {
 });
 
 for (page in document.getElementsByClassName("mnuele")) {
-    if(document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
+    if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
         document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
     }
 }

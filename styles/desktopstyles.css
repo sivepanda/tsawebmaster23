@@ -1135,7 +1135,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .amenPara {
-    /* position: absolute; */ 
+    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1145,8 +1145,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .amenPara p {
     font-size: 1.4vw;
     width: 35vw;
-    
 }
+
 .boxes {
     margin-top: 10vh;
     /* width: 15vw; */
@@ -1156,11 +1156,17 @@ body.page-5 #pagination li:nth-of-type(5)*/
     gap: 20%;
 }
 
-.water{
+#water {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: none;
-    border-bottom:2px solid white;
+    border-bottom: 2px solid white;
+    transition: 50ms all ease-in-out;
+}
+
+.undLineActive {
+    border-bottom: 0px solid white !important;
+    transition: 50ms all ease-in-out;
 }
 
 #demo-canvas {
@@ -1482,26 +1488,40 @@ body.page-5 #pagination li:nth-of-type(5)*/
     }
 }
 
-.drinks{
+#drinks {
     /* position: absolute; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     /* width: 25%; */
     margin-top: 5vh;
     height: 40vh;
 }
 
-.coke{
-    background-image: url(../resources/images/Coke.png);
-    background-size: cover;
-    width: 95%;
-    /* background-color: green; */
+.coke {
+    background: url(../resources/images/coca-cola.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red; */
 }
 
-.orange{
-    background: url(../resources/images/Cocktail.png) no-repeat;
-    background-size: contain;
-    width: 95%;
-    /* background-color: green; */
+.sprite {
+    background: url(../resources/images/sprite-logo.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+.aqua {
+    background: url(../resources/images/Aquafina_2016.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+.orange {
+    background: url(../resources/images/minmaid.png) no-repeat;
+    background-position: center;
+    background-size: 60%;
 }
