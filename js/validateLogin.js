@@ -3,6 +3,7 @@ var pass;
 var userExists = false;
 var correctPass = false;
 var userData;
+var cot;
 
 const userSetBox = document.getElementById("setUser") ? document.getElementById("setUser") : false;
 const pwrdSetBox = document.getElementById("newPass") ? document.getElementById("newPass") : false;
@@ -65,7 +66,7 @@ function getAndParseCookie(cname) {
 
 function checkPassMatch() {
     passCheckBox.addEventListener('input', (event) => {
-        if(pwrdSetBox.value == passCheckBox.value) {
+        if (pwrdSetBox.value == passCheckBox.value) {
             passCheckBox.style.border = '1px solid #008000'
         } else {
             passCheckBox.style.border = '1px solid #fc324f'
@@ -73,10 +74,27 @@ function checkPassMatch() {
     });
 }
 
+clickTarget.removeEventListener('click',
+    makeBackgroundYellow,
+    false
+);
+
+function addAccModalListener(event) {
+    if (event.target != actCreateModal) {
+        console.log("here");
+        actCreateModal.style.display = cot > 0 ? 'none' : "grid"
+        cot++;
+    }
+}
 
 function openActModal() {
     actCreateModal.style.display = "grid";
-    checkPassMatch()
+    checkPassMatch();
+    cot = 0;
+    window.addEventListener('click',
+        addAccModalListener,
+        false
+    );
 }
 
 function encrypt(toEncrypt) {
@@ -145,7 +163,7 @@ function register() {
     var newPassCheck = encrypt(document.getElementById("newPassCheck").value);
     var newName = document.getElementById("fullname").value;
     var userExists = false;
-    
+
     if (newUser != "" && newPass != "" && newPass == newPassCheck && newName != "") {
         var user = new User(newName, newUser, newPass);
         var i = 0;
@@ -164,7 +182,7 @@ function register() {
             setCookie("user" + i, JSON.stringify(user));
             localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
             // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-            window.open("account-login.html", "_self");
+            window.open("your-account.html", "_self");
         }
     } else {
         document.getElementById("error").style.display = "block";

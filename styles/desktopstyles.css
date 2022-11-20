@@ -137,13 +137,14 @@ body {
 
 .properties {
     /* position: absolute; */
+    margin-top: 0;
     margin-left: 15vw;
     font-size: 25px;
 }
 
 .attributes {
     list-style-type: none;
-    margin-top: 35%;
+    margin-top: 15%;
     margin-left: 8vw;
 }
 
@@ -1148,7 +1149,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .boxes {
-    margin-top: 10vh;
+    margin-top: 0vh;
     /* width: 15vw; */
     display: flex;
     justify-content: center;
@@ -1157,6 +1158,22 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #water {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: none;
+    border-bottom: 2px solid white;
+    transition: 50ms all ease-in-out;
+}
+
+#food {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: none;
+    border-bottom: 2px solid white;
+    transition: 50ms all ease-in-out;
+}
+
+#plane {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: none;

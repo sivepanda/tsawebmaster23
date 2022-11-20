@@ -33,6 +33,17 @@ function closeBox(a, b) {
     console.log(a.style.display)
 }
 
+function closeBox(a, b, c) {
+    a = document.getElementById(a);
+    b = document.getElementById(b);
+    lsc = []
+    for (x of c) lsc.push(document.getElementById(x))
+    a.style.display = a.style.display == "" ? "none" : "";
+    for (x of lsc) x.classList.toggle("undLineActive");
+    // b.classList.toggle("undLineActive");
+    console.log(a.style.display)
+}
+
 
 //loading screen
 var isLoaded = false;
