@@ -1543,3 +1543,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-position: center;
     background-size: 60%;
 }
+
+#yacwelcome {
+    margin-top: -95vh;
+    padding-top: 0vh;
+    width: 100vw;
+    font-size: 3vw;
+    position: absolute;
+    font-weight: 500;
+    text-align: center;
+}

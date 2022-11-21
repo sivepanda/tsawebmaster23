@@ -10,6 +10,12 @@ const pwrdSetBox = document.getElementById("newPass") ? document.getElementById(
 const passCheckBox = document.getElementById("newPassCheck") ? document.getElementById("newPassCheck") : false;
 const actCreateModal = document.getElementById("register") ? document.getElementById("register") : false;
 
+document.getElementById("yacwelcome") ? initializeAccount() : null;
+
+function initializeAccount() {
+    let currUser = JSON.parse(localStorage.getItem(localStorage.getItem("currentUser")));
+    document.getElementById("yacwelcome").innerHTML = "Welcome, " + currUser.fullname;
+}
 
 // COOKIES --------------------------------------------------------
 
@@ -115,7 +121,7 @@ function checkUser() {
             if (pass = getAndParseCookie(user + i).password) {
                 setCookie("currentUser", ("user" + i));
                 document.getElementById("output").innerHTML = "Welcome, " + getAndParseCookie("user" + i).fullname;
-                window.open("your-events.html", "_self");
+                window.open("your-account.html", "_self");
                 return true;
             } else {
                 document.getElementById("output").innerHTML = "Incorrect Password";
@@ -141,7 +147,7 @@ function checkUserLS() {
             if (pass == JSON.parse(localStorage.getItem("user" + i)).password) {
                 localStorage.setItem("currentUser", ("user" + i));
                 document.getElementById("output").innerHTML = "Welcome, " + JSON.parse(localStorage.getItem("user" + i)).fullname;
-                window.open("your-events.html", "_self");
+                window.open("your-account.html", "_self");
 
                 return true;
             } else {
