@@ -33,15 +33,29 @@ function closeBox(a, b) {
     console.log(a.style.display)
 }
 
-function closeBox(a, b, c) {
+function closeBox(a, b, c, d) {
     a = document.getElementById(a);
     b = document.getElementById(b);
     lsc = []
+    lsd = []
     for (x of c) lsc.push(document.getElementById(x))
-    a.style.display = a.style.display == "" ? "none" : "";
-    for (x of lsc) x.classList.toggle("undLineActive");
+    for (x of d) lsd.push(document.getElementById(x))
+        // a.style.display = a.style.display == "grid" ? "none" : "grid";
+    if (a.style.display == "grid") {
+        a.style.display = 'none';
+        b.classList.remove("undLineActive");
+        for (x of lsc) x.classList.remove("undLineActive");
+        for (x of lsd) x.style.display = "none";
+    } else {
+        a.style.display = 'grid';
+        b.classList.add("undLineActive");
+        for (x of lsc) x.classList.remove("undLineActive");
+        for (x of lsd) x.style.display = "none";
+    }
+    // for (x of lsc) x.classList.remove("undLineActive");
+    // for (x of lsd) x.style.display == "none";
     // b.classList.toggle("undLineActive");
-    console.log(a.style.display)
+    // console.log(b.classList.contains("undLineActive"));
 }
 
 

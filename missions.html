@@ -110,13 +110,13 @@
                     <p>Fly comfortably with Heimdall. Giving you the views of a lifetime from the comfort of a first class seat, complete with reclining seats, a gourmet meal, and water on demand.</p>
                 </div>
                 <div class="boxes">
-                    <div id="water" onclick="closeBox('drinks', 'water', ['food','plane'])">
+                    <div id="water" onclick="closeBox('drinks', 'water', ['food','plane'], ['meals','seats'])">
                         <h2>Drinks</h2>
                     </div>
-                    <div id="food" onclick="closeBox('meals', 'food', ['water', 'plane'])">
+                    <div id="food" onclick="closeBox('meals', 'food', ['water', 'plane'], ['drinks','seats'])">
                         <h2>Meals</h2>
                     </div>
-                    <div id="plane" onclick="closeBox('seats', 'plane', ['water', 'food'])">
+                    <div id="plane" onclick="closeBox('seats', 'plane', ['water', 'food'], ['meals','drinks'])">
                         <h2>Seating</h2>
                     </div>
                 </div>
