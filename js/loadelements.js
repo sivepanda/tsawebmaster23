@@ -25,6 +25,40 @@ var localWebStorage = window.localStorage;
 const header = document.getElementById("header");
 
 
+function closeBox(a, b) {
+    a = document.getElementById(a);
+    b = document.getElementById(b);
+    a.style.display = a.style.display == "" ? "none" : "";
+    b.classList.toggle("undLineActive");
+    console.log(a.style.display)
+}
+
+function closeBox(a, b, c, d) {
+    a = document.getElementById(a);
+    b = document.getElementById(b);
+    lsc = []
+    lsd = []
+    for (x of c) lsc.push(document.getElementById(x))
+    for (x of d) lsd.push(document.getElementById(x))
+        // a.style.display = a.style.display == "grid" ? "none" : "grid";
+    if (a.style.display == "grid") {
+        a.style.display = 'none';
+        b.classList.remove("undLineActive");
+        for (x of lsc) x.classList.remove("undLineActive");
+        for (x of lsd) x.style.display = "none";
+    } else {
+        a.style.display = 'grid';
+        b.classList.add("undLineActive");
+        for (x of lsc) x.classList.remove("undLineActive");
+        for (x of lsd) x.style.display = "none";
+    }
+    // for (x of lsc) x.classList.remove("undLineActive");
+    // for (x of lsd) x.style.display == "none";
+    // b.classList.toggle("undLineActive");
+    // console.log(b.classList.contains("undLineActive"));
+}
+
+
 //loading screen
 var isLoaded = false;
 var timerComplete = false;
@@ -86,7 +120,7 @@ window.addEventListener("scroll", function(e) {
 });
 
 for (page in document.getElementsByClassName("mnuele")) {
-    if(document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
+    if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
         document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
     }
 }
