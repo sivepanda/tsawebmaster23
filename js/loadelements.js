@@ -15,7 +15,7 @@ document.head.appendChild(icon);
 var path = window.location.pathname;
 path = path.substring(path.lastIndexOf("/") + 1)
 title = path.substring(0, 1).toUpperCase() + path.substring(1, path.lastIndexOf("."))
-title = (title == "Index") ? "Home" : title;
+title = (title == "Index" || title == "") ? "Home" : title;
 //set site title
 document.title = title + " - Retrograde";
 //set local storage variable
