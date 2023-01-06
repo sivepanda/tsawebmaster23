@@ -78,6 +78,8 @@ function loaded() {
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
         document.getElementById("ic0") ? document.querySelector("#ic0 p").classList.add("showp") : console.log('ic0 not found');
+        document.getElementById("modalstart") && localStorage.getItem("visited") == "true" ? document.getElementById("modalstart").style.display = 'none' : null;
+        document.getElementById("")
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
     }

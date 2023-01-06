@@ -10,6 +10,14 @@ const pwrdSetBox = document.getElementById("newPass") ? document.getElementById(
 const passCheckBox = document.getElementById("newPassCheck") ? document.getElementById("newPassCheck") : false;
 const actCreateModal = document.getElementById("register") ? document.getElementById("register") : false;
 
+class User {
+    constructor(full, user, pass) {
+        this.fullname = full
+        this.username = user;
+        this.password = pass;
+    }
+}
+
 document.getElementById("yacwelcome") ? initializeAccount() : null;
 
 function initializeAccount() {
@@ -86,8 +94,8 @@ clickTarget.removeEventListener('click',
 );
 
 function addAccModalListener(event) {
-    if (event.target != actCreateModal) {
-        console.log("here");
+    if (event.target != actCreateModal && !event.target.classList.contains("text-input")) {
+        console.log(event.target.classList);
         actCreateModal.style.display = cot > 0 ? 'none' : "grid"
         cot++;
     }
@@ -202,10 +210,3 @@ function register() {
     }
 }
 
-class User {
-    constructor(full, user, pass) {
-        this.fullname = full
-        this.username = user;
-        this.password = pass;
-    }
-}

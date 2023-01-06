@@ -63,8 +63,15 @@
             <li><a class='mnuele' href="about.html">About Us</a></li>
         </ul>
     </div>
-    <!-- </div> -->
+    <div id="modalstart">
+        <h1>Welcome to Retograde!</h1>
+        <p>To enhance your experience, make sure to enable cookies, local storage, and autoplay video!</p>
+        <button class='button-main' onclick="closeIntroModal()">Close</button>
+    </div>
     <div class="main">
+        <div>
+    
+        </div>
         <section class='contentbox videobox full' id="ic0">
             <video autoPlay muted loop id='myVideo'>
                     <source src="resources/videos/EarthVid.mp4.mp4" type="video/mp4"></source>
@@ -95,10 +102,16 @@
         </ul>
     </div>
     <div class="footer">
-        
+
     </div>
 
 </body>
 
 <script async src="js/mobController.js"></script>
 <script async src="js/loadelements.js"></script>
+<script>
+    function closeIntroModal() {
+        document.getElementById("modalstart").style.display = 'none';
+        localStorage.setItem("visited", "true");
+    }
+</script>
