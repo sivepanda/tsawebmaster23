@@ -1544,32 +1544,73 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-size: 60%;
 }
 
-#yacwelcome {
-    margin-top: -95vh;
-    padding-top: 0vh;
-    width: 100vw;
-    font-size: 3vw;
-    position: absolute;
-    font-weight: 500;
-    text-align: center;
+#ya0content {
+    margin-top: -99vh;
+    display: grid;
+    grid-template-rows: 10vh 5vh 20vh 20vh 20vh 5vh;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
 }
 
-#yabook {
-    margin-top: -85vh;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#yacwelcome {
+    grid-row: 1;
+    grid-column: 2 / span 3;
+    font-size: 5vh;
     align-self: center;
-    justify-content: center;
-    width: 30vw;
-    z-index: 100;
-    padding-bottom: 1rem;
-    border-radius: 20px;
+    justify-self: center;
+    animation: 300ms ease-in-out 10ms fadein;
+}
+
+#yastatus {
+    background-color: rgba(0, 0, 0, 0.34);
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(5px);
+    grid-row: 3 / span 3;
+    grid-column: 1 / span 2;
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0;
+    font-family: 'Sarabun', sans-serif;
+    align-self: center;
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    animation: 2s ease-in-out  fadein;
+    animation-iteration-count: 1;
+
+}
+
+#yastatus h1 {
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+}
+
+#yaavail {
+    background-color: rgba(0, 0, 0, 0.34);
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(5px);
+    grid-row: 3 / span 3;
+    grid-column: 4 / span 2;
+    width: 25vw;
     height: 60vh;
-    max-height: 80vh;
-    transition: all ease-in-out 200ms;
+    padding: 0;
+    border-radius: 30px;
+    align-self: center;
+    justify-self: center;
+    animation: 2s ease-in-out  fadein;
+    animation-iteration-count: 1;
+    transition: all ease-in-out 300ms;
+}
+
+/* #yaavail:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 300ms;
+} */
+
+#yaavail h1 {
+    font-size: 4vh;
+    padding-left: 0;
+    padding-right: 0;
+
 }
 
 #yaslogan {
@@ -1603,4 +1644,120 @@ body.page-5 #pagination li:nth-of-type(5)*/
     padding-bottom: 1vh;
     align-self: center;
     margin-left: 20vw;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.flightinfo {
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+    justify-content: space-between;
+}
+
+#aflightlist hr {
+    width: 20vw;
+    border-top: 1px;
+}
+
+.flightdtnm {
+    width: 25%;
+    padding-left: 3vw;
+    text-align: left;
+}
+
+.flightinfo .type {
+    margin-top: 0;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 4vh;
+}
+
+.flightinfo .date {
+    padding-top: 0px;
+    margin-top: 0px;
+    color: #c2c2c2;
+}
+
+.flightinfo .book {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-right: 3vw;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+.lbusin{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sideimage{
+    height: 100vh;
+    /* width: 50vw; */
+    display: grid;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 10vw;
+    font-size: 30px;
+}
+
+#busin{
+    background-color: green;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../resources/images/pexels-bruno-massao-2873486.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: 150ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+#busin:hover {
+    background-size: 110%;
+    transition: 200ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+
+#leis{
+    background-color: blue;
+}
+
+.sideimage h1{
+    margin-top: 10vh;
+}
+
+#busin p{
+    text-align: left;
+    font-size: 26px;
+    max-width: 75vh;
+    line-height: 7vh;
+}
+
+#busin a{
+    font-style: none;
+    color: white;
+    font-size: 20px;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+#busin a:hover{
+    opacity: .8;
 }

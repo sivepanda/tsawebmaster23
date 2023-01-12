@@ -1,5 +1,9 @@
 //load logo and other header elements
+var development = true;
 
+String.prototype.toTitleCase = function () {
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
 
 var fonts = document.createElement('link');
 fonts.setAttribute('rel', 'stylesheet');
@@ -15,6 +19,7 @@ document.head.appendChild(icon);
 var path = window.location.pathname;
 path = path.substring(path.lastIndexOf("/") + 1)
 title = path.substring(0, 1).toUpperCase() + path.substring(1, path.lastIndexOf("."))
+title = title.replace("-"," ").toTitleCase();
 title = (title == "Index" || title == "") ? "Home" : title;
 //set site title
 document.title = title + " - Retrograde";
@@ -78,7 +83,10 @@ function loaded() {
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
         document.getElementById("ic0") ? document.querySelector("#ic0 p").classList.add("showp") : console.log('ic0 not found');
-        document.getElementById("modalstart") && localStorage.getItem("visited") == "true" ? document.getElementById("modalstart").style.display = 'none' : null;
+        document.getElementById("modalstart").style.display = development ?  'none' : null;
+        
+        // REENABLE BELOW
+        // document.getElementById("modalstart") && localStorage.getItem("visited") == "true" ? document.getElementById("modalstart").style.display = 'none' : null;
         document.getElementById("")
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
