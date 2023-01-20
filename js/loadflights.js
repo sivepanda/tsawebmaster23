@@ -7,7 +7,14 @@ dates.set(5, "Thursday");
 dates.set(6, "Friday");
 dates.set(7, "Saturday");
 
+
+/** flight class that is used to save booked flights*/
 class Flight {
+    /** contructor
+     * @param dtB is the begin date of the flight
+     * @param dtE is the end date of the flight
+     * @param ty is the type of flight
+    */
     constructor(dtB, dtE, ty) {
         this.dateBegin = dtB;
         this.dateEnd = dtE;
@@ -24,6 +31,10 @@ class Flight {
     
 }
 
+/**finds the date x days after today 
+ * @param today - begin date, date of origin
+ * @param x - days to increment
+*/
 function newDayXApart(today, x) {
     let eObj = new Date()
     eObj.setDate(today.getDate() + x);
@@ -31,12 +42,15 @@ function newDayXApart(today, x) {
     return e;
 }
 
+
+/**creates the set of upcoming flights */
 function createFlights() {
     var today = new Date();
     num = 0;
     htmlInject = ''
+    numEntries = 3 //number of entries on the page
 
-    while(num < 3) {
+    while(num < numEntries) {
         currDt = String(today.getDate()).padStart(2, '0');
         let b = today.toLocaleDateString(undefined, {month:'numeric', day:'numeric'});
         console.log(b)
@@ -65,5 +79,7 @@ function createFlights() {
         today.setDate(today.getDate() + 1);
         currDt++;
     }
+
+    //inject to HTML
     document.getElementById("aflightlist").innerHTML = htmlInject
 }
