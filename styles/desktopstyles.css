@@ -10,6 +10,14 @@ body {
     font-family: 'Sarabun', 'sans-serif';
 }
 
+.mobile {
+    display: none;
+}
+
+.newcirc {
+    display: none;
+}
+
 .videobox {
     height: 100vh;
     width: 100vw;
@@ -1746,6 +1754,19 @@ body.page-5 #pagination li:nth-of-type(5)*/
     font-size: 20px;
 }
 
+#leis p{
+    text-align: left;
+    font-size: 26px;
+    max-width: 75vh;
+    line-height: 7vh;
+}
+
+#leis a{
+    font-style: none;
+    color: white;
+    font-size: 20px;
+}
+
 .arrow {
     border: solid white;
     border-width: 0 3px 3px 0;
@@ -1759,5 +1780,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
   }
 
 #busin a:hover{
+    opacity: .8;
+}
+
+#leis a:hover{
     opacity: .8;
 }

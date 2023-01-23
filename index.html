@@ -52,8 +52,13 @@
               </video>
         </div>
     </div>
-
-    <div class="header fullheader" id="header">
+    <div class="mobheader mobile">
+        <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" />
+        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+            <div class="bar"></div>
+        </button>
+    </div>
+    <div class="header fullheader desktop" id="header">
         <img class="headerlogo" src="resources/images/retrograde_wh.png" alt="logo" />
         <ul>
             <li><a class='mnuele' href="index.html">Home</a> </li>
@@ -105,6 +110,20 @@
 
     </div>
 
+    <div class="newcirc">
+        <!-- <span class="dot" id="dot"></span> -->
+        <nav class="dotmnu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attributes.html">Attributes</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
 </body>
 
 <script async src="js/mobController.js"></script>
@@ -114,5 +133,11 @@
     function closeIntroModal() {
         document.getElementById("modalstart").style.display = 'none';
         localStorage.setItem("visited", "true");
+    } 
+    function toggleMenu() {
+        menu_btn.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active');
+        mobile_list.classList.toggle('is-active');
+        console.log('menu loaded');
     }
 </script>
