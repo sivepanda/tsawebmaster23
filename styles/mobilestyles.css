@@ -14,10 +14,14 @@ body {
     display: none;
 }
 
+:root {
+    --blueprple: #2301a9
+}
 
 /* MENU */
 
 .mobheader {
+    top: 0;
     height: 10vh;
     width: 100vw;
     overflow-y: hidden;
@@ -25,8 +29,8 @@ body {
     position: fixed;
     align-content: center;
     justify-content: center;
-    grid-template-columns: 2vw 10vw 76vw 10vw 2vw;
-    background-color: aquamarine;
+    grid-template-columns: 2vw 10vw 74vw 10vw 4vw;
+    background:  linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 1) 100%);
 }
 
 .headerlogo {
@@ -69,16 +73,16 @@ body {
 
 .hamburger.is-active:before {
     z-index: 1000;
-    background-color: var(--light-green);
+    background-color: var(--blueprple);
     /* border-radius: 10px; */
-    transform: rotate(-40deg) translate(-7px, 5px);
+    transform: rotate(-45deg) translate(-5px, 23px);
 }
 
 .hamburger.is-active:after {
     z-index: 1000;
-    background-color: var(--light-green);
+    background-color: var(--blueprple);
     /* border-radius: 10px; */
-    transform: rotate(40deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(0px, -21px);
 }
 
 .hamburger .bar {
@@ -103,6 +107,7 @@ body {
 }
 
 .dotmnu ul li {
+    font-family: 'Orbitron', sans-serif !important;
     text-decoration: none;
     list-style-type: none;
 }
@@ -114,7 +119,6 @@ body {
     display: inline-block;
     bottom: 0vh;
     background-color: rgba(156, 156, 156, 0.1);
-    /* transition: 2s all ease-in-out; */
     margin-left: -1000px;
     margin-bottom: -1500px;
     width: 2000px;
@@ -166,7 +170,7 @@ body {
     color: white;
     margin-top: 6vh;
     text-decoration: none;
-    font-family: "Michroma";
+    font-family: "Orbitron";
     font-size: 5vh;
 }
 

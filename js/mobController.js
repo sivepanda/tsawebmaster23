@@ -32,6 +32,7 @@ function resizeWindow() {
         isMobile = true;
         styles.setAttribute('href', mobstyles);
         window.scrollTo(0, 0);
+        document.getElementById("loadtank").remove();
     }
 }
 
