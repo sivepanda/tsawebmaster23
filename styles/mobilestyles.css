@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun:wght@100;400&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/*                               GLOBAL SETTINGS                              */
+/* -------------------------------------------------------------------------- */
+
 html,
 body {
     width: 100%;
@@ -18,7 +23,13 @@ body {
     --blueprple: #2301a9
 }
 
-/* MENU */
+h1 {
+    font-family: "Orbitron", "sans-serif";
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
 
 .mobheader {
     top: 0;
@@ -62,7 +73,7 @@ body {
 .hamburger:before {
     content: '';
     display: block;
-    width: 80px;
+    width: 60px;
     height: 7px;
     background-color: white;
     margin: 10px 0px;
@@ -259,4 +270,61 @@ body {
         top: 15%;
         opacity: 1;
     }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 INDEX PAGE                                 */
+/* -------------------------------------------------------------------------- */
+
+#ic0 {
+    background-image: url("../resources/images/pexels-pixabay-220201.jpg");
+    height: 100vh;
+    margin-top: 0;
+    background-position: right;
+    background-size: cover;
+}
+
+#ic0 #myVideo {
+    display: none;
+}
+
+#ic0 h1 {
+    padding-top: 35vh;
+    font-size: 5vh;
+    padding-left: 1vw;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#ic0 p {
+    font-size: 2vh;
+    text-align: center;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+
+#ic1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.336)), url("../resources/images/cancun.jpg");
+    height: 100vh;
+    margin-top: 0;
+    background-position: right;
+    background-size: cover;
+}
+
+#ic1 h1 {
+    padding-top: 35vh;
+    font-size: 5vh;
+    padding-left: 1vw;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#ic1 p {
+    font-size: 2vh;
+    text-align: center;
+    padding-left: 8vw;
+    padding-right: 8vw;
 }
