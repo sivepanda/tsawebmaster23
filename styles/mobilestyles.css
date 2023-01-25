@@ -306,7 +306,7 @@ h1 {
 
 
 #ic1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.336)), url("../resources/images/cancun.jpg");
+    background-image: url("../resources/images/cancun.jpg");
     height: 100vh;
     margin-top: 0;
     background-position: right;
@@ -314,17 +314,46 @@ h1 {
 }
 
 #ic1 h1 {
-    padding-top: 35vh;
+    padding-top: 75vh;
     font-size: 5vh;
-    padding-left: 1vw;
-    text-align: center;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    text-align: right;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
 #ic1 p {
     font-size: 2vh;
-    text-align: center;
-    padding-left: 8vw;
-    padding-right: 8vw;
+    text-align: right;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+/* background-image: url(../resources/images/rock.jpg); */
+
+
+#ic2 {
+    background-image: url(../resources/images/rock.jpg);;
+    height: 100vh;
+    margin-top: 0;
+    background-position: right;
+    background-size: cover;
+}
+
+#ic2 h1 {
+    padding-top: 75vh;
+    font-size: 5vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    text-align: right;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#ic2 p {
+    font-size: 2vh;
+    text-align: right;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
