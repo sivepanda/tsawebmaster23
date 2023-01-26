@@ -282,7 +282,7 @@ html {
     scroll-snap-stop: always;
     margin-top: 0;
     padding-top: 0;
-    background-image: url(../resources/images/cancun.jpg);
+    background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/cancun.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -1717,52 +1717,68 @@ body.page-5 #pagination li:nth-of-type(5)*/
     font-size: 30px;
 }
 
-#busin{
+.sideimage{
+    --light-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    --darker-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-color: green;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../resources/images/pexels-bruno-massao-2873486.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    transition: 150ms all cubic-bezier(.51,-0.01,.19,.96);
+    transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+.sideimage:hover {
+    background-size: 110%;
+    transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+#busin {
+    background-image: var(--light-darken-overlay), url(../resources/images/pexels-bruno-massao-2873486.jpg);
 }
 
 #busin:hover {
-    background-size: 110%;
-    transition: 200ms all cubic-bezier(.51,-0.01,.19,.96);
+    background-image: var(--darker-darken-overlay), url(../resources/images/pexels-bruno-massao-2873486.jpg);
+
 }
 
-
 #leis{
-    background-color: blue;
+    background-image: var(--light-darken-overlay), url(../resources/images/people-in-space.jpg);
+    background-size: 170%;
+    transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+#leis:hover {
+    background-image: var(--darker-darken-overlay), url(../resources/images/people-in-space.jpg);
+    background-size: 180%;
+    transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
 .sideimage h1{
     margin-top: 10vh;
 }
 
-#busin p{
+.sideimage p{
     text-align: left;
     font-size: 26px;
+    height: 0vh;
+    overflow: hidden;
     max-width: 75vh;
     line-height: 7vh;
+    transition: all cubic-bezier(.99,.15,.73,.77) 400ms;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
-#busin a{
+.sideimage:hover p {
+    height: 45vh;
+    transition: all ease-in-out 300ms;
+}
+
+.sideimage a{
     font-style: none;
     color: white;
-    font-size: 20px;
-}
-
-#leis p{
-    text-align: left;
-    font-size: 26px;
-    max-width: 75vh;
-    line-height: 7vh;
-}
-
-#leis a{
-    font-style: none;
-    color: white;
+    padding-top: 0px;
+    margin-top: 0px;
     font-size: 20px;
 }
 
@@ -1784,4 +1800,46 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #leis a:hover{
     opacity: .8;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  BOOK PAGE                                 */
+/* -------------------------------------------------------------------------- */
+
+#bp0 {
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-rows: 10vh 15vh 75vh;
+}
+
+#flighttype {
+    text-align: center;
+    grid-column: 1 / span 3;
+    font-size: 15vh;
+    padding: 0;
+    margin: 0;
+    padding-top: 9vh;
+}
+
+.bookstep {
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 10vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1vw;
+}
+
+.bookstep:not(:nth-child(2)) {
+    padding-top: 10vh;
+}
+
+.activeb {
+    color: white;
+}
+
+.inactiveb {
+    color:rgba(83, 83, 83, 0.507)
 }
