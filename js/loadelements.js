@@ -89,7 +89,7 @@ function loaded() {
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
         document.getElementById("ic0") ? document.querySelector("#ic0 p").classList.add("showp") : console.log('ic0 not found');
-        document.getElementById("modalstart").style.display = development ?  'none' : null;
+        document.getElementById("modalstart") ? (document.getElementById("modalstart").style.display = development ?  'none' : null) : console.log('modalstart not found');
         
         // REENABLE BELOW
         // document.getElementById("modalstart") && localStorage.getItem("visited") == "true" ? document.getElementById("modalstart").style.display = 'none' : null;

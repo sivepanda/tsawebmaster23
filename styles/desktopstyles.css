@@ -1704,6 +1704,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .lbusin{
     display: grid;
+    
     grid-template-columns: 1fr 1fr;
 }
 
@@ -1711,13 +1712,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     height: 100vh;
     /* width: 50vw; */
     display: grid;
-    /* justify-content: center; */
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    padding-left: 10vw;
-    font-size: 30px;
-}
-
-.sideimage{
+    /* padding-left: 10vw; */
+    font-size: 3vh;
     --light-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     --darker-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-color: green;
@@ -1743,13 +1744,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #leis{
     background-image: var(--light-darken-overlay), url(../resources/images/people-in-space.jpg);
-    background-size: 170%;
+    background-size: 130%;
     transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
 #leis:hover {
     background-image: var(--darker-darken-overlay), url(../resources/images/people-in-space.jpg);
-    background-size: 180%;
+    background-size: 140%;
     transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
@@ -1759,7 +1760,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .sideimage p{
     text-align: left;
-    font-size: 26px;
+    font-size: 2.5vh;
     height: 0vh;
     overflow: hidden;
     max-width: 75vh;
@@ -1774,12 +1775,17 @@ body.page-5 #pagination li:nth-of-type(5)*/
     transition: all ease-in-out 300ms;
 }
 
+.lbusin .content {
+    align-self: center;
+    justify-self: center;
+}
+
 .sideimage a{
     font-style: none;
     color: white;
     padding-top: 0px;
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 2.5vh;
 }
 
 .arrow {
@@ -1809,14 +1815,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
 #bp0 {
     display: grid;
     grid-template-columns: 30vw 40vw 30vw;
-    grid-template-rows: 10vh 15vh 5vh 70vh;
+    grid-template-rows: 10vh 5vh 10vh 75vh;
 }
 
 #flighttype {
+    align-self: center;
+    justify-self: center;
     text-align: center;
     grid-column: 1 / span 3;
-    grid-row: 2;
-    font-size: 12vh;
+    grid-row: 3;
+    font-size: 10vh;
     margin: 0;
     /* margin: 0;
     padding-top: 9vh;
@@ -1824,12 +1832,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .steps {
+    align-self: center;
     grid-row: 4;
     grid-column: 1;
 }
 
 .bookstep {
-    font-size: 10vh;
+    font-size: 8vh;
     padding-top: 0;
     padding-bottom: 2vh;
     margin-top: 0;
@@ -1844,6 +1853,17 @@ body.page-5 #pagination li:nth-of-type(5)*/
     border-radius: 20px;
     transition: all ease-in-out 200ms;
     
+}
+
+#bp0 .content {
+    background-color: white;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    width:60vw;
+    height: 65vh;
+    grid-row: 4;
+    grid-column: 2 / span 3;
 }
 
 .inactiveb {
