@@ -1857,6 +1857,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #bp0 .content {
     background-color: white;
+    color: #000;
     align-self: center;
     justify-self: center;
     border-radius: 10px;
@@ -1864,6 +1865,19 @@ body.page-5 #pagination li:nth-of-type(5)*/
     height: 65vh;
     grid-row: 4;
     grid-column: 2 / span 3;
+    align-items: start;
+}
+
+#bp0 th {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    height: 5vh;
+    vertical-align: top;
+
+}
+
+#bp0 .grimage {
+    height: 100%;
 }
 
 .inactiveb {
