@@ -21,8 +21,27 @@ class User {
 document.getElementById("yacwelcome") ? initializeAccount() : null;
 
 function initializeAccount() {
-    let currUser = JSON.parse(localStorage.getItem(localStorage.getItem("currentUser")));
+    let currUser = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
     document.getElementById("yacwelcome").innerHTML = "Welcome, " + currUser.fullname;
+}
+
+console.log("hello")
+
+/**Automatically log in user if there is one in session */
+function autoLogIn() {
+    console.log("hello1")
+    window.addEventListener('load', (event) => {
+        if (sessionStorage.getItem("currentUser") != null) {
+            console.log(sessionStorage.getItem("currentUser"));
+            document.getElementById("output").innerHTML = "Welcome, " + JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser"))).fullname;
+            window.open("your-account.html", "_self");
+        }
+    });
+}
+
+function logOut() {
+    sessionStorage.removeItem("currentUser");
+    window.open("purchase.html", "_self");
 }
 
 // COOKIES --------------------------------------------------------
@@ -153,7 +172,7 @@ function checkUserLS() {
     while (localStorage.getItem("user" + i) != null) {
         if (JSON.parse(localStorage.getItem("user" + i)).username == user) {
             if (pass == JSON.parse(localStorage.getItem("user" + i)).password) {
-                localStorage.setItem("currentUser", ("user" + i));
+                sessionStorage.setItem("currentUser", ("user" + i));
                 document.getElementById("output").innerHTML = "Welcome, " + JSON.parse(localStorage.getItem("user" + i)).fullname;
                 window.open("your-account.html", "_self");
 
