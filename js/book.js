@@ -1,0 +1,88 @@
+var flight;
+
+//FLIGHT DATA------------------------------------------------------------------------------------------
+
+/** flight class that is used to save booked flights*/
+class Flight {
+    /** contructor
+     * @param dtB is the begin date of the flight
+     * @param dtE is the end date of the flight
+     * @param ty is the type of flight
+    */
+    constructor(dtB, dtE, ty) {
+        this.dateBegin = dtB;
+        this.dateEnd = dtE;
+        this.type = ty;
+    }
+
+    /**Format Flight data as HTML to inject into the available flight data */
+    format() {
+        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> <p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> </div> <button type='button' class='button-main book'>Book</button> </div>"
+    }
+
+    setBegin(dtB) {
+        this.dateBegin = dtB
+    }
+    
+}
+
+function newDayXApart(today, x) {
+    let eObj = new Date()
+    eObj.setDate(today.getDate() + x);
+    e = eObj.toLocaleDateString(undefined, {month:'numeric', day:'numeric'});
+    return e;
+}
+
+
+
+// COOKIES --------------------------------------------------------
+
+function setCookie(cname, cvalue) {
+    document.cookie += cname + "=" + cvalue + ";";
+    return cname + "=" + cvalue + ";";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function cookieExists(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function getAndParseCookie(cname) {
+    return JSON.parse(getCookie(cname));
+}
+
+
+
+// PAGE INITIALIZATION ------------------------------------------
+
+document.getElementById("flighttype") ? initializeAccount() : null;
+
+function initializeAccount() {
+    flight = JSON.parse(localStorage.getItem("currentbook"));
+    document.getElementById("flighttype").innerHTML = flight.type;
+}

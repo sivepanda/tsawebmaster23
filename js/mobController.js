@@ -18,12 +18,7 @@ function changeElementIDDisplay(id, display) {
     document.getElementById(id) ? document.getElementById(id).style.display = display : console.log(id + " replaced");
 }
 
-// var logo = document.querySelector('.menumenu');
 var menu = document.querySelector('.menu');
-
-// logo.addEventListener('click', function() {
-//     menu.classList.toggle('showmenu');
-// });
 
 function resizeWindow() {
     var height = window.innerHeight;
@@ -37,10 +32,29 @@ function resizeWindow() {
         isMobile = true;
         styles.setAttribute('href', mobstyles);
         window.scrollTo(0, 0);
-
+        document.getElementById("loadtank").remove();
     }
 }
 
+window.addEventListener('load', (event) => {
+    const menu_btn = document.querySelector('.hamburger');
+    const mobile_menu = document.querySelector('.dotmnu');
+    const mobile_list = document.querySelector(".newcirc");
+    
+    console.log('mobile menu ready');
+
+    const ic1Logo = document.getElementById("ic1logo");
+    ic1Logo ? initialLogoHeight = ic1Logo.offsetHeight : console.log("not index");
+    const ic3bp = document.getElementById("ic3bp");
+    ic3bp ? initialTextIBP3Height = ic3bp.offsetHeight : console.log("not index");
+
+    menu_btn.addEventListener('click', function() {
+        // head.style.width = 100 + "vw";
+        menu_btn.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active');
+        mobile_list.classList.toggle('is-active');
+    });
+});
 
 
 function toggleMenu() {
@@ -48,7 +62,6 @@ function toggleMenu() {
     mobile_menu.classList.toggle('is-active');
     mobile_list.classList.toggle('is-active');
     console.log('menu loaded');
-
 }
 
 
