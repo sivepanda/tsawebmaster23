@@ -1,23 +1,34 @@
-//load logo and other header elements
 
+var development = true;
 
+String.prototype.toTitleCase = function () {
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
+
+/**load logo and other header elements */
+
+//load fonts
 var fonts = document.createElement('link');
 fonts.setAttribute('rel', 'stylesheet');
 fonts.setAttribute('type', 'text/css');
 fonts.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun&display=swap');
 document.head.appendChild(fonts);
+
 //set header icon
 var icon = document.createElement('link');
 icon.setAttribute('rel', 'icon');
 icon.setAttribute('href', 'resources/images/favicon.ico');
 icon.setAttribute('type', 'image/x-icon');
 document.head.appendChild(icon);
+
+// create site title based on HTML hyperlink
 var path = window.location.pathname;
 path = path.substring(path.lastIndexOf("/") + 1)
 title = path.substring(0, 1).toUpperCase() + path.substring(1, path.lastIndexOf("."))
-title = (title == "Index") ? "Home" : title;
-//set site title
-document.title = title + " - Retrograde";
+title = title.replace("-"," ").toTitleCase();
+title = (title == "Index" || title == "") ? "Home" : title;
+document.title = title + " - Retrograde"; //set site title
+
 //set local storage variable
 var localWebStorage = window.localStorage;
 
@@ -71,13 +82,18 @@ window.addEventListener('load', (event) => {
 
 
 /*LOADING SCREEN */
-//remove loading screen upon load
+/**what happens when the page loads*/
 function loaded() {
     if (isLoaded && timerComplete && document.getElementById("loadtank")) {
         var load = document.getElementById("loadtank");
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
         document.getElementById("ic0") ? document.querySelector("#ic0 p").classList.add("showp") : console.log('ic0 not found');
+        document.getElementById("modalstart") ? (document.getElementById("modalstart").style.display = development ?  'none' : null) : console.log('modalstart not found');
+        
+        // REENABLE BELOW
+        // document.getElementById("modalstart") && localStorage.getItem("visited") == "true" ? document.getElementById("modalstart").style.display = 'none' : null;
+        document.getElementById("")
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
     }
@@ -88,6 +104,9 @@ loadInterval = setInterval(function() {
     loaded();
 }, 1500);
 
+/**Triggered when element is in viewport
+ * @param el - parameter being watched
+ */
 function elementInViewport(el) {
     var top = el.offsetTop;
     var left = el.offsetLeft;
@@ -108,6 +127,7 @@ function elementInViewport(el) {
     );
 }
 
+//Scroll event for when the full navbar transforms into the compact one
 window.addEventListener("scroll", function(e) {
     if (window.scrollY > 200) {
         header.classList.remove("fullheader");
@@ -124,31 +144,3 @@ for (page in document.getElementsByClassName("mnuele")) {
         document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
     }
 }
-
-
-//INDEX PAGE ANIMATIONS------------------------------------------------------------------------------------------------------------
-const ic0 = document.getElementById("ic0") ? document.getElementById("ic0") : console.log('ic0 not found');
-const ic1 = document.getElementById("ic1") ? document.getElementById("ic1") : console.log('ic1 not found');
-const ic2 = document.getElementById("ic2") ? document.getElementById("ic2") : console.log('ic2 not found');
-
-const liic0 = document.getElementById("liic0") ? document.getElementById("liic0") : console.log('liic0 not found');
-const liic1 = document.getElementById("liic1") ? document.getElementById("liic1") : console.log('liic1 not found');
-const liic2 = document.getElementById("liic2") ? document.getElementById("liic2") : console.log('liic2 not found');
-
-window.addEventListener("scroll", function(e) {
-    if (elementInViewport(ic0)) {
-        liic0.classList.add("scaletwo");
-        liic1.classList.remove("scaletwo");
-        liic2.classList.remove("scaletwo");
-    } else if (elementInViewport(ic1)) {
-        liic1.classList.add("scaletwo");
-        liic0.classList.remove("scaletwo");
-        liic2.classList.remove("scaletwo");
-    } else if (elementInViewport(ic2)) {
-        liic2.classList.add("scaletwo");
-        liic0.classList.remove("scaletwo");
-        liic1.classList.remove("scaletwo");
-    }
-});
-
-//MISSION PAGE ANIMATIONS----------------------------------------------------------------------------------------------------------

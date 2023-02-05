@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun:wght@100;400&display=swap');
 html,
 body {
     width: 100%;
@@ -8,6 +8,14 @@ body {
     background-color: black;
     color: white;
     font-family: 'Sarabun', 'sans-serif';
+}
+
+.mobile {
+    display: none;
+}
+
+.newcirc {
+    display: none;
 }
 
 .videobox {
@@ -33,7 +41,6 @@ body {
     --hfont-size: 0.8vw;
     --hlogo-size: 7vw;
     --hbkg: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 1) 100%);
-    ;
 }
 
 .fullheader {
@@ -284,7 +291,7 @@ html {
     scroll-snap-stop: always;
     margin-top: 0;
     padding-top: 0;
-    background-image: url(../resources/images/cancun.jpg);
+    background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/cancun.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -365,7 +372,7 @@ html {
 }
 
 .active .dot {
-    background-color: blue;
+    background-color: #2301a9;
     transition: 100ms all ease-in-out;
 }
 
@@ -1185,6 +1192,74 @@ body.page-5 #pagination li:nth-of-type(5)*/
 #plane h2:hover{
     opacity: .8;
 }
+.overengine{
+    margin-top: 5vh;
+}
+
+.leftright h2{
+    display: grid;
+    justify-content: center;
+}
+
+.leftright p{
+    width: 100%;
+    line-height: 300%;
+    font-size: 20px;
+}
+
+.leftright{
+    width: 50%;
+    float: left;
+}
+
+.engineOver{
+    padding-right: 2%;
+    border-right: 1px solid white;
+}
+
+.engines ul{
+    list-style-type: none;
+}
+
+.engines ul li{
+    width: 80%;
+    border-bottom: 1px solid rgba(119, 118, 118, 0.603);
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-size: 20px;
+}
+
+.engines li span{
+    float: right;
+}
+
+.secondinfo p{
+    width: 80%;
+    line-height: 300%;
+    font-size: 20px;
+}
+
+.thorsbs{
+    float: left;
+}
+
+.thorover{
+    /* padding-right: 120%; */
+    /* border-right: 1px solid white; */
+}
+
+.thorinfo{
+    border-left: 1px solid white;
+    margin-left: 20%;
+    padding-left: 20%;
+}
+
+.thoroverview p{
+    width: 80%;
+    font-size: 20px;
+    line-height: 300%;
+}
+
 
 #food {
     padding-left: 2%;
@@ -1565,14 +1640,299 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-size: 60%;
 }
 
+#ya0content {
+    margin-top: -99vh;
+    display: grid;
+    grid-template-rows: 10vh 5vh 20vh 20vh 20vh 5vh;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+}
+
 #yacwelcome {
-    margin-top: -95vh;
-    padding-top: 0vh;
-    width: 100vw;
-    font-size: 3vw;
+    grid-row: 1;
+    grid-column: 2 / span 3;
+    font-size: 5vh;
+    align-self: center;
+    justify-self: center;
+    animation: 300ms ease-in-out 10ms fadein;
+}
+
+#yastatus {
+    background-color: rgba(0, 0, 0, 0.34);
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(5px);
+    grid-row: 3 / span 3;
+    grid-column: 1 / span 2;
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0;
+    font-family: 'Sarabun', sans-serif;
+    align-self: center;
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    animation: 2s ease-in-out  fadein;
+    animation-iteration-count: 1;
+
+}
+
+#yastatus h1 {
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+}
+
+#yaavail {
+    background-color: rgba(0, 0, 0, 0.34);
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(5px);
+    grid-row: 3 / span 3;
+    grid-column: 4 / span 2;
+    width: 25vw;
+    height: 60vh;
+    padding: 0;
+    border-radius: 30px;
+    align-self: center;
+    justify-self: center;
+    animation: 2s ease-in-out  fadein;
+    animation-iteration-count: 1;
+    transition: all ease-in-out 300ms;
+}
+
+/* #yaavail:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all ease-in-out 300ms;
+} */
+
+#yaavail h1 {
+    font-size: 4vh;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+#yaslogan {
     position: absolute;
-    font-weight: 500;
+    margin-top:-33vh;
+    margin-left: 80vw;
+    font-size: 10vh;
+    font-weight: 50;
+}
+
+#yalogout {
+    width: 10vw;
+    grid-column: 5;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border: 2px solid white;
+    background: linear-gradient(125deg, rgba(0, 22, 255, 0) 0%, rgba(0, 22, 255, .5) 50%, rgba(255, 1, 245, 1) 100%);
+    background-size: 200%;
+
+}
+
+#yalogout:hover {
+    background-position: right;
+}
+
+#modalstart {
+    background-color: #000000cc;
+    position: fixed;
+    float: bottom;
+    bottom: 0;
+    width: 100vw;
+    display: inline-flex;
+    align-items: center;
+    /* margin-top: 100vh; */
+}
+
+#modalstart h1 {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#modalstart .button-main {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    align-self: center;
+    margin-left: 20vw;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.flightinfo {
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+    justify-content: space-between;
+}
+
+#aflightlist hr {
+    width: 20vw;
+    border-top: 1px;
+}
+
+.flightdtnm {
+    width: 25%;
+    padding-left: 3vw;
+    text-align: left;
+}
+
+.flightinfo .type {
+    margin-top: 0;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 4vh;
+}
+
+.flightinfo .date {
+    padding-top: 0px;
+    margin-top: 0px;
+    color: #c2c2c2;
+}
+
+.flightinfo .book {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-right: 3vw;
+    align-self: flex-start;
+    justify-self: flex-end;
+}
+
+.lbusin{
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+}
+
+.sideimage{
+    height: 100vh;
+    /* width: 50vw; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 10vw; */
+    font-size: 3vh;
+    --light-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    --darker-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-color: green;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+.sideimage:hover {
+    background-size: 110%;
+    transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+#busin {
+    background-image: var(--light-darken-overlay), url(../resources/images/pexels-bruno-massao-2873486.jpg);
+}
+
+#busin:hover {
+    background-image: var(--darker-darken-overlay), url(../resources/images/pexels-bruno-massao-2873486.jpg);
+
+}
+
+#leis{
+    background-image: var(--light-darken-overlay), url(../resources/images/people-in-space.jpg);
+    background-size: 130%;
+    transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+#leis:hover {
+    background-image: var(--darker-darken-overlay), url(../resources/images/people-in-space.jpg);
+    background-size: 140%;
+    transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
+}
+
+.sideimage h1{
+    margin-top: 10vh;
+}
+
+.sideimage p{
+    text-align: left;
+    font-size: 2.5vh;
+    height: 0vh;
+    overflow: hidden;
+    max-width: 75vh;
+    line-height: 7vh;
+    transition: all cubic-bezier(.99,.15,.73,.77) 400ms;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.sideimage:hover p {
+    height: 45vh;
+    transition: all ease-in-out 300ms;
+}
+
+.lbusin .content {
+    align-self: center;
+    justify-self: center;
+}
+
+.sideimage a{
+    font-style: none;
+    color: white;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 2.5vh;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+#busin a:hover{
+    opacity: .8;
+}
+
+#leis a:hover{
+    opacity: .8;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  BOOK PAGE                                 */
+/* -------------------------------------------------------------------------- */
+
+#bp0 {
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-rows: 10vh 5vh 10vh 75vh;
+}
+
+#flighttype {
+    align-self: center;
+    justify-self: center;
     text-align: center;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    font-size: 10vh;
+    margin: 0;
+    /* margin: 0;
+    padding-top: 9vh;
+    height: 20vh */
 }
 
 .overengine{
@@ -1642,4 +2002,159 @@ body.page-5 #pagination li:nth-of-type(5)*/
     font-size: 20px;
     line-height: 300%;
 }
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    font-size: 10vh;
+    margin: 0;
+    /* margin: 0;
+    padding-top: 9vh;
+    height: 20vh */
+}
+
+.steps {
+    align-self: center;
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.bookstep {
+    font-size: 8vh;
+    padding-top: 0;
+    padding-bottom: 2vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1vw;
+    text-align: center;
+}
+
+.activeb {
+    color:rgba(255, 255, 255, 0.966);
+    background-color: rgba(201, 201, 201, 0.3);
+    border-radius: 20px;
+    transition: all ease-in-out 200ms;
+    
+}
+
+#bp0 .content {
+    background-color: white;
+    color: #000;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    width:60vw;
+    height: 65vh;
+    grid-row: 4;
+    grid-column: 2 / span 3;
+    align-items: start;
+}
+
+#bp0 table {
+    width: 60vw;
+    border-collapse: collapse;
+}
+
+#bp0 thead th {
+    font-size: 2vh;
+    height: 1em;
+    font-weight: bold;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 0;
+}
+
+#bp0 th {
+    border-bottom: 1px solid #8f8f8f;
+}
+
+#bp0 th {
+    font-weight: normal;
+    align-content: center;
+}
+
+#bp0 th {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    height: 5vh;
+    vertical-align: middle;
+
+}
+
+#bp0 .grimage {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url(/resources/images/pool-g854a75762_1280.jpg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inactiveb {
+    color:rgba(83, 83, 83, 0.507)
+}
+
+.leisy{
+    height: 100vh;
+}
+
+.leisypic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../resources/images/SunriseInSpace.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    /* border: 2px solid purple; */
+    /* margin: 5% 5% 0 5%; */
+}
+
+.contenty{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 45vh;
+    background-color: black;
+    /* margin: 5% 5% 0 5%; */
+}
+
+.titly{
+    display: grid;
+    grid-template-columns: 44vw 44vw; 
+    grid-template-rows: 20vh;
+    grid-column-gap: 2vw;
+  }
+
+.leet{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.LTitle{
+    font-size: 42px;
+    /* color: black; */
+
+}
+
+.Lpara p{
+    font-size: 22px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
