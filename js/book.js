@@ -8,11 +8,24 @@ class Flight {
      * @param dtB is the begin date of the flight
      * @param dtE is the end date of the flight
      * @param ty is the type of flight
+     
     */
     constructor(dtB, dtE, ty) {
         this.dateBegin = dtB;
         this.dateEnd = dtE;
         this.type = ty;
+    }
+
+    /** Set the room that the user is booking
+     * @param rm is the room */
+    setRoom(rm) {
+        this.room = rm
+    }
+
+    /** Set the tier of flight that the user is booking
+     * @param tr is the class of flight */
+    setFlightTier(tr) {
+        this.flightTier = tr
     }
 
     /**Format Flight data as HTML to inject into the available flight data */
@@ -83,6 +96,10 @@ function getAndParseCookie(cname) {
 document.getElementById("flighttype") ? initializeAccount() : null;
 
 function initializeAccount() {
+    //set active flight variable
     flight = JSON.parse(localStorage.getItem("currentbook"));
     document.getElementById("flighttype").innerHTML = flight.type;
+
+    //set button events
+    
 }

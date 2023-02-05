@@ -139,8 +139,8 @@ window.addEventListener("scroll", function(e) {
     }
 });
 
-for (page in document.getElementsByClassName("mnuele")) {
-    if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
-        document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
-    }
-}
+// for (page in document.getElementsByClassName("mnuele")) {
+//     if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
+//         document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
+//     }
+// }
