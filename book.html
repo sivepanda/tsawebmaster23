@@ -78,15 +78,62 @@
                         <th>Name</th>
                         <th>Image</th>
                         <th>Beds</th>
-                        <th>Size</th>
+                        <th>Size</th> 
                         <th>Amenities</th>
                         <th>Price</th>
                     </tr>
                 </thead>
                 <tbody id="options">
-                    <tr>
+                    <tr class='option' id="trStand">
                         <th>Standard</th>
-                        <th class="grimage"></th>
+                        <th class="grimagecontainer">
+                            <img class="grimage" src="resources/images/DALLE Room1.png"></img>
+                        </th>
+                        <th>1 double</th>
+                        <th>200 sq. ft.</th>
+                        <th class="amen">
+                            <div>
+                                <p><i class="fa-solid fa-solid fa-person-swimming"></i>&nbsp;&nbsp;Pool access</p>
+                                <p><i class="fa-solid fa-mug-saucer"></i>&nbsp;&nbsp;Complementary Breakfast</p>
+                                <p><i class="fa-solid fa-panorama"></i>&nbsp;&nbsp;City View</p>
+                            </div>
+                        </th>
+                        <th>+ $0</th>
+                    </tr>
+                    <tr class='option' id="trPremi">
+                        <th>Premium</th>
+                        <th class="grimagecontainer">
+                            <img class="grimage" src="resources/images/DALLE Room3.png"></img>
+                        </th>
+                        <th>2 double</th>
+                        <th>400 sq. ft.</th>
+                        <th class="amen">
+                            <div>
+                                <p><i class="fa-solid fa-solid fa-person-swimming"></i>&nbsp;&nbsp;Pool access</p>
+                                <p><i class="fa-solid fa-mug-saucer"></i>&nbsp;&nbsp;Complementary Breakfast</p>
+                                <p><i class="fa-solid fa-panorama"></i>&nbsp;&nbsp;Ocean View</p>
+                                <p><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;All-Access Food Tour</p>
+                            </div>
+                        </th>
+                        <th>+ $250</th>
+                    </tr>
+                    <tr class='option' id="trDlxe">
+                        <th>Deluxe</th>
+                        <th class="grimagecontainer">
+                            <img class="grimage" src="resources/images/DALLE Room2.png"></img>
+                        </th>
+                        <th>3 double / 1 king</th>
+                        <th>600 sq. ft.</th>
+                        <th class="amen">
+                            <div>
+                                <p><i class="fa-solid fa-person-swimming"></i>&nbsp;&nbsp;Pool access</p>
+                                <p><i class="fa-solid fa-mug-saucer"></i>&nbsp;&nbsp;Complementary Breakfast</p>
+                                <p><i class="fa-solid fa-panorama"></i>&nbsp;&nbsp;Ocean View</p>
+                                <p><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;All-Access Food Tour</p>
+                                <p><i class="fa-solid fa-ship"></i>&nbsp;&nbsp;Access to Boating Taxi Service</p>
+                            </div>
+                        </th>
+                        <th>+ $500</th>
                     </tr>
                 </tbody>
             </table>
@@ -95,6 +142,7 @@
 
 </body>
 
+<script src="https://kit.fontawesome.com/07f5345973.js" crossorigin="anonymous"></script>
 <script async src="js/mobController.js"></script>
 <script async src="js/book.js"></script>
 <script async src="js/loadelements.js"></script>

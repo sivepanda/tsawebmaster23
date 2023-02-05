@@ -1831,6 +1831,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     grid-template-columns: 30vw 40vw 30vw;
     grid-template-rows: 10vh 5vh 10vh 75vh;
+    --imgsize: 9vw;
 }
 
 #flighttype {
@@ -1881,11 +1882,24 @@ body.page-5 #pagination li:nth-of-type(5)*/
     grid-row: 4;
     grid-column: 2 / span 3;
     align-items: start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#bp0 .content::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 #bp0 table {
     width: 60vw;
     border-collapse: collapse;
+}
+
+#bp0 thead {
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 #bp0 thead th {
@@ -1898,7 +1912,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #bp0 th {
-    border-bottom: 1px solid #8f8f8f;
+    border-bottom: 1px solid #bebdbd;
 }
 
 #bp0 th {
@@ -1911,11 +1925,25 @@ body.page-5 #pagination li:nth-of-type(5)*/
     padding-bottom: 3vh;
     height: 5vh;
     vertical-align: middle;
+    /* background-color: rgba(4, 255, 0, 0.3); */
+    /* border: 2px solid green; */
+}
 
+#bp0 tr {
+    transition: all ease-in-out 200ms;
+}
+
+#bp0 tr:hover {
+    background-color: #8f8f8f;
+    transition: all ease-in-out 200ms;
+}
+
+#bp0 .grimagecontainer {
+    width: var(--imgsize);
 }
 
 #bp0 .grimage {
-    height: 100%;
+    width: var(--imgsize);
     padding: 0;
     margin: 0;
     background-image: url(/resources/images/pool-g854a75762_1280.jpg);
@@ -1923,6 +1951,19 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#bp0 .amen {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 20vw;
+    /* background-color: rgba(0, 212, 255, .3); */
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                LEISURE PAGE                                */
+/* -------------------------------------------------------------------------- */
 
 .inactiveb {
     color:rgba(83, 83, 83, 0.507)
@@ -1940,7 +1981,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 60vh;
+    height: 55vh;
     /* border: 2px solid purple; */
     /* margin: 5% 5% 0 5%; */
 }
@@ -1952,13 +1993,14 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 100vw;
     height: 45vh;
     background-color: black;
+    /* border: 1px solid purple; */
     /* margin: 5% 5% 0 5%; */
 }
 
 .titly{
     display: grid;
     grid-template-columns: 44vw 44vw; 
-    grid-template-rows: 20vh;
+    /* grid-template-rows: 22.5vh; */
     grid-column-gap: 2vw;
   }
 
@@ -1979,17 +2021,75 @@ body.page-5 #pagination li:nth-of-type(5)*/
     
 }
 
+.retry{
+    height: 100vh;
+    width: 100vw;
+}
+
+.oofy{
+    /* display: grid;
+    justify-content: center; */
+}
+
+.picy{
+    /* display: grid;
+    justify-content: center; */
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../resources/images/SunriseInSpace.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.tempy{
+    display: grid;
+    justify-content: center;
+}
+
+.oofy p{
+    color: white;
+    font-size: 20px;
+    line-height: 5vh;
+}
+
+.picy h1{
+    /* margin-left: 5vw; */
+    /* align-self: center; */
+    margin-top: 15vh;
+    font-size: 48px;
+    /* padding-bottom: 120px; */
+    letter-spacing: 8vw;
+}
+
+ .splity{
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 65vh;
+    grid-column-gap: 5vw;
+}
 
 
+.selection{
+    background: white;
 
+}
 
+.listy{
+    /* margin-top: 5vh; */
+    display: grid;
+    justify-content: center;
+    border: 2px solid purple;
+}
 
+.listy li{
 
-
-
-
-
-
-
-
-
+    color: black;
+    /* margin-bottom: 12vh; */
+    list-style: none;
+    font-size: 20px;
+   
+}
