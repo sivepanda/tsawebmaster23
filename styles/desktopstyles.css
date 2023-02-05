@@ -142,24 +142,39 @@ body {
     width: 50vw !important;
 }
 
+.helement {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
 .properties {
     /* position: absolute; */
-    margin-top: 0;
-    margin-left: 15vw;
-    font-size: 25px;
+    /* margin-top: 10vh; */
+    margin-left: 0vw;
+    font-size: 20px;
+    /* background-color: green; */
 }
 
 .attributes {
+    /* position: relative; */
     list-style-type: none;
-    margin-top: 15%;
-    margin-left: 8vw;
+    margin-top: 3%;
+    /* margin-left: 8vw; */
+    /* background-color: yellow; */
+    padding: 0 0 0 0;
 }
 
 .attributes li {
     opacity: 0;
-    margin-top: 6%;
-    font-size: 20px;
-    padding-bottom: 3%;
+    padding-top: 6%;
+    font-size: 17px;
+    padding-bottom: 6%;
     border-bottom: 1px solid white;
     width: 30vw;
 }
@@ -192,10 +207,10 @@ body {
 @keyframes left {
     0% {
         opacity: 0;
-        margin-left: 10vw;
+        padding-left: 2vw;
     }
     100% {
-        margin-left: 0;
+        padding-left: 0;
         opacity: 1;
     }
 }
@@ -210,13 +225,7 @@ body {
     margin-left: .5vw;
 }
 
-.helement {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
+
 
 .helement:nth-child(1) {
     margin-left: 0;
@@ -1172,6 +1181,86 @@ body.page-5 #pagination li:nth-of-type(5)*/
     transition: 50ms all ease-in-out;
 }
 
+#water h2:hover{
+    opacity: .8;
+}
+
+#food h2:hover{
+    opacity: .8;
+}
+
+#plane h2:hover{
+    opacity: .8;
+}
+.overengine{
+    margin-top: 5vh;
+}
+
+.leftright h2{
+    display: grid;
+    justify-content: center;
+}
+
+.leftright p{
+    width: 100%;
+    line-height: 300%;
+    font-size: 20px;
+}
+
+.leftright{
+    width: 50%;
+    float: left;
+}
+
+.engineOver{
+    padding-right: 2%;
+    border-right: 1px solid white;
+}
+
+.engines ul{
+    list-style-type: none;
+}
+
+.engines ul li{
+    width: 80%;
+    border-bottom: 1px solid rgba(119, 118, 118, 0.603);
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-size: 20px;
+}
+
+.engines li span{
+    float: right;
+}
+
+.secondinfo p{
+    width: 80%;
+    line-height: 300%;
+    font-size: 20px;
+}
+
+.thorsbs{
+    float: left;
+}
+
+.thorover{
+    /* padding-right: 120%; */
+    /* border-right: 1px solid white; */
+}
+
+.thorinfo{
+    border-left: 1px solid white;
+    margin-left: 20%;
+    padding-left: 20%;
+}
+
+.thoroverview p{
+    width: 80%;
+    font-size: 20px;
+    line-height: 300%;
+}
+
+
 #food {
     padding-left: 2%;
     padding-right: 2%;
@@ -1838,6 +1927,82 @@ body.page-5 #pagination li:nth-of-type(5)*/
     align-self: center;
     justify-self: center;
     text-align: center;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    font-size: 10vh;
+    margin: 0;
+    /* margin: 0;
+    padding-top: 9vh;
+    height: 20vh */
+}
+
+.overengine{
+    margin-top: 5vh;
+}
+
+.leftright h2{
+    display: grid;
+    justify-content: center;
+}
+
+.leftright p{
+    width: 100%;
+    line-height: 300%;
+    font-size: 20px;
+}
+
+.leftright{
+    width: 50%;
+    float: left;
+}
+
+.engineOver{
+    padding-right: 2%;
+    border-right: 1px solid white;
+}
+
+.engines ul{
+    list-style-type: none;
+}
+
+.engines ul li{
+    width: 80%;
+    border-bottom: 1px solid rgba(119, 118, 118, 0.603);
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-size: 20px;
+}
+
+.engines li span{
+    float: right;
+}
+
+.secondinfo p{
+    width: 80%;
+    line-height: 300%;
+    font-size: 20px;
+}
+
+.thorsbs{
+    float: left;
+}
+
+.thorover{
+    /* padding-right: 120%; */
+    /* border-right: 1px solid white; */
+}
+
+.thorinfo{
+    border-left: 1px solid white;
+    margin-left: 20%;
+    padding-left: 20%;
+}
+
+.thoroverview p{
+    width: 80%;
+    font-size: 20px;
+    line-height: 300%;
+}
     grid-column: 1 / span 3;
     grid-row: 3;
     font-size: 10vh;
