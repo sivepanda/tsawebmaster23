@@ -2001,7 +2001,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 80%;
     font-size: 20px;
     line-height: 300%;
-}
+
     grid-column: 1 / span 3;
     grid-row: 3;
     font-size: 10vh;
