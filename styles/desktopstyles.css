@@ -2209,8 +2209,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .tempy{
-    display: grid;
-    justify-content: center;
+    text-align: center;
+    padding-top: 7.5vh;
+    padding-bottom: 7.5vh;
+    width: 100vw;
+    /* height: 15vh; */
+    font-size: 48px;
+    letter-spacing: 8vw;
 }
 
 .oofy p{
@@ -2219,42 +2224,59 @@ body.page-5 #pagination li:nth-of-type(5)*/
     line-height: 5vh;
 }
 
-.picy h1{
-    /* margin-left: 5vw; */
-    /* align-self: center; */
-    margin-top: 15vh;
-    font-size: 48px;
-    /* padding-bottom: 120px; */
-    letter-spacing: 8vw;
-}
-
  .splity{
     
     display: grid;
     justify-content: center;
     grid-template-columns: 40vw 40vw;
-    grid-template-rows: 65vh;
+    grid-template-rows: 64vh;
     grid-column-gap: 5vw;
 }
 
 
 .selection{
-    background: white;
+    /* background: white; */
 
 }
 
 .listy{
-    /* margin-top: 5vh; */
-    display: grid;
-    justify-content: center;
-    border: 2px solid purple;
+    padding-left: 0px;
+    margin-top: 0px;
+    /* border: 2px solid purple; */
+    
 }
 
 .listy li{
-
-    color: black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: calc(64vh/4);
+    border-bottom: 1px solid white;
+    width: 40vw;
+    color: rgba(0,0,0,0);
     /* margin-bottom: 12vh; */
     list-style: none;
-    font-size: 20px;
    
 }
+
+.listy li h1{
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin: 0 0 0 0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    transition:all ease-in-out 150ms;
+
+}
+
+#cmon{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.listy li h1:hover{
+    font-size: 60px;
+    transition:all ease-in-out 200ms;
+}
+

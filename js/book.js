@@ -99,7 +99,8 @@ function initializeAccount() {
     //set active flight variable
     flight = JSON.parse(localStorage.getItem("currentbook"));
     document.getElementById("flighttype").innerHTML = flight.type;
+}
 
-    //set button events
-    
+function setTier(tr) {
+    flight.setFlightTier(tr)
 }
