@@ -1,4 +1,4 @@
-var flight;
+// var flight;
 
 //FLIGHT DATA------------------------------------------------------------------------------------------
 
@@ -20,6 +20,8 @@ class Flight {
      * @param rm is the room */
     setRoom(rm) {
         this.room = rm
+        console.log("sucessfully set room to " + rm)
+
     }
 
     /** Set the tier of flight that the user is booking
@@ -98,6 +100,7 @@ document.getElementById("flighttype") ? initializeAccount() : null;
 function initializeAccount() {
     //set active flight variable
     flight = JSON.parse(localStorage.getItem("currentbook"));
+    flight = new Flight(flight.dateBegin, flight.dateEnd, flight.type)
     document.getElementById("flighttype").innerHTML = flight.type;
 }
 

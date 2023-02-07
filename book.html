@@ -84,7 +84,7 @@
                     </tr>
                 </thead>
                 <tbody id="options">
-                    <tr class='option' id="trStand" onclick="flight.setFlightTier('standard')">
+                    <tr class='option' id="trStand" onclick="flight.setRoom('standard')">
                         <th>Standard</th>
                         <th class="grimagecontainer">
                             <img class="grimage" src="resources/images/DALLE Room1.png"></img>
@@ -100,7 +100,7 @@
                         </th>
                         <th>+ $0</th>
                     </tr>
-                    <tr class='option' id="trPremi" onclick="flight.setFlightTier('premium')">
+                    <tr class='option' id="trPremi" onclick="flight.setRoom('premium')">
                         <th>Premium</th>
                         <th class="grimagecontainer">
                             <img class="grimage" src="resources/images/DALLE Room3.png"></img>
@@ -117,7 +117,7 @@
                         </th>
                         <th>+ $250</th>
                     </tr>
-                    <tr class='option' id="trDlxe">
+                    <tr class='option' id="trDlxe" onclick="flight.setRoom('deluxe')">
                         <th>Deluxe</th>
                         <th class="grimagecontainer">
                             <img class="grimage" src="resources/images/DALLE Room2.png"></img>
@@ -149,5 +149,5 @@
 <script  src="js/validateLogin.js"></script>
 <!-- <script  src="js/loadflights.js"></script> -->
 <script>
-    
+    initializeAccount()
 </script>
