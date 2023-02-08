@@ -2280,3 +2280,17 @@ body.page-5 #pagination li:nth-of-type(5)*/
     transition:all ease-in-out 200ms;
 }
 
+
+
+.infos{
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.infos p{
+    width: 35vw;
+}

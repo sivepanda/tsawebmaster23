@@ -213,6 +213,7 @@ function register() {
         } else {
             console.log(i);
             setCookie("user" + i, JSON.stringify(user));
+            sessionStorage.setItem("currentUser", (user + i));
             localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
             // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
             window.open("your-account.html", "_self");
