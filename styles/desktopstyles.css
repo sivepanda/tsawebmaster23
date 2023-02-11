@@ -1989,11 +1989,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     float: left;
 }
 
-.thorover{
-    /* padding-right: 120%; */
-    /* border-right: 1px solid white; */
-}
-
 .thorinfo{
     border-left: 1px solid white;
     margin-left: 20%;
@@ -2128,6 +2123,23 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 20vw;
     /* background-color: rgba(0, 212, 255, .3); */
 }
+
+
+#confirmselect {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#confirmselect h1 {
+    font-size: 5vh;
+    text-align: center;
+}
+
+#confirmselect p {
+    text-align: center;
+}
+
 
 
 /* -------------------------------------------------------------------------- */

@@ -11,29 +11,37 @@ class Flight {
      * @param ty is the type of flight
      
     */
-    constructor(dtB, dtE, ty) {
+    constructor(dtB, dtE, ty, pr) {
         this.dateBegin = dtB;
         this.dateEnd = dtE;
         this.type = ty;
+        this.price = pr
     }
 
     /** Set the room that the user is booking
      * @param rm is the room */
     setRoom(rm, pr) {
         this.room = rm;
+        //change indicators to show new div
         document.getElementById("roomselect") ? document.getElementById("roomselect").style.display = "none" : null;
-        document.getElementById("flightselect") ? document.getElementById("flightselect").style.display = "block" : null;
+        document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "grid" : null;
         document.getElementById("staystep") ? document.getElementById("staystep").classList.toggle("activeb") : null;
-        document.getElementById("flightstep") ? document.getElementById("flightstep").classList.toggle("activeb") : null;
+        document.getElementById("confstep") ? document.getElementById("confstep").classList.toggle("activeb") : null;
         
         this.price += pr;
-        console.log("sucessfully set room to " + rm)
+
+        //populate div
+        this.viewReciept()
+
+
+        console.log("sucessfully set room to " + rm + " price " + this.price)
     }
 
-    /** Set the tier of flight that the user is booking
-     * @param tr is the class of flight */
-    setFlightTier(tr) {
-        this.flightTier = tr
+    viewReciept() {
+        document.getElementById("tyc") ? document.getElementById("tyc").innerHTML += ' ' + flight.type : null;
+        document.getElementById("tmc") ? document.getElementById("tmc").innerHTML += ' ' + flight.dateBegin + " - " + flight.dateEnd : null;
+        document.getElementById("rmc") ? document.getElementById("rmc").innerHTML +=  flight.room : null;
+        document.getElementById("prc") ? document.getElementById("prc").innerHTML +=  flight.price.toLocaleString('en-US') : null;
     }
 
     /**Format Flight data as HTML to inject into the available flight data */
@@ -44,7 +52,10 @@ class Flight {
     setBegin(dtB) {
         this.dateBegin = dtB
     }
-    
+
+    confRoom() {
+        localStorage.setItem("bookedflights", (localStorage.setItem("bookedflights") ? localStorage.setItem("bookedflights") + JSON.stringify(this): JSON.stringify(this)))
+    }
 }
 
 function newDayXApart(today, x) {
@@ -106,9 +117,9 @@ document.getElementById("flighttype") ? initializeAccount() : null;
 function initializeAccount() {
     //set active flight variable
     flight = JSON.parse(localStorage.getItem("currentbook"));
-    flight = new Flight(flight.dateBegin, flight.dateEnd, flight.type)
+    flight = new Flight(flight.dateBegin, flight.dateEnd, flight.type, flight.price)
     document.getElementById("flighttype") ? document.getElementById("flighttype").innerHTML = flight.type : null;
-    document.getElementById("flightselect") ? document.getElementById("flightselect").style.display = "none" : null;
+    document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
 }
 
 function setTier(tr) {

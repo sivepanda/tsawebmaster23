@@ -9,7 +9,7 @@ const liic2 = document.getElementById("liic2") ? document.getElementById("liic2"
 
 console.log((localStorage.getItem("visited") == "true") ? "none" : "block")
 
-document.getElementById("modalstart").style.display = (localStorage.getItem("visited") == "true") ? "none" : "block";
+document.getElementById("modalstart").style.display = (localStorage.getItem("visited") == "true") ? "none" : "inline-flex";
 
 function closeIntroModal() {
     document.getElementById("modalstart").style.display = 'none';

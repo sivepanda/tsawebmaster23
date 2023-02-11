@@ -22,6 +22,15 @@ class Flight {
         this.dateBegin = dtB;
         this.dateEnd = dtE;
         this.type = ty;
+    
+        if(ty == "Savitir") {
+            this.price = 20000
+        } else if (ty == "Aether") {
+            this.price = 100000
+        } else if (ty == "Heimdall") {
+            this.price = 10000
+        }
+    
     }
 
     /** Set the room that the user is booking
