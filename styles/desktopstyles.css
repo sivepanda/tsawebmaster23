@@ -2024,10 +2024,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     font-size: 8vh;
     padding-top: 0;
     padding-bottom: 2vh;
+    padding-left: 4vw;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 1vw;
-    text-align: center;
+    text-align: left;
+    color:rgba(83, 83, 83, 0.507)
+
 }
 
 .activeb {
@@ -2035,7 +2038,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-color: rgba(201, 201, 201, 0.3);
     border-radius: 20px;
     transition: all ease-in-out 200ms;
-    
 }
 
 #bp0 .content {
@@ -2132,9 +2134,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                LEISURE PAGE                                */
 /* -------------------------------------------------------------------------- */
 
-.inactiveb {
-    color:rgba(83, 83, 83, 0.507)
-}
+
 
 .leisy{
     height: 100vh;
