@@ -8,6 +8,8 @@ dates.set(6, "Friday");
 dates.set(7, "Saturday");
 
 
+//FLIGHT DATA------------------------------------------------------------------------------------------
+
 /** flight class that is used to save booked flights*/
 class Flight {
     /** contructor
@@ -26,6 +28,7 @@ class Flight {
      * @param rm is the room */
     setRoom(rm) {
         this.room = rm
+        console.log("sucessfully set room to " + rm)
     }
 
     /** Set the tier of flight that the user is booking
@@ -36,7 +39,7 @@ class Flight {
 
     /**Format Flight data as HTML to inject into the available flight data */
     format() {
-        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> <p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> </div> <button type='button' class='button-main book'>Book</button> </div>"
+        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> <p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> </div> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
     }
 
     setBegin(dtB) {

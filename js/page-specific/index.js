@@ -7,6 +7,15 @@ const liic0 = document.getElementById("liic0") ? document.getElementById("liic0"
 const liic1 = document.getElementById("liic1") ? document.getElementById("liic1") : console.log('liic1 not found');
 const liic2 = document.getElementById("liic2") ? document.getElementById("liic2") : console.log('liic2 not found');
 
+console.log((localStorage.getItem("visited") == "true") ? "none" : "block")
+
+document.getElementById("modalstart").style.display = (localStorage.getItem("visited") == "true") ? "none" : "block";
+
+function closeIntroModal() {
+    document.getElementById("modalstart").style.display = 'none';
+    localStorage.setItem("visited", "true");
+} 
+
 window.addEventListener("scroll", function(e) {
     if (elementInViewport(ic0)) {
         liic0.classList.add("scaletwo");

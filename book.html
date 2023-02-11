@@ -67,11 +67,11 @@
     <section id='bp0' class='contentbox full'>
     <h1 id="flighttype">Error. Please reload.</h1>
         <div class="steps">
-            <h1 class="bookstep activeb">1. Training</h1>
-            <h1 class="bookstep inactiveb">2. Flight</h1>
-            <h1 class="bookstep inactiveb">3. Stay</h1>
+            <h1  id='staystep' class="bookstep activeb">1. Stay</h1>
+            <h1 id='flightstep' class="bookstep">2. Flight</h1>
+            <h1 id='confstep' class="bookstep">3. Confirm</h1>
         </div>
-        <div class="content">
+        <div class="content" id="roomselect">
             <table>
                 <thead>
                     <tr>
@@ -84,7 +84,7 @@
                     </tr>
                 </thead>
                 <tbody id="options">
-                    <tr class='option' id="trStand">
+                    <tr class='option' id="trStand" onclick="flight.setRoom('standard', 0)">
                         <th>Standard</th>
                         <th class="grimagecontainer">
                             <img class="grimage" src="resources/images/DALLE Room1.png"></img>
@@ -100,7 +100,7 @@
                         </th>
                         <th>+ $0</th>
                     </tr>
-                    <tr class='option' id="trPremi">
+                    <tr class='option' id="trPremi" onclick="flight.setRoom('premium', 250)">
                         <th>Premium</th>
                         <th class="grimagecontainer">
                             <img class="grimage" src="resources/images/DALLE Room3.png"></img>
@@ -117,7 +117,7 @@
                         </th>
                         <th>+ $250</th>
                     </tr>
-                    <tr class='option' id="trDlxe">
+                    <tr class='option' id="trDlxe" onclick="flight.setRoom('deluxe', 500)">
                         <th>Deluxe</th>
                         <th class="grimagecontainer">
                             <img class="grimage" src="resources/images/DALLE Room2.png"></img>
@@ -138,6 +138,58 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="content" id="flightselect">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th> 
+                        <th>Amenities</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class='option' >
+                        <th>Coach</th>
+                        <th>200 sq. ft.</th>
+                        <th class="amen">
+                            <div>
+                                <p><i class="fa-solid fa-solid fa-person-swimming"></i>&nbsp;&nbsp;Pool access</p>
+                                <p><i class="fa-solid fa-mug-saucer"></i>&nbsp;&nbsp;Complementary Breakfast</p>
+                                <p><i class="fa-solid fa-panorama"></i>&nbsp;&nbsp;City View</p>
+                            </div>
+                        </th>
+                        <th>+ $0</th>
+                    </tr>
+                    <tr class='option' >
+                        <th>Prem</th>
+                        <th>200 sq. ft.</th>
+                        <th class="amen">
+                            <div>
+                                <p><i class="fa-solid fa-solid fa-person-swimming"></i>&nbsp;&nbsp;Pool access</p>
+                                <p><i class="fa-solid fa-mug-saucer"></i>&nbsp;&nbsp;Complementary Breakfast</p>
+                                <p><i class="fa-solid fa-panorama"></i>&nbsp;&nbsp;City View</p>
+                            </div>
+                        </th>
+                        <th>+ $0</th>
+                    </tr>
+                    <tr class='option' >
+                        <th>Pro</th>
+                        <th>200 sq. ft.</th>
+                        <th class="amen">
+                            <div>
+                                <p><i class="fa-solid fa-solid fa-person-swimming"></i>&nbsp;&nbsp;Pool access</p>
+                                <p><i class="fa-solid fa-mug-saucer"></i>&nbsp;&nbsp;Complementary Breakfast</p>
+                                <p><i class="fa-solid fa-panorama"></i>&nbsp;&nbsp;City View</p>
+                            </div>
+                        </th>
+                        <th>+ $0</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </section>
 
 </body>
@@ -149,5 +201,5 @@
 <script  src="js/validateLogin.js"></script>
 <!-- <script  src="js/loadflights.js"></script> -->
 <script>
-    
+    initializeAccount()
 </script>
