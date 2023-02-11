@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .loadtank {
+            position: fixed;
+            background: black;
+            margin: 0;
+            top: 0;
+            left: 0;
+            padding: 0;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1001;
+            display: grid;
+            --top-bottom-margins: calc(calc(100vh - 40vw) / 2);
+            grid-template-columns: 30vw 40vw 30vw;
+            grid-template-rows: var(--top-bottom-margins) 40vw var(--top-bottom-margins);
+        }
+        
+        .video-container {
+            /* align-self: center; */
+            padding-top: 56.25%;
+            height: 0;
+            align-content: center;
+            flex-direction: row;
+            display: flex;
+            height: 10vh;
+            /* position: relative; */
+        }
+        
+        #promo {
+            grid-row: 2;
+            grid-column: 2;
+            width: 40vw;
+            height: 40vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: clip; scroll-snap-type: y mandatory;">
+    <div class="loadtank" id="loadtank">
+        <div class="video-container">
+            <video muted loop infinite autoplay id="promo" class="loadingvid">
+                <source src="resources/videos/retro_loading.mov" type="video/mp4">
+              </video>
+        </div>
+    </div>
+
+    <div class="header fullheader" id="header">
+        <img class="headerlogo desktop" src="resources/images/retrograde_wh.png" alt="logo" />
+        <ul>
+            <li><a class='mnuele' href="index.html">Home</a> </li>
+            <li><a class='mnuele' href="trips.html">Trips</a></li>
+            <li><a class='mnuele' href="purchase.html">Purchase</a> </li>
+            <!-- <li><a class='mnuele' href="missions.html">Missions</a> </li> -->
+            <li><a class='mnuele' href="about.html">About Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="biggy contentbox">
+        <div class="bussy">
+            <div class="leftist">
+                <h1>Business</h1>
+                <p>Groundbreaking research? The next superhit film? Our beautiful facility, amazing technology, the latest equipment, and friendly and knowledgeable staff are what you need for your next endeavor. From our 3 specialized film sets that include a full 8K camera rigging, and access to dressing rooms, makeup rooms, green rooms, writers’ rooms', conference rooms, and the rest of our station's amenities to our sophisticated and versatile labs, which are ready and capable of handling research ranging from biology, to chemistry, and physics.</p>
+                <p class="seriously">Request a quote for pricing.</p>
+            </div>
+        </div>
+        <div class="bussy">
+            <div class="cardy">
+                <div class="quoty">
+                    <h1>Request a Quote</h1>
+                </div>
+                
+                <div class="yoyo">
+                    <label for="fnam">Company Name</label>
+                    <input type="text" id="fnam" name="companyname">
+                    <label for="fmail">Email</label>
+                    <input type="text" id="fmail" name="firstname">
+                    <label for="labs">Use Case</label>
+                    <select id="labs" name="labs">
+                        <option value="canada">Lab</option>
+                        <option value="usa">Studio</option>
+                    </select>
+
+                    <label for="subject">Describe your plan</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:25vh; margin-bottom: 2vh; color: white"></textarea>
+
+                    <input type="submit" value="Submit">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script async src="js/mobController.js"></script>
+<script async src="js/loadelements.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

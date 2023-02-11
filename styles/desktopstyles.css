@@ -2149,8 +2149,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-repeat: no-repeat;
     background-position: center;
     height: 55vh;
-    /* border: 2px solid purple; */
-    /* margin: 5% 5% 0 5%; */
 }
 
 .contenty{
@@ -2160,14 +2158,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 100vw;
     height: 45vh;
     background-color: black;
-    /* border: 1px solid purple; */
-    /* margin: 5% 5% 0 5%; */
 }
 
 .titly{
     display: grid;
     grid-template-columns: 44vw 44vw; 
-    /* grid-template-rows: 22.5vh; */
     grid-column-gap: 2vw;
   }
 
@@ -2179,8 +2174,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .LTitle{
     font-size: 42px;
-    /* color: black; */
-
 }
 
 .Lpara p{
@@ -2193,14 +2186,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 100vw;
 }
 
-.oofy{
-    /* display: grid;
-    justify-content: center; */
-}
-
 .picy{
-    /* display: grid;
-    justify-content: center; */
     width: 100vw;
     height: 100vh;
     background-image: url(../resources/images/SunriseInSpace.png);
@@ -2215,7 +2201,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     padding-top: 7.5vh;
     padding-bottom: 7.5vh;
     width: 100vw;
-    /* height: 15vh; */
     font-size: 48px;
     letter-spacing: 8vw;
 }
@@ -2236,29 +2221,23 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 
-.selection{
-    /* background: white; */
-
-}
-
 .listy{
     padding-left: 0px;
     margin-top: 0px;
-    /* border: 2px solid purple; */
-    
 }
 
 .listy li{
     display: grid;
     justify-content: center;
     align-items: center;
-    height: calc(64vh/4);
-    border-bottom: 1px solid white;
+    height: calc(64vh/4.2);
     width: 40vw;
     color: rgba(0,0,0,0);
-    /* margin-bottom: 12vh; */
+    margin-bottom: 1.016vh;
     list-style: none;
-   
+   border-radius: 15px;
+   background-color: rgba(0, 0, 0, 0.3);
+   transform: all ease-in-out 150ms;
 }
 
 .listy li h1{
@@ -2277,7 +2256,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     align-items: center;
 }
 
-.listy li h1:hover{
+.listy li:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all ease-in-out 150ms;
+    
+}
+
+.listy li:hover h1{
     font-size: 60px;
     transition:all ease-in-out 200ms;
 }
@@ -2286,6 +2271,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .infos{
     border-radius: 15px;
+    height: 64vh;
     background-color: rgba(0, 0, 0, 0.3);
     display: grid;
     justify-content: center;
@@ -2296,3 +2282,177 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .infos p{
     width: 35vw;
 }
+
+.tiery{
+    height: 20vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.tiersplit{
+    width: 38vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tier1card{
+    height: 64vh;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    justify-content: center;
+}
+
+.tier1card h1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.lop{
+    grid-row: 1;
+    display: grid;
+    justify-items: center;
+    
+}
+
+.lop h1{
+    font-size: 38px;
+    display: grid;
+    margin: 0px;
+}
+
+.lop p{
+    margin: 0px;
+}
+
+.middy{
+    display: grid;
+    justify-items: center;
+}
+
+#useless{
+    width: 100%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Business                                  */
+/* -------------------------------------------------------------------------- */
+
+.biggy{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 40vw 40vw;
+    width: 98vw;
+    grid-column-gap: 2vw;
+    height: 100vh;
+    /* padding-top: 8vh; */
+}
+
+.bussy{
+    height: 80vh;
+    display: grid;
+    /* border: 1px solid white; */
+}
+
+.leftist h1{
+    font-size: 48px;
+}
+
+.leftist p{
+    font-size: 28px;
+    line-height: 5.5vh;
+}
+
+.seriously{
+    margin-top: 3vh;
+}
+
+.cardy{
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.cardy h1{
+    font-size: 48px;
+    margin-bottom: 0px;
+    /* word-spacing: 1vw; */
+}
+
+.quoty{
+    display: grid;
+    justify-content: center;
+    height: 10vh;
+    margin-bottom: 3vh;
+    /* background-color: black; */
+}
+
+.yoyo{
+    display: grid;
+}
+
+
+input[type=text], select, textarea {
+    width: 35vw; /* Full width */
+    padding: 12px; /* Some padding */ 
+    background-color: black;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 1vh; /* Add a top margin */
+    margin-bottom: 2vh; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  input[type=text], select, textarea p{
+    color: white;
+    font-family: "sarabun", "sans-serif";
+  }
+
+  input[type=submit] {
+    width: 10vw;
+    background: linear-gradient(125deg, rgba(0, 22, 255, 1) 0%, rgba(255, 1, 245, 1) 100%);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 40px;
+    border: 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 3%;
+    font-family: "sarabun", "sans-serif";
+
+    /* font-family: 'Sarabun', 'sans-serif';
+    background: rgb(61, 0, 255);
+    background: linear-gradient(125deg, rgba(0, 22, 255, 1) 0%, rgba(255, 1, 245, 1) 100%);
+    border: 0px;
+    background-size: 200%;
+    background-position: left;
+    transition: ease-in-out 0.5s;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    align-self: center;
+    font-size: 2vh;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 30%;
+    padding-right: 30%;
+    border-radius: 40px;
+    margin-top: 1.5vh;
+    z-index: 200;
+    text-decoration: none; */
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    
+  }
