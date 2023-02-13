@@ -118,12 +118,14 @@ function createFlights() {
 /**Load the user booked flights */
 function loadBookedFlights() {
     var htmlInject = ''
-    if(localStorage.getItem("bookedflights") != null) {
-        const userFlights = JSON.parse(localStorage.getItem("bookedflights"));
-        for (const flight of userFlights) {
-            htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>" + flight.dateBegin + " - " + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
-        }
-    } else {
+    let i = 0
+    while(localStorage.getItem("bflight" + i) != null) {
+        let flight = JSON.parse(localStorage.getItem("bflight" + i));
+        if(flight.user == (JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username)
+        htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>" + flight.dateBegin + " - " + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
+        i++;
+    }
+    if (i == 0) {
         htmlInject += "<p>You haven't booked a vacation yet!</p>"
     }
     document.getElementById("yastatuses").innerHTML = htmlInject

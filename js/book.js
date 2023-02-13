@@ -1,5 +1,3 @@
-// var flight;
-
 //FLIGHT DATA------------------------------------------------------------------------------------------
 
 /** flight class that is used to save booked flights*/
@@ -16,6 +14,11 @@ class Flight {
         this.dateEnd = dtE;
         this.type = ty;
         this.price = pr
+    }
+
+    /**Attaches flight to a specific user */
+    setUser(u) {
+        this.user = u
     }
 
     /** Set the room that the user is booking
@@ -40,7 +43,7 @@ class Flight {
     viewReciept() {
         document.getElementById("tyc") ? document.getElementById("tyc").innerHTML += ' ' + flight.type : null;
         document.getElementById("tmc") ? document.getElementById("tmc").innerHTML += ' ' + flight.dateBegin + " - " + flight.dateEnd : null;
-        document.getElementById("rmc") ? document.getElementById("rmc").innerHTML +=  flight.room : null;
+        document.getElementById("rmc") ? document.getElementById("rmc").innerHTML +=  " " + captialFirst(flight.room) : null;
         document.getElementById("prc") ? document.getElementById("prc").innerHTML +=  flight.price.toLocaleString('en-US') : null;
     }
 
@@ -54,6 +57,7 @@ class Flight {
     }
 
     confRoom() {
+        this.setUser((JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username);
         localStorage.setItem(newestFlight(), JSON.stringify(this));
         window.open("your-account.html", "_self");     
     }
@@ -66,7 +70,9 @@ function newDayXApart(today, x) {
     return e;
 }
 
-
+function captialFirst(x) {
+    return x.charAt(0).toUpperCase() + x.slice(1);
+}
 
 // COOKIES --------------------------------------------------------
 
@@ -112,7 +118,7 @@ function getAndParseCookie(cname) {
 /**Return the name of the next flight */
 function newestFlight() {
     let i = 0
-    while(localStorage.getElementById("bflight" + i) != null) {
+    while(localStorage.getItem("bflight" + i) != null) {
         i++;
     }
     return ("bflight" + i);

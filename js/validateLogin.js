@@ -5,6 +5,8 @@ var correctPass = false;
 var userData;
 var cot;
 
+
+
 const userSetBox = document.getElementById("setUser") ? document.getElementById("setUser") : false;
 const pwrdSetBox = document.getElementById("newPass") ? document.getElementById("newPass") : false;
 const passCheckBox = document.getElementById("newPassCheck") ? document.getElementById("newPassCheck") : false;
@@ -21,6 +23,9 @@ class User {
 document.getElementById("yacwelcome") ? initializeAccount() : null;
 
 function initializeAccount() {
+    var guest = new User("Guest", "guest", "guest");
+    localStorage.setItem("userguest", JSON.stringify(guest));
+    
     let currUser = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
     document.getElementById("yacwelcome").innerHTML = "Welcome, " + currUser.fullname;
 }
@@ -187,6 +192,12 @@ function checkUserLS() {
     }
     document.getElementById("output").innerHTML = "User does not exist";
     return false;
+}
+
+function openGuest() {
+    sessionStorage.setItem("currentUser", "userguest");
+    document.getElementById("output").innerHTML = "Welcome, Guest";
+    window.open("your-account.html", "_self");
 }
 
 function register() {
