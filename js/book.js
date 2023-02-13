@@ -40,6 +40,7 @@ class Flight {
         console.log("sucessfully set room to " + rm + " price " + this.price)
     }
 
+    /**View confirmation reciept */
     viewReciept() {
         document.getElementById("tyc") ? document.getElementById("tyc").innerHTML += ' ' + flight.type : null;
         document.getElementById("tmc") ? document.getElementById("tmc").innerHTML += ' ' + flight.dateBegin + " - " + flight.dateEnd : null;
@@ -70,6 +71,7 @@ function newDayXApart(today, x) {
     return e;
 }
 
+/**Capitalizes first character of string */
 function captialFirst(x) {
     return x.charAt(0).toUpperCase() + x.slice(1);
 }

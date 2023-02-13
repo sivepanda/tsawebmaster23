@@ -96,10 +96,6 @@ function getAndParseCookie(cname) {
     return JSON.parse(getCookie(cname));
 }
 
-//Let's do some basic encryption on the cookies being used as a user/pass
-
-//IMPORT md5.js HERE (its imported now - JS functions are made public to each other when both are linked in the html) you may need to change the import type to async though)
-
 // FUNCTIONALITY --------------------------------------------------------
 
 function checkPassMatch() {
