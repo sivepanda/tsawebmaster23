@@ -74,7 +74,16 @@
                 <button type="button" class="button-main" id="yalogout" onclick="logOut()">Log Out</button>
                 <div id="yastatus" class="win-btn">
                     <h1>Your Vacations</h1>
-                    <p>You haven't booked a vacation yet!</p>
+                    <div id="yastatuses">
+                        <hr>
+                        <div class='flightinfo'>     
+                            <div class='flightdtnm'>
+                                <p class='type'>Type</p>
+                                <p class='date'>Date</p>
+                            </div> 
+                        </div>
+                    </div>
+                    
                 </div>
                 <div id="yaavail" class="win-btn">
                     <h1>Available Flights</h1>
@@ -96,4 +105,5 @@
 <script>
     initializeAccount();
     createFlights();
+    loadBookedFlights();
 </script>

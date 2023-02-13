@@ -54,7 +54,8 @@ class Flight {
     }
 
     confRoom() {
-        localStorage.setItem("bookedflights", (localStorage.setItem("bookedflights") ? localStorage.setItem("bookedflights") + JSON.stringify(this): JSON.stringify(this)))
+        localStorage.setItem(newestFlight(), JSON.stringify(this));
+        window.open("your-account.html", "_self");     
     }
 }
 
@@ -106,6 +107,15 @@ function cookieExists(cname) {
 
 function getAndParseCookie(cname) {
     return JSON.parse(getCookie(cname));
+}
+
+/**Return the name of the next flight */
+function newestFlight() {
+    let i = 0
+    while(localStorage.getElementById("bflight" + i) != null) {
+        i++;
+    }
+    return ("bflight" + i);
 }
 
 

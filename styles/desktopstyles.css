@@ -1389,6 +1389,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 300px;
 }
 
+#signin .field {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #signin label {
     font-size: 0.9rem;
     line-height: 2rem;
@@ -1807,6 +1814,30 @@ body.page-5 #pagination li:nth-of-type(5)*/
     align-self: flex-start;
     justify-self: flex-end;
 }
+
+#yastatus .flightinfo {
+    width: 32vw;
+}
+
+#yastatus hr {
+    width: 28vw;
+    border-top: 1px;
+}
+
+#yastatus .flightdtnm {
+    padding-left: 0;
+}
+
+#yastatus .type {
+    width: 32vw;
+    text-align: center;
+}
+
+#yastatus .date {
+    width: 32vw;
+    text-align: center;
+}
+
 
 .lbusin{
     display: grid;
@@ -2411,7 +2442,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 
-input[type=text], select, textarea {
+.bussy input[type=text], select, textarea {
     width: 35vw; /* Full width */
     padding: 12px; /* Some padding */ 
     background-color: black;
@@ -2423,12 +2454,12 @@ input[type=text], select, textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
-  input[type=text], select, textarea p{
+  .bussy input[type=text], select, textarea p{
     color: white;
     font-family: "sarabun", "sans-serif";
   }
 
-  input[type=submit] {
+  .bussy input[type=submit] {
     width: 10vw;
     background: linear-gradient(125deg, rgba(0, 22, 255, 1) 0%, rgba(255, 1, 245, 1) 100%);
     padding-top: 3%;
@@ -2465,6 +2496,6 @@ input[type=text], select, textarea {
   }
   
   /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
+  .bussy input[type=submit]:hover {
     
   }

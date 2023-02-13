@@ -69,8 +69,12 @@ function newDayXApart(today, x) {
     return e;
 }
 
+function captialFirst(x) {
+    return x.charAt(0).toUpperCase() + x.slice(1);
+}
 
-/**creates the set of upcoming flights */
+
+/**creates the set of upcoming flights and injects HTML */
 function createFlights() {
     var today = new Date();
     num = 0;
@@ -111,7 +115,21 @@ function createFlights() {
     document.getElementById("aflightlist").innerHTML = htmlInject
 }
 
-// Trigger a booking event
+/**Load the user booked flights */
+function loadBookedFlights() {
+    var htmlInject = ''
+    if(localStorage.getItem("bookedflights") != null) {
+        const userFlights = JSON.parse(localStorage.getItem("bookedflights"));
+        for (const flight of userFlights) {
+            htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>" + flight.dateBegin + " - " + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
+        }
+    } else {
+        htmlInject += "<p>You haven't booked a vacation yet!</p>"
+    }
+    document.getElementById("yastatuses").innerHTML = htmlInject
+}
+
+/**Trigger a booking event */ 
 function beginBook(val) {
     localStorage.setItem("currentbook", val); //alternative to cookies that are not persistent after browser close for testing
     window.open("book.html", "_self");
