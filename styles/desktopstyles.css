@@ -2351,13 +2351,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 98vw;
     grid-column-gap: 2vw;
     height: 100vh;
-    /* padding-top: 8vh; */
 }
 
 .bussy{
     height: 80vh;
     display: grid;
-    /* border: 1px solid white; */
 }
 
 .leftist h1{
@@ -2383,7 +2381,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .cardy h1{
     font-size: 48px;
     margin-bottom: 0px;
-    /* word-spacing: 1vw; */
 }
 
 .quoty{
@@ -2391,7 +2388,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     justify-content: center;
     height: 10vh;
     margin-bottom: 3vh;
-    /* background-color: black; */
 }
 
 .yoyo{
@@ -2400,15 +2396,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 
 input[type=text], select, textarea {
-    width: 35vw; /* Full width */
-    padding: 12px; /* Some padding */ 
+    width: 35vw;
+    padding: 12px;
     background-color: black;
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 1vh; /* Add a top margin */
-    margin-bottom: 2vh; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1vh; 
+    margin-bottom: 2vh; 
+    resize: vertical;
   }
 
   input[type=text], select, textarea p{
@@ -2429,30 +2425,132 @@ input[type=text], select, textarea {
     margin-top: 0px;
     margin-bottom: 3%;
     font-family: "sarabun", "sans-serif";
-
-    /* font-family: 'Sarabun', 'sans-serif';
-    background: rgb(61, 0, 255);
-    background: linear-gradient(125deg, rgba(0, 22, 255, 1) 0%, rgba(255, 1, 245, 1) 100%);
-    border: 0px;
-    background-size: 200%;
-    background-position: left;
-    transition: ease-in-out 0.5s;
-    color: white;
-    text-align: center;
-    font-weight: 400;
-    align-self: center;
-    font-size: 2vh;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 30%;
-    padding-right: 30%;
-    border-radius: 40px;
-    margin-top: 1.5vh;
-    z-index: 200;
-    text-decoration: none; */
   }
   
-  /* When moving the mouse over the submit button, add a darker green color */
+
   input[type=submit]:hover {
     
   }
+
+  /* -------------------------------------------------------------------------- */
+  /*                                  About Us                                  */
+  /* -------------------------------------------------------------------------- */
+
+.Tabouty{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    justify-content: center;
+    align-items: center;
+    
+    grid-column-gap: 2vw;
+    height: 100vh;
+    width: 100vw;
+}
+
+.abinfo{
+    /* background-color: white; */
+    height: 80vh;
+}
+
+.abinfo h1{
+    font-size: 42px;
+}
+
+.abinfo p{
+    margin-top: 5vh;
+    font-size: 18px;
+    line-height: 5vh;
+    max-width: 35vw;
+}
+
+.abbox{
+    /* background-color: white; */
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 30vh 30vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactbox {
+    position: relative;
+    /* margin-top: 3vh; */
+    /* height: 43vh; */
+    grid-column: 2;
+    grid-row: 1;
+    background-color: var(--dark-green);
+    margin-left: 10vw;
+    width: 30vw;
+}
+
+.contactbox h3 {
+    color: rgba(0, 0, 0, 0);
+    font-weight: 100;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 5vh;
+    margin-top: 0;
+    margin-left: 2vw;
+    margin-bottom: 0;
+}
+
+.infobox div {
+    display: flex;
+    margin: 0;
+    margin-left: 2vw;
+    padding: 0;
+    align-items: center;
+}
+
+.infobox div span {
+    width: 40px;
+    height: 40px;
+    background: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%
+}
+
+.infobox div p {
+    font-size: 3vh;
+    margin-left: 1em;
+    padding: 0;
+}
+
+.infobox div a {
+    margin-left: 1em;
+    font-size: 3vh;
+    color: white;
+    transition: all ease-in-out 250ms;
+    text-decoration: none;
+}
+
+.infobox div a:hover {
+    color: rgb(146, 146, 146);
+    transition: all ease-in-out 250ms;
+}
+
+.soc {
+    margin-top: 10px;
+    display: flex;
+}
+
+.soc li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.soc li a {
+    color: white;
+    transition: all ease-in-out 250ms;
+    font-size: 4vh;
+}
+
+.soc li a:hover {
+    color: rgb(146, 146, 146);
+    font-size: 4vh;
+    transition: all ease-in-out 250ms;
+}
