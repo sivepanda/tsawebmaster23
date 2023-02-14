@@ -2410,11 +2410,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .leftist h1{
-    font-size: 48px;
+    font-size:  6vh;
 }
 
 .leftist p{
-    font-size: 28px;
+    font-size: 3vh;
     line-height: 5.5vh;
 }
 
@@ -2430,7 +2430,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .cardy h1{
-    font-size: 48px;
+    font-size: 5vh;
     margin-bottom: 0px;
 }
 

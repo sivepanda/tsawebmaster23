@@ -28,10 +28,10 @@ h1 {
 }
 
 .contentbox {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -283,10 +283,17 @@ h1 {
 /*                                 INDEX PAGE                                 */
 /* -------------------------------------------------------------------------- */
 
+#modalstart{
+    
+    display: none !important;
+
+}
+
 #ic0 {
     background-image: url("../resources/images/pexels-pixabay-220201.jpg");
     height: 100vh;
-    margin-top: 0;
+    margin-top: 0px;
+    padding-top: 0px;
     background-position: right;
     background-size: cover;
 }
@@ -363,4 +370,8 @@ h1 {
     text-align: right;
     padding-left: 6vw;
     padding-right: 6vw;
+}
+
+.full{
+    margin-top: 0px;
 }
