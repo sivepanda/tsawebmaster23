@@ -83,7 +83,7 @@
                     <span>OR</span>
                     <hr class="bar">
                 </div>
-                <button type="button" class="button-main retuser" id='guest' onclick="checkUserLS()">Continue as Guest</button>
+                <button type="button" class="button-main retuser" id='guest' onclick="openGuest()">Continue as Guest</button>
 
 
                 </footer>
@@ -94,11 +94,11 @@
             <div id="signin" class="win-btn">
                 <h1 id="output">Sign in</h1>
                 <form>
-                    <div>
+                    <div class="field">
                         <label class="mail">Username</label>
                         <input type="text" class="text-input win-btn" id="user" required autofocus/>
                     </div>
-                    <div>
+                    <div class="field">
                         <label class="mail">Password</label>
                         <input type="password" class="text-input win-btn" id="pass" required/>
                     </div>
@@ -110,7 +110,7 @@
                 <footer id="main-footer">
                     <p>Copyright &copy; 2023 Retrograde Space Corporation. All Rights Reserved</p>
                     <div>
-                        <a href="terms-and-conditions.html">Terms Of Use & Privacy Policy</a>
+                        <a href="terms-and-conditions.html" target="_blank">Terms Of Use & Privacy Policy</a>
                     </div>
                 </footer>
             </div>

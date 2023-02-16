@@ -5,6 +5,8 @@ var correctPass = false;
 var userData;
 var cot;
 
+
+
 const userSetBox = document.getElementById("setUser") ? document.getElementById("setUser") : false;
 const pwrdSetBox = document.getElementById("newPass") ? document.getElementById("newPass") : false;
 const passCheckBox = document.getElementById("newPassCheck") ? document.getElementById("newPassCheck") : false;
@@ -21,6 +23,9 @@ class User {
 document.getElementById("yacwelcome") ? initializeAccount() : null;
 
 function initializeAccount() {
+    var guest = new User("Guest", "guest", "guest");
+    localStorage.setItem("userguest", JSON.stringify(guest));
+    
     let currUser = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
     document.getElementById("yacwelcome").innerHTML = "Welcome, " + currUser.fullname;
 }
@@ -90,10 +95,6 @@ function cookieExists(cname) {
 function getAndParseCookie(cname) {
     return JSON.parse(getCookie(cname));
 }
-
-//Let's do some basic encryption on the cookies being used as a user/pass
-
-//IMPORT md5.js HERE (its imported now - JS functions are made public to each other when both are linked in the html) you may need to change the import type to async though)
 
 // FUNCTIONALITY --------------------------------------------------------
 
@@ -189,6 +190,12 @@ function checkUserLS() {
     return false;
 }
 
+function openGuest() {
+    sessionStorage.setItem("currentUser", "userguest");
+    document.getElementById("output").innerHTML = "Welcome, Guest";
+    window.open("your-account.html", "_self");
+}
+
 function register() {
     var f = document.getElementById("regfields");
     var newUser = document.getElementById("newUser").value;
@@ -213,6 +220,7 @@ function register() {
         } else {
             console.log(i);
             setCookie("user" + i, JSON.stringify(user));
+            sessionStorage.setItem("currentUser", (user + i));
             localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
             // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
             window.open("your-account.html", "_self");

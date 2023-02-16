@@ -44,7 +44,7 @@
     </style>
 </head>
 
-<body id="mainpage" style="overflow-x: clip; scroll-snap-type: y mandatory;">
+<body style="overflow-x: clip; scroll-snap-type: y mandatory;">
     <div class="loadtank" id="loadtank">
         <div class="video-container">
             <video muted loop infinite autoplay id="promo" class="loadingvid">
@@ -63,41 +63,63 @@
             <li><a class='mnuele' href="about.html">About Us</a></li>
         </ul>
     </div>
-    </div>
-    <div>
-        <section class='contentbox videobox full' id="ya0">
-            <video autoPlay muted loop id='myVideo'>
-                    <source src="resources/videos/The_Earth_in_4k_.mp4" type="video/mp4"></source> <!-- remove controls -->
-            </video>
-            <div class="contentbox" id="ya0content">
-                <h1 id="yacwelcome">Welcome, </h1>
-                <button type="button" class="button-main" id="yalogout" onclick="logOut()">Log Out</button>
-                <div id="yastatus" class="win-btn">
-                    <h1>Your Vacations</h1>
-                    <div id="yastatuses">
+    
+    <div class="biggy contentbox">
+        <div class="bussy">
+            <div class="leftist">
+                <h1>Business</h1>
+                <p>Groundbreaking research? The next superhit film? Our beautiful facility, amazing technology, the latest equipment, and friendly and knowledgeable staff are what you need for your next endeavor. From our 3 specialized film sets that include a full 8K camera rigging, and access to dressing rooms, makeup rooms, green rooms, writers’ rooms', conference rooms, and the rest of our station's amenities to our sophisticated and versatile labs, which are ready and capable of handling research ranging from biology, to chemistry, and physics.</p>
+                <p class="seriously">Request a quote for pricing.</p>
+            </div>
+        </div>
+        <div class="bussy">
+            <div class="cardy">
+                <div class="quoty">
+                    <h1>Request a Quote</h1>
+                </div>
+                
+                <div class="yoyo">
+                    <label for="fnam">Company Name</label>
+                    <input type="text" id="fnam" name="companyname">
+                    <label for="fmail">Email</label>
+                    <input type="text" id="fmail" name="firstname">
+                    <label for="labs">Use Case</label>
+                    <select id="labs" name="labs">
+                        <option value="canada">Lab</option>
+                        <option value="usa">Studio</option>
+                    </select>
 
-                    </div>
-                    
+                    <label for="subject">Describe your plan</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:25vh; margin-bottom: 2vh; color: white"></textarea>
+
+                    <input type="submit" value="Submit">
                 </div>
-                <div id="yaavail" class="win-btn">
-                    <h1>Available Flights</h1>
-                    <div id="aflightlist">
-                        
-                    </div> <!--Auto populate this div with dates-->
-                </div>
-            </div>    
-            
-            <!-- <p id="yaslogan">Ad Astra</p> -->
+                
+            </div>
+        </div>
     </div>
 
 </body>
 
 <script async src="js/mobController.js"></script>
 <script async src="js/loadelements.js"></script>
-<script  src="js/validateLogin.js"></script>
-<script  src="js/loadflights.js"></script>
-<script>
-    initializeAccount();
-    createFlights();
-    loadBookedFlights();
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

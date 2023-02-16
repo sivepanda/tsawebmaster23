@@ -89,10 +89,8 @@ function loaded() {
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
         document.getElementById("ic0") ? document.querySelector("#ic0 p").classList.add("showp") : console.log('ic0 not found');
-        document.getElementById("modalstart") ? (document.getElementById("modalstart").style.display = development ?  'none' : null) : console.log('modalstart not found');
         
         // REENABLE BELOW
-        // document.getElementById("modalstart") && localStorage.getItem("visited") == "true" ? document.getElementById("modalstart").style.display = 'none' : null;
         document.getElementById("")
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
@@ -139,8 +137,8 @@ window.addEventListener("scroll", function(e) {
     }
 });
 
-for (page in document.getElementsByClassName("mnuele")) {
-    if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
-        document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
-    }
-}
+// for (page in document.getElementsByClassName("mnuele")) {
+//     if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {
+//         document.getElementsByClassName("mnuele")[page].classList.add('mnuact');
+//     }
+// }
