@@ -39,7 +39,7 @@ function resizeWindow() {
 window.addEventListener('load', (event) => {
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.dotmnu');
-    const mobile_list = document.querySelector(".newcirc");
+    const mobile_list = document.querySelector('.newcirc');
     
     console.log('mobile menu ready');
 
@@ -49,9 +49,8 @@ window.addEventListener('load', (event) => {
     ic3bp ? initialTextIBP3Height = ic3bp.offsetHeight : console.log("not index");
 
     menu_btn.addEventListener('click', function() {
-        // head.style.width = 100 + "vw";
         menu_btn.classList.toggle('is-active');
-        mobile_menu.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active-flex');
         mobile_list.classList.toggle('is-active');
     });
 });
