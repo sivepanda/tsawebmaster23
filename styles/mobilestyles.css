@@ -1000,14 +1000,16 @@ hr {
     padding: 0;
 }
 
-.ifoot p{
+.ifoot a{
     /* display: grid; */
     /* justify-content: center; */
+    text-decoration: none;
+    color: white;
     font-size: 12px;
     /* align-self: center; */
 }
 
-.ifoot p:hover{
+.ifoot a:hover{
     opacity: .7;
 }
 
