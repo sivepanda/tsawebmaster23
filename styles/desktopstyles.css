@@ -1523,6 +1523,22 @@ body.page-5 #pagination li:nth-of-type(5)*/
     transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
+#leis-info{
+    display: block;
+}
+
+#leis-heim{
+    display: none;
+}
+
+#leis-sav {
+    display: none;
+}
+
+#leis-aeth {
+    display: none;
+}
+
 .sideimage h1{
     margin-top: 10vh;
 }
@@ -2200,11 +2216,21 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-top: 3vh;
     display: block;
     place-self: center;
+    overflow-y: hidden;
     grid-row: 2;
     grid-column: 2;
     z-index: 5;
     opacity: 0.7;
 }
+
+#map {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#map::-webkit-scrollbar {
+    display: none;
+  }
 
 .mapcontainer .map {
     /* position: absolute; */
@@ -2296,23 +2322,29 @@ body.page-5 #pagination li:nth-of-type(5)*/
     height: 10vh;
     background-color: black;
     display: grid;
-    grid-template-columns: 6vw 6vw 6vw 6vw 6vw 6vw 6vw;
+    grid-template-columns: 6vw 6vw 6vw 6vw 6vw 6vw;
+    grid-template-rows: 10vh;
     justify-content: center;
     align-items: center;
 }
 
-.ifoot{
+.ifoot {
+    grid-row: 1;
     /* border-right: 1px solid red; */
 }
 
-.ifoot p{
+.ifoot a {
     display: grid;
+    grid-row: 1;
     justify-content: center;
-    font-size: 12px;
-    /* align-self: center; */
+    font-size: auto;
+    color: white;
+    text-decoration: none;
+
+    align-self: center;
 }
 
-.ifoot p:hover{
+.ifoot a:hover{
     opacity: .7;
 }
 
