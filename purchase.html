@@ -55,8 +55,15 @@
               </video>
         </div>
     </div>
+    
+    <div class="mobheader mobile">
+        <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" />
+        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+            <div class="bar"></div>
+        </button>
+    </div>
 
-    <div class="header fullheader" id="header">
+    <div class="header fullheader desktop" id="header">
         <img class="headerlogo" src="resources/images/retrograde_wh.png" alt="logo" />
         <ul>
             <li><a class='mnuele' href="index.html">Home</a> </li>
@@ -66,31 +73,32 @@
             <li><a class='mnuele' href="about.html">About Us</a></li>
         </ul>
     </div>
+
+    <div class="newcirc mobile">
+        <nav class="dotmnu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="trips.html">Trips</a></li>
+                <hr>
+                <li><a href="purchase.html">Purchase</a></li>
+                <hr>
+                <li><a href="missions.html">Missions</a></li>
+                <hr>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
     <!-- CONTENT -->
     <div id="large-header" class="large-header">
         <canvas id="demo-canvas"></canvas>
     </div>
 
     <div id='pc1' class="contentbox">
-        <div class="guestin">
-            <h1>Are you new?</h1>
-            <div id="signin" class="win-btn">
-
-                <button type="button" id='accreate' class="button-main retuser" onclick="openActModal()">Create an Account</button>
-                </form>
-                <div class="or">
-                    <hr class="bar">
-                    <span>OR</span>
-                    <hr class="bar">
-                </div>
-                <button type="button" class="button-main retuser" id='guest' onclick="openGuest()">Continue as Guest</button>
-
-
-                </footer>
-            </div>
-        </div>
         <div class="signin">
-            <h1>Are you a returning user?</h1>
+            <h1 class="desktop">Are you a returning user?</h1>
             <div id="signin" class="win-btn">
                 <h1 id="output">Sign in</h1>
                 <form>
@@ -112,6 +120,23 @@
                     <div>
                         <a href="terms-and-conditions.html" target="_blank">Terms Of Use & Privacy Policy</a>
                     </div>
+                </footer>
+            </div>
+        </div>
+        <div class="guestin">
+            <h1 class="desktop">Are you new?</h1>
+            <div id="signin" class="win-btn">
+
+                <button type="button" id='accreate' class="button-main retuser" onclick="openActModal()">Create an Account</button>
+                </form>
+                <div class="or desktop">
+                    <hr class="bar desktop">
+                    <span class="desktop">OR</span>
+                    <hr class="bar desktop">
+                </div>
+                <button type="button" class="button-main retuser" id='guest' onclick="openGuest()">Continue as Guest</button>
+
+
                 </footer>
             </div>
         </div>

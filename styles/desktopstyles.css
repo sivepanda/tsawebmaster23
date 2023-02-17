@@ -1864,7 +1864,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
     
 }
 
-.retry{
+.retry {
+    position: absolute;
+    top: 0;
     height: 100vh;
     width: 100vw;
 }
@@ -1876,16 +1878,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
+    position: absolute;
 }
 
 .tempy{
     text-align: center;
-    padding-top: 7.5vh;
-    padding-bottom: 7.5vh;
+    padding-top: 8vh;
+    padding-bottom: 0vh;
     width: 100vw;
-    font-size: 48px;
-    letter-spacing: 8vw;
+    font-size: 7vh;
 }
 
 .oofy p{
@@ -1894,8 +1895,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     line-height: 5vh;
 }
 
- .splity{
-    
+.splity{    
     display: grid;
     justify-content: center;
     grid-template-columns: 40vw 40vw;
@@ -1907,6 +1907,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .listy{
     padding-left: 0px;
     margin-top: 0px;
+}
+
+.rightyy {
+    grid-row: 1;
+    grid-column: 2;
 }
 
 .listy li{
@@ -1989,9 +1994,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .tier1card h1{
+    font-size: 5vh;
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.tier1card p {
+    font-size: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .lop{
