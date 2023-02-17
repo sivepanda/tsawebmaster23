@@ -10,9 +10,9 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: clip;
-    background-color: black;
+    background-color: #10141f;
     color: white;
-    font-family: 'Sarabun', 'sans-serif';
+    font-family: var(--body-font);
 }
 
 .desktop {
@@ -20,10 +20,204 @@ body {
 }
 
 :root {
-    --blueprple: #2301a9
+    --blueprple: #2301a9;
+    --darkglass: rgba(0, 0, 0, 0.3);
+    --lightglass: rgba(255, 255, 255, 0.3);
+    --corner-rad: 20px;
+    --head-font: "Orbitron", "sans-serif";
+    --body-font: 'Sarabun', 'sans-serif'
 }
 
 h1 {
-    font-family: "Orbitron", "sans-serif";
+    font-family: var(--head-font);
 }
 
+.contentbox {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    MENU                                    */
+/* -------------------------------------------------------------------------- */
+
+.mobheader {
+    z-index: 10;
+    top: 0;
+    height: 10vh;
+    width: 100vw;
+    overflow-y: hidden;
+    display: grid;
+    position: fixed;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 2vw 10vw 74vw 10vw 4vw;
+    background:  linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 1) 100%);
+}
+
+.headerlogo {
+    max-width:8vw;
+    height: 8vh;
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.hamburger {
+    grid-row: 1;
+    grid-column: 4;
+    justify-self: center;
+    align-self: center;
+    z-index: 1000;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 10;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 7px;
+    background-color: white;
+    margin: 10px 0px;
+    transition: 0.4s;
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.hamburger.is-active:before {
+    z-index: 1000;
+    background-color: var(--blueprple);
+    /* border-radius: 10px; */
+    transform: rotate(-45deg) translate(-5px, 23px);
+}
+
+.hamburger.is-active:after {
+    z-index: 1000;
+    background-color: var(--blueprple);
+    /* border-radius: 10px; */
+    transform: rotate(45deg) translate(0px, -21px);
+}
+
+.hamburger .bar {
+    width: 60px;
+}
+
+.hamburger.is-active .bar {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+    transform: translateX(30px);
+}
+
+.dotmnu {
+    display: none;
+    z-index: 0;
+    margin-left: 40vw;
+    /* display: block; */
+    position: fixed;
+    top: 0;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    height: 100vh;
+    background-color: var(--lightglass);
+    border-radius: var(--corner-rad) 0px 0px var(--corner-rad);
+    backdrop-filter: blur(5px);
+    width: 60vw;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: arrive ease-in-out 200ms;
+
+}
+
+.newcirc .is-active-flex {
+    animation: arrive ease-in-out 200ms;
+}
+
+@keyframes arrive {
+    0% {
+        margin-left: 100vw;
+    } 100% {
+        margin-left: 40vw;
+    }
+}
+
+@keyframes leave {
+    0% {
+        margin-left: 40vw;
+    } 100% {
+        margin-left: 100vw;
+    }
+}
+
+.is-active-flex {
+    display: flex !important;
+}
+
+.is-active {
+    display: block !important;
+}
+
+hr {
+    background-image: linear-gradient(45deg, rgb(75, 31, 87) 0%, rgb(16, 16, 204) 100%);
+    width: 40vw;
+    border: 0px;
+    height: 1px;
+}
+
+
+.dotmnu ul {
+    list-style: none;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dotmnu ul li {
+    margin-bottom: 3vh !important;
+    margin-top: 3vh !important;
+}
+
+.dotmnu ul li a {
+    display: block;
+    color: white;
+    font-family: var(--head-font);
+    font-size: 5vh;
+    text-decoration: none;
+}
+
+/* .dotmnu ul li:first-child {
+    margin-top: 0vh !important;
+} */
+
+.dotmnu ul li:last-child {
+    margin-bottom: 0vh !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 INDEX PAGE                                 */
+/* -------------------------------------------------------------------------- */
+
+#modalstart {
+    display: none !important;
+}
+
+#ic0 #myVideo {
+    display: none;
+}
