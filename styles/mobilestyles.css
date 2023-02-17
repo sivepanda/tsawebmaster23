@@ -49,6 +49,7 @@ h1 {
     height: 10vh;
     width: 100vw;
     overflow-y: hidden;
+    overflow-x: hidden;
     display: grid;
     position: fixed;
     align-content: center;
@@ -180,7 +181,7 @@ hr {
 .dotmnu ul {
     list-style: none;
     display: flex;
-    align-self: center;
+    /* align-self: center; */
     justify-self: center;
     flex-direction: column;
     text-align: center;
@@ -189,15 +190,15 @@ hr {
 }
 
 .dotmnu ul li {
-    margin-bottom: 3vh !important;
-    margin-top: 3vh !important;
+    margin-bottom: 2vh !important;
+    margin-top: 2vh !important;
 }
 
 .dotmnu ul li a {
     display: block;
     color: white;
     font-family: var(--head-font);
-    font-size: 5vh;
+    font-size: 5vw;
     text-decoration: none;
 }
 
@@ -220,4 +221,278 @@ hr {
 
 #ic0 #myVideo {
     display: none;
+}
+
+.contentbox{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: none; */
+}
+
+#ic0{
+    background-image: url(../resources/images/pexels-pixabay-220201.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.contentbox h1{
+    font-size: 6vw;
+    display:grid;
+    justify-content: center;
+    margin-bottom: 0px;
+
+}
+
+.contentbox p{
+    display:grid;
+    justify-content: center;
+    width: 80vw;
+}
+
+#ic1{
+    background-image: url(../resources/images/cancun.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+#ic2{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../resources/images/rock.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Trips                                   */
+/* -------------------------------------------------------------------------- */
+
+.lbusin{
+    /* display: grid;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+#busin{
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../resources/images/pexels-bruno-massao-2873486.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#leis{
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../resources/images/people-in-space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.content p{
+    width: 80vw;
+}
+
+.sideimage a{
+    font-style: none;
+    color: white;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 2.8vw;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+#busin a:hover{
+    opacity: .8;
+}
+
+#leis a:hover{
+    opacity: .8;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Leisure                                  */
+/* -------------------------------------------------------------------------- */
+
+.retry{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../resources/images/SunriseInSpace.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tier1card{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tier1card h1{
+    display: grid;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.middy{
+    display: grid;
+    justify-items: center;
+    width: 80vw;
+    line-height: 4vh;
+}
+
+.tiersplit{
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tiery{
+    height: 20vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.lop{
+    grid-row: 1;
+    display: grid;
+    justify-items: center;
+    
+}
+
+.lop h1{
+    font-size: 38px;
+    display: grid;
+    margin: 0px;
+}
+
+.lop p{
+    margin: 0px;
+}
+
+#useless{
+    width: 100%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Business                                  */
+/* -------------------------------------------------------------------------- */
+
+.biggy{
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+
+.bussy{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seriously{
+    margin-top: 3vh;
+    display: grid;
+    justify-content: left !important;
+}
+
+.leftist p{
+    line-height: 5vh;
+}
+
+.cardy{
+    background-color: var(--lightglass);
+    border-radius: var(--corner-rad);
+    display: grid;
+    justify-content: center;
+    width: 90vw;
+}
+
+.cardy h1{
+    font-size: 5vh;
+    margin-bottom: 0px;
+}
+
+.quoty{
+    display: grid;
+    justify-content: center;
+    height: 10vh;
+    margin-bottom: 3vh;
+}
+
+.quoty h1{
+    font-size: 7vw;
+}
+
+.bussy input[type=text], select, textarea {
+    width: 80vw;
+    padding: 12px;
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1vh; 
+    margin-bottom: 2vh; 
+    resize: vertical;
+  }
+
+  .bussy input[type=text], select, textarea p{
+    color: white;
+    font-family: "Sarabun", "sans-serif";
+  }
+
+  .bussy input[type=submit] {
+    width: 20vw;
+    background: linear-gradient(125deg, rgba(0, 22, 255, 1) 0%, rgba(255, 1, 245, 1) 100%);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 40px;
+    border: 0px;
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 3%;
+    font-family: "Sarabun", "sans-serif";
+  }
+
+  .yoyo{
+    display: grid;
 }
