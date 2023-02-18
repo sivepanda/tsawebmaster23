@@ -31,8 +31,8 @@ function resizeWindow() {
     } else {
         isMobile = true;
         styles.setAttribute('href', mobstyles);
-        window.scrollTo(0, 0);
-        document.getElementById("loadtank").remove();
+        // window.scrollTo(0, 0);
+        document.getElementById("loadtank") ? document.getElementById("loadtank").remove() : null;
     }
 }
 
