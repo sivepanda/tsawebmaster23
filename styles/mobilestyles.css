@@ -132,6 +132,7 @@ h1 {
     height: 100vh;
     background-color: var(--lightglass);
     border-radius: var(--corner-rad) 0px 0px var(--corner-rad);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     width: 60vw;
     /* display: flex; */
@@ -363,6 +364,10 @@ hr {
     display: grid;
     justify-content: center;
     font-size: 38px;
+}
+
+.tier1card p {
+    /* font-size: ; */
 }
 
 .middy{
