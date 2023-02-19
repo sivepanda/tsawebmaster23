@@ -2321,6 +2321,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 
 .footy{
+    margin-top: 15vh;
     height: 10vh;
     background-color: black;
     display: grid;

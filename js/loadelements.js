@@ -127,7 +127,7 @@ function elementInViewport(el) {
 
 //Scroll event for when the full navbar transforms into the compact one
 window.addEventListener("scroll", function(e) {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 150) {
         header.classList.remove("fullheader");
         header.classList.add("compactheader");
     } else {
