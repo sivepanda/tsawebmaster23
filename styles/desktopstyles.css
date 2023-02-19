@@ -15,6 +15,8 @@ body {
     --darkglass: rgba(0, 0, 0, 0.3);
     --lightglass: rgba(255, 255, 255, 0.3);
     --corner-rad: 20px;
+    --head-font-size: clamp(30px, 30px + 0.5vw, 40px);
+    --body-font-size: clamp(20px, 20px + 0.5vw, 40px);
 }
 
 .mobile {
@@ -31,9 +33,18 @@ body {
     overflow-y: hidden;
 }
 
-#myVideo {
-    width: 100vw;
-    z-index: -1;
+@media screen and (max-aspect-ratio: 16/9) {
+    #myVideo{
+        height: 100vh;
+        z-index: -1;
+    }  
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+    #myVideo{
+        width: 100vw;
+        z-index: -1;
+    }  
 }
 
 .showh1 {
@@ -280,14 +291,14 @@ html {
     margin-left: 50vw;
     margin-right: 6vw;
     margin-top: 10vh;
-    font-size: 1.5vw;
+    font-size: var(--body-font-size);
 }
 
 #ic0 h1 {
     margin-top: -1vh;
     padding-top: 0vh;
     margin-left: 50vw;
-    font-size: 3vw;
+    font-size: var(--head-font-size);
     position: absolute;
     font-weight: 500;
     /* opacity: 100; */
@@ -311,9 +322,9 @@ html {
 }
 
 #ic1 p {
-    font-size: 1vw;
+    font-size: 1.8vw;
     padding-left: 6vw;
-    width: 20vw;
+    width: 80vw;
     color: white;
     text-shadow: black 0px 0px 8px;
 }
@@ -336,9 +347,9 @@ html {
 }
 
 #ic2 p {
-    font-size: 1vw;
+    font-size: 1.8vw;
     padding-left: 6vw;
-    width: 20vw;
+    width: 80vw;
     color: white;
     text-shadow: black 0px 0px 8px;
 }
@@ -2360,10 +2371,3 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background: white;
     background: url(../resources/images/retro_a.png);
 }
-
-etro_a.png);
-}
-
-o_a.png);
-}
-
