@@ -21,7 +21,7 @@ const loader = new GLTFLoader();
 loader.load( '../resources/3d/SavitirII.glb', function ( gltf ) {
 
 	scene.add( gltf.scene );
-
+	
 }, undefined, function ( error ) {
 
 	console.error( error );
@@ -34,4 +34,5 @@ function animate() {
 	// cube.rotation.y += 0.01;
 	renderer.render( scene, camera );
 }
+
 animate();
