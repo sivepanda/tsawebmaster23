@@ -2165,17 +2165,18 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     grid-template-columns: 40vw 40vw;
     justify-content: center;
+    
     align-items: center;
 
     grid-column-gap: 2vw;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
 }
 
 .abinfo{
     /* background-color: white; */
     margin-top: 10vh;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 .abinfo h1{
@@ -2337,13 +2338,14 @@ body.page-5 #pagination li:nth-of-type(5)*/
     height: 10vh;
     background-color: black;
     display: grid;
-    grid-template-columns: 6vw 6vw 6vw 6vw 6vw 6vw;
+    grid-template-columns: calc(100vw/8) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9);
     grid-template-rows: 10vh;
     justify-content: center;
     align-items: center;
 }
 
 .ifoot {
+    /* margin-right: 12vw; */
     grid-row: 1;
     /* border-right: 1px solid red; */
 }
