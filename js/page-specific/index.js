@@ -31,3 +31,28 @@ window.addEventListener("scroll", function(e) {
         liic1.classList.remove("scaletwo");
     }
 });
+
+
+
+// let counter = 0;
+// let lastIntersectedDiv = null;
+
+// const counterElement = document.getElementById('counter');
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       if (lastIntersectedDiv === null || entry.target.offsetTop > lastIntersectedDiv.offsetTop) {
+//         counter++;
+//       } else {
+//         counter--;
+//       }
+//       counterElement.textContent = counter.toString();
+//       lastIntersectedDiv = entry.target;
+//     }
+//   });
+// });
+
+// const boxes = document.querySelectorAll('.box');
+// boxes.forEach(box => {
+//   observer.observe(box);
+// });
