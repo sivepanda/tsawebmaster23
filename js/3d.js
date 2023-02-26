@@ -26,7 +26,6 @@ camera.rotation.x = -0.5 * Math.PI
 
 renderer.render( scene, camera );
 
-
 // instantiate a loader
 const loader = new OBJLoader();
 
@@ -54,8 +53,6 @@ scene.add(pointLight, ambientLight)
 
 const lightHelper = new THREE.PointLightHelper(pointLight)
 scene.add(lightHelper)
-
-
 
 function animate() {
 	requestAnimationFrame( animate );
