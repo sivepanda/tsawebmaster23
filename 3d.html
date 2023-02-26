@@ -4,26 +4,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>My first three.js app</title>
 		<style>
 			body { margin: 0; }
 		</style>
 	</head>
+	<div class="loadtank" id="loadtank">
+        <div class="video-container">
+            <video muted loop infinite autoplay id="promo" class="loadingvid">
+                <source src="resources/videos/retro_loading.mov" type="video/mp4">
+              </video>
+        </div>
+    </div>
 	<body>
-
+		<canvas id="bg"></canvas>
 	</body>
 </html>
-
-<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
-<script type="importmap">
-  {
-    "imports": {
-      	"three": "https://unpkg.com/three@0.149.0/build/three.module.js",
-		"three/addons/": "https://unpkg.com/three@0.149.0/examples/jsm/"
-    }
-  }
-</script>
 
 <!-- <script type="module">
 
@@ -33,7 +28,8 @@
 
 </script> -->
 
-<script type="module" src="js/3d.js">
+<script type="module" src="js/3d.js"></script>
+<script src="js/loadelements.js"></script>
 	
 
 

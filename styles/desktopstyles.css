@@ -2393,3 +2393,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background: white;
     background: url(../resources/images/retro_a.png);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                     3D                                     */
+/* -------------------------------------------------------------------------- */
+
+#bg {
+    position: fixed !important ;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100vh !important;
+}
