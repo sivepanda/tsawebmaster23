@@ -7,7 +7,7 @@ import * as THREE from 'three';
 
 const scene = new THREE.Scene();
 
-scene.background = new THREE.Color( 0x000000 );
+scene.background = new THREE.Color( 0xff0000 );
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -18,13 +18,14 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
 
-camera.position.setX(90);
-camera.position.setY(0);
-camera.position.setZ(10);
-camera.rotation.x = -0.5 * Math.PI
+camera.position.setX(0);
+camera.position.setY(40);
+camera.position.setZ(20);
+// camera.rotation.x = -0.5 * Math.PI
 
 
 renderer.render( scene, camera );
+
 
 // instantiate a loader
 const loader = new OBJLoader();
