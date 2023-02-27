@@ -2355,11 +2355,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .footy{
     margin-top: 15vh;
-    height: 10vh;
+    height: 8vh;
     background-color: black;
     display: grid;
-    grid-template-columns: calc(100vw/8) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9);
-    grid-template-rows: 10vh;
+    grid-template-columns: calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) ;
+    grid-template-rows: 8vh;
     justify-content: center;
     align-items: center;
 }
@@ -2385,14 +2385,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     opacity: .7;
 }
 
-.yoyoyo{
-    display: grid;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    background: white;
-    background: url(../resources/images/retro_a.png);
-}
+
 
 /* -------------------------------------------------------------------------- */
 /*                                     3D                                     */
