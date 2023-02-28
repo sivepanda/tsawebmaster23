@@ -3,13 +3,16 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-// import './styles.'
+// animating POSES https://dev.to/pahund/animating-camera-movement-in-three-js-17e9
+//need to figure out in betweening and smooth scroll, then move to scroll triggered setpoints
 
 import * as THREE from 'three';
 
+import * as TWEEN from '@tweenjs/tween.js'
+
 const scene = new THREE.Scene();
 
-scene.background = new THREE.Color( 0x000000 );
+scene.background = new THREE.Color( 0x10141f );
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -24,32 +27,14 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-camera.position.set(0, 40, 20);
+camera.position.set(0, 10, 10);
 controls.update();
-// camera.rotation.x = -0.5 * Math.PI
+camera.rotation.z = -0.5 * Math.PI
 
 
 renderer.render( scene, camera );
 
-// const loader = new OBJLoader();
-
 const base = '../resources/3d/';
-
-// const mtlLoader = new MTLLoader();
-
-// mtlLoader.setMaterialOptions({normalizeRGB:true});
-
-// mtlLoader.load((base + 'SavitirII_gr.mtl'), function(materials) {	
-
-// 	materials.preload();
-
-// 	loader.setMaterials(materials);
-
-// 	loader.load((base + 'SavitirII_gr.obj'), function(object){
-// 		scene.add(object);
-// 		object.rotation.y = 0.75 * Math.PI
-// 	});
-// });
 
 const loader = new GLTFLoader();
 loader.load(
@@ -78,27 +63,49 @@ loader.load(
 )
 
 const pointLight = new THREE.PointLight(0xffffff);
-// pointLight.position.set(0, 25, 25);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 
 scene.add(pointLight, ambientLight)
 
 const lightHelper = new THREE.PointLightHelper(pointLight)
-scene.add(lightHelper)
+scene.add(lightHelper);
+
+/**This function is to set the different setpoints around the rocket that can be triggered */
+function setCameraSetpoint(setpoint) {
+	switch(setpoint) {
+		case 1: // full
+			camera.position.set(0, 10, 10);
+			camera.rotation.z = -0.5 * Math.PI;
+			break;
+		case 2: // engines
+			camera.position.set(-0.048373183157522676, -1.999832220796294, 3.6720805280807034)
+			camera.rotation.z = 0;
+	}
+}
 
 function animate() {
 	requestAnimationFrame( animate );
 	controls.update();
-
 	renderer.render( scene, camera );
 }
 
 animate();
 
+document.getElementById('sp').addEventListener("click", () => {
+	setCameraSetpoint(2);
+});
+
+document.getElementById('sc').addEventListener("click", () => {
+	// Data which will write in a file.
+	let data = "{  X: " + camera.position.x + ", Y: " + camera.position.y +  ", Z: " + camera.position.z + "  }"
+	
+	console.log(data)
+});
 
 
 
+	
 
 
 
