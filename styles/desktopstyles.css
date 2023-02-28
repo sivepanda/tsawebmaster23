@@ -2472,10 +2472,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
   S
   .popup h2 {
     margin-top: 0;
+    color:rgb(0, 0, 10);
   }
   
   .popup p {
     margin-bottom: 0;
+    color:rgb(0, 0, 10);
   }
   
   .popup-link {
