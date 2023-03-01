@@ -8,14 +8,14 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 import * as THREE from 'three';
 
-import * as TWEEN from '@tweenjs/tween.js'
+import TWEEN from 'tween';
 
 const scene = new THREE.Scene();
 
 scene.background = new THREE.Color( 0x10141f );
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
+console.log("test")
 const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector("#bg"),
 });
@@ -73,14 +73,42 @@ scene.add(lightHelper);
 
 /**This function is to set the different setpoints around the rocket that can be triggered */
 function setCameraSetpoint(setpoint) {
+	const cameraCoords = { pX: camera.position.x, pY: camera.position.y, pZ: camera.position.z, 
+		rX: camera.rotation.x, rY: camera.rotation.y, rZ: camera.rotation.z };
 	switch(setpoint) {
 		case 1: // full
-			camera.position.set(0, 10, 10);
-			camera.rotation.z = -0.5 * Math.PI;
+			const beginPosCoords = { pX: 0, pY: 10, pZ: 10,
+				rX: 0, rY: 0, rZ: (-0.5 * Math.PI) }
+				new TWEEN.Tween(cameraCoords)
+				.to(beginPosCoords)
+				.onUpdate(() => {
+					camera.position.set(cameraCoords.pX, cameraCoords.pY, cameraCoords.pZ);
+					camera.rotation.set(cameraCoords.rX, cameraCoords.rY, cameraCoords.rZ);
+				})
+				.start();
 			break;
 		case 2: // engines
-			camera.position.set(-0.048373183157522676, -1.999832220796294, 3.6720805280807034)
-			camera.rotation.z = 0;
+			const engPosCoords = { pX: -0.05, pY: -2, pZ: 3.7, 
+				rX: 0.5, rY: -0.01, rZ: 0.06 };
+			new TWEEN.Tween(cameraCoords)
+				.to(engPosCoords)
+				.onUpdate(() => {
+					camera.position.set(cameraCoords.pX, cameraCoords.pY, cameraCoords.pZ);
+					camera.rotation.set(cameraCoords.rX, cameraCoords.rY, cameraCoords.rZ);
+				})
+				.start();
+			break;
+		case 3: //midstage
+			const midPosCoords = { pX: 1.28, pY: 6.64, pZ: -4.62, 
+				rX: -3.01, rY: 0.39, rZ: 3.09 };
+				new TWEEN.Tween(cameraCoords)
+				.to(midPosCoords)
+				.onUpdate(() => {
+					camera.position.set(cameraCoords.pX, cameraCoords.pY, cameraCoords.pZ);
+					camera.rotation.set(cameraCoords.rX, cameraCoords.rY, cameraCoords.rZ);
+				})
+				.start();
+			break;
 	}
 }
 
@@ -88,19 +116,27 @@ function animate() {
 	requestAnimationFrame( animate );
 	controls.update();
 	renderer.render( scene, camera );
+	TWEEN.update();
 }
 
 animate();
 
+var nSet = 1;
+
 document.getElementById('sp').addEventListener("click", () => {
-	setCameraSetpoint(2);
+	console.log(nSet)
+	setCameraSetpoint(nSet);
+	nSet++;
+	nSet = (nSet > 3) ? 1 : nSet;
 });
 
 document.getElementById('sc').addEventListener("click", () => {
 	// Data which will write in a file.
-	let data = "{  X: " + camera.position.x + ", Y: " + camera.position.y +  ", Z: " + camera.position.z + "  }"
+	let posData = "{  X: " + camera.position.x + ", Y: " + camera.position.y +  ", Z: " + camera.position.z + "  }"
+	let rotData = "{  X: " + camera.rotation.x + ", Y: " + camera.rotation.y +  ", Z: " + camera.rotation.z + "  }"
 	
-	console.log(data)
+	console.log("Position", posData)
+	console.log("Rotation", rotData)
 });
 
 
