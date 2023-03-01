@@ -78,7 +78,7 @@ function setCameraSetpoint(setpoint) {
 	switch(setpoint) {
 		case 1: // full
 			const beginPosCoords = { pX: 0, pY: 10, pZ: 10,
-				rX: 0, rY: 0, rZ: (-0.5 * Math.PI) }
+				rX: 0, rY: 0, rZ: 0.2 }
 				new TWEEN.Tween(cameraCoords)
 				.to(beginPosCoords)
 				.onUpdate(() => {
@@ -99,10 +99,21 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 3: //midstage
-			const midPosCoords = { pX: 1.28, pY: 6.64, pZ: -4.62, 
-				rX: -3.01, rY: 0.39, rZ: 3.09 };
+			const midPosCoords = { pX: 4.041051621581688, pY: 3.7530026023575385, pZ: 0.9745105259344332, 
+					rX: -1.066, rY: 1.077, rZ: 1.01 };
 				new TWEEN.Tween(cameraCoords)
 				.to(midPosCoords)
+				.onUpdate(() => {
+					camera.position.set(cameraCoords.pX, cameraCoords.pY, cameraCoords.pZ);
+					camera.rotation.set(cameraCoords.rX, cameraCoords.rY, cameraCoords.rZ);
+				})
+				.start();
+			break;
+		case 4: //midstage
+			const wholePosCoords = {  pX: -2.6266243778586045, pY: 9.82136924406223, pZ: 13.056514838041975, 
+					rX: -0.09112650806065098, rY: -0.18526112344029286, rZ: -0.01683082264768163 };
+				new TWEEN.Tween(cameraCoords)
+				.to(wholePosCoords)
 				.onUpdate(() => {
 					camera.position.set(cameraCoords.pX, cameraCoords.pY, cameraCoords.pZ);
 					camera.rotation.set(cameraCoords.rX, cameraCoords.rY, cameraCoords.rZ);
@@ -127,16 +138,18 @@ document.getElementById('sp').addEventListener("click", () => {
 	console.log(nSet)
 	setCameraSetpoint(nSet);
 	nSet++;
-	nSet = (nSet > 3) ? 1 : nSet;
+	nSet = (nSet > 4) ? 1 : nSet;
 });
 
 document.getElementById('sc').addEventListener("click", () => {
 	// Data which will write in a file.
 	let posData = "{  X: " + camera.position.x + ", Y: " + camera.position.y +  ", Z: " + camera.position.z + "  }"
 	let rotData = "{  X: " + camera.rotation.x + ", Y: " + camera.rotation.y +  ", Z: " + camera.rotation.z + "  }"
-	
+	let data = "{ pX: " + camera.position.x + ", pY: " + camera.position.y + ", pZ: " + camera.position.z + ", rX: " + camera.rotation.x + ", rY: " + camera.rotation.y + ", rZ: " + camera.rotation.z + " }"
+	 
 	console.log("Position", posData)
 	console.log("Rotation", rotData)
+	console.log("Data", data)
 });
 
 
