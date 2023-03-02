@@ -110,8 +110,7 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 4: //midstage
-			const wholePosCoords = {  pX: -2.6266243778586045, pY: 9.82136924406223, pZ: 13.056514838041975, 
-					rX: -0.09112650806065098, rY: -0.18526112344029286, rZ: -0.01683082264768163 };
+			const wholePosCoords = { pX: -1.7889429186971835, pY: 3.2115692238692475, pZ: 13.61988483323175, rX: 0.6415454260078526, rY: -0.1440605609522377, rZ: 0.10682581834083991 };
 				new TWEEN.Tween(cameraCoords)
 				.to(wholePosCoords)
 				.onUpdate(() => {
@@ -140,6 +139,7 @@ document.getElementById('sp').addEventListener("click", () => {
 	nSet++;
 	nSet = (nSet > 4) ? 1 : nSet;
 });
+
 
 document.getElementById('sc').addEventListener("click", () => {
 	// Data which will write in a file.
