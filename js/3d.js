@@ -25,11 +25,16 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
 
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
-camera.position.set(0, 10, 10);
-controls.update();
-camera.rotation.z = -0.5 * Math.PI
+// camera.position.set(0, 10, 10);
+// // controls.update();
+// camera.rotation.z = -0.5 * Math.PI
+
+const initialPos = { pX: 0.037, pY: -4.475, pZ: 2.386, 
+	rX: 1.068, rY: -0.017, rZ: 0.030 }
+camera.position.set(initialPos.pX, initialPos.pY, initialPos.pZ);
+camera.rotation.set(initialPos.rX, initialPos.rY, initialPos.rZ);
 
 
 renderer.render( scene, camera );
@@ -69,7 +74,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(pointLight, ambientLight)
 
 const lightHelper = new THREE.PointLightHelper(pointLight)
-scene.add(lightHelper);
+// scene.add(lightHelper);
 
 /**This function is to set the different setpoints around the rocket that can be triggered */
 function setCameraSetpoint(setpoint) {
@@ -77,8 +82,8 @@ function setCameraSetpoint(setpoint) {
 		rX: camera.rotation.x, rY: camera.rotation.y, rZ: camera.rotation.z };
 	switch(setpoint) {
 		case 1: // full
-			const beginPosCoords = { pX: 0, pY: 10, pZ: 10,
-				rX: 0, rY: 0, rZ: 0.2 }
+			const beginPosCoords = { pX: 0.037, pY: -4.475, pZ: 2.386, 
+				rX: 1.068, rY: -0.017, rZ: 0.030 }
 				new TWEEN.Tween(cameraCoords)
 				.to(beginPosCoords)
 				.onUpdate(() => {
@@ -88,8 +93,8 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 2: // engines
-			const engPosCoords = { pX: -0.05, pY: -2, pZ: 3.7, 
-				rX: 0.5, rY: -0.01, rZ: 0.06 };
+			const engPosCoords = { pX: 4.844, pY: 1.209, pZ: 3.953, 
+				rX: -0.001, rY: 0.794, rZ: 0 };
 			new TWEEN.Tween(cameraCoords)
 				.to(engPosCoords)
 				.onUpdate(() => {
@@ -124,7 +129,7 @@ function setCameraSetpoint(setpoint) {
 
 function animate() {
 	requestAnimationFrame( animate );
-	controls.update();
+	// controls.update();
 	renderer.render( scene, camera );
 	TWEEN.update();
 }
@@ -134,6 +139,13 @@ animate();
 var nSet = 1;
 
 document.getElementById('sp').addEventListener("click", () => {
+	console.log(nSet)
+	setCameraSetpoint(nSet);
+	nSet++;
+	nSet = (nSet > 4) ? 1 : nSet;
+});
+
+addEventListener("wheel", (event) => {
 	console.log(nSet)
 	setCameraSetpoint(nSet);
 	nSet++;

@@ -2398,6 +2398,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
     padding: 0;
     margin: 0;
     height: 100vh !important;
+    width: 100vh !important;
+    overflow: hidden;
 }
 
 /* -------------------------------------------------------------------------- */
