@@ -138,19 +138,24 @@ animate();
 
 var nSet = 1;
 
-document.getElementById('sp').addEventListener("click", () => {
-	console.log(nSet)
-	setCameraSetpoint(nSet);
-	nSet++;
-	nSet = (nSet > 4) ? 1 : nSet;
-});
-
 addEventListener("wheel", (event) => {
 	console.log(nSet)
 	setCameraSetpoint(nSet);
 	nSet++;
 	nSet = (nSet > 4) ? 1 : nSet;
 });
+
+document.onkeydown = (e) => {
+	if(e.key  == 'ArrowLeft') {
+		setCameraSetpoint(nSet);
+		nSet--;
+		nSet = (nSet < 1) ? 4 : nSet;
+	} else if (e.key == 'ArrowRight') {
+		setCameraSetpoint(nSet);
+		nSet++;
+		nSet = (nSet > 4) ? 1 : nSet;
+	}
+}
 
 
 document.getElementById('sc').addEventListener("click", () => {
