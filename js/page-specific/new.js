@@ -1,13 +1,17 @@
 var t = false;
 
 // Show the popup when the link is clicked
-document.querySelector('.popup-link').addEventListener('click', function (e) {
-    e.preventDefault();
-    var popupId = this.getAttribute('data-popup');
-    document.querySelector(popupId).style.display = 'block';
-    t = true
-    console.log('p',t)
-});
+const newslinks = document.querySelectorAll('.popup-link');
+for(links of newslinks) {
+    links.addEventListener('click', function (e) {
+        e.preventDefault();
+        var popupId = this.getAttribute('data-popup');
+        document.querySelector(popupId).style.display = 'block';
+        t = true
+        console.log('p',t)
+    });
+}
+
 
 // Hide the popup when the user clicks outside of it
 window.addEventListener('click', function (e) {
@@ -18,11 +22,12 @@ window.addEventListener('click', function (e) {
                 console.log('j',e.target.contains(popups[i]));
                 return;
             } else {
-                console.log("poggers")
+                console.log("poggers");
                 popups[i].style.display = 'none';
             }
         }
     } else {
+        console.log("2poggers");
         t = false;
     }
 }, false);

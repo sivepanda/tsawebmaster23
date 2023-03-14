@@ -5,7 +5,21 @@
 	<head>
 		<meta charset="utf-8">
 		<style>
-			body { margin: 0; }
+			body { margin: 0; overflow: hidden; }
+			#sp { 
+				position: absolute;
+				left:0px !important;
+				top:25px;
+				left:auto;
+				z-index: 2;
+			}
+			#sc { 
+				position: absolute;
+				top:60px;
+				left:0px;
+				left:auto;
+				z-index: 2;
+			}
 		</style>
 	</head>
 	<!-- <div class="loadtank" id="loadtank">
@@ -17,6 +31,7 @@
     </div> -->
 	<body>
 		<canvas id="bg"></canvas>
+		<button id="sc">Save Current Camera Location</button>
 	</body>
 </html>
 
