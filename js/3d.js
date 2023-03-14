@@ -2,6 +2,8 @@ import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
+// import { CSS3DObject } from 'three/addons/renderers/CSS3DObject.js';
 
 // animating POSES https://dev.to/pahund/animating-camera-movement-in-three-js-17e9
 //need to figure out in betweening and smooth scroll, then move to scroll triggered setpoints
@@ -20,15 +22,26 @@ const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector("#bg"),
 });
 
+const cssrenderer = new CSS3DRenderer();
+cssrenderer.setSize(window.innerWidth, window.innerHeight);
+cssrenderer.domElement.style.position = 'absolute';
+cssrenderer.domElement.style.top = '0px';
+cssrenderer.domElement.style.pointerEvents = 'none';
+document.body.appendChild(cssrenderer.domElement);
+
+const div1 = document.createElement('div');
+var div1Content = "<h1>The Engines</h1> <p>The engines are pretty cool. They do some really cool things, like taking the astrotronauts to space without blowing them up.</p>"
+div1.innerHTML += div1Content;
+
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
 
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // camera.position.set(0, 10, 10);
-// // controls.update();
+controls.update();
 // camera.rotation.z = -0.5 * Math.PI
 
 const initialPos = { pX: 0.037, pY: -4.475, pZ: 2.386, 
@@ -75,6 +88,14 @@ scene.add(pointLight, ambientLight)
 
 const lightHelper = new THREE.PointLightHelper(pointLight)
 // scene.add(lightHelper);
+
+div1.style.backgroundColor = "green";
+
+var cssElementOne = new CSS3DObject(div1);
+cssElementOne.position.set(5, 5, 5);
+
+scene.add(cssElementOne);
+
 
 /**This function is to set the different setpoints around the rocket that can be triggered */
 function setCameraSetpoint(setpoint) {
@@ -131,19 +152,27 @@ function animate() {
 	requestAnimationFrame( animate );
 	// controls.update();
 	renderer.render( scene, camera );
+	cssrenderer.render( scene, camera );
 	TWEEN.update();
 }
+
+window.addEventListener('resize', () => {
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	cssrenderer.setSize(window.innerWidth, window.innerHeight);
+})
 
 animate();
 
 var nSet = 1;
 
-addEventListener("wheel", (event) => {
-	console.log(nSet)
-	setCameraSetpoint(nSet);
-	nSet++;
-	nSet = (nSet > 4) ? 1 : nSet;
-});
+// addEventListener("wheel", (event) => {
+// 	console.log(nSet)
+// 	setCameraSetpoint(nSet);
+// 	nSet++;
+// 	nSet = (nSet > 4) ? 1 : nSet;
+// });
 
 document.onkeydown = (e) => {
 	if(e.key  == 'ArrowLeft') {
