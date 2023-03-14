@@ -2117,7 +2117,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .cardy{
-    background-color: var(--lightglass);
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    /* background-color: rgba(169,169,169, .1); */
     border-radius: var(--corner-rad);
     display: grid;
     justify-content: center;
@@ -2354,20 +2356,25 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 
 .footy{
-    margin-top: 15vh;
-    height: 8vh;
+    position: relative;
+    bottom: 0;
+    /* margin-top: 15vh; */
+    height: 9vh;
     background-color: black;
     display: grid;
-    grid-template-columns: calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) ;
+    grid-template-columns: calc(100vw/7) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) ;
     grid-template-rows: 8vh;
     justify-content: center;
     align-items: center;
 }
 
 .ifoot {
-    /* margin-right: 12vw; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
     grid-row: 1;
-    /* border-right: 1px solid red; */
+    /* background: red; */
 }
 
 .ifoot a {
