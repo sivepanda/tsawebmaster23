@@ -2185,12 +2185,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
   .Tabouty{
     display: grid;
-    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 47vh 45vh;
     justify-content: center;
     
     align-items: center;
 
-    grid-column-gap: 2vw;
+    /* grid-column-gap: 2vw; */
     /* height: 100vh; */
     width: 100vw;
 }
@@ -2206,17 +2206,19 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .abinfo p{
-    margin-top: 5vh;
+    margin-top: 2vh;
     font-size: 18px;
     line-height: 5vh;
-    max-width: 35vw;
+    max-width: 90vw;
 }
 
 .abbox{
-    margin-top: 20vh;
-    height: 80vh;
+    /* margin-top: 20vh; */
+    /* height: 80vh; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* row-gap: 20vw; */
+    column-gap: 10vw;
     align-items: center;
     justify-content: center;
 }
