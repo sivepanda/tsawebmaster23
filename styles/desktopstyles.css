@@ -2118,7 +2118,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .cardy{
-    background-color: var(--lightglass);
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    /* background-color: rgba(169,169,169, .1); */
     border-radius: var(--corner-rad);
     display: grid;
     justify-content: center;
@@ -2184,12 +2186,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
   .Tabouty{
     display: grid;
-    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 47vh 45vh;
     justify-content: center;
     
     align-items: center;
 
-    grid-column-gap: 2vw;
+    /* grid-column-gap: 2vw; */
     /* height: 100vh; */
     width: 100vw;
 }
@@ -2205,17 +2207,19 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .abinfo p{
-    margin-top: 5vh;
+    margin-top: 2vh;
     font-size: 18px;
     line-height: 5vh;
-    max-width: 35vw;
+    max-width: 90vw;
 }
 
 .abbox{
-    margin-top: 20vh;
-    height: 80vh;
+    /* margin-top: 20vh; */
+    /* height: 80vh; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* row-gap: 20vw; */
+    column-gap: 10vw;
     align-items: center;
     justify-content: center;
 }
@@ -2355,20 +2359,25 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 
 .footy{
-    margin-top: 15vh;
-    height: 8vh;
+    position: relative;
+    bottom: 0;
+    /* margin-top: 15vh; */
+    height: 9vh;
     background-color: black;
     display: grid;
-    grid-template-columns: calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) ;
+    grid-template-columns: calc(100vw/7) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) ;
     grid-template-rows: 8vh;
     justify-content: center;
     align-items: center;
 }
 
 .ifoot {
-    /* margin-right: 12vw; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
     grid-row: 1;
-    /* border-right: 1px solid red; */
+    /* background: red; */
 }
 
 .ifoot a {
