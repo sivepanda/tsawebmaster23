@@ -16,6 +16,29 @@ function closeIntroModal() {
     localStorage.setItem("visited", "true");
 } 
 
+/**Triggered when element is in viewport
+ * @param el - parameter being watched
+ */
+function elementInViewport(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+
+    while (el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+    }
+
+    return (
+        top >= window.pageYOffset &&
+        left >= window.pageXOffset &&
+        (top + height) <= (window.pageYOffset + window.innerHeight) &&
+        (left + width) <= (window.pageXOffset + window.innerWidth)
+    );
+}
+
 window.addEventListener("scroll", function(e) {
     if (elementInViewport(ic0)) {
         liic0.classList.add("scaletwo");

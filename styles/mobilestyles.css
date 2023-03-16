@@ -32,7 +32,7 @@ html {
     --lightglass-x: rgba(16, 20, 31, 0.7);
     --corner-rad: 20px;
     --head-font: "Orbitron", "sans-serif";
-    --body-font: 'Sarabun', 'sans-serif'
+    --body-font: 'Sarabun', 'sans-serif';
 }
 
 p {
