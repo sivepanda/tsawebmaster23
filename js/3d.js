@@ -211,18 +211,6 @@ document.onkeydown = (e) => {
 }
 
 
-document.getElementById('sc').addEventListener("click", () => {
-	// Data which will write in a file.
-	let posData = "{  X: " + camera.position.x + ", Y: " + camera.position.y +  ", Z: " + camera.position.z + "  }"
-	let rotData = "{  X: " + camera.rotation.x + ", Y: " + camera.rotation.y +  ", Z: " + camera.rotation.z + "  }"
-	let data = "{ pX: " + camera.position.x + ", pY: " + camera.position.y + ", pZ: " + camera.position.z + ", rX: " + camera.rotation.x + ", rY: " + camera.rotation.y + ", rZ: " + camera.rotation.z + " }"
-	 
-	console.log("Position", posData)
-	console.log("Rotation", rotData)
-	console.log("Data", data)
-});
-
-
 
 	
 
