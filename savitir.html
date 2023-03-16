@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body { margin: 0; overflow: hidden; }
+			
+			.loadtank {
+            position: fixed;
+            background: black;
+            margin: 0;
+            top: 0;
+            left: 0;
+            padding: 0;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1002;
+            display: grid;
+            --top-bottom-margins: calc(calc(100vh - 40vw) / 2);
+            grid-template-columns: 30vw 40vw 30vw;
+            grid-template-rows: var(--top-bottom-margins) 40vw var(--top-bottom-margins);
+        }
+        
+        .video-container {
+            /* align-self: center; */
+            padding-top: 56.25%;
+            height: 0;
+            align-content: center;
+            flex-direction: row;
+            display: flex;
+            height: 10vh;
+            /* position: relative; */
+        }
+        
+        #promo {
+            grid-row: 2;
+            grid-column: 2;
+            width: 40vw;
+            height: 40vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+			
+		</style>
+	</head>
+	<div class="loadtank" id="loadtank">
+        <div class="video-container">
+            <video muted loop infinite autoplay id="promo" class="loadingvid">
+                <source src="resources/videos/retro_loading.mov" type="video/mp4">
+              </video>
+        </div>
+    </div>
+	<body>
+    <div class="mobheader mobile">
+      <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
+      <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+          <div class="bar"></div>
+      </button>
+  </div>
+  <div class="header fullheader desktop" id="header">
+      <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" />
+      <ul>
+          <li><a class='mnuele' href="index.html">Home</a> </li>
+          <li><a class='mnuele' href="trips.html">Trips</a></li>
+          <li><a class='mnuele' href="purchase.html">Purchase</a> </li>
+          <!-- <li><a class='mnuele' href="missions.html">Missions</a> </li> -->
+          <li><a class='mnuele' href="about.html">About Us</a></li>
+      </ul>
+  </div>
+  <div class="newcirc mobile">
+      <nav class="dotmnu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <hr>
+              <li><a href="trips.html">Trips</a></li>
+              <hr>
+              <!-- <li><a href="purchase.html">Purchase</a></li> -->
+              <!-- <hr>
+              <li><a href="missions.html">Missions</a></li> -->
+              <hr>
+              <li><a href="about.html">About</a></li>
+          </ul>
+      </nav>
+
+  </div>
+		<canvas id="bg"></canvas>
+		<!-- <button id="sc">Save Current Camera Location</button> -->
+		<div class="infopanels" id="infopanels">
+			<div class="divoverlay">	
+				<h1>Savitir</h1>
+				<p class="jumpy">Scroll down to learn more!</p>
+			</div>
+			<div class="divoverlay">
+				<h1>First Stage</h1>
+				<p>This is your transport module, where you will stay as you fly across space. Supplied with 3 powerful and efficient engines, this is the stage that powers most of your trip to the space station.
+					The three Hornet IV-Superlite engines, using standard Methlyox fuel, pull a mind-boggling <b>600N</b> of thrust, capable of 360 degree adjustment on any axis in seconds.
+				</p>
+			</div>
+			<div class="divoverlay">
+				<h1>Second Stage</h1>
+				<p>This is the first stage outside of the forces of Earth's atmosphere. With <b>4000 kN</b> (in a vacuum) of thrust on the single Dragonfly CPE (Compact Propulsion Engine) powered by our state-of-the-art nuclear fusion reactor cell, 
+					this stage will be one that is tough to remember, as the crucial burns are completed in mere milliseconds.
+				</p>
+			</div>
+			<div class="divoverlay">
+				<h1>First Stage</h1>
+				<p>This is the very first stage, the most power occurs within this burn. Using a combination of 4 Dragonfly HLEs (HeavyLift Engine), each powered by the fusion of hydrogen atoms in the heart of the Dragonfly reactors, we 
+					achieve a jaw-dropping <b>40,000 kN</b> at maximum thrust at sea level, setting its place as one of the world's most powerful first stages in a rocket, <i>ever.</i>
+				</p>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+<!-- <script >
+
+  import * as THREE from 'three';
+
+  const scene = new THREE.Scene();
+
+</script> -->
+
+<script async src="js/mobController.js"></script>
+<script src="js/page-specific/3dloadelements.js"></script>
+<script type="module" src="js/3d.js"></script>
+<script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
+<script src="js/page-specific/3dloadelements.js"></script>
+<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+
+<script type="importmap">
+  {
+    "imports": {
+		
+      	"three": "https://unpkg.com/three@0.149.0/build/three.module.js",
+      	"three/addons/": "https://unpkg.com/three@0.149.0/examples/jsm/"
+    }
+  }
+</script>
+	
+
+
+
+</script>
