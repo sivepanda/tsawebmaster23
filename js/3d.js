@@ -169,34 +169,41 @@ var nSet = 1;
 addEventListener("wheel", (event) => {
 	console.log(nSet)
 	if(event.deltaY > 0) {
-		nSet++;
-		if(nSet > 4) {
-			nSet = 1;
-			document.getElementById("infopanels").scrollTop = 0;
-
-		} else {
-			document.getElementById("infopanels").scrollBy(0, 5);
-		}
-		// nSet = (nSet > 4) ? 1 : nSet;
-		setCameraSetpoint(nSet);
+		move(1);
 	} else {
-		setCameraSetpoint(nSet);
-		nSet--;
-		nSet = (nSet < 1) ? 4 : nSet;
-		document.getElementById("infopanels").scrollBy(0, -5);
+		move(2);
 	}
 	
 });
 
+function move(p) {
+	switch(p) {
+		case 1:
+			nSet++;
+			if(nSet > 4) {
+				nSet = 1;
+				document.getElementById("infopanels").scrollTop = 0;
+	
+			} else {
+				document.getElementById("infopanels").scrollBy(0, 5);
+			}
+			// nSet = (nSet > 4) ? 1 : nSet;
+			setCameraSetpoint(nSet);
+			break;
+		case 2:
+			nSet--;
+			nSet = (nSet < 1) ? 4 : nSet;
+			setCameraSetpoint(nSet);
+			document.getElementById("infopanels").scrollBy(0, -5);
+			break;
+	}
+}
+
 document.onkeydown = (e) => {
 	if(e.key  == 'ArrowLeft') {
-		setCameraSetpoint(nSet);
-		nSet--;
-		nSet = (nSet < 1) ? 4 : nSet;
+		move(2);
 	} else if (e.key == 'ArrowRight') {
-		setCameraSetpoint(nSet);
-		nSet++;
-		nSet = (nSet > 4) ? 1 : nSet;
+		move(1);
 	}
 	else if(e.key == 's') {
 		// Data which will write in a file.
