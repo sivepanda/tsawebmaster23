@@ -2280,11 +2280,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
   .Tabouty{
     display: grid;
-    grid-template-rows: 47vh 45vh;
+    grid-template-rows: 47vh 47vh;
     justify-content: center;
-    
+    padding-bottom: 10vh;
     align-items: center;
-
+    grid-gap: 10vh;
     /* grid-column-gap: 2vw; */
     /* height: 100vh; */
     width: 100vw;
@@ -2297,12 +2297,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .abinfo h1{
-    font-size: 42px;
+    font-size: 4vh;
 }
 
 .abinfo p{
     margin-top: 2vh;
-    font-size: 18px;
+    font-size: 2vh;
     line-height: 5vh;
     max-width: 90vw;
 }
@@ -2347,7 +2347,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .mapcontainer {
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     display: block;
     place-self: center;
     overflow-y: hidden;
@@ -2371,7 +2371,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* grid-column: 2; */
     /* grid-row: 1; */
     border: none;
-    height: 35vh;
+    height: 40vh;
     width: 30vw;
     border-radius: var(--corner-rad);
     /* width: 100%; */
@@ -2454,8 +2454,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .footy{
     position: relative;
+    /* width: 100vw; */
+    z-index: 1000;
     bottom: 0;
-    /* margin-top: 15vh; */
+    /* margin-top: 10vh; */
     height: 8vh;
     background-color: black;
     display: grid;

@@ -25,10 +25,10 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
 
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // camera.position.set(0, 10, 10);
-// controls.update();
+controls.update();
 // camera.rotation.z = -0.5 * Math.PI
 
 const initialPos = { pX: -3.045818102784073, pY: 11.708038654057017, pZ: 9.13024895854543, rX: 0.12247009903293854, rY: -0.26363018841530583, rZ: 0.03206364892180843 }
@@ -42,7 +42,7 @@ const base = '../resources/3d/';
 
 const loader = new GLTFLoader();
 loader.load(
-	(base + 'SavitirII_gray.gltf'),
+	(base + 'SavitirII.gltf'),
 	function ( gltf ) {
 
 		scene.add( gltf.scene );
@@ -166,15 +166,15 @@ animate();
 
 var nSet = 1;
 
-addEventListener("wheel", (event) => {
-	console.log(nSet)
-	if(event.deltaY > 0) {
-		move(1);
-	} else {
-		move(2);
-	}
+// addEventListener("wheel", (event) => {
+// 	console.log(nSet)
+// 	if(event.deltaY > 0) {
+// 		move(1);
+// 	} else {
+// 		move(2);
+// 	}
 	
-});
+// });
 
 function move(p) {
 	switch(p) {
