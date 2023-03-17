@@ -1867,6 +1867,88 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 
 
+.busi{
+    height: 100vh;
+    background:  linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/SunriseInSpace.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.smenu{
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-top: 15vh;
+    grid-gap: 2vw;
+    grid-template-columns: calc(80vw/5) calc(80vw/5) calc(80vw/5) calc(80vw/5) calc(80vw/5);
+}
+
+.smenu h1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    margin: 0px;
+    height: 10vh;
+    background-color: var(--darkglass);
+   /* background:rgba(0, 0, 0, 0.71); */
+    border-radius: 10px;
+}
+
+.nothing{
+    background-color: transparent !important;
+    
+}
+
+.smenu h1:hover{
+    background-color: var(--lightglass);
+    transition: all ease-in-out 150ms;
+}
+
+.split{
+    display: grid;
+    grid-template-columns: 37.5vw 37.5vw;
+    grid-gap: 5vw;
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.extra{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkglass);
+    border-radius: 10px;
+}
+
+.cmony{
+    letter-spacing: 1vw;
+    /* margin: 0; */
+}
+
+.ally{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.5fr;
+    /* margin-bottom: 5vh; */
+}
+
+.soof{
+    background: transparent !important;
+}
+
+.pwe{
+    margin-left: 10%;
+    line-height: 5vh;
+    font-size: 1vw;
+    margin-right: 10%;
+}
 
 .leisy{
     height: 100vh;
@@ -2021,7 +2103,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .tiery{
-    height: 20vh;
+    height: 15vh;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -2031,7 +2113,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 38vw;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .tier1card{
@@ -2058,13 +2140,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .lop{
     grid-row: 1;
     display: grid;
-    justify-items: center;
-    
+    justify-items: center; 
 }
 
 .lop h1{
     font-size: 38px;
     display: grid;
+    /* justify-content: center !important; */
+    align-items: end;
+    /* align-self: center !important;  */
     margin: 0px;
 }
 
@@ -2078,10 +2162,18 @@ body.page-5 #pagination li:nth-of-type(5)*/
     overflow: scroll;
 }
 
+/* #useless h1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+} */
+
 #useless{
+    
+    height: 100%;
     width: 100%;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -2361,10 +2453,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     position: relative;
     bottom: 0;
     /* margin-top: 15vh; */
-    height: 9vh;
+    height: 8vh;
     background-color: black;
     display: grid;
-    grid-template-columns: calc(100vw/7) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) calc(100vw/9) ;
+    grid-template-columns: calc(100vw/12) calc(100vw/14) calc(100vw/14) calc(100vw/14) calc(100vw/14) calc(100vw/14) calc(100vw/14) ;
     grid-template-rows: 8vh;
     justify-content: center;
     align-items: center;
@@ -2380,6 +2472,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .ifoot a {
+    font-weight: 700;
+    font-size: .6vw;
     display: grid;
     grid-row: 1;
     justify-content: center;
