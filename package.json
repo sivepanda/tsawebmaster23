@@ -4,8 +4,7 @@
   "description": "Santa Fe TSA Webmaster Project",
   "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,12 +15,5 @@
   "bugs": {
     "url": "https://github.com/sivepanda/tsawebmaster23/issues"
   },
-  "homepage": "https://github.com/sivepanda/tsawebmaster23#readme",
-  "devDependencies": {
-    "vite": "^4.1.4"
-  },
-  "dependencies": {
-    "three": "^0.150.0",
-    "tween": "^0.9.0"
-  }
+  "homepage": "https://github.com/sivepanda/tsawebmaster23#readme"
 }

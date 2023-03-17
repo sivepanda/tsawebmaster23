@@ -1,8 +1,6 @@
 
 var development = false;
 
-var title;
-
 String.prototype.toTitleCase = function () {
     return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 };
@@ -11,7 +9,7 @@ String.prototype.toTitleCase = function () {
 
 //load fonts
 var fonts = document.createElement('link');
-// fonts.setAttribute('rel', 'stylesheet');
+fonts.setAttribute('rel', 'stylesheet');
 fonts.setAttribute('type', 'text/css');
 fonts.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Sarabun&display=swap');
 document.head.appendChild(fonts);
@@ -26,6 +24,7 @@ document.head.appendChild(icon);
 // create site title based on HTML hyperlink
 var path = window.location.pathname;
 path = path.substring(path.lastIndexOf("/") + 1)
+var title;
 title = path.substring(0, 1).toUpperCase() + path.substring(1, path.lastIndexOf("."))
 title = title.replace("-"," ").toTitleCase();
 title = (title == "Index" || title == "") ? "Home" : title;
@@ -37,40 +36,15 @@ var localWebStorage = window.localStorage;
 
 const header = document.getElementById("header");
 
-function closeBox(a, b, c, d) {
-    a = document.getElementById(a);
-    b = document.getElementById(b);
-    lsc = []
-    lsd = []
-    for (x of c) lsc.push(document.getElementById(x))
-    for (x of d) lsd.push(document.getElementById(x))
-        // a.style.display = a.style.display == "grid" ? "none" : "grid";
-    if (a.style.display == "grid") {
-        a.style.display = 'none';
-        b.classList.remove("undLineActive");
-        for (x of lsc) x.classList.remove("undLineActive");
-        for (x of lsd) x.style.display = "none";
-    } else {
-        a.style.display = 'grid';
-        b.classList.add("undLineActive");
-        for (x of lsc) x.classList.remove("undLineActive");
-        for (x of lsd) x.style.display = "none";
-    }
-    // for (x of lsc) x.classList.remove("undLineActive");
-    // for (x of lsd) x.style.display == "none";
-    // b.classList.toggle("undLineActive");
-    // console.log(b.classList.contains("undLineActive"));
-}
-
-
 //loading screen
 var isLoaded = false;
 var timerComplete = false;
 
-window.addEventListener('load', (event) => {
-    isLoaded = true;
-    loaded();
-});
+// window.addEventListener('load', (event) => {
+//     // console.log(xhr.loaded);
+//     isLoaded = true;
+//     loaded();
+// });
 
 
 
@@ -89,8 +63,8 @@ function loaded() {
         console.log('Page loaded successfully');
     }
 }
-
-var loadInterval = setInterval(function() {
+var loadInterval; 
+loadInterval = setInterval(function() {
     timerComplete = true;
     loaded();
 }, 1500);
