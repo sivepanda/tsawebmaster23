@@ -2650,3 +2650,81 @@ body.page-5 #pagination li:nth-of-type(5)*/
     width: 0px;
     background: transparent;
   }
+
+
+  /* -------------------------------------------------------------------------- */
+  /*                                  Missions                                  */
+  /* -------------------------------------------------------------------------- */
+
+  .both{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    padding-top: 10vh;
+    height: 90vh;
+    background-color: #181818;
+  }
+
+  .circles{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bb{
+    height: 10vh;
+    /* background: pink; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .b{
+    height: calc(100vh/60);
+    width: calc(100vh/60);
+    background: white;
+    transition: 100ms ease-in-out;
+    border-radius: 100%;
+    border: 1px solid magenta;
+  }
+
+  .bb p{
+
+    display: grid;
+    justify-content: center;
+    
+  }
+
+  .b:hover{
+    height: calc(100vh/50);
+    width: calc(100vh/50);
+    transition: 100ms ease-in-out;
+  }
+
+  .infoss{
+    /* background: yellow; */
+    display: grid;
+    justify-content: center;
+  }
+
+  .infoss h1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1vw;
+    background: linear-gradient(#B19CD7,  #C0AFE2,  #CEC2EB, #DDD5F3, #EBE8FC);
+    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+  }
+
+  .infoss p{
+    /* background: radial-gradient(circle at 10% 20%, rgb(64, 84, 178) 0%, rgb(219, 2, 234) 90%); */
+    background: radial-gradient(circle at 10% 20%, rgb(236, 158, 248) 0%, rgb(131, 83, 241) 90.1%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+    max-width: 60vw;
+    font-size: 1.2vw;
+    line-height: 6vh;
+    overflow: scroll;
+  }
