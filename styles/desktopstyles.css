@@ -2689,7 +2689,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
   }
 
   .bb p{
-
+    font-family: var(--head-font);
     display: grid;
     justify-content: center;
     
@@ -2705,6 +2705,24 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* background: yellow; */
     display: grid;
     justify-content: center;
+    overflow-y: scroll;
+    
+  }
+
+  .infoss::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  .infoss::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  .infoss::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
   }
 
   .infoss h1{
@@ -2726,5 +2744,5 @@ body.page-5 #pagination li:nth-of-type(5)*/
     max-width: 60vw;
     font-size: 1.2vw;
     line-height: 6vh;
-    overflow: scroll;
+    
   }
