@@ -1099,3 +1099,62 @@ hr {
     background: white;
     background: url(../resources/images/retro_a.png);
 }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  Missions                                  */
+/* -------------------------------------------------------------------------- */
+
+.all{
+    padding-top: 10vh;
+    display: grid;
+    justify-content: center;
+}
+
+.all h1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.dude p{
+    display: grid;
+    max-width: 80vw;
+    background: radial-gradient(circle at 10% 20%, rgb(236, 158, 248) 0%, rgb(131, 83, 241) 90.1%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-left: 10vw;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    
+    margin-right: 10vw;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    margin-left: 10vw;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+.seri{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 10vw 80vw 10vw;
+}
+
+.seri p{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

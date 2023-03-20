@@ -2288,7 +2288,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
     grid-gap: 2vh;
     /* grid-column-gap: 2vw; */
     /* height: 100vh; */
+    padding-bottom: 5vh;
     width: 100vw;
+
 }
 
 .abinfo p{
