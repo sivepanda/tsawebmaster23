@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: clip;
-    background-color: #10141f;
+    background-color: #181818;
     color: white;
     font-family: 'Sarabun', 'sans-serif';
 }
@@ -1526,7 +1526,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     font-size: 3vh;
     --light-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     --darker-darken-overlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-    background-color: green;
+    /* background-color: green; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1549,7 +1549,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #leis{
     background-image: var(--light-darken-overlay), url(../resources/images/people-in-space.jpg);
-    background-size: 130%;
+    background-size: 140%;
     transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
