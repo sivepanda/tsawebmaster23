@@ -2232,7 +2232,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* align-items: center; */
     justify-content: center;
     grid-template-rows: calc(84vh/3) calc(84vh/3) calc(84vh/3);
-    grid-gap: 2vh;
+    grid-gap: 4vh;
 }
 
 .dig{
