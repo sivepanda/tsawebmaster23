@@ -2765,10 +2765,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .popup {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 25vh;
+    height: 50vh;
+    overflow-y: scroll;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;

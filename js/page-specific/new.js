@@ -1,12 +1,12 @@
 var t = false;
 
 // Show the popup when the link is clicked
-const newslinks = document.querySelectorAll('.popup-link');
+const newslinks = document.querySelectorAll('.timeline-item');
 for(links of newslinks) {
     links.addEventListener('click', function (e) {
         e.preventDefault();
         var popupId = this.getAttribute('data-popup');
-        document.querySelector(popupId).style.display = 'block';
+        document.querySelector(popupId) ? document.querySelector(popupId).style.display = 'block' : console.log(popupId, 'does not exist');
         t = true
         console.log('p',t)
     });
