@@ -1634,8 +1634,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 
 #bp0 {
+    background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/pexels-pixabay-355465.jpg);
     display: grid;
-    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-columns: 10vw 60vw 30vw;
     grid-template-rows: 10vh 5vh 10vh 75vh;
     --imgsize: 9vw;
 }
@@ -1726,18 +1727,26 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .steps {
     align-self: center;
-    grid-row: 4;
+    grid-row: 1 / span 4;
     grid-column: 1;
+    /* margin-left: 5vw; */
+    display: grid;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+
 }
+
+
 
 .bookstep {
     font-size: 8vh;
-    padding-top: 0;
-    padding-bottom: 2vh;
-    padding-left: 4vw;
+    /* padding-top: 0; */
+    /* padding-bottom: 2vh; */
+    /* padding-left: 4vw; */
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 1vw;
     text-align: left;
     color:rgba(83, 83, 83, 0.507)
 
@@ -1751,12 +1760,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #bp0 .content {
-    background-color: white;
+    background-color: var(--darkglass);
     color: #000;
     align-self: center;
     justify-self: center;
     border-radius: 10px;
-    width:60vw;
+    width: 80vw;
     height: 65vh;
     grid-row: 4;
     grid-column: 2 / span 3;
@@ -1772,7 +1781,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #bp0 table {
-    width: 60vw;
+    width: 80vw;
     border-collapse: collapse;
 }
 
@@ -1782,6 +1791,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #bp0 thead th {
+    background-color: var(--lightglass);
     font-size: 2vh;
     height: 1em;
     font-weight: bold;
@@ -1809,11 +1819,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #bp0 tr {
+    color: white;
+    width: 100%;
     transition: all ease-in-out 200ms;
 }
 
 #bp0 tr:hover {
-    background-color: #8f8f8f;
+    background-color: var(--lightglass);
     transition: all ease-in-out 200ms;
 }
 
@@ -1835,11 +1847,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
     text-align: left;
     padding-top: 0;
     padding-bottom: 0;
-    width: 20vw;
+    width: 40%;
     /* background-color: rgba(0, 212, 255, .3); */
 }
 
 .inf {
+    color:white;
     display: flex;
     flex-direction: column;
 }
@@ -1878,8 +1891,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-position: center;
 }
 
-.smenu{
-    
+.smenu {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -1891,7 +1903,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     grid-template-columns: calc(80vw/5) calc(80vw/5) calc(80vw/5) calc(80vw/5) calc(80vw/5);
 }
 
-.smenu h1{
+.smenu h1 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -1903,17 +1915,17 @@ body.page-5 #pagination li:nth-of-type(5)*/
     border-radius: 10px;
 }
 
-.nothing{
+.nothing {
     background-color: transparent !important;
     
 }
 
-.smenu h1:hover{
+.smenu h1:hover {
     background-color: var(--lightglass);
     transition: all ease-in-out 150ms;
 }
 
-.split{
+.split {
     display: grid;
     grid-template-columns: 37.5vw 37.5vw;
     grid-gap: 5vw;
@@ -1951,6 +1963,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
     line-height: 5vh;
     font-size: 1vw;
     margin-right: 10%;
+}
+
+#leis-info p {
+    grid-column: 1 / span 2;
+    font-size: 1.5vw;
+    width: 80vw;
 }
 
 .leisy{
@@ -2495,6 +2513,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                     3D                                     */
 /* -------------------------------------------------------------------------- */
 
+#bg {
+    margin-left: 25vw;
+}
+
 #sp { 
     position: absolute;
     left:0px !important;
@@ -2518,7 +2540,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
     scroll-snap-type: y mandatory;
     position: relative;
     margin-top: -90vh;
-    background-color: var(--lightglass);
+    padding-left: 3vw;
+    /* background-color: var(--lightglass); */
     border-radius: 0px var(--corner-rad) var(--corner-rad) 0px;
     z-index: 1000;
     height: 80vh;
@@ -2558,7 +2581,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .divoverlay p {
     padding-left: 1vw;
-    padding-right: 1vw;
+    padding-right: 2vw;
+    line-height: 2;
+
 }
 
 .infopanels::-webkit-scrollbar {
@@ -2665,11 +2690,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     grid-template-columns: 20vw 80vw;
     padding-top: 10vh;
-    height: 90vh;
+    height: auto;
+    min-height: 90vh;
     background-color: #181818;
 }
 
 .circles{
+    height: 90vh;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -2704,6 +2731,26 @@ body.page-5 #pagination li:nth-of-type(5)*/
     transition: 400ms all ease-in-out;
 }
 
+.bb:hover {
+    height: 12.5vh;
+    margin-left: -0.25vh;
+    margin-bottom: -0.25vh;
+    margin-top: -0.25vh;
+    width: 12.5vh;
+    background: var(--lightglass);
+    transition: 400ms all ease-in-out;
+}
+
+.bb:hover p {
+    transition: 400ms all ease-in-out;
+    color: #c9c9c9;
+}
+
+.bb:hover .b {
+    transition: 400ms all ease-in-out;
+    filter: invert(0.8);
+}
+
 .bactive p {
     transition: 400ms all ease-in-out;
     color: white !important;
@@ -2711,7 +2758,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .bactive .b {
     transition: 400ms all ease-in-out;
-    filter: invert(1);
+    filter: invert(1) !important;
 }
 
 .bb p {
@@ -2760,7 +2807,8 @@ transition: 100ms ease-in-out;
     background-clip: text;
     -webkit-background-clip: text;
 
-    max-width: 60vw;
+    /* max-width: 60vw; */
+    padding-right: 5vw;
     font-size: 1.2vw;
     line-height: 6vh;
 

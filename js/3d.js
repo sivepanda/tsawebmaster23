@@ -15,14 +15,14 @@ const scene = new THREE.Scene();
 
 scene.background = new THREE.Color( 0x181818 );
 
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, (window.innerWidth / 2) / window.innerHeight, 0.1, 1000 );
 console.log("test")
 const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector("#bg"),
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( (window.innerWidth / 2), window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
 
 // const controls = new OrbitControls(camera, renderer.domElement);
@@ -31,7 +31,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 // controls.update();
 // camera.rotation.z = -0.5 * Math.PI
 
-const initialPos = { pX: 51.01524580786668, pY: 24.769041060658182, pZ: 3.206434156862591, rX: -2.1372814386131957, rY: 1.5289153750073772, rZ: 2.137678770503264 }
+const initialPos = { pX: 51.01524580786668, pY: 24.769041060658182, pZ: 10.206434156862591, rX: -2.1372814386131957, rY: 1.5289153750073772, rZ: 2.137678770503264 }
 camera.position.set(initialPos.pX, initialPos.pY, initialPos.pZ);
 camera.rotation.set(initialPos.rX, initialPos.rY, initialPos.rZ);
 
@@ -137,7 +137,7 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 4: //midstage
-			const wholePosCoords = { pX: 17.63753837917099, pY: -13.922313862705211, pZ: 1.2919511048835266, rX: 1.5438197439977774, rY: 0.7608679890233997, rZ: -1.5316847970593994 };
+			const wholePosCoords = { pX: 17.63753837917099, pY: -13.922313862705211, pZ: 5.2919511048835266, rX: 1.5438197439977774, rY: 0.7608679890233997, rZ: -1.5316847970593994 };
 				new TWEEN.Tween(cameraCoords)
 				.to(wholePosCoords)
 				.onUpdate(() => {

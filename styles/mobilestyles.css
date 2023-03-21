@@ -1105,6 +1105,67 @@ hr {
 /*                                  Missions                                  */
 /* -------------------------------------------------------------------------- */
 
+.circles{
+    height: 20vh;
+    gap: 2vw;
+    width: 130vw;
+    overflow-x: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bb {
+    height: 19vw;
+    width: 19vw;
+    background: var(--darkglass);
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 1fr; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 200ms all ease-in-out;
+}
+
+.b {
+    height: calc(100vh/20);
+    width: calc(100vh/20);
+    filter: invert(0.5);
+}
+
+.bactive {
+    height: 13vh;
+    margin-left: -0.5vh;
+    margin-bottom: -0.5vh;
+    margin-top: -0.5vh;
+    width: 13vh;
+    background: var(--lightglass);
+    transition: 400ms all ease-in-out;
+}
+.bactive p {
+    transition: 400ms all ease-in-out;
+    color: white !important;
+}
+
+.bactive .b {
+    transition: 400ms all ease-in-out;
+    filter: invert(1) !important;
+}
+
+.bb p {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: var(--head-font);
+    color: #65636a;
+    font-size: 3vw;
+    display: grid;
+    justify-content: center;
+
+}
+
 .all{
     padding-top: 10vh;
     display: grid;

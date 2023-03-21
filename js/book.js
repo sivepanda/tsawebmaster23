@@ -28,8 +28,8 @@ class Flight {
         //change indicators to show new div
         document.getElementById("roomselect") ? document.getElementById("roomselect").style.display = "none" : null;
         document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "grid" : null;
-        document.getElementById("staystep") ? document.getElementById("staystep").classList.toggle("activeb") : null;
-        document.getElementById("confstep") ? document.getElementById("confstep").classList.toggle("activeb") : null;
+        document.getElementById("staystep") ? document.getElementById("staystep").classList.remove("bactive") : null;
+        document.getElementById("confstep") ? document.getElementById("confstep").classList.add("bactive") : null;
         
         this.price += pr;
 
@@ -62,6 +62,17 @@ class Flight {
         localStorage.setItem(newestFlight(), JSON.stringify(this));
         window.open("your-account.html", "_self");     
     }
+}
+
+function goBack() {
+    document.getElementById("tyc") ? document.getElementById("tyc").innerHTML = 'Type' : null;
+    document.getElementById("tmc") ? document.getElementById("tmc").innerHTML = 'Time:' : null;
+    document.getElementById("rmc") ? document.getElementById("rmc").innerHTML =  "Room:" : null;
+    document.getElementById("prc") ? document.getElementById("prc").innerHTML =  "Price: $" : null;
+    document.getElementById("roomselect") ? document.getElementById("roomselect").style.display = "grid" : null;
+    document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
+    document.getElementById("staystep") ? document.getElementById("staystep").classList.add("bactive") : null;
+    document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
 }
 
 function newDayXApart(today, x) {
@@ -138,6 +149,8 @@ function initializeAccount() {
     flight = new Flight(flight.dateBegin, flight.dateEnd, flight.type, flight.price)
     document.getElementById("flighttype") ? document.getElementById("flighttype").innerHTML = flight.type : null;
     document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
+    document.getElementById("staystep") ? document.getElementById("staystep").classList.add("bactive") : null;
+        document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
 }
 
 function setTier(tr) {
