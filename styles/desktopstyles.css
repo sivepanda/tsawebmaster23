@@ -2204,13 +2204,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .biggy{
     display: grid;
+    padding-top: 12vh;
     justify-content: center;
     align-items: center;
     /* grid-template-columns: 40vw 40vw; */
     width: 98vw;
     /* grid-column-gap: 2vw; */
     height: auto;
-    padding-top: 0vh;
     padding-bottom: 0vh;
     margin-top: 0vh;
     margin-bottom: 0vh;
@@ -2220,16 +2220,30 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
+
+
 .leftist {
-    padding-top: 12vh;
     padding-left: 5vw;
     padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.leftist .img {
+    height: 25vh;
 }
 
 .leftist #labs {
-    font-size: var(--body-font);
+    
+    width: 50vw;
+}
+
+#labs p {
+    font-size: 1vw;
     line-height: 3vh;
 }
 
@@ -2244,6 +2258,20 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .seriously{
     margin-top: 3vh;
+}
+
+.rightist {
+    height: 100vh;
+    width: 25vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.rightist img {
+    width: 15vw;
 }
 
 .cardy {
