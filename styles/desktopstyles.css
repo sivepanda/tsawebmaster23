@@ -2202,6 +2202,70 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                  Business                                  */
 /* -------------------------------------------------------------------------- */
 
+
+.helpy{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    height: 100vh;
+    
+}
+
+.There{
+   margin-left: 5vw;
+   margin-right: 5vw;
+}
+
+.There h1{
+    margin-top: 0px;
+    font-size: 3vw;
+}
+
+.There p{
+    font-size: 1.1vw;
+}
+
+.picss{
+    /* background: blue; */
+    display: grid;
+    /* align-items: center; */
+    justify-content: center;
+    grid-template-rows: calc(84vh/3) calc(84vh/3) calc(84vh/3);
+    grid-gap: 2vh;
+}
+
+.dig{
+    width: 25vw;
+    margin-right: 2.5vw;
+    background: url(../resources/images/lab.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid white
+}
+
+.front{
+    width: 25vw;
+    margin-right: 2.5vw;
+    background: url(../resources/images/lab2.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid white
+}
+
+.below{
+    width: 25vw;
+    margin-right: 2.5vw;
+    background: url(../resources/images/lab3.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid white
+}
+
+
 .biggy{
     display: grid;
     padding-top: 12vh;
