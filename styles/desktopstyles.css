@@ -1529,7 +1529,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* background-color: green; */
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100vh;
+    background-size: 100%;
     transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
@@ -1549,16 +1549,14 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #leis{
     background-image: var(--light-darken-overlay), url(../resources/images/people-in-space.jpg);
-    /* background-size: 140%; */
-    background-position: center;
-    /* background-size: cover; */
-    background-size: 100vh;
+    background-size: 140%;
+    
     transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
 #leis:hover {
     background-image: var(--darker-darken-overlay), url(../resources/images/people-in-space.jpg);
-    background-size: 110vh;
+    background-size: 140%;
     transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
