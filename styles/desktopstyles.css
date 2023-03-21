@@ -1529,7 +1529,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* background-color: green; */
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 100vh;
     transition: 400ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
@@ -1558,7 +1558,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #leis:hover {
     background-image: var(--darker-darken-overlay), url(../resources/images/people-in-space.jpg);
-    background-size: 140%;
+    background-size: 110vh;
     transition: 300ms all cubic-bezier(.51,-0.01,.19,.96);
 }
 
