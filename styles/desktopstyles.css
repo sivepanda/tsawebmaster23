@@ -1584,7 +1584,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     font-size: 2.5vh;
     height: 0vh;
     overflow: hidden;
-    max-width: 75vh;
+    max-width: 45vw;
     line-height: 7vh;
     transition: all cubic-bezier(.99,.15,.73,.77) 400ms;
     margin-bottom: 0px;
@@ -1968,6 +1968,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 #leis-info p {
     grid-column: 1 / span 2;
     font-size: 1.5vw;
+    line-height: 5vh;
     width: 80vw;
 }
 
@@ -2205,15 +2206,31 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 40vw 40vw;
+    /* grid-template-columns: 40vw 40vw; */
     width: 98vw;
-    grid-column-gap: 2vw;
-    height: 100vh;
+    /* grid-column-gap: 2vw; */
+    height: auto;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
 }
 
 .bussy{
-    height: 80vh;
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.leftist {
+    padding-top: 12vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.leftist #labs {
+    font-size: var(--body-font);
+    line-height: 3vh;
 }
 
 .leftist h1{
@@ -2229,7 +2246,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-top: 3vh;
 }
 
-.cardy{
+.cardy {
+    width: 40vw;
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(5px);
     /* background-color: rgba(169,169,169, .1); */
@@ -2617,6 +2635,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     position: relative;
 }
 
+.timeline-item:first-child {
+    margin-top: 15vh;
+}
+
 .timeline-content {
     position: relative;
     margin-left: 120px;
@@ -2809,7 +2831,16 @@ transition: 100ms ease-in-out;
 
     /* max-width: 60vw; */
     padding-right: 5vw;
+    padding-bottom: 4vh;
     font-size: 1.2vw;
     line-height: 6vh;
 
+}
+
+.infoss a {
+    background: white;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: white !important;
 }
