@@ -1884,6 +1884,109 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                LEISURE PAGE                                */
 /* -------------------------------------------------------------------------- */
 
+.amen{
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    height: 30vh;
+}
+
+.drinks{
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 30vw 13vw 13vw 13vw 13vw;
+    grid-gap: 2vw;
+    border-bottom: 1px solid white;
+}
+
+.drinks h1{
+    font-size: 3vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.amen h1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+}
+
+.amen ul{
+    /* list-style: none; */
+    display: grid;
+    align-items: center;
+}
+
+
+
+.eat{
+    display: grid;
+    margin-top: 1vh;
+    height: 18vh;
+}
+
+.aqua{
+    background: url(../resources/images/Aquafina_2016.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.coke{
+    background: url(../resources/images/coca-cola.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.minmaid{
+    background: url(../resources/images/minmaid.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sprite{
+    background: url(../resources/images/sprite-logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.chicken{
+    background: url(../resources/images/Best-Grilled-Chicken-Breast.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid white
+}
+
+.steak{
+    background: url(../resources/images/steakforretro.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid white
+}
+
+.fish{
+    background: url(../resources/images/salmonforretro.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid white
+}
+
+.salad{
+    background: url(../resources/images/saladforretro.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid white
+}
+
+
 
 .busi{
     height: 100vh;
