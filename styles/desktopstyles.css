@@ -78,6 +78,7 @@ body {
     transition: all ease-in-out 0.2s;
     background: var(--hbkg);
     z-index: 1000;
+    top:0;
 }
 
 .headerlogo {
@@ -2225,7 +2226,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-bottom: 5vh;
     display: grid;
     grid-template-columns: 70vw 30vw;
-    height: 100vh;
+    height: auto;
     
 }
 
@@ -2448,6 +2449,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     max-width: 90vw;
 }
 
+.abinfo a {
+    color: white !important;
+}
+
 .abbox{
     /* margin-top: 20vh; */
     /* height: 80vh; */
@@ -2470,6 +2475,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* grid-row: 1; */
     background-color: var(--lightglass);
     border-radius: var(--corner-rad);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     /* margin-left: 10vw; */
     width: 30vw;
 }
@@ -2491,7 +2498,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     /* margin-top: 3vh; */
     display: block;
     place-self: center;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     grid-row: 2;
     grid-column: 2;
     z-index: 5;
@@ -2500,24 +2507,34 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #map {
     -ms-overflow-style: none;  /* IE and Edge */
+    /* overflow-y: hidden; */
     scrollbar-width: none;  /* Firefox */
 }
 
 #map::-webkit-scrollbar {
     display: none;
+    /* overflow-y: hidden; */
   }
 
 .mapcontainer .map {
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
     /* position: absolute; */
     /* grid-column: 2; */
     /* grid-row: 1; */
     border: none;
     height: 40vh;
-    width: 30vw;
+    width: 20vw;
     border-radius: var(--corner-rad);
     /* width: 100%; */
     /* float: left; */
 }
+
+.mapcontainer .map::-webkit-scrollbar {
+    display: none;
+    /* overflow-y: hidden; */
+  }
 
 .contactbox h3 {
     color: rgb(255, 255, 255);
@@ -2527,6 +2544,42 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-top: 0;
     margin-left: 2vw;
     margin-bottom: 0;
+    
+}
+
+.newscontainer {
+    color: #b2b2b2;
+    width: 20vw;
+    border-radius: var(--corner-rad);
+    background-color: var(--lightglass);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms all ease-in-out;
+    cursor: pointer;
+
+}
+
+.newscontainer .news {
+    filter: invert(0.7);
+    height: 14vh;
+    transition: 200ms all ease-in-out;
+
+}
+
+.newscontainer:hover {
+    color:white;
+    transition: 200ms all ease-in-out;
+}
+
+.newscontainer:hover .news {
+    height: 16vh;
+    filter:invert(1);
+    transition: 300ms all ease-in-out;
 }
 
 .infobox div {
@@ -2740,6 +2793,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .timeline-item {
+    cursor: pointer !important;
     margin: 50px 0;
     position: relative;
 }
@@ -2779,14 +2833,17 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .popup {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    border-radius: var(--corner-rad);
+    top: 25vh;
+    height: 50vh;
+    overflow-y: scroll;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    border: 1px solid #ccc;
+    transform: translate(-50%, 0%);
+    background-color: white;
+    /* border: 1px solid #ccc; */
     padding: 20px;
-    box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0px 0px 10px #000000;
     display: none;
     z-index: 999;
 }
@@ -2810,6 +2867,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+}
+
+#nc1 {
+    background-image: linear-gradient(rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%),url(../resources/images/universe-gdf1bcf5dc_1920.jpg);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: fixed;
+    background-size: 120%;
+    background-position: top;
 }
 
 
@@ -2952,4 +3019,23 @@ transition: 100ms ease-in-out;
     background-clip: text;
     -webkit-background-clip: text;
     color: white !important;
+}
+
+#f04c1 {
+    background: url(../resources/images/night-photograph-gf6a42c2d1_1920.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100vw;
+}
+
+#f04c1 {
+    text-align: center;
+}
+
+#f04c1 a {
+    color:white;
 }
