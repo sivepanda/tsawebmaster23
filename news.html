@@ -1,111 +1,392 @@
 <!DOCTYPE html>
 
-<html>
 <head>
-    <title>Vertical Scrolling Timeline</title>
-    <link rel="stylesheet" href="styles/desktopstyles.css">
+    <style>
+        .loadtank {
+            position: fixed;
+            background: black;
+            margin: 0;
+            top: 0;
+            left: 0;
+            padding: 0;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1001;
+            display: grid;
+            --top-bottom-margins: calc(calc(100vh - 40vw) / 2);
+            grid-template-columns: 30vw 40vw 30vw;
+            grid-template-rows: var(--top-bottom-margins) 40vw var(--top-bottom-margins);
+        }
+        
+        .video-container {
+            /* align-self: center; */
+            padding-top: 56.25%;
+            height: 0;
+            align-content: center;
+            flex-direction: row;
+            display: flex;
+            height: 10vh;
+            /* position: relative; */
+        }
+        
+        #promo {
+            grid-row: 2;
+            grid-column: 2;
+            width: 40vw;
+            height: 40vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
+
 <body>
+<div class="loadtank" id="loadtank">
+    <div class="video-container">
+        <video muted loop infinite autoplay id="promo" class="loadingvid">
+            <source src="resources/videos/retro_loading.mov" type="video/mp4">
+          </video>
+</div>
+</div>
+    <div class="mobheader mobile">
+        <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
+        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+            <div class="bar"></div>
+        </button>
+    </div>
+    <div id="nc1"></div>
+    <div class="header fullheader desktop" id="header">
+        <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" />
+        <ul>
+            <li><a class='mnuele' href="index.html">Home</a> </li>
+            <li><a class='mnuele' href="trips.html">Trips</a></li>
+            <li><a class='mnuele' href="purchase.html">Purchase</a> </li>
+            <li><a class='mnuele' href="missions.html">Missions</a> </li>
+            <li><a class='mnuele' href="about.html">About Us</a></li>
+        </ul>
+    </div>
+    <div class="newcirc mobile">
+        <nav class="dotmnu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="trips.html">Trips</a></li>
+                <hr>
+                <!-- <li><a href="purchase.html">Purchase</a></li> -->
+                <!-- <hr> -->
+                <li><a href="missions.html">Missions</a></li>
+                <hr>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+    </div>
 
     <!-- Popups -->
 
     <div id="popup-info0" class="popup">
-        <h2 style="color:black">The View</h2>
-        <p>This is some sample text for the popup information. </p>
+        <h2 style="color:black">Retrograde’s Beginning</h2>
+        <p>Retrograde's humble beginnings as an after-school club in Oblong High School in 2017 were the result of the passion and determination of a group of students who dreamed of exploring space. They were motivated by a shared vision to create a low-cost way of accessing space that could be used by everyone, not just the wealthy elite. The founders of Retrograde were inspired by the works of pioneers such as Elon Musk and Jeff Bezos, and they wanted to contribute to the field of space exploration in their own way.
+
+            <br><br>What started as a small group of high school students soon grew into a passionate community of like-minded individuals who shared the same dream. With the support of their school and the wider community, the club began experimenting with rocket designs and propulsion systems, with a particular focus on developing reusable rockets. As their knowledge and expertise grew, the students began to realize the potential of their work and decided to turn their after-school club into a space corporation four years later.
+            
+            <br><br>Like any startup, Retrograde faced numerous challenges in its early days. One of the biggest challenges was funding. Without access to significant financial resources, the team had to rely on creative fundraising methods such as crowdfunding campaigns and grants from organizations that supported their mission.
+            
+            <br><br>Another challenge was building a team of experts in the fields of aerospace engineering, rocketry, and materials science. The team had to work hard to attract talent and build a strong team that could tackle the complex problems they were facing.
+            
+            <br><br>Despite these challenges, Retrograde was able to overcome them through a combination of hard work, determination, and innovation. The team embraced new technologies and worked tirelessly to develop new materials and propulsion systems that would enable them to achieve their goals. They also fostered a culture of collaboration and encouraged their team members to share their ideas and work together to solve problems.
+        </p>
     </div>
 
     <div id="popup-info1" class="popup">
-        <h2 style="color:black">SpaceFacts</h2>
-        <p>This is some sample text for the popup information. </p>
+        <h2 style="color:black">Retrograde’s Incorporation</h2>
+        <p>As co-founder of Retrograde Space Corporation, I am thrilled to announce that we are taking the first steps towards revolutionizing space travel. On August 2nd, 2021, we officially launched our company, and we are already hard at work developing cutting-edge technology that will take us to the next level.
+            <br><br>
+            One of the key areas of focus for us is developing more efficient and powerful thrusters. We know that this is a critical area for the success of any space mission, and we are committed to increasing thruster efficiency and power by a factor of 500%. We believe that this will allow us to travel farther and faster than ever before, and ultimately unlock the full potential of space exploration.
+            <br><br>
+            To achieve this goal, we are planning to conduct a static thruster test in just six months. This test will be a crucial step towards demonstrating the effectiveness of our new technology, and we are confident that it will show just how far we have come since our founding.
+            <br><br>
+            Of course, we know that there will be skeptics out there who doubt our abilities. Some may even claim that our goals are unrealistic or unattainable. But we are not deterred by these naysayers. We know that with hard work, dedication, and a little bit of ingenuity, anything is possible.
+            <br><br>
+            At Retrograde, we are not content to simply rest on our laurels. We know that the future of space exploration depends on constant innovation and improvement, and we are committed to leading the charge. So while our static thruster test may be six months away, we are already looking forward to what comes next. We are confident that our breakthroughs will pave the way for a new era of space travel, and we cannot wait to see where our journey takes us.
+            <br><br>
+            -Hasan Venkatra
+        </p>
     </div>
 
     <div id="popup-info2" class="popup">
-        <h2 style="color:black">Nasa</h2>
-        <p>This is some sample text for the popup information. </p>
+        <h2 style="color:black">Fusion Breakthrough</h2>
+        <p>Retrograde is proud to be a driving part of developmental breakthroughs throughout the world. As part of our program, we provide cutting edge research and scientific resources to public research facilities, including the Lawrence Livermore National Laboratory’s National Ignition Facility. A team of Retrograde scientists and engineers were instrumental in the success of the Lawrence Livermore National Laboratory's fusion experiment. The Retrograde team was able to apply their expertise in materials science to develop a new material that could withstand the extreme temperatures and pressures required for nuclear fusion. This breakthrough enabled the Lawrence Livermore team to achieve a major milestone in their quest for practical fusion energy. In the wake of their success, we talked to the team leader about the team’s involvement in the project:
+            <br><br>
+            As a researcher at Lawrence Livermore National Laboratory’s National Ignition Facility (NIF), I have had the opportunity to work on some of the most cutting-edge scientific experiments in the world. At the NIF, we are focused on achieving fusion energy, which is the same process that powers the sun.
+            <br><br>
+            The NIF is a unique facility that is designed to create and study high-energy density plasmas, which are the same conditions that occur inside a star during the fusion process. Our goal is to achieve fusion ignition, which is the point at which the energy output from the fusion reaction exceeds the energy input required to initiate it. If we can achieve ignition, it could be a major breakthrough in the quest for clean, sustainable energy.
+            <br><br>
+            One of the key tools we use at the NIF is a giant laser that can focus 192 individual beams onto a tiny target the size of a pencil eraser. This creates intense pressure and temperature conditions that are necessary to initiate the fusion process. Our experiments require precision and accuracy to ensure that the laser beams hit the target at the exact same time and with the exact same intensity.
+            <br><br>
+            But achieving ignition is not an easy task. We are dealing with incredibly complex physics, and we are constantly working to improve our understanding of the processes involved. One of the challenges we face is that the plasmas we create are highly unstable, and they can be difficult to control. We need to find ways to stabilize the plasma and prevent it from breaking apart before the fusion reaction can occur.
+            <br><br>
+            Another challenge is that the conditions inside the target can create a lot of debris that can damage the equipment we use to create the plasma. We need to find ways to mitigate this debris and ensure that our equipment can continue to function effectively.
+            <br><br>
+            Despite these challenges, we have made significant progress in our research. We have achieved record-breaking levels of pressure and temperature, and we are constantly improving our techniques to create more stable plasmas. We are also exploring new approaches to fusion, such as using alternative fuels and different types of lasers.
+            <br><br>
+            At the NIF, we are not just working to achieve fusion ignition. We are also conducting research that has broader implications for science and technology. For example, our work on high-energy-density plasmas is helping to improve our understanding of astrophysics, materials science, and the behavior of matter under extreme conditions.
+            <br><br>
+            In addition, our laser technology has applications beyond fusion. It is used in fields such as materials processing, medicine, and national security. We are constantly finding new ways to use our technology to advance science and society.
+            <br><br>
+            As a researcher at the NIF, I am proud to be part of a team that is pushing the boundaries of science and technology. Our work is challenging, but it is also incredibly rewarding. If we can achieve fusion ignition, it could be a game-changer for the energy industry and for our planet. But even if we don't achieve ignition, our research is advancing our understanding of the universe and helping to improve our world in countless other ways.
+            <br><br><br>
+            The impact of this breakthrough was significant for the space industry. Nuclear fusion has the potential to revolutionize space exploration by providing a virtually unlimited source of energy for spacecraft propulsion systems. The success of the Lawrence Livermore experiment showed that fusion energy was not just a theoretical concept, but a practical reality that could be achieved with the right materials and technology.
+             </p>
     </div>
 
     <div id="popup-info3" class="popup">
-        <h2 style="color:black">NewsNewsNews</h2>
-        <p>This is some sample text for the popup information. </p>
+        <h2 style="color:black">Fusion Nominal!</h2>
+        <p>I am thrilled to announce our latest breakthrough in propulsion technology. Our collaboration with Lawrence Livermore National Laboratory’s National Ignition Facility has resulted in the creation of fusion thrusters that are not only more efficient, but also more powerful than traditional Methane-Liquid Oxygen(methalox) thrusters.
+            <br><br>
+            After months of research and testing, our team has successfully developed fusion thrusters with a 200% increase in efficiency when compared to methalox thrusters. This is a huge leap forward in the field of space propulsion, and we are excited to share our findings with the world.
+            <br><br>
+            One of the biggest advantages of our fusion thrusters is their increased power. This means that spacecraft equipped with these thrusters will be able to travel further and faster than ever before. With our fusion technology, we are pushing the boundaries of what is possible in space exploration and opening up new opportunities for the future.
+            <br><br>
+            But the benefits of our fusion thrusters don't stop there. They are also more efficient, meaning that they require less fuel to achieve the same level of propulsion as methalox thrusters. This is a major advantage for space missions, where every pound of cargo and fuel counts.
+            <br><br>
+            Our collaboration with Lawrence Livermore National Laboratory’s National Ignition Facility has been instrumental in the development of these revolutionary fusion thrusters. Their expertise in laser and fusion technologies has helped us push the boundaries of what is possible in space propulsion.
+            <br><br>
+            At Retrograde, we are committed to creating innovative technologies that will shape the future of space exploration. Our fusion thrusters represent a major step forward in this mission, and we look forward to continuing to push the boundaries of what is possible in space propulsion technology.
+             </p>
     </div>
 
-    <div id="popup-info4" class="popup">
-        <h2 style="color:black">dailyLive</h2>
-        <p>This is some sample text for the popup information. </p>
+    <div id="popup-info8" class="popup">
+        <h2 style="color:black">Hermes Nominal!</h2>
+        <p>Hermes II is a fusion thruster that has been under development for quite some time. Recently, the team behind the project announced that they have achieved a significant milestone in the testing of the thrusters. The results showed a 350% increase in efficiency compared to methalox, with 150% left to go to reach their target goal.
+            <br><br>
+            This achievement is a remarkable step forward for the field of space propulsion. Fusion thrusters are a promising technology that could revolutionize space travel by providing a highly efficient and sustainable means of propulsion. However, there are still many challenges to overcome before these thrusters can become a practical solution for space travel.
+            <br><br>
+            One of the biggest challenges is the development of high-performance materials that can withstand the extreme temperatures and pressures generated by fusion reactions. Another challenge is developing efficient methods for producing the fuel that powers the fusion reactions. Despite these challenges, the team behind the Hermes II project has made significant progress towards achieving their goal.
+            <br><br>
+            The testing of the Hermes II fusion thrusters involved a process known as static testing. Static testing is a method of testing rocket engines that does not involve actual flight. Instead, the thrusters are mounted in a test stand and fired to simulate the conditions they would experience during flight. This allows the team to evaluate the performance of the thrusters under controlled conditions and make any necessary adjustments before they are used in a real-world setting.
+            <br><br>
+            The results of the static testing on the Hermes II fusion thrusters are impressive. The thrusters showed a 350% increase in efficiency compared to Methane - Liquid Oxygen (methalox). methalox is a commonly used propellant in rocket engines that provides a high level of performance but has significant drawbacks. methalox is highly flammable and can be dangerous to handle. It also requires a lot of energy to produce, making it an expensive fuel source.
+            <br><br>
+            The Hermes II fusion thrusters, on the other hand, use a different type of fuel that is much safer and more efficient. The fuel is based on deuterium and helium-3, which are isotopes of hydrogen. These fuels are abundant in space and can be extracted from the moon and other celestial bodies. Though less efficient than that of deuterium-tritium, use of these fuels being more abundant  could potentially make space travel more affordable and sustainable in the future.
+            <br><br>
+            Despite the impressive results of the static testing, the team behind the Hermes II project still has some work to do before they can reach their target goal. They have reported that they still need to achieve a 150% increase in efficiency to reach their target. This may sound like a significant challenge, but it is important to remember that the testing of fusion thrusters is a complex process that requires a lot of experimentation and refinement.
+            <br><br>
+            In conclusion, the static testing of the Hermes II fusion thrusters is a significant step forward in the development of sustainable and efficient space propulsion systems. The results are impressive, showing a 350% increase in efficiency compared to methalox. While there is still work to be done, the progress made by the team behind the project is a promising sign that fusion thrusters could play a significant role in the future of space travel.
+             </p>
     </div>
 
-    <div id="popup-info5" class="popup">
-        <h2 style="color:black">Carson Daily</h2>
-        <p>This is some sample text for the popup information. </p>
+    <div id="popup-info9" class="popup">
+        <h2 style="color:black">Full Speed Ahead</h2>
+        <p>The static testing of Hermes II Plus fusion thrusters in 2028, with a 500% increase in power, was a significant milestone for Retrograde. However, the test had unintended consequences for the oil market and the overall economy. The increased power and efficiency of the Hermes III thrusters made them a viable alternative to traditional oil-based propulsion systems, which caused a crash in the oil market.
+            <br><br>
+            The oil market crash had a ripple effect throughout the economy, which was already fragile due to other factors. Retrograde recognized the potential impact of its technology on the economy and was quick to take action. The company decided to delay the commercial usage of the Hermes III thrusters until the economy had stabilized.
+            <br><br>
+            Once the economy had stabilized, Retrograde began planning for the commercial usage of its fusion thrusters. The company recognized that the potential applications for the thrusters were vast, from commercial space exploration to terrestrial travel. Retrograde's plan for commercial usage of the thrusters is to partner with other companies to develop and market products utilizing its fusion technology. The company is committed to ensuring that the technology is used responsibly and will have a positive impact on society.
+        </p>
     </div>
 
-    <div id="popup-info6" class="popup">
-        <h2 style="color:black">MorningStar</h2>
-        <p>This is some sample text for the popup information. </p>
+    <div id="popup-info11" class="popup">
+        <h2 style="color:black">ONFA Created</h2>
+        <p>The year 2027 started a shift that would forever change the world, switching from fossil fuels to fusion power. This shift was made possible by the efforts of Retrograde scientists, who developed an open-source adapter that could pull fusion-generated power off power lines, making the power source available to everyone.
+            <br><br>
+            The adoption of fusion power was a significant development, as it offered a source of clean, reliable, and virtually limitless energy. Retrograde technology made this power source available to the public for the first time, unleashing a wave of innovation and economic growth as new fusion factories were established to meet the demand.
+            <br><br>
+            The impact of this shift was far-reaching, as the fossil fuel industry struggled to compete with the clean and virtually free energy generated by fusion power. As a result, the oil market and other fossil fuel markets crashed, with many companies forced to close their doors due to the sudden shift in demand.
+            <br><br>
+            The shift to fusion power had a significant impact on the economy, as many workers in the fossil fuel industry were put out of work as a result. This was a painful transition for many people, as they had to retrain or find new careers in other industries. To help alleviate this strain, Retrograde, along with numerous other companies specializing in fusion technology, created the Open Nuclear Fusion Alliance, and provided materials and funding so that technology and career centers around the globe can begin to retrain workers in this new field.
+            <br><br>
+            Despite the challenges, the shift to fusion power was seen as a crucial step towards a more sustainable future. With fusion power, there was no need for the extraction, transportation, and refining of fossil fuels, which had long been a major source of pollution and environmental degradation.
+            <br><br>
+            The rapid adoption of fusion power also created new opportunities for innovation and growth, as companies rushed to develop new products and services that could take advantage of the virtually free energy source. This created a new wave of entrepreneurship and innovation, as small businesses and startups found new ways to leverage the power of fusion to create new products and services.
+            <br><br>
+            As the transition to fusion power continued, the old oil and other fuel factories were slowly phased out over time. This was a difficult process, as many workers had to be retrained or find new careers, and many communities had to adapt to the changing economic landscape.
+            <br><br>
+            Despite the challenges, the shift to fusion power was seen as a positive development for the world, as it represented a major step towards a more sustainable and environmentally friendly future. With fusion power, the world could enjoy a virtually limitless source of clean energy, without the pollution and environmental degradation associated with fossil fuels. This represented a brighter future for all, as people could enjoy the benefits of modern life without sacrificing the health and well-being of the planet.
+             </p>
     </div>
 
     <!----------------------Timelines---------------------->
 
     <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item" data-popup="#popup-info0">
             <div class="timeline-content">
-                <b>December 13th 2022</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info0">Fusion Breakthrough</a></h2>
-                <p>Retrograde scientist were crucial in Lawrence Livermore National Labratory fusion research</p>
-            </div>
-        </div>
-        
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <b>May 23rd 2023</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info1">Retrograde Nominal!</a></h2>
-                <p>The first successful fullstack launch of Heimdall I has been completed.</p>
+                <b>July 15th, 2017</b>
+                <h2><a href="#" class="popup-link">Retrograde Begins</a></h2>
+                <p>Retrograde begins as an after school club in Oblong High School in Louisville, KY. <br><u>Click for more information.</u></p>
             </div>
         </div>
 
-        <div class="timeline-item">
+
+        <div class="timeline-item" data-popup="#popup-info1">
             <div class="timeline-content">
-                <b>example date</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info2">News Article Title</a></h2>
-                <p>News Article Description</p>
+                <b>August 2nd, 2021</b>
+                <h2><a href="#" class="popup-link">Retrograde is Incorporated</a></h2>
+                <p>Retrograde Space Corporation beings, first static test 6 months later.<br><u>Click for more information.</u></p>
             </div>
         </div>
 
-        <div class="timeline-item">
+
+        <div class="timeline-item" data-popup="#popup-info2">
             <div class="timeline-content">
-                <b>example date</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info3">News Article Title</a></h2>
-                <p>News Article Description</p>
+                <b>December 13th, 2022</b>
+                <h2><a href="#" class="popup-link">Fusion Breakthrough</a></h2>
+                <p>Retrograde scientists were crucial in Lawrence Livermore National Laboratory fusion success. <br><u></u>Click for more information.</u></p>
             </div>
         </div>
 
-        <div class="timeline-item">
+
+        <div class="timeline-item" data-popup="#popup-info3">
             <div class="timeline-content">
-                <b>example date</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info4">News Article Title</a></h2>
-                <p>News Article Description</p>
+                <b>March 13th, 2023</b>
+                <h2><a href="#" class="popup-link">Fusion Nominal!</a></h2>
+                <p>Nuclear fusion passes safety checks for commercial and scientific power usage. <br><u>Click for more information.</u></p>
             </div>
         </div>
 
-        <div class="timeline-item">
+
+        <div class="timeline-item" data-popup="#popup-info4">
             <div class="timeline-content">
-                <b>example date</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info5">News Article Title</a></h2>
-                <p>News Article Description</p>
+                <b>May 23rd, 2023</b>
+                <h2><a href="#" class="popup-link">Testing, testing, 1, 2, 3</a></h2>
+                <p>The first fullstack launch of Heimdall I is completed.</p>
             </div>
         </div>
 
-        <div class="timeline-item">
+
+        <div class="timeline-item" data-popup="#popup-info5">
             <div class="timeline-content">
-                <b>example date</b>
-                <h2><a href="#" class="popup-link" data-popup="#popup-info6">News Article Title</a></h2>
-                <p>News Article Description</p>
+                <b>June 5th, 2025</b>
+                <h2><a href="#" class="popup-link">Hermes Nominal!</a></h2>
+                <p>First static test of the Hermes fusion thrusters launch shows 200% increase in efficiency and power (in comparison to methalox). Goal announced: 500% increase.</p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info6">
+            <div class="timeline-content">
+                <b>February 10th, 2026</b>
+                <h2><a href="#" class="popup-link">Heimdall Nominal!</a></h2>
+                <p>The first fullstack launch of Heimdall II was successful.</p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info7">
+            <div class="timeline-content">
+                <b>November 1st, 2027 </b>
+                <h2><a href="#" class="popup-link">Efficiency Gains</a></h2>
+                <p>Static testing on Hermes II fusion thrusters shows 350% increase in efficiency (in comparison to methalox). 150% left on goal.</p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info8">
+            <div class="timeline-content">
+                <b>December 4th, 2027</b>
+                <h2><a href="#" class="popup-link">Hermes Test Nominal!</a></h2>
+                <p>Hermes II Thrusters were tested, achieving Retorograde’s goal of a 5x increase in efficiency with a whopping 515% 
+increase over our older methalox engines. Not only that, all 3 engines tested showed significant increases in reliability. <br><u>Click for more information.</u></p>       
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info9">
+            <div class="timeline-content">
+                <b>March 17th, 2028</b>
+                <h2><a href="#" class="popup-link">Full Speed Ahead</a></h2>
+                <p>Hermes II Plus engines are tested for the first time. These are the engines that will power the main stage of our 
+deep space spacecraft, Savitir. <br><u>Click for more information.</u></p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info10">
+            <div class="timeline-content">
+                <b>November 30,2028</b>
+                <h2><a href="#" class="popup-link">Oxomo is Ready!</a></h2>
+                <p>Construction of Oxomo Space Center launch and training facilities on Isla del Estrellas concludes. </p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info11">
+            <div class="timeline-content">
+                <b>May 24, 2029</b>
+                <h2><a href="#" class="popup-link">ONFA Created</a></h2>
+                <p>In order to support the world transition to nuclear fusion power, Retrograde became a founding member of the Open 
+Nuclear Fusion Alliance, funding and supplying career and technology centers worldwide with the materials necessary to retrain the displaced fossil fuel workforce to work with nuclear fusion. <br><u>Click for more information.</u></p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info12">
+            <div class="timeline-content">
+                <b>October 30th, 2030</b>
+                <h2><a href="#" class="popup-link">The Final Frontier</a></h2>
+                <p>Aether II launches successfully creating Retrograde's first deep space option, opening the final frontier to all. 
+</p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info13">
+            <div class="timeline-content">
+                <b>July 2nd 2032</b>
+                <h2><a href="#" class="popup-link">Retrograde Ready!</a></h2>
+                <p>Retrograde passes safety regulations with flying colors and prepares for its first commercial launch. </p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item" data-popup="#popup-info14">
+            <div class="timeline-content">
+                <b>Jan 1st 2033</b>
+                <h2><a href="#" class="popup-link">3… 2… 1…</a></h2>
+                <p>Retrograde launches its first commercial flight with the new years countdown. The first successful launch started off a year of space flight. </p>
             </div>
         </div>
 
     </div>
 
+    <div class="footy">
+
+        <div class="ifoot">
+            <img src="resources\images\retrograde_wh.png" style="width: 50%; height: auto; padding-bottom: 1vh;">
+        </div>
+
+        <div class="ifoot">
+            <a href="https://drive.google.com/drive/folders/1ayLr_JgWDCBLRv4DqObI_whZ8xIutZyT?usp=sharing" target="_blank">PORTFOLIO</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="https://instagram.com" target="_blank">INSTAGRAM</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="https://twitter.com" target="_blank">TWITTER</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="https://facebook.com" target="_blank">FACEBOOK</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="news.html" target="_blank">NEWS</a>
+
+        </div>
+
+        <div class="ifoot">
+            <a href="attributes.html" target="_blank">ATTRIBUTES</a>
+        </div>
+    </div>
+
 </body>
 
 <script  async src="js/page-specific/new.js"></script>
+<script  async src="js/page-specific/new_parallax.js"></script>
+<script async src="js/mobController.js"></script>
+<script async src="js/loadelements.js"></script>
 </html>

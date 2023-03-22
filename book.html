@@ -59,7 +59,7 @@
             <li><a class='mnuele' href="index.html">Home</a> </li>
             <li><a class='mnuele' href="trips.html">Trips</a></li>
             <li><a class='mnuele' href="purchase.html">Purchase</a> </li>
-            <!-- <li><a class='mnuele' href="missions.html">Missions</a> </li> -->
+            <li><a class='mnuele' href="missions.html">Missions</a> </li>
             <li><a class='mnuele' href="about.html">About Us</a></li>
         </ul>
     </div>
@@ -67,8 +67,20 @@
     <section id='bp0' class='contentbox full'>
     <h1 id="flighttype">Error. Please reload.</h1>
         <div class="steps">
-            <h1  id='staystep' class="bookstep activeb">1. Stay</h1>
-            <h1 id='confstep' class="bookstep">2. Confirm</h1>
+            <div class="bb" id="backstep" onclick="window.open('your-account.html', '_self');">
+                <img class="b" src="../resources/images/arrow.png"></img>
+                <p>Back</p>
+            </div>
+            <div class="bb" id="staystep" onclick="goBack()">
+                <img class="b" src="../resources/images/double-bed.png"></img>
+                <p>Stay</p>
+            </div>
+            <div class="bb" id="confstep">
+                <img class="b" src="../resources/images/confirmation.png"></img>
+                <p>Confirm</p>
+            </div>
+            <!-- <h1  id='staystep' class="bookstep activeb">1. Stay</h1> -->
+            <!-- <h1 id='confstep' class="bookstep">2. Confirm</h1> -->
         </div>
         <div class="content" id="roomselect">
             <table>

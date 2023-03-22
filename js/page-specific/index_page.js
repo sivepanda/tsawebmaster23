@@ -39,21 +39,21 @@ function elementInViewport(el) {
     );
 }
 
-window.addEventListener("scroll", function(e) {
-    if (elementInViewport(ic0)) {
-        liic0.classList.add("scaletwo");
-        liic1.classList.remove("scaletwo");
-        liic2.classList.remove("scaletwo");
-    } else if (elementInViewport(ic1)) {
-        liic1.classList.add("scaletwo");
-        liic0.classList.remove("scaletwo");
-        liic2.classList.remove("scaletwo");
-    } else if (elementInViewport(ic2)) {
-        liic2.classList.add("scaletwo");
-        liic0.classList.remove("scaletwo");
-        liic1.classList.remove("scaletwo");
-    }
-});
+// window.addEventListener("scroll", function(e) {
+//     if (elementInViewport(ic0)) {
+//         liic0.classList.add("scaletwo");
+//         liic1.classList.remove("scaletwo");
+//         liic2.classList.remove("scaletwo");
+//     } else if (elementInViewport(ic1)) {
+//         liic1.classList.add("scaletwo");
+//         liic0.classList.remove("scaletwo");
+//         liic2.classList.remove("scaletwo");
+//     } else if (elementInViewport(ic2)) {
+//         liic2.classList.add("scaletwo");
+//         liic0.classList.remove("scaletwo");
+//         liic1.classList.remove("scaletwo");
+//     }
+// });
 
 
 

@@ -13,25 +13,25 @@ import * as THREE from 'three';
 
 const scene = new THREE.Scene();
 
-scene.background = new THREE.Color( 0x10141f );
+scene.background = new THREE.Color( 0x181818 );
 
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, (window.innerWidth / 2) / window.innerHeight, 0.1, 1000 );
 console.log("test")
 const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector("#bg"),
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( (window.innerWidth / 2), window.innerHeight );
 renderer.outputEncoding = THREE.sRGBEncoding;
 
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
 // camera.position.set(0, 10, 10);
-controls.update();
+// controls.update();
 // camera.rotation.z = -0.5 * Math.PI
 
-const initialPos = { pX: -3.045818102784073, pY: 11.708038654057017, pZ: 9.13024895854543, rX: 0.12247009903293854, rY: -0.26363018841530583, rZ: 0.03206364892180843 }
+const initialPos = { pX: 51.01524580786668, pY: 24.769041060658182, pZ: 10.206434156862591, rX: -2.1372814386131957, rY: 1.5289153750073772, rZ: 2.137678770503264 }
 camera.position.set(initialPos.pX, initialPos.pY, initialPos.pZ);
 camera.rotation.set(initialPos.rX, initialPos.rY, initialPos.rZ);
 
@@ -117,7 +117,7 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 2: // engines
-			const engPosCoords = { pX: -1.6123642556361932, pY: 8.429628340056222, pZ: 4.389562028934395, rX: 0.09014302180271692, rY: -0.2451981612784777, rZ: 0.021938031811923497 };
+			const engPosCoords = { pX: 22.05347969148621, pY: 39.991102135685956, pZ: 8.893895397272937, rX: -0.544721600897651, rY: 1.2820589436701435, rZ: 0.5261715167399206 };
 			new TWEEN.Tween(cameraCoords)
 				.to(engPosCoords)
 				.onUpdate(() => {
@@ -127,7 +127,7 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 3: //midstage
-			const midPosCoords = { pX: 1.321518117638575, pY: 2.0845178566371403, pZ: 5.021915127139023, rX: 0.019034491878618835, rY: 0.4264218409609203, rZ: -0.007873753243657721 };
+			const midPosCoords = { pX: 19.37806337681007, pY: 19.094876558846455, pZ: 18.46656749750288, rX: 0.027347843719511974, rY: 0.887792160373571, rZ: -0.02121528783530727 };
 				new TWEEN.Tween(cameraCoords)
 				.to(midPosCoords)
 				.onUpdate(() => {
@@ -137,7 +137,7 @@ function setCameraSetpoint(setpoint) {
 				.start();
 			break;
 		case 4: //midstage
-			const wholePosCoords = { pX: -0.03303492140215647, pY: -4.286697265748935, pZ: 2.8663965642543348, rX: 0.9626726061176113, rY: 0.10014884938174967, rZ: -0.1426493235351751 };
+			const wholePosCoords = { pX: 17.63753837917099, pY: -13.922313862705211, pZ: 5.2919511048835266, rX: 1.5438197439977774, rY: 0.7608679890233997, rZ: -1.5316847970593994 };
 				new TWEEN.Tween(cameraCoords)
 				.to(wholePosCoords)
 				.onUpdate(() => {
@@ -166,15 +166,15 @@ animate();
 
 var nSet = 1;
 
-// addEventListener("wheel", (event) => {
-// 	console.log(nSet)
-// 	if(event.deltaY > 0) {
-// 		move(1);
-// 	} else {
-// 		move(2);
-// 	}
+addEventListener("wheel", (event) => {
+	console.log(nSet)
+	if(event.deltaY > 0) {
+		move(1);
+	} else {
+		move(2);
+	}
 	
-// });
+});
 
 function move(p) {
 	switch(p) {

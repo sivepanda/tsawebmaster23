@@ -52,9 +52,14 @@
               </video>
         </div>
     </div>
-
-    <div class="header fullheader" id="header">
-        <img class="headerlogo desktop" src="resources/images/retrograde_wh.png" alt="logo" />
+    <div class="mobheader mobile">
+        <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
+        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+            <div class="bar"></div>
+        </button>
+    </div>
+    <div class="header fullheader desktop" id="header">
+        <img class="headerlogo" src="resources/images/retrograde_wh.png" alt="logo" />
         <ul>
             <li><a class='mnuele' href="index.html">Home</a> </li>
             <li><a class='mnuele' href="trips.html">Trips</a></li>
@@ -63,41 +68,11 @@
             <li><a class='mnuele' href="about.html">About Us</a></li>
         </ul>
     </div>
+    <div class="contentbox" id="f04c1">
+        <h1>404</h1>
+        <p>Looks like your rocket veered off course!<br><a href="index.html">Return to Homepage.</a></p>
     </div>
-    <div>
-        <section class='contentbox videobox full' id="ya0">
-            <video autoPlay muted loop id='bkvid'>
-                    <source src="resources/videos/The_Earth_in_4k_.mp4" type="video/mp4"></source> <!-- remove controls -->
-            </video>
-            <div class="contentbox" id="ya0content">
-                <h1 id="yacwelcome">Welcome, </h1>
-                <button type="button" class="button-main" id="yalogout" onclick="logOut()">Log Out</button>
-                <div id="yastatus" class="win-btn">
-                    <h1>Your Vacations</h1>
-                    <div id="yastatuses">
-
-                    </div>
-                    
-                </div>
-                <div id="yaavail" class="win-btn">
-                    <h1>Available Flights</h1>
-                    <div id="aflightlist">
-                        
-                    </div> <!--Auto populate this div with dates-->
-                </div>
-            </div>    
-            
-            <!-- <p id="yaslogan">Ad Astra</p> -->
-    </div>
-
-</body>
-
 <script async src="js/mobController.js"></script>
 <script async src="js/loadelements.js"></script>
-<script src="js/validateLogin.js"></script>
-<script src="js/loadflights.js"></script>
-<script>
-    initializeAccount();
-    createFlights();
-    loadBookedFlights();
-</script>
+
+</body>
