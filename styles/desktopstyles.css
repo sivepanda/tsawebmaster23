@@ -1884,7 +1884,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                LEISURE PAGE                                */
 /* -------------------------------------------------------------------------- */
 
-.amen{
+.amen {
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
     height: 30vh;
@@ -2023,6 +2023,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .nothing {
     background-color: transparent !important;
     
+}
+
+.smenuactive {
+    background-color: var(--lightglass) !important;
 }
 
 .smenu h1:hover {

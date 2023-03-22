@@ -1,5 +1,7 @@
-var displayOn = 'grid';
-var displayOff = 'none';
+const displayOn = 'grid';
+const displayOff = 'none';
+
+const allAmenDisOn = 'block';
 
 openMod('info')
 
@@ -12,10 +14,14 @@ function openMod(v) {
             document.getElementById("leis-sav").style.display = displayOff;
             document.getElementById("leis-aeth").style.display = displayOff;
 
-            document.getElementById('men-info').classList.add();
-            document.getElementById('men-heim').classList.remove();
-            document.getElementById('men-savi').classList.remove();
-            document.getElementById('men-aeth').classList.remove();
+            document.getElementById("allamen-heim").style.display = displayOff;
+            document.getElementById("allamen-sav").style.display = displayOff;
+            document.getElementById("allamen-aeth").style.display = displayOff;
+
+            document.getElementById('men-info').classList.add('smenuactive');
+            document.getElementById('men-heim').classList.remove('smenuactive');
+            document.getElementById('men-savi').classList.remove('smenuactive');
+            document.getElementById('men-aeth').classList.remove('smenuactive');
             break;
         
             case "heimdall":
@@ -23,6 +29,15 @@ function openMod(v) {
             document.getElementById("leis-heim").style.display = displayOn;
             document.getElementById("leis-sav").style.display = displayOff;
             document.getElementById("leis-aeth").style.display = displayOff;
+
+            document.getElementById("allamen-heim").style.display = allAmenDisOn;
+            document.getElementById("allamen-sav").style.display = displayOff;
+            document.getElementById("allamen-aeth").style.display = displayOff;
+
+            document.getElementById('men-info').classList.remove('smenuactive');
+            document.getElementById('men-heim').classList.add('smenuactive');
+            document.getElementById('men-savi').classList.remove('smenuactive');
+            document.getElementById('men-aeth').classList.remove('smenuactive');
             break;
         
         case "aether":
@@ -30,6 +45,15 @@ function openMod(v) {
             document.getElementById("leis-heim").style.display = displayOff;
             document.getElementById("leis-sav").style.display= displayOff;
             document.getElementById("leis-aeth").style.display = displayOn;
+
+            document.getElementById("allamen-heim").style.display = displayOff;
+            document.getElementById("allamen-sav").style.display = displayOff;
+            document.getElementById("allamen-aeth").style.display = allAmenDisOn;
+
+            document.getElementById('men-info').classList.remove('smenuactive');
+            document.getElementById('men-heim').classList.remove('smenuactive');
+            document.getElementById('men-savi').classList.remove('smenuactive');
+            document.getElementById('men-aeth').classList.add('smenuactive');
             break;
 
         case "savitir":
@@ -37,6 +61,15 @@ function openMod(v) {
             document.getElementById("leis-heim").style.display= displayOff;
             document.getElementById("leis-sav").style.display= displayOn;
             document.getElementById("leis-aeth").style.display= displayOff;
+
+            document.getElementById("allamen-heim").style.display = displayOff;
+            document.getElementById("allamen-sav").style.display = allAmenDisOn;
+            document.getElementById("allamen-aeth").style.display = displayOff;
+
+            document.getElementById('men-info').classList.remove('smenuactive');
+            document.getElementById('men-heim').classList.remove('smenuactive');
+            document.getElementById('men-savi').classList.add('smenuactive');
+            document.getElementById('men-aeth').classList.remove('smenuactive');
             break;
     } 
 }
