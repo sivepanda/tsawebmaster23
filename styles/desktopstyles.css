@@ -1883,6 +1883,22 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                LEISURE PAGE                                */
 /* -------------------------------------------------------------------------- */
 
+.infoq{
+    display: grid;
+    grid-template-columns: 50vw 25vw 25vw;
+}
+
+.drinks{
+    display: grid;
+    grid-template-columns: 12vw 12vw;
+    grid-template-rows: 12vw 12vw;
+}
+
+.food{
+    display: grid;
+    grid-template-columns: 12vw 12vw;
+    grid-template-rows: 12vw 12vw;
+}
 
 .busi{
     height: 100vh;
