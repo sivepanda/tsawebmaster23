@@ -2210,7 +2210,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-bottom: 5vh;
     display: grid;
     grid-template-columns: 70vw 30vw;
-    height: 100vh;
+    height: auto;
     
 }
 
