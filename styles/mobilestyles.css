@@ -1058,13 +1058,11 @@ hr {
 
 .footy{
     margin: 0;
-    padding-left: 15vw;
-    padding-right: 15vw;
     height: 10vh;
     background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 33vw 23vw 23vw;
+    justify-content: center;
     align-items: center;
     
 }
@@ -1082,7 +1080,7 @@ hr {
     margin: 0%;
     text-decoration: none;
     color: white;
-    font-size: 4vw;
+    font-size: 3vw;
     /* font-size: 12px; */
     /* align-self: center; */
 }
