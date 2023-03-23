@@ -45,16 +45,25 @@
 <body>
     <div class="loadtank" id="loadtank">
         <div class="video-container">
-            <video muted loop infinite autoplay id="promo" class="loadingvid">
+            <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
                 <source src="resources/videos/retro_loading.mov" type="video/mp4">
               </video>
         </div>
     </div>
     <div class="mobheader mobile">
         <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
-        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <!-- <button class="hamburger" id="hamburger" onclick=toggleMenu()>
             <div class="bar"></div>
+        </button> -->
+
+        <button class="menu" id='newmnu' onclick="toggleMenu()" aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100" style="align-self: center;">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
         </button>
+
     </div>
     <div class="header fullheader desktop" id="header">
         <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" onclick="window.open('index.html', '_self')" />
@@ -74,14 +83,13 @@
                 <li><a href="trips.html">Trips</a></li>
                 <hr>
                 <!-- <li><a href="purchase.html">Purchase</a></li> -->
-                <hr>
+                <!-- <hr> -->
                 <li><a href="missions.html">Missions</a></li>
                 <hr>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
-    </div>
+      </div>
     
     <div class="both desktop" id="missbkg">
         <div class="circles">
@@ -190,29 +198,7 @@
 
     </div>
 
-    <div class="footy desktop">
-        <div class="ifoot">
-            <img src="resources\images\retrograde_wh.png" style="width: 50%; height: auto; padding-bottom: 1vh;">
-        </div>
-        <div class="ifoot desktop">
-            <a href="https://drive.google.com/drive/folders/1ayLr_JgWDCBLRv4DqObI_whZ8xIutZyT?usp=sharing" target="_blank">PORTFOLIO</a>
-        </div>
-        <div class="ifoot desktop">
-            <a class="desktop" href="https://instagram.com" target="_blank">INSTAGRAM</a>
-        </div>
-        <div class="ifoot desktop">
-            <a class="desktop" href="https://twitter.com" target="_blank">TWITTER</a>
-        </div>
-        <div class="ifoot desktop">
-            <a class="desktop" href="https://facebook.com" target="_blank">FACEBOOK</a>
-        </div>
-        <div class="ifoot desktop">
-            <a class="desktop" href="news.html" target="_blank">NEWS</a>
-        </div>
-        <div class="ifoot desktop">
-            <a href="attributes.html" target="_blank">ATTRIBUTES</a>
-        </div>
-    </div>
+    
 
     <!-- <div class="all mobile">
         <div class="circles">
@@ -248,16 +234,19 @@
 
     <div class="all mobile">
         <div class="seri">
-            <p><i class="arrow left"></i></p>
-            <h1>Planning</h1>
-            <p><i class="arrow right"></i></p>
+            <p id="leftarr"><i class="arrow left"></i></p>
+            <h1 id="mh-plan">Planning</h1>
+            <h1 id="mh-train">Training</h1>
+            <h1 id="mh-vehic">Vehicles</h1>
+            <h1 id="mh-safe">Safety</h1>
+            <h1 id="mh-laun">Launch</h1>
+            <h1 id="mh-recov">Recovery</h1>
+            <p id="riarr"><i class="arrow right"></i></p>
             
         </div>
         
-        <div class="dude">
+        <div id="md-plan" class="dude">
             <p>Due to the long training period and high demand, trips may be booked up to 6 months in advance, new bookings are available every week on Wednesday at 12 CST. 
-            
-           
             </p>
             <p>
                 <span style="margin-bottom: 1vh; color: white">Pre-Launch</span> <br>
@@ -267,8 +256,94 @@
                 If you have no disqualifying health conditions, your reservation will be set and a month before your launch date starts the training period. At Oxomo Space Center off the shores of Cancun, in Isla del Estrellas, you will be treated like royalty. As part of your experience, you get to spend the entirety of your training period in our state of the art facility.
             </p>
         </div>
+
+        <div id="md-train" class="dude">
+            <p>Due to the harsh environments faced by outer space travelers, passengers flying with Retrograde are required to undergo a 
+                month-long training process. The training starts with a week of basic online classes teaching you everything you need to 
+                know. The following in person week is full of many different hands-on lessons using our space vehicle mockups. The next 
+                week concludes the training process with an underwater buoyancy simulation of the experience in our large pool containing 
+                more space vehicle mockups for hands-on training. The final week consists of much review and a comprehensive exam to 
+                guarantee your safety in space. For repeat passengers the training process is not required as long as one can pass the 
+                in person exam. 
+            </p>
+        </div>
+
+        <div id="md-vehic" class="dude">
+            <p>Retrograde employs three different launch systems: Heimdall, Savitir, and Aether. Each launch system specializes in 
+                achieving different launch targets, and are specifically designed to be as safe and efficient as possible in reaching 
+                their respective targets.
+                <span><br><br></span>
+                The efficiency afforded by our ultra high efficiency Heimdall launch system is second to none, and allows us to ensure 
+                your flight is as cost effective and safe as possible. As our Low Earth Orbit launch system, Heimdall designed to lift 
+                a payload that solely holds the Thor orbiter and some additional cargo, maximizing space for safety systems and comfort 
+                on your orbit around Earth. 
+                <span><br><br></span>
+
+                Savitir is equally as efficient for its job. Taking you into Medium Earth Orbit into our state of the art space station, 
+                it boasts significantly more power and size to bring large amounts of cargo up into space. Savitir supports lifting 
+                equipment for laboratory experiments and movie studio equipment safely, while also providing luxurious comfort for all 
+                passengers on their way to our Fines Terrae space station that we operate in conjunction with a number of other travel 
+                and international space agencies. 
+                <span><br><br></span>
+
+                Aether is the most powerful rocket currently in production. Taking full advantage of Retrograde’s groundbreaking 
+                research and harnessing of nuclear fusion to power our rockets, Aether is the sole rocket in production where all 
+                stages are nuclear powered. As a result, a trip to the moon that once took weeks now takes mere hours. Our Hyperion 
+                lander is the epitome of both comfort and cargo space, supporting a whopping 20 people and 30 tons of cargo into deep
+                 space. Aether is not only perfect for a vacation to the moon, but also for deep space cargo, supporting affordable 
+                 missions to Mars and beyond.
+            </p>
+        </div>
+
+        <div id="md-safe" class="dude">
+            <p>We here at Retrograde value your safety. Using rockets to travel to space inherently carries a large amount of risk. 
+                In order to reduce this chance of serious injury we are Retrograde use state of the art engineering redundancies, 
+                techniques and failsafes. to make your trip as fun and safe as possible. One such example of redundancy is the extra 
+                set of parachutes integrated in our crew capsules.</p>
+        </div>
+
+        <div id="md-laun" class="dude">
+            <p>After training comes the launch. Due to the angle of our launch and the location of our launch facility we are able to have one launch every 24 hours. The pre-launch process takes a few hours to complete. After taking the shuttle to the launch platform, you take the elevator up to the loading zone. At the loading zone passengers will be seated and strapped in securely by our trained professionals one by one. Due to our high safety standards, pre-flight checks usually take up to an hour after you are seated. Concluding with our tests starts the countdown. After starting the engines and hitting zero you're off to space. Enjoy your trip!</p>
+        </div>
+
+        <div id="md-recov" class="dude">
+            <p>Thanks to recent advancements in rocket technology, we at Retrograde use fully reusable Vertical Takeoff, Vertical Landing 
+                (VTVL) rocket systems to cut down costs and improve recovery. After your trip concludes the crew capsule will touchdown 
+                in the sea within 20 miles of our launch facility at Oxomo Space Center. After landing, our crew will be dispatched to
+                 pick you up and transport you to our facilities. After retrieval comes a quick medical check up to ensure no health 
+                 conditions were caused or elevated by space. The trip concludes with a week of rest and recuperation at our 5 star hotel
+                  to familiarize yourself with living back on Earth. 
+            </p>
+        </div>
+
         
-    </div>
+    
+    
+        </div>
+
+        <div class="footy">
+            <div class="ifoot">
+                <img src="resources\images\retrograde_wh.png" style="width: 50%; height: auto; padding-bottom: 1vh;">
+            </div>
+            <div class="ifoot">
+                <a href="https://drive.google.com/drive/folders/1ayLr_JgWDCBLRv4DqObI_whZ8xIutZyT?usp=sharing" target="_blank">PORTFOLIO</a>
+            </div>
+            <div class="ifoot desktop">
+                <a class="desktop" href="https://instagram.com" target="_blank">INSTAGRAM</a>
+            </div>
+            <div class="ifoot desktop">
+                <a class="desktop" href="https://twitter.com" target="_blank">TWITTER</a>
+            </div>
+            <div class="ifoot desktop">
+                <a class="desktop" href="https://facebook.com" target="_blank">FACEBOOK</a>
+            </div>
+            <div class="ifoot desktop">
+                <a class="desktop" href="news.html" target="_blank">NEWS</a>
+            </div>
+            <div class="ifoot">
+                <a href="attributes.html" target="_blank">ATTRIBUTES</a>
+            </div>
+        </div>
 
 </body>
 <script src="https://kit.fontawesome.com/07f5345973.js" crossorigin="anonymous"></script>

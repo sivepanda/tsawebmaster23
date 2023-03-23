@@ -47,15 +47,23 @@
 <body style="overflow-x: clip; scroll-snap-type: y mandatory;">
     <div class="loadtank" id="loadtank">
         <div class="video-container">
-            <video muted loop infinite autoplay id="promo" class="loadingvid">
+            <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
                 <source src="resources/videos/retro_loading.mov" type="video/mp4">
               </video>
         </div>
     </div>
     <div class="mobheader mobile">
         <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
-        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <!-- <button class="hamburger" id="hamburger" onclick=toggleMenu()>
             <div class="bar"></div>
+        </button> -->
+
+        <button class="menu" id='newmnu' onclick="toggleMenu()" aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100" style="align-self: center;">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
         </button>
     </div>
     <div class="header fullheader desktop" id="header">
@@ -82,17 +90,16 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
     </div>
     
 
     <div class="busi">
         <div class="smenu">
             <h1 id="men-leis" class="nothing">Leisure</h1>
-            <h1 id="men-info" onclick="openMod('info')">Information</h1>
-            <h1 id="men-heim" onclick="openMod('heimdall')">Heimdall</h1>
-            <h1 id="men-savi" onclick="openMod('savitir')">Savitir</h1>
-            <h1 id="men-aeth" onclick="openMod('aether')">Aether</h1>
+            <h1 id="men-info" class="desktop" onclick="openMod('info')">Information</h1>
+            <h1 id="men-heim" class="desktop" onclick="openMod('heimdall')">Heimdall</h1>
+            <h1 id="men-savi" class="desktop" onclick="openMod('savitir')">Savitir</h1>
+            <h1 id="men-aeth" class="desktop" onclick="openMod('aether')">Aether</h1>
         </div>
 
         <div id="leis-info" class="split">
@@ -103,10 +110,11 @@
                         Cancun for a training period, where you will be taught everything you will need to know to have a safe and enjoyable 
                         trip. Staying at our 5 star hotel while using our state of the art training facilities will make this safety training 
                         course a vacation in itself. The trip itself will bring you a comfortable and awe-inspiring experience.</p>
-                </div>
+                    <p class="mobile">Learn more about our tiers on our desktop site!</p>
+                    </div>
         </div>
 
-        <div id="leis-heim" class="split">
+        <div id="leis-heim" class="split desktop">
                 <div class="extra">
                         <h1 class="cmony">Heimdall</h1>
                         <div class="ally">
@@ -136,7 +144,7 @@
                 </div>
         </div>
 
-        <div id="leis-aeth" class="split">
+        <div id="leis-aeth" class="split desktop">
             <div class="extra">
                 <h1 class="cmony">Aether</h1>
                 <div class="ally">
@@ -169,7 +177,7 @@
             
         </div>
 
-        <div class="split" id="leis-sav">
+        <div class="split desktop" id="leis-sav">
             <div class="extra">
                 <h1 class="cmony">Savitir</h1>
                 <div class="ally">
@@ -200,7 +208,7 @@
         </div>
     </div>
     
-    <div id="allamen-heim" class="leiam">
+    <div id="allamen-heim" class="leiam desktop">
         <div class="drinks">
             <h1>Drinks</h1>
             <div class="coke"></div>
@@ -235,7 +243,7 @@
         </div>    
     </div>
     
-    <div id="allamen-sav" class="leiam">
+    <div id="allamen-sav" class="leiam desktop">
         <div class="drinks">
             <h1>Drinks</h1>
             <div class="coke"></div>
@@ -266,7 +274,7 @@
         </div>    
     </div>
 
-    <div id="allamen-aeth" class="leiam">
+    <div id="allamen-aeth" class="leiam desktop">
         <div class="drinks">
             <h1>Drinks</h1>
             <div class="coke"></div>
