@@ -1884,7 +1884,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /*                                LEISURE PAGE                                */
 /* -------------------------------------------------------------------------- */
 
-.amen{
+.leiam .amen {
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
     height: 30vh;
@@ -1905,14 +1905,14 @@ body.page-5 #pagination li:nth-of-type(5)*/
     align-items: center;
 }
 
-.amen h1{
+.leiam .amen h1{
     display: grid;
     justify-content: center;
     align-items: center;
     font-size: 3vw;
 }
 
-.amen ul{
+.leiam .amen ul{
     /* list-style: none; */
     display: grid;
     align-items: center;
@@ -1924,6 +1924,24 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     margin-top: 1vh;
     height: 18vh;
+}
+
+.eat h2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.eat:hover{
+    background-position: center !important;
+    background-size: cover !important;
+    transition: all ease-in-out 300ms;
+}
+
+.eat:hover h2{
+    opacity: 1 !important;
+    transition: all ease-in-out 300ms;
 }
 
 .aqua{
@@ -1962,12 +1980,21 @@ body.page-5 #pagination li:nth-of-type(5)*/
     border: 1px solid white
 }
 
+.chicken:hover {
+    background: linear-gradient(rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/Best-Grilled-Chicken-Breast.jpg);
+    transition: all ease-in-out 300ms;
+}
+
 .steak{
     background: url(../resources/images/steakforretro.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
     border: 1px solid white
+}
+
+.steak:hover {
+    background: linear-gradient(rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/steakforretro.jpg);
 }
 
 .fish{
@@ -1978,6 +2005,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     border: 1px solid white
 }
 
+.fish:hover {
+    background: linear-gradient(rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/salmonforretro.jpg);
+}
+
 .salad{
     background: url(../resources/images/saladforretro.jpeg);
     background-position: center;
@@ -1986,7 +2017,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
     border: 1px solid white
 }
 
-
+.salad:hover {
+    background: linear-gradient(rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/saladforretro.jpeg);
+}
 
 .busi{
     height: 100vh;
@@ -2023,6 +2056,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .nothing {
     background-color: transparent !important;
     
+}
+
+.smenuactive {
+    background-color: var(--lightglass) !important;
 }
 
 .smenu h1:hover {

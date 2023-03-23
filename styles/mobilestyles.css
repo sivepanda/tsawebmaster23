@@ -103,6 +103,55 @@ h1 {
     z-index: 10;
 }
 
+.menu {
+    grid-row: 1;
+    z-index: 1000;
+    grid-column: 4;
+    width: 15vw;
+    height: 10vh;
+    justify-self: center;
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
 .hamburger .bar,
 .hamburger:after,
 .hamburger:before {
@@ -321,6 +370,15 @@ hr {
     justify-content: center;
     align-items: center; */
 
+}
+
+/* .lbusin .sideimage .content p {
+    font-size: medium;
+} */
+
+
+.lbusin .sideimage .content h1 {
+    font-size: 10vw;
 }
 
 #busin{
@@ -1187,9 +1245,9 @@ hr {
 
 .arrow {
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 1vw 1vw 0;
     display: inline-block;
-    padding: 3px;
+    padding: 1vw;
   }
   
   .right {
@@ -1216,4 +1274,26 @@ hr {
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.busi {
+    height: 80vh;
+}
+
+.nothing {
+    margin-top:10vh;
+    text-align: center;
+}
+
+.split p {
+    padding: 5vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+.biggy p {
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
