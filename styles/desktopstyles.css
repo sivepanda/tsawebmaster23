@@ -1416,6 +1416,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     float: bottom;
     bottom: 0;
     width: 100vw;
+    z-index: 50;
     display: inline-flex;
     align-items: center;
     /* margin-top: 100vh; */
@@ -2917,9 +2918,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .timeline-item {
-    cursor: pointer !important;
+    cursor: pointer;
     margin: 50px 0;
     position: relative;
+}
+
+.nopoint {
+    cursor:default !important;
 }
 
 .timeline-item:first-child {
