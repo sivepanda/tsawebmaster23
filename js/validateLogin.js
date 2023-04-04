@@ -133,9 +133,9 @@ function openActModal() {
 
 function encrypt(toEncrypt) {
 
-    // return toEncrypt
+    return toEncrypt
 
-    return md5(toEncrypt);
+    // return md5(toEncrypt);
 
 }
 
