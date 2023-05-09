@@ -69,7 +69,9 @@ var timerComplete = false;
 
 window.addEventListener('load', (event) => {
     isLoaded = true;
-    loaded();
+    var loadInterval = setInterval(function() {
+        loaded();
+    }, 10);
 });
 
 
@@ -77,7 +79,7 @@ window.addEventListener('load', (event) => {
 /*LOADING SCREEN */
 /**what happens when the page loads*/
 function loaded() {
-    if (isLoaded && timerComplete && document.getElementById("loadtank")) {
+    if (isLoaded && document.getElementById("loadtank")) {
         var load = document.getElementById("loadtank");
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
@@ -90,10 +92,7 @@ function loaded() {
     }
 }
 
-var loadInterval = setInterval(function() {
-    timerComplete = true;
-    loaded();
-}, 1500);
+
 
 /**Triggered when element is in viewport
  * @param el - parameter being watched
