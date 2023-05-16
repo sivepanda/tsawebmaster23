@@ -1459,7 +1459,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .flightdtnm {
-    width: 25%;
+    width: 30%;
     padding-left: 3vw;
     text-align: left;
 }
@@ -1473,6 +1473,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .flightinfo .date {
     padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     margin-top: 0px;
     color: #c2c2c2;
 }
@@ -2812,8 +2814,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     opacity: .7;
 }
 
-
-
 /* -------------------------------------------------------------------------- */
 /*                                     3D                                     */
 /* -------------------------------------------------------------------------- */
@@ -2898,6 +2898,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 /*                                    News                                    */
 /* -------------------------------------------------------------------------- */
+
 .timeline {
     position: relative;
     max-width: 800px;

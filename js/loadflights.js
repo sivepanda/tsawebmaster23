@@ -7,6 +7,8 @@ dates.set(5, "Thursday");
 dates.set(6, "Friday");
 dates.set(7, "Saturday");
 
+const daysLater = 95;
+
 
 //FLIGHT DATA------------------------------------------------------------------------------------------
 
@@ -25,10 +27,16 @@ class Flight {
     
         if(ty == "Savitir") {
             this.price = 20000
+            this.timeStart = "900 AM"
+            this.timeEnd = "300 PM"
         } else if (ty == "Aether") {
             this.price = 100000
+            this.timeStart = "300 PM"
+            this.timeEnd = "300 PM"
         } else if (ty == "Heimdall") {
             this.price = 10000
+            this.timeStart = "200 PM"
+            this.timeEnd = "800 PM"
         }
     
     }
@@ -48,7 +56,9 @@ class Flight {
 
     /**Format Flight data as HTML to inject into the available flight data */
     format() {
-        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> <p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> </div> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
+        var dates = (this.type == "Heimdall" ? "<p class='date'>" + this.dateBegin + "</p>" : ("<p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> "));
+        var times = (this.type == "Aether" ? "<p class='date'>&nbsp;</p>" : ("<p class='date'>" + this.timeStart + " - " + this.timeEnd + "</p>" + (this.type == "Heimdall" ? "<p class='date'>&nbsp;</p>" : "")));
+        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> " + dates + times + " </div> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
     }
 
     setBegin(dtB) {
@@ -64,6 +74,7 @@ class Flight {
 */
 function newDayXApart(today, x) {
     let eObj = new Date()
+    eObj.setMonth(today.getMonth());
     eObj.setDate(today.getDate() + x);
     e = eObj.toLocaleDateString(undefined, {month:'numeric', day:'numeric'});
     return e;
@@ -77,6 +88,7 @@ function captialFirst(x) {
 /**creates the set of upcoming flights and injects HTML */
 function createFlights() {
     var today = new Date();
+    today.setDate(today.getDate() + daysLater);
     num = 0;
     htmlInject = ''
     numEntries = 3 //number of entries on the page
@@ -88,15 +100,15 @@ function createFlights() {
         let e = ''
         let ty = ''
         if(currDt % 7 == 1) { // Saturday launch
-            e = newDayXApart(today, 1);
+            e = newDayXApart(today, 0);
             ty = "Heimdall"
             num++
-        } else if (currDt % 7 == 4) { // Sunday launch
-            e = newDayXApart(today, 3);
+        } else if (currDt % 7 == 2) { // Sunday launch
+            e = newDayXApart(today, 1);
             ty = "Savitir"
             num++
         } else if (currDt % 7 == 6) { // Thursday launch
-            e = newDayXApart(today, 5);
+            e = newDayXApart(today, 8);
             ty = "Aether"
             num++
         }
