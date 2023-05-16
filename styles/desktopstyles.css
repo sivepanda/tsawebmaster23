@@ -278,8 +278,8 @@ p {
 
 html {
     overflow-y: scroll;
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
+    /* -ms-scroll-snap-type: y mandatory; */
+    /* scroll-snap-type: y mandatory; */
 }
 
 #ic0 {
@@ -496,6 +496,97 @@ html {
     margin: 0;
     padding: 50px 0 20px;
     /* text-align: center; */
+}
+
+.reviews{
+    width: 100vw;
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 25vw 25vw 25vw;
+    /* grid-gap: 5vw; */
+}
+
+.rcard{
+    height: 50vh;
+    /* margin-left: 4vw; */
+    /* background-color: white; */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: 20vh 30vh;
+}
+
+
+.toppy{
+    /* width: 25vw; */
+    display: grid;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: red;
+    align-items: center;
+    /* justify-content: center; */
+    grid-template-columns: calc(5vw) calc(14vw);
+    
+}
+
+.mancirc{
+    height: 5vw;
+    /* background-color: red; */
+    background-image: url('../resources/images/minister.webp');
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+}
+
+.namee{
+    display: grid;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: 10vh; */
+}
+
+.namey{
+    color: black;
+    font-size: 2vw;
+    letter-spacing: .1vw;
+}
+
+.titles{
+    color: grey;
+    font-size: 1vw;
+    margin: 0px;
+}
+
+.downny{
+    width: 25vw;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars{
+    height: 0vh;
+    margin-left: 10vw;
+}
+
+.fa-star{
+    font-size: .3vw;
+}
+
+.checked{
+    height: 1vh;
+    color: orange;
+}
+
+.downny p{
+    /* width: 70%; */
+    overflow-wrap: break-word;
 }
 
 .pagination-container {
@@ -2306,6 +2397,121 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 /*                                  Business                                  */
 /* -------------------------------------------------------------------------- */
+
+
+.slider{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+  
+  .slides{
+    width: 500%;
+    /* height: 500px; */
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    position: absolute;
+    margin-top: 50vh;
+    width: 100vw;
+    object-fit: cover;
+
+    height: 50vh;
+  }
+  
+  .navigation-mannual{
+    /* background-color: green; */
+    position: absolute;
+    width: 100vw;
+    /* margin-top: 5vh; */
+    /* margin-left: 50vw; */
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  .mannual-btn{
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .mannual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .mannual-btn:hover{
+    background-color: #ccc;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /* Automatic Navigation */
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    /* margin-top: 460px; */
+    margin-top: 95vh;
+    /* background-color: green; */
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #333;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~.navigation-auto .auto-btn-1{
+    background: #ccc;
+  }
+  
+  #radio2:checked ~.navigation-auto .auto-btn-2{
+    background: #ccc;
+  }
+  
+  
+  #radio3:checked ~.navigation-auto .auto-btn-3{
+    background: #ccc;
+  }
+  
+  #radio4:checked ~.navigation-auto .auto-btn-4{
+    background: #ccc;
+  }
 
 
 .helpy{
