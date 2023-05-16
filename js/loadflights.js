@@ -27,16 +27,16 @@ class Flight {
     
         if(ty == "Savitir") {
             this.price = 20000
-            this.timeStart = "900 AM"
-            this.timeEnd = "300 PM"
+            this.timeStart = "9&nbsp;AM"
+            this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Aether") {
             this.price = 100000
-            this.timeStart = "300 PM"
-            this.timeEnd = "300 PM"
+            this.timeStart = "300&nbsp;PM"
+            this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Heimdall") {
             this.price = 10000
-            this.timeStart = "200 PM"
-            this.timeEnd = "800 PM"
+            this.timeStart = "2&nbsp;PM"
+            this.timeEnd = "8&nbsp;PM"
         }
     
     }
