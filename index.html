@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -47,19 +49,27 @@
 <body id="mainpage" > <!-- style="overflow-x: clip; scroll-snap-type: y mandatory;" --> 
     <div class="loadtank" id="loadtank">
         <div class="video-container">
-            <video muted loop infinite autoplay id="promo" class="loadingvid">
+            <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
                 <source src="resources/videos/retro_loading.mov" type="video/mp4">
               </video>
         </div>
     </div>
     <div class="mobheader mobile">
         <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
-        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <!-- <button class="hamburger" id="hamburger" onclick=toggleMenu()>
             <div class="bar"></div>
+        </button> -->
+
+        <button class="menu" id='newmnu' onclick="toggleMenu()" aria-label="Main Menu">
+            <svg width="200" height="200" viewBox="0 0 100 100" style="align-self: center;">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
         </button>
     </div>
     <div class="header fullheader desktop" id="header">
-        <img class="headerlogo" src="resources/images/retrograde_wh.png" alt="logo" />
+        <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" onclick="window.open('index.html', '_self')" />
         <ul>
             <li><a class='mnuele' href="index.html">Home</a> </li>
             <li><a class='mnuele' href="trips.html">Trips</a></li>
@@ -83,7 +93,6 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
     </div>
 
     <div id="modalstart" class="desktop">
@@ -96,7 +105,7 @@
     
         </div>
         <section class='contentbox videobox full' id="ic0">
-            <video autoPlay muted loop id='myVideo'>
+            <video disablePictureInPicture autoPlay muted loop id='myVideo'>
                     <source src="resources/videos/EarthVid.mp4.mp4" type="video/mp4"></source>
                 </video>
             <h1>A Trip Like No Other</h1>
@@ -191,8 +200,7 @@
    
 </body>
 
-<script async src="js/mobController.js"></script>
-<script async src="js/loadelements.js"></script>
+<script src="js/mobController.js"></script>
 <script async src="js/page-specific/index_page.js"></script>
 <script async src="js/index.js"></script>
 <script>

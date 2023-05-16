@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <style>
@@ -47,14 +49,14 @@
 <body id="mainpage" style="overflow-x: clip; scroll-snap-type: y mandatory;">
     <div class="loadtank" id="loadtank">
         <div class="video-container">
-            <video muted loop infinite autoplay id="promo" class="loadingvid">
+            <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
                 <source src="resources/videos/retro_loading.mov" type="video/mp4">
               </video>
         </div>
     </div>
 
     <div class="header fullheader" id="header">
-        <img class="headerlogo desktop" src="resources/images/retrograde_wh.png" alt="logo" />
+        <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" onclick="window.open('index.html', '_self')" />
         <ul>
             <li><a class='mnuele' href="index.html">Home</a> </li>
             <li><a class='mnuele' href="trips.html">Trips</a></li>
@@ -162,12 +164,43 @@
 
     </section>
 
+    <div class="footy">
+
+        <div class="ifoot">
+            <img src="resources\images\retrograde_wh.png" style="width: 50%; height: auto; padding-bottom: 1vh;">
+        </div>
+
+        <div class="ifoot">
+            <a href="https://drive.google.com/drive/folders/1ayLr_JgWDCBLRv4DqObI_whZ8xIutZyT?usp=sharing" target="_blank">PORTFOLIO</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="https://instagram.com" target="_blank">INSTAGRAM</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="https://twitter.com" target="_blank">TWITTER</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="https://facebook.com" target="_blank">FACEBOOK</a>
+        </div>
+        
+        <div class="ifoot desktop">
+            <a class="desktop" href="news.html" target="_blank">NEWS</a>
+
+        </div>
+
+        <div class="ifoot">
+            <a href="attributes.html" target="_blank">ATTRIBUTES</a>
+        </div>
+    </div>
 </body>
 
 <script src="https://kit.fontawesome.com/07f5345973.js" crossorigin="anonymous"></script>
-<script  async src="js/mobController.js"></script>
+<script src="js/mobController.js"></script>
 <script  async src="js/book.js"></script>
-<script  async src="js/loadelements.js"></script>
+<!-- <script  async src="js/loadelements.js"></script> -->
 <script  src="js/validateLogin.js"></script>
 <!-- <script  src="js/loadflights.js"></script> -->
 <script>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
     <style>
         .loadtank {
             position: fixed;
@@ -45,20 +47,28 @@
 <body>
 <div class="loadtank" id="loadtank">
     <div class="video-container">
-        <video muted loop infinite autoplay id="promo" class="loadingvid">
+        <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
             <source src="resources/videos/retro_loading.mov" type="video/mp4">
           </video>
 </div>
 </div>
     <div class="mobheader mobile">
         <img class="headerlogo" src="resources/images/retro_a.png" alt="logo" onclick="window.open('index.html', '_self')" />
-        <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <!-- <button class="hamburger" id="hamburger" onclick=toggleMenu()>
             <div class="bar"></div>
+        </button> -->
+
+        <button class="menu" id='newmnu' onclick="toggleMenu()" aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100" style="align-self: center;">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
         </button>
     </div>
     <div id="nc1"></div>
     <div class="header fullheader desktop" id="header">
-        <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" />
+        <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" onclick="window.open('index.html', '_self')" />
         <ul>
             <li><a class='mnuele' href="index.html">Home</a> </li>
             <li><a class='mnuele' href="trips.html">Trips</a></li>
@@ -81,8 +91,7 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-
-    </div>
+      </div>
 
     <!-- Popups -->
 
@@ -233,7 +242,7 @@
             <div class="timeline-content">
                 <b>December 13th, 2022</b>
                 <h2><a href="#" class="popup-link">Fusion Breakthrough</a></h2>
-                <p>Retrograde scientists were crucial in Lawrence Livermore National Laboratory fusion success. <br><u></u>Click for more information.</u></p>
+                <p>Retrograde scientists were crucial in Lawrence Livermore National Laboratory fusion success. <br><u>Click for more information.</u></p>
             </div>
         </div>
 
@@ -247,7 +256,7 @@
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info4">
+        <div class="timeline-item nopoint" data-popup="#popup-info4">
             <div class="timeline-content">
                 <b>May 23rd, 2023</b>
                 <h2><a href="#" class="popup-link">Testing, testing, 1, 2, 3</a></h2>
@@ -256,7 +265,7 @@
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info5">
+        <div class="timeline-item nopoint" data-popup="#popup-info5">
             <div class="timeline-content">
                 <b>June 5th, 2025</b>
                 <h2><a href="#" class="popup-link">Hermes Nominal!</a></h2>
@@ -265,7 +274,7 @@
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info6">
+        <div class="timeline-item nopoint" data-popup="#popup-info6">
             <div class="timeline-content">
                 <b>February 10th, 2026</b>
                 <h2><a href="#" class="popup-link">Heimdall Nominal!</a></h2>
@@ -274,7 +283,7 @@
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info7">
+        <div class="timeline-item nopoint" data-popup="#popup-info7">
             <div class="timeline-content">
                 <b>November 1st, 2027 </b>
                 <h2><a href="#" class="popup-link">Efficiency Gains</a></h2>
@@ -303,7 +312,7 @@ deep space spacecraft, Savitir. <br><u>Click for more information.</u></p>
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info10">
+        <div class="timeline-item nopoint" data-popup="#popup-info10">
             <div class="timeline-content">
                 <b>November 30,2028</b>
                 <h2><a href="#" class="popup-link">Oxomo is Ready!</a></h2>
@@ -322,7 +331,7 @@ Nuclear Fusion Alliance, funding and supplying career and technology centers wor
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info12">
+        <div class="timeline-item nopoint" data-popup="#popup-info12">
             <div class="timeline-content">
                 <b>October 30th, 2030</b>
                 <h2><a href="#" class="popup-link">The Final Frontier</a></h2>
@@ -332,7 +341,7 @@ Nuclear Fusion Alliance, funding and supplying career and technology centers wor
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info13">
+        <div class="timeline-item nopoint" data-popup="#popup-info13">
             <div class="timeline-content">
                 <b>July 2nd 2032</b>
                 <h2><a href="#" class="popup-link">Retrograde Ready!</a></h2>
@@ -341,10 +350,10 @@ Nuclear Fusion Alliance, funding and supplying career and technology centers wor
         </div>
 
 
-        <div class="timeline-item" data-popup="#popup-info14">
+        <div class="timeline-item nopoint" data-popup="#popup-info14">
             <div class="timeline-content">
                 <b>Jan 1st 2033</b>
-                <h2><a href="#" class="popup-link">3… 2… 1…</a></h2>
+                <h2><a href="#" class="popup-link">3&hellip; 2&hellip; 1&hellip;</a></h2>
                 <p>Retrograde launches its first commercial flight with the new years countdown. The first successful launch started off a year of space flight. </p>
             </div>
         </div>
@@ -387,6 +396,5 @@ Nuclear Fusion Alliance, funding and supplying career and technology centers wor
 
 <script  async src="js/page-specific/new.js"></script>
 <script  async src="js/page-specific/new_parallax.js"></script>
-<script async src="js/mobController.js"></script>
-<script async src="js/loadelements.js"></script>
+<script src="js/mobController.js"></script>
 </html>
