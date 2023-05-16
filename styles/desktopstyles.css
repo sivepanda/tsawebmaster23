@@ -278,8 +278,8 @@ p {
 
 html {
     overflow-y: scroll;
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
+    /* -ms-scroll-snap-type: y mandatory; */
+    /* scroll-snap-type: y mandatory; */
 }
 
 #ic0 {
@@ -337,7 +337,8 @@ html {
     scroll-snap-stop: always;
     margin-top: 0;
     padding-top: 0;
-    background-image: url(../resources/images/rock.jpg);
+ 
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url(../resources/images/rock.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -496,6 +497,140 @@ html {
     margin: 0;
     padding: 50px 0 20px;
     /* text-align: center; */
+}
+
+.reviews{
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 20vw 20vw 20vw 25vw;
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 80% );
+    grid-gap: 3vw;
+}
+
+.rcard{
+    margin-top: 10vh;
+    height: 50vh;
+    
+    /* background-color: white; */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    display: grid;
+    /* box-sizing: border-box; */
+    grid-template-rows: 17vh 33vh;
+}
+
+
+.toppy{
+    width: 20vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 7vw 12vw;
+    grid-gap: 1vw;
+}
+
+.mancirc{
+    margin-left: 2vw;
+    height: 5vw;
+    /* background-color: red; */
+    background-image: url('../resources/images/minister.webp');
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+}
+
+.namee{
+    display: grid;
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 10vh; */
+}
+
+.namey{
+    color: black;
+    font-size: 2vw;
+
+}
+
+.titles{
+    color: grey;
+    font-size: 1vw;
+    margin: 0px;
+}
+
+.downny{
+    
+    margin-left: 2.5vw;
+
+}
+
+.starry{
+    margin: 0px;
+    padding: 0px;
+}
+
+.starry .fa{
+    font-size: .7vw;
+}
+
+.checked{
+    height: 1vh;
+    color: orange;
+}
+
+.serious{
+    width: 15vw;
+    word-wrap: break-word;
+    opacity: .8;
+}
+
+.belie{
+    margin-top: 10vh;
+}
+
+blockquote {
+    
+    font-family: Georgia, serif;
+    position: relative;
+    font-size: 1.3vw;
+    line-height: 5vh;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+    font-size: 1vw;
+}
+blockquote cite:before {
+    content: "\2013";
 }
 
 .pagination-container {
@@ -1891,6 +2026,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     grid-template-columns: 30vw 30vw 30vw;
     height: 30vh;
+    
 }
 
 .drinks{
@@ -1906,6 +2042,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.leiam{
+    background-color: black;
 }
 
 .leiam .amen h1{
@@ -2346,6 +2486,121 @@ body.page-5 #pagination li:nth-of-type(5)*/
 /* -------------------------------------------------------------------------- */
 /*                                  Business                                  */
 /* -------------------------------------------------------------------------- */
+
+
+.slider{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+  
+  .slides{
+    width: 500%;
+    /* height: 500px; */
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    position: absolute;
+    margin-top: 50vh;
+    width: 100vw;
+    object-fit: cover;
+
+    height: 50vh;
+  }
+  
+  .navigation-mannual{
+    /* background-color: green; */
+    position: absolute;
+    width: 100vw;
+    /* margin-top: 5vh; */
+    /* margin-left: 50vw; */
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  .mannual-btn{
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .mannual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .mannual-btn:hover{
+    background-color: #ccc;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /* Automatic Navigation */
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    /* margin-top: 460px; */
+    margin-top: 95vh;
+    /* background-color: green; */
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #333;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~.navigation-auto .auto-btn-1{
+    background: #ccc;
+  }
+  
+  #radio2:checked ~.navigation-auto .auto-btn-2{
+    background: #ccc;
+  }
+  
+  
+  #radio3:checked ~.navigation-auto .auto-btn-3{
+    background: #ccc;
+  }
+  
+  #radio4:checked ~.navigation-auto .auto-btn-4{
+    background: #ccc;
+  }
 
 
 .helpy{
@@ -2902,9 +3157,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
+    
+    margin: 0 3vw;
     padding: 0 20px;
     overflow: hidden;
+    /* background-color: green; */
 }
 
 .timeline::before {
@@ -2919,8 +3176,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .timeline-item {
+    /* margin-right: 15vw; */
     cursor: pointer;
-    margin: 50px 0;
+    margin-bottom: 50px;
     position: relative;
 }
 
@@ -2933,12 +3191,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .timeline-content {
+    background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
     position: relative;
-    margin-left: 120px;
+    margin-left: 20px;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 6px;
 }
+
+
 
 .timeline h2 {
     margin-top: 0;
@@ -2965,10 +3226,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .popup {
     position: fixed;
     border-radius: var(--corner-rad);
-    top: 25vh;
-    height: 50vh;
+    top: 15vh;
+    height: 75vh;
+    width: 35vw;
     overflow-y: scroll;
-    left: 50%;
+    left: 75vw;
     transform: translate(-50%, 0%);
     background-color: white;
     /* border: 1px solid #ccc; */
@@ -2976,6 +3238,9 @@ body.page-5 #pagination li:nth-of-type(5)*/
     box-shadow: 0px 0px 10px #000000;
     display: none;
     z-index: 999;
+    background-color: #b1bfd8;
+background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
+
 }
 
 .popup h2 {
