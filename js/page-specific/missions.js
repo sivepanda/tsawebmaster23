@@ -179,7 +179,7 @@ function loadMissions() {
         map.set('train', '6549968087_72d08feb11_h.jpg');
         map.set('vehic', 'pexels-pixabay-2163.jpg');
         map.set('safet', 'soyuz-ga20620eb0_1920.jpg');
-        map.set('launc', 'pexels-pixabay-2163.jpg'); //change
+        map.set('launc', 'bill-jelen-NVWyN8GamCk-unsplash.jpg'); //change
         map.set('recov', 'soyuz-ga20620eb0_1920.jpg'); //change
 
         miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get('plan') + ')';
