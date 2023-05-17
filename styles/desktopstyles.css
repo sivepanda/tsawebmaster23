@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: clip;
-    background-color: #181818;
+    background-color: #030303;
     color: white;
     font-family: 'Sarabun', 'sans-serif';
 }
@@ -278,8 +278,8 @@ p {
 
 html {
     overflow-y: scroll;
-    -ms-scroll-snap-type: y proximity;
-    scroll-snap-type: y proximity;
+    /* -ms-scroll-snap-type: y proximity; */
+    /* scroll-snap-type: y proximity; */
 }
 
 #ic0 {
@@ -287,6 +287,18 @@ html {
     scroll-snap-stop: always;
     color: white;
     word-spacing: 10px;
+}
+
+#ic0::after {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0,0,0);
+    background: linear-gradient(0deg, #030303 0%, #03030338 10%, rgba(0,0,0,0) 100%);
+
 }
 
 #ic0 p {
@@ -312,14 +324,14 @@ html {
     scroll-snap-stop: always;
     margin-top: 0;
     padding-top: 0;
-    background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/cancun.jpg);
+    /* background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/cancun.jpg); */
     background-position: center;
     background-size: cover;
 }
 
 #ic1 h1 {
     margin-top: 0;
-    padding-top: 40vh;
+    margin-top: 40vh;
     padding-left: 6vw;
     font-size: clamp(12px, 3vw, 40px);
 }
@@ -466,7 +478,7 @@ html {
     transform: scale(2);
 }
 
-.main section {
+/* .main section {
     margin: 0;
     height: 100vh;
 }
@@ -496,8 +508,8 @@ html {
     color: #fff;
     margin: 0;
     padding: 50px 0 20px;
-    /* text-align: center; */
-}
+    /* text-align: center; 
+} */
 
 .reviews{
     width: 100vw;
@@ -512,7 +524,7 @@ html {
 
 .rcard{
     margin-top: 10vh;
-    height: 50vh;
+    height: 60vh;
     
     /* background-color: white; */
     border-radius: 8px;
@@ -575,7 +587,7 @@ html {
 
 .titles{
     color: rgb(194, 194, 194);
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-weight: 100;
     margin: 0px;
 }
@@ -614,6 +626,14 @@ html {
 
 .showytex {
     background: linear-gradient(#0011ff, #717aff);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.showiertex {
+    background: linear-gradient(#000cb1, #8c00ff);
     background-clip: border-box;
     -webkit-text-fill-color: transparent;
     background-clip: text;
