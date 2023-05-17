@@ -27,9 +27,20 @@ class Flight {
         this.room = rm;
         //change indicators to show new div
         document.getElementById("roomselect") ? document.getElementById("roomselect").style.display = "none" : null;
-        document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "grid" : null;
+        document.getElementById("trainselect") ? document.getElementById("trainselect").style.display = "grid" : null;
+        document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
         document.getElementById("staystep") ? document.getElementById("staystep").classList.remove("bactive") : null;
-        document.getElementById("confstep") ? document.getElementById("confstep").classList.add("bactive") : null;
+        document.getElementById("schedstep") ? document.getElementById("schedstep").classList.add("bactive") : null;
+        document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
+        
+        let today = new Date();
+        document.getElementById("heachdt") ? document.getElementById("heachdt").min = ('td', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
+        document.getElementById("heachdt") ? document.getElementById("heachdt").value = ('td', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
+        document.getElementById("trachdt") ? document.getElementById("trachdt").min = ('td', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
+        document.getElementById("trachdt") ? document.getElementById("trachdt").value = ('td', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
+        today.setDate(today.getDate() + 40);
+        document.getElementById("heachdt") ? document.getElementById("heachdt").max = ('las', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
+    
         
         this.price += pr;
 
@@ -70,8 +81,10 @@ function goBack() {
     document.getElementById("rmc") ? document.getElementById("rmc").innerHTML =  "Room:" : null;
     document.getElementById("prc") ? document.getElementById("prc").innerHTML =  "Price: $" : null;
     document.getElementById("roomselect") ? document.getElementById("roomselect").style.display = "grid" : null;
+    document.getElementById("trainselect") ? document.getElementById("trainselect").style.display = "none" : null;
     document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
     document.getElementById("staystep") ? document.getElementById("staystep").classList.add("bactive") : null;
+    document.getElementById("schedstep") ? document.getElementById("schedstep").classList.remove("bactive") : null;
     document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
 }
 
@@ -148,9 +161,11 @@ function initializeAccount() {
     flight = JSON.parse(localStorage.getItem("currentbook"));
     flight = new Flight(flight.dateBegin, flight.dateEnd, flight.type, flight.price)
     document.getElementById("flighttype") ? document.getElementById("flighttype").innerHTML = flight.type : null;
+    document.getElementById("trainselect") ? document.getElementById("trainselect").style.display = "none" : null;
     document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
     document.getElementById("staystep") ? document.getElementById("staystep").classList.add("bactive") : null;
-        document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
+    document.getElementById("schedstep") ? document.getElementById("schedstep").classList.remove("bactive") : null;
+    document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
 }
 
 function setTier(tr) {
