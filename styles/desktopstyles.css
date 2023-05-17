@@ -159,7 +159,7 @@ body {
     left: 50%;
     overflow-y: none;
     overflow-x: scroll;
-    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: x mandatory;
     width: 50vw !important;
 }
 
@@ -278,8 +278,8 @@ p {
 
 html {
     overflow-y: scroll;
-    /* -ms-scroll-snap-type: y mandatory; */
-    /* scroll-snap-type: y mandatory; */
+    -ms-scroll-snap-type: y proximity;
+    scroll-snap-type: y proximity;
 }
 
 #ic0 {
@@ -653,7 +653,7 @@ blockquote:after {
 blockquote footer {
     padding: 0 2em 0 0;
     text-align:right;
-    font-size: 1vw;
+    font-size: 1.5vw !important;
 }
 blockquote cite:before {
     content: "\2013";
@@ -3215,27 +3215,25 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .timeline {
     position: relative;
-    max-width: 800px;
-    
-    margin: 0 3vw;
-    padding: 0 20px;
+    /* max-width: 800px; */
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    margin: 0vw 0vw;
+    padding: 0vw 0px;
     overflow: hidden;
+    transition: 500ms all ease-in-out;
     /* background-color: green; */
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-    width: 6px;
-    background-color: #ccc;         
 }
 
 .timeline-item {
     /* margin-right: 15vw; */
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    padding: 0vw 0px;
+    margin: 0vw 0vw;
+    width: 95%;
     cursor: pointer;
     margin-bottom: 50px;
     position: relative;
@@ -3251,6 +3249,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 .timeline-content {
     background: radial-gradient(666px at 0.4% 48%, rgb(202, 204, 227) 0%, rgb(89, 89, 99) 97.5%);
+    opacity: .7;
+    backdrop-filter:blur(10px);
     position: relative;
     margin-left: 20px;
     padding: 20px;
