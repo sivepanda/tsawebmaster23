@@ -10,6 +10,9 @@ const liic2 = document.getElementById("liic2") ? document.getElementById("liic2"
 const ic1lef = document.getElementById("ic1lef") ? document.getElementById("ic1lef") : false;
 const ic1righ = document.getElementById("ic1righ") ? document.getElementById("ic1righ") : false;
 
+const ic2lef = document.getElementById("ic2lef") ? document.getElementById("ic2lef") : false;
+const ic2righ = document.getElementById("ic2righ") ? document.getElementById("ic2righ") : false;
+
 console.log((localStorage.getItem("visited") == "true") ? "none" : "block")
 
 document.getElementById("modalstart").style.display = (localStorage.getItem("visited") == "true") ? "none" : "inline-flex";
@@ -21,9 +24,14 @@ function closeIntroModal() {
 
 window.addEventListener("scroll", function(e) {
     if(elementInViewport(ic1)) {
-        console.log('inview')
+
         ic1lef ? ic1lef.classList.add('slidein-horiz') : null;
         ic1righ ? ic1righ.classList.add('slidein-horiz') : null;
+    }
+
+    if(elementInViewport(ic2)) {
+        ic2lef ? ic2lef.classList.add('slidein-horiz') : null;
+        ic2righ ? ic2righ.classList.add('slidein-horiz') : null;
     }
 });
 
