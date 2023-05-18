@@ -298,7 +298,7 @@ html {
     top: 0;
     left: 0;
     background: rgba(0, 0,0,0);
-    background: linear-gradient(0deg, #030303 0%, #03030338 10%, rgba(0,0,0,0) 50%);
+    /* background: linear-gradient(0deg, #030303 0%, #03030338 10%, rgba(0,0,0,0) 50%); */
 
 }
 
@@ -499,6 +499,82 @@ html {
     padding: 50px 0 20px;
     /* text-align: center; 
 } */
+
+.pre{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 65vw 30vw;
+    height: 60vh;
+    background-image: linear-gradient(180deg, rgb(15,15,15) 10%, var(--background) 80% )
+    
+}
+
+.beachy{
+    margin-top: 5vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.beaches{
+    background-image: url('../resources/images/cancun.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50vw;
+    height: 50vh;
+}
+
+.lunch{
+    margin-top: 5vh;
+    display: grid;
+    align-items: center;
+    /* background-color: green; */
+    height: 50vh;
+    grid-template-rows: 15vh 27vh 8vh;
+}
+
+.duke{
+    /* border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(270deg, #000000 0%, #04619f 74%) 1; */
+}
+
+.duke h1{
+    margin: 0px;
+    font-size: 2.5vw;
+}
+
+.duke span{
+    background: linear-gradient(#2231ff, #717aff);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+}
+
+.duke h1{
+    letter-spacing: 5px;
+}
+
+.dukie{
+    display: grid;
+    align-items: center;
+    width: 25vw;
+    opacity: .7;
+    
+}
+
+.OU{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+     border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%) 1;
+}
 
 .reviews{
     width: 100vw;
