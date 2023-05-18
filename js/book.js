@@ -33,6 +33,8 @@ class Flight {
         document.getElementById("schedstep") ? document.getElementById("schedstep").classList.add("bactive") : null;
         document.getElementById("confstep") ? document.getElementById("confstep").classList.remove("bactive") : null;
         
+        document.getElementById("flightname") ? document.getElementById("flightname").innerHTML = this.type : null;
+
         let today = new Date();
         document.getElementById("heachdt") ? document.getElementById("heachdt").min = ('td', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
         document.getElementById("heachdt") ? document.getElementById("heachdt").value = ('td', today.toISOString().replace(/T.*/,'').split('-').join('-')) : null;
@@ -160,7 +162,7 @@ function initializeAccount() {
     //set active flight variable
     flight = JSON.parse(localStorage.getItem("currentbook"));
     flight = new Flight(flight.dateBegin, flight.dateEnd, flight.type, flight.price)
-    document.getElementById("flighttype") ? document.getElementById("flighttype").innerHTML = flight.type : null;
+    // document.getElementById("flighttype") ? document.getElementById("flighttype").innerHTML = flight.type : null;
     document.getElementById("trainselect") ? document.getElementById("trainselect").style.display = "none" : null;
     document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;
     document.getElementById("staystep") ? document.getElementById("staystep").classList.add("bactive") : null;

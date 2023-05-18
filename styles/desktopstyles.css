@@ -630,7 +630,6 @@ html {
 }
 
 blockquote {
-    
     font-family: var(--body-font);
     position: relative;
     font-size: 1.1vw;
@@ -638,6 +637,7 @@ blockquote {
     margin: 0.5em;
     padding: 0.5em 2em 0.5em 3em;
 }
+
 /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
 blockquote:before {
     font-family: Georgia, serif;
@@ -2043,6 +2043,20 @@ body.page-5 #pagination li:nth-of-type(5)*/
     padding-left: 3vw;
     padding-top: 5vh;
     
+}
+
+#schedleft {
+    color: white;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    border-left: 1px solid var(--lightglass);
+}
+
+#schedleft #flightname {
+    font-size: 5vh;
+
 }
 
 .dtselectla {

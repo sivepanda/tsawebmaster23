@@ -13,7 +13,7 @@ import * as THREE from 'three';
 
 const scene = new THREE.Scene();
 
-scene.background = new THREE.Color( 0x181818 );
+scene.background = new THREE.Color( 0x030303 );
 
 const camera = new THREE.PerspectiveCamera( 75, (window.innerWidth / 2) / window.innerHeight, 0.1, 1000 );
 console.log("test")
