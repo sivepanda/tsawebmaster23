@@ -12,6 +12,7 @@ body {
 }
 
 :root {
+    --background: rgb(3, 3, 3);
     --darkglass: rgba(0, 0, 0, 0.3);
     --lightglass: rgba(255, 255, 255, 0.3);
     --corner-rad: 20px;
@@ -297,7 +298,7 @@ html {
     top: 0;
     left: 0;
     background: rgba(0, 0,0,0);
-    background: linear-gradient(0deg, #030303 0%, #03030338 10%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, #030303 0%, #03030338 10%, rgba(0,0,0,0) 50%);
 
 }
 
@@ -319,63 +320,51 @@ html {
     /* opacity: 100; */
 }
 
-#ic1 {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    margin-top: 0;
-    padding-top: 0;
-    /* background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/cancun.jpg); */
-    background-position: center;
-    background-size: cover;
+#ic1, #ic2 {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    /* margin-left: 15vw; */
+    grid-template-columns: 50vw 50vw;
+    align-items: center;
+    justify-items: center;
 }
 
-#ic1 h1 {
-    margin-top: 0;
-    margin-top: 40vh;
-    padding-left: 6vw;
-    font-size: clamp(12px, 3vw, 40px);
+#ic1 .cont, 
+#ic2 .cont {
+    grid-row: 1;
+    grid-column: 2;
+    text-align:left;
 }
 
-#ic1 p {
-    font-size: clamp(10px, 2vw, 20px);
-    padding-left: 6vw;
-    width: 30vw;
-    color: white;
-    text-shadow: black 0px 0px 8px;
+#ic1 img,
+#ic2 img {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 0px var(--corner-rad) var(--corner-rad) 0px;
 }
 
-#ic2 {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    margin-top: 0;
-    padding-top: 0;
- 
-    background:linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url(../resources/images/rock.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
+#ic1 h1,
 #ic2 h1 {
     margin-top: 0;
-    padding-top: 40vh;
-    padding-left: 6vw;
+    /* margin-top: 40vh; */
+    /* padding-left: 6vw; */
     font-size: clamp(12px, 3vw, 40px);
 }
 
+#ic1 p,
 #ic2 p {
     font-size: clamp(10px, 2vw, 20px);
-    padding-left: 6vw;
+    /* padding-left: 6vw; */
     width: 30vw;
     color: white;
     text-shadow: black 0px 0px 8px;
-}
-
-.pageination {
-    /* margin-left: 95vw;
-    margin-top: -95vh; */
-    top: 15vh;
-    left: 95vw;
-    position: fixed;
 }
 
 .invis {
@@ -513,17 +502,17 @@ html {
 
 .reviews{
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 20vw 20vw 20vw 25vw;
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 80% );
+    background-image: linear-gradient(180deg, var(--background) 10%, rgba(50,4,89,1) 80% );
     grid-gap: 3vw;
 }
 
 .rcard{
-    margin-top: 10vh;
+    margin-top: 20vh;
     height: 60vh;
     
     /* background-color: white; */
@@ -625,7 +614,7 @@ html {
 }
 
 .showytex {
-    background: linear-gradient(#0011ff, #717aff);
+    background: linear-gradient(#2231ff, #717aff);
     background-clip: border-box;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -3120,6 +3109,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     grid-template-rows: 8vh;
     justify-content: center;
     align-items: center;
+}
+
+#mainpage .footy {
+    background-color: rgba(50,4,89,1);
 }
 
 .ifoot {
