@@ -104,8 +104,6 @@ function loaded() {
     }
 }
 
-
-
 /**Triggered when element is in viewport
  * @param el - parameter being watched
  */

@@ -1,11 +1,14 @@
 //INDEX PAGE ANIMATIONS------------------------------------------------------------------------------------------------------------
-const ic0 = document.getElementById("ic0") ? document.getElementById("ic0") : console.log('ic0 not found');
-const ic1 = document.getElementById("ic1") ? document.getElementById("ic1") : console.log('ic1 not found');
-const ic2 = document.getElementById("ic2") ? document.getElementById("ic2") : console.log('ic2 not found');
+const ic0 = document.getElementById("ic0") ? document.getElementById("ic0") : false;
+const ic1 = document.getElementById("ic1") ? document.getElementById("ic1") : false;
+const ic2 = document.getElementById("ic2") ? document.getElementById("ic2") : false;
 
-const liic0 = document.getElementById("liic0") ? document.getElementById("liic0") : console.log('liic0 not found');
-const liic1 = document.getElementById("liic1") ? document.getElementById("liic1") : console.log('liic1 not found');
-const liic2 = document.getElementById("liic2") ? document.getElementById("liic2") : console.log('liic2 not found');
+const liic0 = document.getElementById("liic0") ? document.getElementById("liic0") : false;
+const liic1 = document.getElementById("liic1") ? document.getElementById("liic1") : false;
+const liic2 = document.getElementById("liic2") ? document.getElementById("liic2") : false;
+
+const ic1lef = document.getElementById("ic1lef") ? document.getElementById("ic1lef") : false;
+const ic1righ = document.getElementById("ic1righ") ? document.getElementById("ic1righ") : false;
 
 console.log((localStorage.getItem("visited") == "true") ? "none" : "block")
 
@@ -14,7 +17,16 @@ document.getElementById("modalstart").style.display = (localStorage.getItem("vis
 function closeIntroModal() {
     document.getElementById("modalstart").style.display = 'none';
     localStorage.setItem("visited", "true");
-} 
+}
+
+window.addEventListener("scroll", function(e) {
+    if(elementInViewport(ic1)) {
+        console.log('inview')
+        ic1lef ? ic1lef.classList.add('slidein-horiz') : null;
+        ic1righ ? ic1righ.classList.add('slidein-horiz') : null;
+    }
+});
+
 
 /**Triggered when element is in viewport
  * @param el - parameter being watched
