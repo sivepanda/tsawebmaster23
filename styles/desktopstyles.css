@@ -471,7 +471,7 @@ html {
     align-items: center;
     grid-template-columns: 65vw 30vw;
     height: 60vh;
-    background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% )
+    /* background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% ) */
     
 }
 
@@ -486,13 +486,14 @@ html {
 
 .slidein-horiz {
     opacity: 1 !important;
-    margin-left: 0vw;
-    margin-right: 0vw;
+    margin-left: 0vw !important;
+    margin-right: 0vw !important;
     transition: all ease-in-out 500ms;
 }
 
 #ic1 {
     padding-bottom: 5vh;
+    background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% );
 }
 
 #ic2 {
@@ -509,6 +510,7 @@ html {
 
 #ic2lef {
     grid-column: 2;
+    margin-left: 4vw;
 }
 
 #ic2righ {
@@ -567,12 +569,17 @@ html {
 }
 
 .dukie{
-    display: grid;
-    align-items: center;
+    /* display: grid; */
+    /* align-items: center; */
     align-self: center;
     width: 25vw;
     opacity: .7;
     font-size: 2vh;
+}
+
+#ic2 .dukie {
+    justify-self: end;
+
 }
 
 .OU{
@@ -697,15 +704,17 @@ html {
 }
 
 .serious{
+    height: 30vh;
     width: 15vw;
     word-wrap: break-word;
     opacity: .8;
+    font-size: 2.4vh;
+    /* overflow-y: scroll; */
 }
 
 .serious p{
     height: 30vh;
-    font-size: 2.4vh;
-    overflow-y: scroll;
+    
 }
 
 .belie{
