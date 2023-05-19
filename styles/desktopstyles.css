@@ -588,16 +588,16 @@ html {
     align-items: center;
     width: 15vw;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     background-position-x: 0%;
     border-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%) 1;
     transition: 200ms ease-in-out;
 }
 
 .OU:hover {
-    border-width: 2px;
+    border-width: 6px;
     background-position-x: 80%;
-    transition: 400ms all ease-in-out;
+    transition: 200ms all ease-in-out;
 }
 
 .reviews{
@@ -614,7 +614,6 @@ html {
 .rcard{
     margin-top: 20vh;
     height: 60vh;
-    
     /* background-color: white; */
     border-radius: 8px;
     background-color: rgba(255, 255, 255, .15);  
@@ -662,7 +661,6 @@ html {
 
 .namee{
     display: grid;
-    
     /* justify-content: center; */
     /* align-items: center; */
     /* height: 10vh; */
@@ -1579,7 +1577,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
     position:fixed;
 }
 
+#ya0 {
+    height: 200vh;
+}
+
 #ya0content {
+    height: 100vh;
     margin-top: 15vh;
     display: grid;
     position: absolute;
@@ -1602,6 +1605,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #yacwelcome {
+    position: relative;
     grid-row: 1;
     grid-column: 2 / span 3;
     font-size: 5vh;
