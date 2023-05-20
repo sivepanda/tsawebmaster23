@@ -169,25 +169,49 @@
                     <label id='trachdtla' class="dtselectla" for="trachdt">Schedule Your Training:</label><br>
                     <input type="date" class="dtselect" id="trachdt" name="heath-date">
                 </div>
+
+                <button type="button" id="schedede" class="button-main" onclick="flight.viewReciept()">Schedule</button>
             </div>
 
             <div id="schedleft">
                 <h1 id="flightname" class="showytex"></h1>
                 <!-- <br> -->
-                <h1>Start Time</h1>
-                <p id="starttm"></p>
+                <h1 class="datedescriptor">Mission Start</h1>
+                <p class="datedescription" id="starttm"></p>
+                <h1 class="datedescriptor">Mission End</h1>
+                <p class="datedescription" id="endtm"></p>
+                <h1 class="datedescriptor">Mission Duration</h1>
+                <p class="datedescription" id="durationtm"></p>
             </div>
             
         </div>
 
         <div class="content" id="confirmselect">
-            <div class="inf">
-                <h1 id="tyc">Type:</h1>
-                <p id="tmc">Time:</p>
-                <p id="rmc">Room:</p>
-                <p id="prc">Price: $</p>
-                <button type="button" class="button-main" onclick="flight.confRoom()">Confirm</button>
-            </div>
+                <h1 id="tyc" class="showytex"></h1>
+                <div id="confleft">
+                    <h1 class="datedescriptor">Mission Start</h1>
+                    <p class="datedescription" id="tmsc"></p>
+                    <h1 class="datedescriptor">Mission End</h1>
+                    <p class="datedescription" id="tmec"></p>
+                    <h1 class="datedescriptor">Mission Duration</h1>
+                    <p class="datedescription" id="durc"></p>
+                </div>
+                <div id="confright">
+                    <h1 class="datedescriptor">Health Checkup Date</h1>
+                    <p class="datedescription" id="tmhc"></p>
+                    <h1 class="datedescriptor">Training Date</h1>
+                    <p class="datedescription" id="tmtc"></p>
+                    <h1 class="datedescriptor">Room</h1>
+                    <p class="datedescription" id="rmc"></p>
+                </div>
+                <div id="prpay">
+                    <h1 id='prdesc' class="datedescriptor">Price</h1>
+                    <p id="prc">$</p>
+                    <button type="button" class="button-main" onclick="flight.confRoom()">Pay Now</button>
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4n5debpo.json"  background="transparent" style="display:none;" speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>    
+
+                </div>
         </div>
 
     </section>
