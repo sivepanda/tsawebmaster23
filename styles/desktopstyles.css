@@ -471,7 +471,7 @@ html {
     align-items: center;
     grid-template-columns: 65vw 30vw;
     height: 60vh;
-    background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% )
+    /* background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% ) */
     
 }
 
@@ -486,13 +486,14 @@ html {
 
 .slidein-horiz {
     opacity: 1 !important;
-    margin-left: 0vw;
-    margin-right: 0vw;
+    margin-left: 0vw !important;
+    margin-right: 0vw !important;
     transition: all ease-in-out 500ms;
 }
 
 #ic1 {
     padding-bottom: 5vh;
+    background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% );
 }
 
 #ic2 {
@@ -509,6 +510,7 @@ html {
 
 #ic2lef {
     grid-column: 2;
+    margin-left: 4vw;
 }
 
 #ic2righ {
@@ -567,12 +569,17 @@ html {
 }
 
 .dukie{
-    display: grid;
-    align-items: center;
+    /* display: grid; */
+    /* align-items: center; */
     align-self: center;
     width: 25vw;
     opacity: .7;
     font-size: 2vh;
+}
+
+#ic2 .dukie {
+    justify-self: end;
+
 }
 
 .OU{
@@ -581,16 +588,16 @@ html {
     align-items: center;
     width: 15vw;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     background-position-x: 0%;
     border-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%) 1;
     transition: 200ms ease-in-out;
 }
 
 .OU:hover {
-    border-width: 2px;
+    border-width: 6px;
     background-position-x: 80%;
-    transition: 400ms all ease-in-out;
+    transition: 200ms all ease-in-out;
 }
 
 .reviews{
@@ -607,7 +614,6 @@ html {
 .rcard{
     margin-top: 20vh;
     height: 60vh;
-    
     /* background-color: white; */
     border-radius: 8px;
     background-color: rgba(255, 255, 255, .15);  
@@ -655,7 +661,6 @@ html {
 
 .namee{
     display: grid;
-    
     /* justify-content: center; */
     /* align-items: center; */
     /* height: 10vh; */
@@ -697,15 +702,22 @@ html {
 }
 
 .serious{
+    height: 30vh;
     width: 15vw;
     word-wrap: break-word;
     opacity: .8;
+    font-size: 2.4vh;
+    /* overflow-y: scroll; */
 }
 
 .serious p{
     height: 30vh;
+<<<<<<< HEAD
     font-size: 1.8vh;
     overflow-y: scroll;
+=======
+    
+>>>>>>> 3f2d01e0933345e7fafa15300dd94b9c2578aa06
 }
 
 .belie{
@@ -1570,7 +1582,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
     position:fixed;
 }
 
+#ya0 {
+    height: 200vh;
+}
+
 #ya0content {
+    height: 100vh;
     margin-top: 15vh;
     display: grid;
     position: absolute;
@@ -1593,6 +1610,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #yacwelcome {
+    position: relative;
     grid-row: 1;
     grid-column: 2 / span 3;
     font-size: 5vh;

@@ -15,6 +15,12 @@ const ic2righ = document.getElementById("ic2righ") ? document.getElementById("ic
 
 console.log((localStorage.getItem("visited") == "true") ? "none" : "block")
 
+var reviews = document.getElementsByClassName('serious');
+for(r in reviews) {
+    $( ".serious" ).textfit('bestfit');
+}
+// $('.serious')
+
 document.getElementById("modalstart").style.display = (localStorage.getItem("visited") == "true") ? "none" : "inline-flex";
 
 function closeIntroModal() {
