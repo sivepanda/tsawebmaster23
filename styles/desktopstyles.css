@@ -1793,6 +1793,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
     text-align: center;
 }
 
+.allinfo{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 30vw 70vw;
+}
+
+.allinfo li{
+    
+}
+
 
 .lbusin{
     display: grid;
