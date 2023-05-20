@@ -712,7 +712,12 @@ html {
 
 .serious p{
     height: 30vh;
+<<<<<<< HEAD
+    font-size: 1.8vh;
+    overflow-y: scroll;
+=======
     
+>>>>>>> 3f2d01e0933345e7fafa15300dd94b9c2578aa06
 }
 
 .belie{
@@ -1926,7 +1931,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background-size: cover;
     display: grid;
     grid-template-columns: 10vw 60vw 30vw;
-    grid-template-rows: 10vh 5vh 10vh 75vh;
+    grid-template-rows: 10vh 5vh 5vh 75vh;
     --imgsize: 9vw;
 }
 
@@ -1936,7 +1941,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     text-align: center;
     grid-column: 1 / span 3;
     grid-row: 3;
-    font-size: 10vh;
+    font-size: 8vh;
     margin: 0;
     /* margin: 0;
     padding-top: 9vh;
@@ -2316,7 +2321,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .leiam{
-    background-color: black;
+    background-image: linear-gradient(180deg, rgb(23, 23, 25) 50%, var(--background) 90% );
+  
 }
 
 .leiam .amen h1{
