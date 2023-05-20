@@ -1923,6 +1923,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 #bp0 {
     background: linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 100%), url(../resources/images/pexels-pixabay-355465.jpg);
+    background-size: cover;
     display: grid;
     grid-template-columns: 10vw 60vw 30vw;
     grid-template-rows: 10vh 5vh 10vh 75vh;
@@ -1965,6 +1966,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .engineOver{
     padding-right: 2%;
     border-right: 1px solid white;
+}
+
+#schedede {
+    width: 10vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-self:center;
+    align-self:center;
+    margin-top: 20vh;
 }
 
 .engines ul{
@@ -2171,6 +2181,21 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
 }
 
+#dates{
+    display: flex;
+    flex-direction: column;
+}
+
+.datedescriptor {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.datedescription {
+    padding-top: 0;
+    margin-top: 1vh;
+}
+
 .dtselectla {
     color: white;
     font-size: 3vh;
@@ -2193,17 +2218,69 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #confirmselect {
+    color: white;
     display: grid;
+    align-self:initial;
+    /* justify-self:end; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 55vh;
     justify-content: center;
-    align-content: center;
+    /* align-content: center; */
 }
 
+#confleft {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 2vw;
+    text-align: left;
+}
+
+#confirmselect .datedescriptor,
+#confirmselect .datedescription {
+    text-align: left;
+
+}
+
+#confright {
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 0vw;
+    text-align: left;
+}
+
+#confirmselect #tyc {
+    font-size: 3vw;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#prdesc {
+    font-size: 3vw;
+}
+
+#prc {
+    font-size: 2vw;
+    margin: 0;
+    text-align: left !important;
+}
+
+#prpay .button-main {
+    margin-top: 12vh;
+}
+
+/* border-left: 1px solid var(--lightglass); */
+
+
 #confirmselect h1 {
-    font-size: 5vh;
+    color: white;
+    font-size: 1.5vw;
     text-align: center;
 }
 
 #confirmselect p {
+    color: white;
     text-align: center;
 }
 
