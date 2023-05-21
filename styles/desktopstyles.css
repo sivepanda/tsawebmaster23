@@ -712,8 +712,12 @@ html {
 
 .serious p{
     height: 30vh;
+<<<<<<< HEAD
+    
+=======
     font-size: 1.8vh;
     overflow-y: scroll;
+>>>>>>> ae6c7dc4d0629f2f32f75ba205343e84dc787373
 }
 
 .belie{
@@ -1805,6 +1809,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
 #yastatus .date {
     width: 32vw;
     text-align: center;
+}
+
+.allinfo{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 30vw 70vw;
+}
+
+.allinfo li{
+    
 }
 
 
@@ -2902,35 +2916,92 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background: #ccc;
   }
 
-
-.helpy{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    display: grid;
-    grid-template-columns: 70vw 30vw;
-    height: auto;
+  /*-- 旧代码.helpy{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      display: grid;
+      grid-template-columns: 70vw 30vw;
+      height: auto;
+      
+    } ---- 旧代码*/
     
-}
+    .There{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    
+    .kongbai{
+        width: 100%;
+        height: 15vh; 
+    }
+    .There h1{
+        margin-top: 0px;
+        font-size: 5vw;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .There p{
+        font-size: 1.3vw;
+    }
+    
+    .zongti{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at top center, white);
+        background-color: #000000;
+    }
 
-.There{
-   margin-left: 5vw;
-   margin-right: 5vw;
-}
+    .sfq{
+        display: flex;
+        width: 90vw;
+        max-width: 1000px;
+        height: 500px;
+        overflow: hidden;
+    }
 
-.There h1{
-    margin-top: 0px;
-    font-size: 3vw;
-}
+    .tupian{
+        position: relative;
+        width: 60px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center;
+        transition: 0.5s cubic-bezier(0.05,0.61,0.41, 0.6);
+        overflow: hidden;
+    }
 
-.There p{
-    font-size: 1.1vw;
-}
+    .tupian.jihuo{
+        flex: 1;
+        margin: 0;
+        border-radius: 40px;
+    }
 
+    .tupian.jihuo .yinying{
+        background: linear-gradient(to top, rgb(56, 55, 55));
+    }
+
+    .tupian .yinying{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        transition: 0.5s cubic-bezier(0.05, 0.61,0.41, 0.6);
+    }
+
+
+
+    /* 旧代码
 .picss{
     /* background: blue; */
-    display: grid;
+    /* 旧代码display: grid;
     /* align-items: center; */
-    justify-content: center;
+   /* 旧代码 justify-content: center;
     grid-template-rows: calc(84vh/3) calc(84vh/3) calc(84vh/3);
     grid-gap: 4vh;
 }
@@ -2972,19 +3043,20 @@ body.page-5 #pagination li:nth-of-type(5)*/
     justify-content: center;
     align-items: center;
     /* grid-template-columns: 40vw 40vw; */
-    width: 98vw;
+   /* 旧代码 width: 98vw;
     /* grid-column-gap: 2vw; */
-    height: auto;
+   /* 旧代码 height: auto;
     padding-bottom: 0vh;
     margin-top: 0vh;
     margin-bottom: 0vh;
-}
+} 旧代码*/
 
 .bussy{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 10vh;
 }
 
 
@@ -3096,7 +3168,148 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-bottom: 3%;
     font-family: var(--body-font);
   }
-  
+   
+  .zt{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+
+  .kapian{
+    width: 100vw;
+    max-width: 850px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+
+  .ka{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    padding-left: 30px;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .ka .zhaopian{
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+  }
+
+  .ka .zhaopian img{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.6s;
+  }
+
+  #kp_1:checked ~ .ka-1 img,
+  #kp_2:checked ~ .ka-2 img,
+  #kp_3:checked ~ .ka-3 img,
+  #kp_4:checked ~ .ka-4 img,
+  #kp_5:checked ~ .ka-5 img{
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+
+  .ka .wenben{
+    flex: 1;
+    padding: 0 30px 0 35px;
+    position: relative;
+    left: 50px;
+    opacity: 0;
+    transition: 0.6s;
+  }
+
+  #kp_1:checked ~ .ka-1 .wenben,
+  #kp_2:checked ~ .ka-2 .wenben,
+  #kp_3:checked ~ .ka-3 .wenben,
+  #kp_4:checked ~ .ka-4 .wenben,
+  #kp_5:checked ~ .ka-5 .wenben{
+    opacity: 1;
+    z-index: 9;
+    left: 0;
+    transition-delay: 0.3s;
+  }
+
+  .ka .biaoti{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .ka .wenzi{
+    font-size: 17px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+
+  .ka a{
+    padding: 13px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    float: right;
+  }
+
+  .kps{
+    position: absolute;
+    bottom: 25px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .kps .kp{
+    width: 50px;
+    height: 10px;
+    background-color: #dfdfdf;
+    display: inline-flex;
+    margin: 0 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kps .kp::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s;
+  }
+
+  #kp_1:checked ~ .kas .ka-1::before,
+  #kp_2:checked ~ .kas .ka-2::before,
+  #kp_3:checked ~ .kas .ka-3::before,
+  #kp_4:checked ~ .kas .ka-4::before,
+  #kp_5:checked ~ .kas .ka-5::before{
+    width: 100%;
+    transform: scaleX(1);
+  }
 
   input[type=submit]:hover {
     
