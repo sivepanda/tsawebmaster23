@@ -712,8 +712,12 @@ html {
 
 .serious p{
     height: 30vh;
+<<<<<<< HEAD
+    
+=======
     font-size: 1.8vh;
     overflow-y: scroll;
+>>>>>>> ae6c7dc4d0629f2f32f75ba205343e84dc787373
 }
 
 .belie{
@@ -1792,6 +1796,16 @@ body.page-5 #pagination li:nth-of-type(5)*/
 #yastatus .date {
     width: 32vw;
     text-align: center;
+}
+
+.allinfo{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 30vw 70vw;
+}
+
+.allinfo li{
+    
 }
 
 
