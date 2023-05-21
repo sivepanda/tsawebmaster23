@@ -75,10 +75,6 @@ class Flight {
         
         this.price += pr;
 
-        //populate div
-        // this.viewReciept()
-
-
         console.log("sucessfully set room to " + rm + " price " + this.price)
     }
 
@@ -126,9 +122,17 @@ class Flight {
     }
 
     confRoom() {
-        this.setUser((JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username);
-        localStorage.setItem(newestFlight(), JSON.stringify(this));
-        window.open("your-account.html", "_self");     
+        // payayay
+        document.getElementById("payayay") ? document.getElementById("payayay").style.display = 'none' : null;
+        document.getElementById("paye") ? document.getElementById("paye").style.display = 'block' : null;
+
+        setTimeout(() => { console.log("World!"); }, 1000);
+
+        // let x = setInterval(function() {
+            this.setUser((JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username);
+            localStorage.setItem(newestFlight(), JSON.stringify(this));
+            window.open("your-account.html", "_self");
+        // }, 100);
     }
 }
 
@@ -136,7 +140,7 @@ function goBack() {
     document.getElementById("tyc") ? document.getElementById("tyc").innerHTML = 'Type' : null;
     document.getElementById("tmc") ? document.getElementById("tmc").innerHTML = 'Time:' : null;
     document.getElementById("rmc") ? document.getElementById("rmc").innerHTML =  "Room:" : null;
-    document.getElementById("prc") ? document.getElementById("prc").innerHTML =  "Price: $" : null;
+    document.getElementById("prc") ? document.getElementById("prc").innerHTML =  "$" : null;
     document.getElementById("roomselect") ? document.getElementById("roomselect").style.display = "grid" : null;
     document.getElementById("trainselect") ? document.getElementById("trainselect").style.display = "none" : null;
     document.getElementById("confirmselect") ? document.getElementById("confirmselect").style.display = "none" : null;

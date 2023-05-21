@@ -1583,11 +1583,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #ya0content {
-    height: 100vh;
+    height: 200vh;
     margin-top: 15vh;
     display: grid;
-    position: absolute;
-    grid-template-rows: 10vh 5vh 20vh 20vh 20vh 5vh;
+    /* position: absolute; */
+    grid-template-rows: 10vh 5vh 20vh 20vh 20vh 5vh 100vh;
     grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
 }
 
@@ -1621,7 +1621,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     grid-row: 3 / span 3;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 3;
     width: 80%;
     height: 100%;
     border-radius: var(--corner-rad);
@@ -1645,10 +1645,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    grid-row: 3 / span 3;
-    grid-column: 4 / span 2;
-    width: 25vw;
-    height: 60vh;
+    grid-row: 7;
+    grid-column: 1 / span 5;
+    width: 90vw;
+    height: 90vh;
     padding: 0;
     border-radius: var(--corner-rad);
     align-self: center;
@@ -1733,11 +1733,12 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: flex;
     flex-direction: row;
     width: 25vw;
+    margin-left: 5vw;
     justify-content: space-between;
 }
 
 #aflightlist hr {
-    width: 20vw;
+    width: 80vw;
     border-top: 1px;
 }
 
@@ -1771,6 +1772,13 @@ body.page-5 #pagination li:nth-of-type(5)*/
     justify-self: flex-end;
 }
 
+#yastatuses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
 #yastatus .flightinfo {
     width: 32vw;
 }
@@ -1781,6 +1789,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #yastatus .flightdtnm {
+    width: 80%;
+    padding-left: 0vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-left: 0;
 }
 
@@ -2224,7 +2237,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     align-self:initial;
     /* justify-self:end; */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 55vh;
+    grid-template-rows: 10vh 40vh 15vh;
     justify-content: center;
     /* align-content: center; */
 }
@@ -2258,21 +2271,36 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #prdesc {
-    font-size: 3vw;
+    text-align: center !important;
+    font-size: 3vw !important;
 }
 
 #prc {
-    font-size: 2vw;
+    font-size: 4vw;
     margin: 0;
-    text-align: left !important;
+    text-align: center !important;
 }
 
-#prpay .button-main {
-    margin-top: 12vh;
+#prpay {
+    /* justify-self: center; */
+    justify-self: center;
+    align-self: center;
+    /* border-left: 1px solid var(--lightglass); */
 }
 
-/* border-left: 1px solid var(--lightglass); */
+#confirmselect #paye {
+    grid-row: 3;
+    grid-column: 2;
+    width: 10vh;
+    height: 10vh;
+    justify-self: center;
+    display: none;
+}
 
+#confirmselect .button-main {
+    /* margin-top: 12vh; */
+    grid-column: 2;
+}
 
 #confirmselect h1 {
     color: white;
@@ -2288,6 +2316,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .inf .button-main {
     align-self: center;
 }
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -2333,8 +2362,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     align-items: center;
 }
-
-
 
 .eat{
     display: grid;
