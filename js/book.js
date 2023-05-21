@@ -124,17 +124,26 @@ class Flight {
     confRoom() {
         // payayay
         document.getElementById("payayay") ? document.getElementById("payayay").style.display = 'none' : null;
+        document.getElementById("paye") ? document.getElementById("paye").play() : null;
         document.getElementById("paye") ? document.getElementById("paye").style.display = 'block' : null;
 
-        setTimeout(() => { console.log("World!"); }, 1000);
-
-        // let x = setInterval(function() {
+        setTimeout(() => { 
             this.setUser((JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username);
             localStorage.setItem(newestFlight(), JSON.stringify(this));
+            document.getElementById("paye") ? document.getElementById("paye").stop() : null;
+            document.getElementById("paye") ? document.getElementById("paye").seek("0%") : null;
+            document.getElementById("paye") ? document.getElementById("paye").stop() : null;
             window.open("your-account.html", "_self");
+         }, 1000);
+
+        // let x = setInterval(function() {
+            
         // }, 100);
     }
 }
+
+document.getElementById("paye") ? document.getElementById("paye").seek(0) : null;
+document.getElementById("paye") ? document.getElementById("paye").stop() : null;
 
 function goBack() {
     document.getElementById("tyc") ? document.getElementById("tyc").innerHTML = 'Type' : null;

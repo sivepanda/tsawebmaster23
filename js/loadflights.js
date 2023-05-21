@@ -136,6 +136,11 @@ function loadBookedFlights() {
         if(flight.user == (JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username)
         htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>"  + flight.timeStart + ' ' + flight.dateBegin + " - " + flight.timeEnd + ' ' + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
         if(i == 0) {
+            document.getElementById("yalefhe") ? document.getElementById("yalefhe").innerHTML = 'Time Until Your Flight' : null;
+            document.getElementById("yabksome") ? document.getElementById("yabksome").style.display = 'none' : null;
+            document.getElementById("reminders") ? document.getElementById("reminders").style.display = 'flex' : null;
+            document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'hidden' : null;
+
             let timeconv = flight.timeStart.split(" ")[1] == "AM" ? flight.timeStart.split(" ")[0] + ":00:00 GMT-0500" : (parseInt(flight.timeStart.split(" ")[0]) + 12) + ":00:00 GMT-0500"
             let dtbg = parseInt(flight.dateBegin) < 10 ? '0' + flight.dateBegin : flight.dateBegin;
             console.log('2023/' + dtbg + " " + timeconv)
@@ -161,21 +166,23 @@ function loadBookedFlights() {
                 } else {
                     document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = tmstr : null;
                 }
-
-                // document.getElementById("days").innerHTML = days;
-                // document.getElementById("hours").innerHTML = hours;
-                // document.getElementById("minutes").innerHTML = minutes;
-                // document.getElementById("seconds").innerHTML = seconds;
-        
-                
-        
             },1000);
-        }
+        } 
         i++;
     }
     if (i == 0) {
-        htmlInject += "<p>You haven't booked a vacation yet!</p>"
+        console.log("test");
+        document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'hidden' : null;
+        document.getElementById("yalefhe") ? document.getElementById("yalefhe").innerHTML = 'Book A Flight' : console.log("BAF not found");
+        document.getElementById("flightm") ? document.getElementById("flightm").style.display = 'none' : null;
+        document.getElementById("reminders").style.display = 'none';
+        document.getElementById("yabksome").style.display = 'static';
+        htmlInject += "<p>You haven't booked a vacation yet!</p>";
     }
+    if(i > 4) {
+        document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'scroll' : null;
+    }
+
     document.getElementById("yastatuses").innerHTML = htmlInject
 }
 
