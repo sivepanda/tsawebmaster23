@@ -182,7 +182,7 @@ function loadMissions() {
         map.set('launc', 'bill-jelen-NVWyN8GamCk-unsplash.jpg'); //change
         map.set('recov', 'soyuz-ga20620eb0_1920.jpg'); //change
 
-        miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get('plan') + ')';
+        // miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get('plan') + ')';
         miss.style.backgroundSize = 'cover';
 
         for(button in buttons) {
@@ -190,7 +190,7 @@ function loadMissions() {
                 let x = button;
                 buttons[x].addEventListener('click', () => {
                     let val = (buttons[x].getAttribute('value'));
-                    miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get(val) + ')';
+                    // miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get(val) + ')';
                     miss.style.backgroundSize = 'cover';
                     miss.style.backgroundPosition = 'bottom';
 

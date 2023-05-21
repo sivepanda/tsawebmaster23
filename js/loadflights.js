@@ -31,7 +31,7 @@ class Flight {
             this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Aether") {
             this.price = 100000
-            this.timeStart = "300&nbsp;PM"
+            this.timeStart = "3&nbsp;PM"
             this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Heimdall") {
             this.price = 10000
@@ -56,9 +56,9 @@ class Flight {
 
     /**Format Flight data as HTML to inject into the available flight data */
     format() {
-        var dates = (this.type == "Heimdall" ? "<p class='date'>" + this.dateBegin + "</p>" : ("<p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> "));
-        var times = (this.type == "Aether" ? "<p class='date'>&nbsp;</p>" : ("<p class='date'>" + this.timeStart + " - " + this.timeEnd + "</p>" + (this.type == "Heimdall" ? "<p class='date'>&nbsp;</p>" : "")));
-        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> " + dates + times + " </div> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
+        var dateString = this.timeStart + " <b>" + this.dateBegin + "</b> — " + this.timeEnd + " <b>" + this.dateEnd + "</b>";
+        // var times = (this.type == "Aether" ? "" : ("<p class='date'>" + this.timeStart + " - " + this.timeEnd + "</p>" + (this.type == "Heimdall" ? "<p class='date'>&nbsp;</p>" : "")));
+        return "<div class='flightinfo'>  <h1 class='type'>" + this.type + "</h1> <p>" + dateString + "</p> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
     }
 
     setBegin(dtB) {
@@ -91,7 +91,7 @@ function createFlights() {
     today.setDate(today.getDate() + daysLater);
     num = 0;
     htmlInject = ''
-    numEntries = 3 //number of entries on the page
+    numEntries = 8 //number of entries on the page
 
     while(num < numEntries) {
         currDt = String(today.getDate()).padStart(2, '0');
@@ -134,7 +134,43 @@ function loadBookedFlights() {
     while(localStorage.getItem("bflight" + i) != null) {
         let flight = JSON.parse(localStorage.getItem("bflight" + i));
         if(flight.user == (JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username)
-        htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>" + flight.dateBegin + " - " + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
+        htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>"  + flight.timeStart + ' ' + flight.dateBegin + " - " + flight.timeEnd + ' ' + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
+        if(i == 0) {
+            let timeconv = flight.timeStart.split(" ")[1] == "AM" ? flight.timeStart.split(" ")[0] + ":00:00 GMT-0500" : (parseInt(flight.timeStart.split(" ")[0]) + 12) + ":00:00 GMT-0500"
+            let dtbg = parseInt(flight.dateBegin) < 10 ? '0' + flight.dateBegin : flight.dateBegin;
+            console.log('2023/' + dtbg + " " + timeconv)
+            let tmtil = new Date('2023/' + dtbg + " " + timeconv);
+            // document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = tmtil : null;
+
+            var countDownDate = tmtil.getTime();
+            var x = setInterval(function(){
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+        
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                let tmstr = days + ":" + hours + ':' + minutes +':' + seconds;
+            
+                if(distance < 0){
+                    clearInterval(x);
+                    document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = '00:00:00:00' : null;
+
+                } else {
+                    document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = tmstr : null;
+                }
+
+                // document.getElementById("days").innerHTML = days;
+                // document.getElementById("hours").innerHTML = hours;
+                // document.getElementById("minutes").innerHTML = minutes;
+                // document.getElementById("seconds").innerHTML = seconds;
+        
+                
+        
+            },1000);
+        }
         i++;
     }
     if (i == 0) {

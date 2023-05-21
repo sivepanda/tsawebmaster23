@@ -307,14 +307,15 @@ html {
     margin-left: 50vw;
     margin-right: 6vw;
     margin-top: 10vh;
-    font-size: var(--body-font-size);
+    font-size: 1.3vw;
+    word-spacing: normal;
 }
 
 #ic0 h1 {
     margin-top: -1vh;
     padding-top: 0vh;
     margin-left: 50vw;
-    font-size: var(--head-font-size);
+    font-size: 3vw;
     position: absolute;
     font-weight: 500;
     /* opacity: 100; */
@@ -711,8 +712,13 @@ html {
 }
 
 .serious p{
+<<<<<<< HEAD
     font-size: 1.8vh;
     overflow-y: scroll;
+=======
+    height: 30vh;
+    
+>>>>>>> c116c5d36745a8ecae38ee2f7d72be49b242cde5
 }
 
 .belie{
@@ -1582,12 +1588,44 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #ya0content {
-    height: 100vh;
+    height: 200vh;
     margin-top: 15vh;
     display: grid;
-    position: absolute;
-    grid-template-rows: 10vh 5vh 20vh 20vh 20vh 5vh;
+    /* position: absolute; */
+    grid-template-rows: 10vh 5vh 20vh 20vh 20vh 5vh 100vh;
     grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+}
+
+#tmtilflight {
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 3;
+    background-color: var(--darkglass);
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    border-radius: var(--corner-rad);
+    align-self: center;
+    justify-self: center;
+}
+
+#flightm {
+    align-self: center;
+    justify-self: center;
+    /* margin-top: 30%; */
+    font-size: 7vh;
+}
+
+#tmtilflight #reminders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tmtilflight #reminders span {
+    font-size: 1.5vw;
 }
 
 @media screen and (max-aspect-ratio: 16/9) {
@@ -1620,7 +1658,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     grid-row: 3 / span 3;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 3;
     width: 80%;
     height: 100%;
     border-radius: var(--corner-rad);
@@ -1644,10 +1682,10 @@ body.page-5 #pagination li:nth-of-type(5)*/
     box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.11);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    grid-row: 3 / span 3;
-    grid-column: 4 / span 2;
-    width: 25vw;
-    height: 60vh;
+    grid-row: 7;
+    grid-column: 1 / span 5;
+    width: 90vw;
+    height: 90vh;
     padding: 0;
     border-radius: var(--corner-rad);
     align-self: center;
@@ -1731,13 +1769,23 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .flightinfo {
     display: flex;
     flex-direction: row;
-    width: 25vw;
+    width: 80vw;
+    margin-left: 5vw;
     justify-content: space-between;
 }
 
 #aflightlist hr {
-    width: 20vw;
+    width: 80vw;
     border-top: 1px;
+}
+
+#aflightlist .type {
+    justify-self: left;
+}
+
+#aflightlist .flightinfo {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
 }
 
 .flightdtnm {
@@ -1764,28 +1812,44 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .flightinfo .book {
     padding-left: 3vw;
     padding-right: 3vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
     margin-right: 3vw;
     margin-top: 0vh;
     align-self: center;
     justify-self: flex-end;
 }
 
+#yastatuses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
 #yastatus .flightinfo {
-    width: 32vw;
+    width: 40vw;
+    margin-left: 0%;
+    padding-left: 0%;
 }
 
 #yastatus hr {
-    width: 28vw;
+    width: 40vw;
     border-top: 1px;
 }
 
 #yastatus .flightdtnm {
-    padding-left: 0;
+    width: 98%;
+    padding-left: 0vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
 }
 
 #yastatus .type {
     width: 32vw;
-    text-align: center;
+    text-align: left;
 }
 
 #yastatus .date {
@@ -2256,7 +2320,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     align-self:initial;
     /* justify-self:end; */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 55vh;
+    grid-template-rows: 10vh 40vh 15vh;
     justify-content: center;
     /* align-content: center; */
 }
@@ -2290,21 +2354,36 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 #prdesc {
-    font-size: 3vw;
+    text-align: center !important;
+    font-size: 3vw !important;
 }
 
 #prc {
-    font-size: 2vw;
+    font-size: 4vw;
     margin: 0;
-    text-align: left !important;
+    text-align: center !important;
 }
 
-#prpay .button-main {
-    margin-top: 12vh;
+#prpay {
+    /* justify-self: center; */
+    justify-self: center;
+    align-self: center;
+    /* border-left: 1px solid var(--lightglass); */
 }
 
-/* border-left: 1px solid var(--lightglass); */
+#confirmselect #paye {
+    grid-row: 3;
+    grid-column: 2;
+    width: 10vh;
+    height: 10vh;
+    justify-self: center;
+    display: none;
+}
 
+#confirmselect .button-main {
+    /* margin-top: 12vh; */
+    grid-column: 2;
+}
 
 #confirmselect h1 {
     color: white;
@@ -2320,6 +2399,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .inf .button-main {
     align-self: center;
 }
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -2365,8 +2445,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     display: grid;
     align-items: center;
 }
-
-
 
 .eat{
     display: grid;
@@ -2907,35 +2985,93 @@ body.page-5 #pagination li:nth-of-type(5)*/
     background: #ccc;
   }
 
-
-.helpy{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    display: grid;
-    grid-template-columns: 70vw 30vw;
-    height: auto;
+  /*-- 旧代码.helpy{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      display: grid;
+      grid-template-columns: 70vw 30vw;
+      height: auto;
+      
+    } ---- 旧代码*/
     
-}
+    .There{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    
+    .kongbai{
+        width: 100%;
+        height: 15vh; 
+    }
+    .There h1{
+        margin-top: 0px;
+        font-size: 5vw;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .There p{
+        font-size: 1.3vw;
+        margin-left: 2vw;
+        margin-right: 2vw
+    }
+    
+    .zongti{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at top center, white);
+        background-color: #000000;
+    }
 
-.There{
-   margin-left: 5vw;
-   margin-right: 5vw;
-}
+    .sfq{
+        display: flex;
+        width: 90vw;
+        height: 500px;
+        overflow: hidden;
+    }
 
-.There h1{
-    margin-top: 0px;
-    font-size: 3vw;
-}
+    .tupian{
+        position: relative;
+        width: 60px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center;
+        transition: 0.5s cubic-bezier(0.05,0.61,0.41, 0.6);
+        overflow: hidden;
+    }
 
-.There p{
-    font-size: 1.1vw;
-}
+    .tupian.jihuo{
+        flex: 1;
+        margin: 0;
+        border-radius: 40px;
+    }
 
+    .tupian.jihuo .yinying{
+        background: linear-gradient(to top, rgb(56, 55, 55));
+    }
+
+    .tupian .yinying{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        transition: 0.5s cubic-bezier(0.05, 0.61,0.41, 0.6);
+    }
+
+
+
+    /* 旧代码
 .picss{
     /* background: blue; */
-    display: grid;
+    /* 旧代码display: grid;
     /* align-items: center; */
-    justify-content: center;
+   /* 旧代码 justify-content: center;
     grid-template-rows: calc(84vh/3) calc(84vh/3) calc(84vh/3);
     grid-gap: 4vh;
 }
@@ -2977,19 +3113,20 @@ body.page-5 #pagination li:nth-of-type(5)*/
     justify-content: center;
     align-items: center;
     /* grid-template-columns: 40vw 40vw; */
-    width: 98vw;
+   /* 旧代码 width: 98vw;
     /* grid-column-gap: 2vw; */
-    height: auto;
+   /* 旧代码 height: auto;
     padding-bottom: 0vh;
     margin-top: 0vh;
     margin-bottom: 0vh;
-}
+} 旧代码*/
 
 .bussy{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 10vh;
 }
 
 
@@ -3044,7 +3181,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .cardy {
-    width: 40vw;
+    width: 42vw;
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(5px);
     /* background-color: rgba(169,169,169, .1); */
@@ -3101,7 +3238,149 @@ body.page-5 #pagination li:nth-of-type(5)*/
     margin-bottom: 3%;
     font-family: var(--body-font);
   }
-  
+   
+  .zt{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+
+  .kapian{
+    width: 100vw;
+    /*max-width: 850px;*/
+    height: 350px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+
+  .ka{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    padding-left: 30px;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .ka .zhaopian{
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+  }
+
+  .ka .zhaopian img{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.6s;
+  }
+
+  #kp_1:checked ~ .ka-1 img,
+  #kp_2:checked ~ .ka-2 img,
+  #kp_3:checked ~ .ka-3 img,
+  #kp_4:checked ~ .ka-4 img,
+  #kp_5:checked ~ .ka-5 img{
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+
+  .ka .wenben{
+    flex: 1;
+    padding: 0 30px 0 35px;
+    position: relative;
+    left: 50px;
+    opacity: 0;
+    transition: 0.6s;
+  }
+
+  #kp_1:checked ~ .ka-1 .wenben,
+  #kp_2:checked ~ .ka-2 .wenben,
+  #kp_3:checked ~ .ka-3 .wenben,
+  #kp_4:checked ~ .ka-4 .wenben,
+  #kp_5:checked ~ .ka-5 .wenben{
+    opacity: 1;
+    z-index: 9;
+    left: 0;
+    transition-delay: 0.3s;
+  }
+
+  .ka .biaoti{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .ka .wenzi{
+    font-size: 17px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 25px;
+    margin-right: 5vw;
+  }
+
+  .ka a{
+    padding: 13px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    float: right;
+  }
+
+  .kps{
+    position: absolute;
+    bottom: 25px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .kps .kp{
+    width: 50px;
+    height: 10px;
+    background-color: #dfdfdf;
+    display: inline-flex;
+    margin: 0 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kps .kp::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s;
+  }
+
+  #kp_1:checked ~ .kas .ka-1::before,
+  #kp_2:checked ~ .kas .ka-2::before,
+  #kp_3:checked ~ .kas .ka-3::before,
+  #kp_4:checked ~ .kas .ka-4::before,
+  #kp_5:checked ~ .kas .ka-5::before{
+    width: 100%;
+    transform: scaleX(1);
+  }
 
   input[type=submit]:hover {
     
@@ -3695,20 +3974,18 @@ transition: 100ms ease-in-out;
     display: grid;
     justify-content: center;
     align-items: center;
-    letter-spacing: 1vw;
-    background: linear-gradient(#B19CD7,  #C0AFE2,  #CEC2EB, #DDD5F3, #EBE8FC);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+    font-size: 6vh;
+    letter-spacing: 0.2vw;
 }
 
 .infoss p{
     /* background: radial-gradient(circle at 10% 20%, rgb(64, 84, 178) 0%, rgb(219, 2, 234) 90%); */
-    background: radial-gradient(circle at 10% 20%, rgb(236, 158, 248) 0%, rgb(131, 83, 241) 90.1%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+    /* background: radial-gradient(circle at 10% 20%, rgb(236, 158, 248) 0%, rgb(131, 83, 241) 90.1%); */
+    /* -webkit-text-fill-color: transparent; */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
 
+    color: white;
     /* max-width: 60vw; */
     padding-right: 5vw;
     padding-bottom: 4vh;

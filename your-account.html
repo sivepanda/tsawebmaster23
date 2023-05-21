@@ -4,6 +4,8 @@
     <script src="js/mobController.js"></script>
     <script src="js/loadelements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         .loadtank {
@@ -84,6 +86,30 @@
                     </div>
                     
                 </div>
+
+                <div id="tmtilflight" class="win-btn">
+                    <h1>Time Until Next Flight</h1>
+                    <div id="flightm">
+                        
+                    </div>
+                    <br><br>
+                    <div id="reminders">
+                        <h1>Quick Reminders</h1>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span><ion-icon name="bag-remove"></ion-icon></span>
+                            <p style="padding-left: 10px;">Make sure you are packed and ready to go!</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span><ion-icon name="heart"></ion-icon></span>
+                            <p style="padding-left: 10px;">Don&apos;t forget to do your health checkup!</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span><ion-icon name="airplane"></ion-icon></span>
+                            <p style="padding-left: 10px;">Ensure you have transportation to Cancun!</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="yaavail" class="win-btn">
                     <h1>Available Flights</h1>
                     <div id="aflightlist">
