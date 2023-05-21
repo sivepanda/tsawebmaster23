@@ -3880,14 +3880,14 @@ background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
 }
 
 .planns{
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
 }
 
 .planns p{
@@ -3899,7 +3899,7 @@ background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
 .retrog{
     /* height: 60vh; */
     display: grid;
-    margin-top: 20vh;
+    margin-top: 10vh;
     justify-content: center;
 }
 
@@ -3919,10 +3919,10 @@ background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
 }
 
 .ipics{
-    margin-top: 30vh;
+    margin-top: 10vh;
     display: grid;
     justify-content: center;
-    height: 70vh;
+    height: 60vh;
     grid-template-columns: 30vw 30vw;
     grid-gap: 2vw;
 }
@@ -3953,7 +3953,8 @@ background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
 }
 
 #mbot{
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
+    margin-top: 0px;
 }
 
 .showd{
