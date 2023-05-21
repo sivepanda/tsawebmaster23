@@ -2939,6 +2939,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
     
     .There p{
         font-size: 1.3vw;
+        margin-left: 2vw;
+        margin-right: 2vw
     }
     
     .zongti{
@@ -2953,7 +2955,6 @@ body.page-5 #pagination li:nth-of-type(5)*/
     .sfq{
         display: flex;
         width: 90vw;
-        max-width: 1000px;
         height: 500px;
         overflow: hidden;
     }
@@ -3106,7 +3107,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .cardy {
-    width: 40vw;
+    width: 42vw;
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(5px);
     /* background-color: rgba(169,169,169, .1); */
@@ -3165,7 +3166,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
   }
    
   .zt{
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3174,7 +3175,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 
   .kapian{
     width: 100vw;
-    max-width: 850px;
+    /*max-width: 850px;*/
     height: 350px;
     background-color: #fff;
     border-radius: 25px;
@@ -3249,6 +3250,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
     color: #555;
     text-align: justify;
     margin-bottom: 25px;
+    margin-right: 5vw;
   }
 
   .ka a{
