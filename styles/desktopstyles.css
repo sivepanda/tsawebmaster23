@@ -3862,8 +3862,113 @@ background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
   /*                                  Missions                                  */
   /* -------------------------------------------------------------------------- */
 
+
+.topsi{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+}
+
+.im{
+    height: 60vh;
+    width: 35vw;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../resources/images/ast looking out.jpeg"); 
+}
+
+.ovim{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.planns{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.planns p{
+    font-size: 2.2vh;
+    line-height: 7vh;
+    max-width: 30vw;
+}
+
+.retrog{
+    /* height: 60vh; */
+    display: grid;
+    margin-top: 20vh;
+    justify-content: center;
+}
+
+.retrog span{
+    font-size: 5vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.retrog p{
+    margin-top: 8vh;
+    line-height: 7vh;
+    max-width: 70vw;
+    font-size: 2.2vh;
+    letter-spacing: .1vw;
+}
+
+.ipics{
+    margin-top: 30vh;
+    display: grid;
+    justify-content: center;
+    height: 70vh;
+    grid-template-columns: 30vw 30vw;
+    grid-gap: 2vw;
+}
+
+.iright{
+    display: grid;
+    height: 60vh;
+    grid-gap: 2vw;
+}
+
+.irtop{
+    background-position: center;
+    background-size: cover;
+    background-image: url("../resources/images/ast in water.jpeg"); 
+}
+
+.irbot{
+    background-position: center;
+    background-size: cover;
+    background-image: url("../resources/images/ast training.jpeg"); 
+}
+
+.ileft{
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../resources/images/man getting ready to be ast.jpeg");
+}
+
+#mbot{
+    margin-bottom: 20vh;
+}
+
+.showd{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    font-size: 5vh;
+    letter-spacing: .6vw;
+}
+
+
 .both{
     display: grid;
+  
     grid-template-columns: 20vw 80vw;
     padding-top: 10vh;
     height: auto;
@@ -3874,6 +3979,7 @@ background-image: linear-gradient(135deg, #b1bfd8 0%, #6782b4 74%);
 .circles{
     height: 90vh;
     display: grid;
+    
     justify-content: center;
     align-items: center;
 }
