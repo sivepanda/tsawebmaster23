@@ -1794,13 +1794,36 @@ body.page-5 #pagination li:nth-of-type(5)*/
 }
 
 .allinfo{
+    background: black;
+    margin-top: 18vh;
     display: grid;
-    height: 100vh;
+    height: 85vh;
     grid-template-columns: 30vw 70vw;
+    
 }
 
-.allinfo li{
-    
+.sideinf{
+    border-right: 1px solid white;
+    height: 65vh;
+    border-top: 1px solid white;
+}
+
+.sideinf ul{
+    padding: 0px;
+    list-style: none;
+}
+
+.sideinf li{
+    margin: 0px;
+    color: white;
+    display: grid;
+    align-items: center;
+    height: 13vh;
+    border-bottom: 1px solid white;
+}
+
+.nou{
+    border-bottom-width: 0px !important;
 }
 
 

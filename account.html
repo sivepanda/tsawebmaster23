@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .loadtank {
+            position: fixed;
+            background: black;
+            margin: 0;
+            top: 0;
+            left: 0;
+            padding: 0;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1001;
+            display: grid;
+            --top-bottom-margins: calc(calc(100vh - 40vw) / 2);
+            grid-template-columns: 30vw 40vw 30vw;
+            grid-template-rows: var(--top-bottom-margins) 40vw var(--top-bottom-margins);
+        }
+        
+        .video-container {
+            /* align-self: center; */
+            padding-top: 56.25%;
+            height: 0;
+            align-content: center;
+            flex-direction: row;
+            display: flex;
+            height: 10vh;
+            /* position: relative; */
+        }
+        
+        #promo {
+            grid-row: 2;
+            grid-column: 2;
+            width: 40vw;
+            height: 40vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: clip; scroll-snap-type: y mandatory;">
+    <div class="loadtank" id="loadtank">
+        <div class="video-container">
+            <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
+                <source src="resources/videos/retro_loading.mov" type="video/mp4">
+              </video>
+        </div>
+    </div>
+
+    <div class="header fullheader" id="header">
+        <img class="headerlogo" src="resources/images/retrograde_wh.png" href='index.html' alt="logo" onclick="window.open('index.html', '_self')" />
+        <ul>
+            <li><a class='mnuele' href="index.html">Home</a> </li>
+            <li><a class='mnuele' href="trips.html">Trips</a></li>
+            <li><a class='mnuele' href="purchase.html">Purchase</a> </li>
+            <li><a class='mnuele' href="missions.html">Missions</a> </li>
+            <li><a class='mnuele' href="about.html">About Us</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="allinfo">
+        <div class="sideinf">
+            <ul>
+                <li>ACCOUNT INFORMATION</li>
+                <li>MY ORDERS</li>
+                <li>NEWSLETTER SUBSCRIPTION</li>
+                <li>MY WISHLIST</li>
+                <li class="nou">CHANGE PASSWORD</li>
+            </ul>
+        </div>
+        <div class="actualinf">
+
+        </div>
+    </div>
+
+</body>
