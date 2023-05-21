@@ -1731,7 +1731,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .flightinfo {
     display: flex;
     flex-direction: row;
-    width: 25vw;
+    width: 80vw;
     margin-left: 5vw;
     justify-content: space-between;
 }
@@ -1739,6 +1739,15 @@ body.page-5 #pagination li:nth-of-type(5)*/
 #aflightlist hr {
     width: 80vw;
     border-top: 1px;
+}
+
+#aflightlist .type {
+    justify-self: left;
+}
+
+#aflightlist .flightinfo {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
 }
 
 .flightdtnm {
@@ -1765,6 +1774,8 @@ body.page-5 #pagination li:nth-of-type(5)*/
 .flightinfo .book {
     padding-left: 3vw;
     padding-right: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     margin-right: 3vw;
     margin-top: 0vh;
     align-self: center;

@@ -31,7 +31,7 @@ class Flight {
             this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Aether") {
             this.price = 100000
-            this.timeStart = "300&nbsp;PM"
+            this.timeStart = "3&nbsp;PM"
             this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Heimdall") {
             this.price = 10000
@@ -56,9 +56,9 @@ class Flight {
 
     /**Format Flight data as HTML to inject into the available flight data */
     format() {
-        var dates = (this.type == "Heimdall" ? "<p class='date'>" + this.dateBegin + "</p>" : ("<p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> "));
-        var times = (this.type == "Aether" ? "<p class='date'>&nbsp;</p>" : ("<p class='date'>" + this.timeStart + " - " + this.timeEnd + "</p>" + (this.type == "Heimdall" ? "<p class='date'>&nbsp;</p>" : "")));
-        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> " + dates + times + " </div> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
+        var dateString = this.timeStart + " <b>" + this.dateBegin + "</b> — " + this.timeEnd + " <b>" + this.dateEnd + "</b>";
+        // var times = (this.type == "Aether" ? "" : ("<p class='date'>" + this.timeStart + " - " + this.timeEnd + "</p>" + (this.type == "Heimdall" ? "<p class='date'>&nbsp;</p>" : "")));
+        return "<div class='flightinfo'>  <h1 class='showytex type'>" + this.type + "</h1> <p>" + dateString + "</p> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
     }
 
     setBegin(dtB) {
@@ -91,7 +91,7 @@ function createFlights() {
     today.setDate(today.getDate() + daysLater);
     num = 0;
     htmlInject = ''
-    numEntries = 3 //number of entries on the page
+    numEntries = 8 //number of entries on the page
 
     while(num < numEntries) {
         currDt = String(today.getDate()).padStart(2, '0');
