@@ -711,13 +711,8 @@ html {
 }
 
 .serious p{
-    height: 30vh;
-<<<<<<< HEAD
-    
-=======
     font-size: 1.8vh;
     overflow-y: scroll;
->>>>>>> ae6c7dc4d0629f2f32f75ba205343e84dc787373
 }
 
 .belie{
