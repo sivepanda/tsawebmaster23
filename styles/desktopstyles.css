@@ -319,7 +319,7 @@ html {
     background-clip: text;
     -webkit-background-clip: text;
 
-    mix-blend-mode: screen;
+    mix-blend-mode:difference;
 
     margin-top: -1vh;
     padding-top: 0vh;
