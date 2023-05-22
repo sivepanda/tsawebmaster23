@@ -3016,6 +3016,19 @@ body.page-5 #pagination li:nth-of-type(5)*/
         margin-right: 5vw;
     }
     
+    .There .midsmall {
+        margin-top: 2vh;
+        color: rgb(168, 168, 168);
+        line-height: 4vh;
+        max-width: 40vw;
+        text-align: center;
+        font-size: 1.2vw;
+        color: white;
+        max-width: 60vw;
+        padding-right: 5vw;
+        padding-bottom: 4vh;
+    }
+
     .kongbai{
         width: 100%;
         height: 15vh; 
@@ -3026,6 +3039,7 @@ body.page-5 #pagination li:nth-of-type(5)*/
         display: inline-block;
         display: flex;
         justify-content: center;
+        margin-bottom: 0;
     }
     
     .There p{
@@ -3422,6 +3436,11 @@ body.page-5 #pagination li:nth-of-type(5)*/
     padding-bottom: 5vh;
     width: 100vw;
 
+}
+
+.abinfo h1 {
+    text-align: center;
+    font-size: 5vh;
 }
 
 .abinfo p{

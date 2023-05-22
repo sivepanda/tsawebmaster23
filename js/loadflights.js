@@ -135,12 +135,12 @@ function loadBookedFlights() {
         let flight = JSON.parse(localStorage.getItem("bflight" + i));
         if(flight.user == (JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username)
         htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>"  + flight.timeStart + ' ' + flight.dateBegin + " - " + flight.timeEnd + ' ' + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
-        if(i == 0) {
+        if(flight.user == (JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username) {
             document.getElementById("yalefhe") ? document.getElementById("yalefhe").innerHTML = 'Time Until Your Flight' : null;
             document.getElementById("yabksome") ? document.getElementById("yabksome").style.display = 'none' : null;
             document.getElementById("reminders") ? document.getElementById("reminders").style.display = 'flex' : null;
             document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'hidden' : null;
-
+            
             let timeconv = flight.timeStart.split(" ")[1] == "AM" ? flight.timeStart.split(" ")[0] + ":00:00 GMT-0500" : (parseInt(flight.timeStart.split(" ")[0]) + 12) + ":00:00 GMT-0500"
             let dtbg = parseInt(flight.dateBegin) < 10 ? '0' + flight.dateBegin : flight.dateBegin;
             console.log('2023/' + dtbg + " " + timeconv)
