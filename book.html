@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <style>
@@ -44,7 +46,7 @@
     </style>
 </head>
 
-<body id="mainpage" style="overflow-x: clip; scroll-snap-type: y mandatory;">
+<body style="overflow-x: clip; scroll-snap-type: y mandatory;">
     <div class="loadtank" id="loadtank">
         <div class="video-container">
             <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
@@ -65,7 +67,7 @@
     </div>
     </div>
     <section id='bp0' class='contentbox full'>
-    <h1 id="flighttype">Error. Please reload.</h1>
+    <h1 id="flighttype" class="showytex">Book Your Trip</h1>
         <div class="steps">
             <div class="bb" id="backstep" onclick="window.open('your-account.html', '_self');">
                 <img class="b" src="../resources/images/arrow.png"></img>
@@ -75,10 +77,17 @@
                 <img class="b" src="../resources/images/double-bed.png"></img>
                 <p>Stay</p>
             </div>
+            <div class="bb" id="schedstep">
+                <img class="b" src="../resources/images/education.png"></img>
+                <p>Schedule</p>
+            </div>
+
             <div class="bb" id="confstep">
                 <img class="b" src="../resources/images/confirmation.png"></img>
                 <p>Confirm</p>
             </div>
+
+            
             <!-- <h1  id='staystep' class="bookstep activeb">1. Stay</h1> -->
             <!-- <h1 id='confstep' class="bookstep">2. Confirm</h1> -->
         </div>
@@ -150,15 +159,59 @@
             </table>
         </div>
 
-        <div class="content" id="confirmselect">
-            <div class="inf">
-                <h1 id="tyc">Type:</h1>
-                <p id="tmc">Time:</p>
-                <p id="rmc">Room:</p>
-                <p id="prc">Price: $</p>
-                <button type="button" class="button-main" onclick="flight.confRoom()">Confirm</button>
+        <div class="content" id="trainselect">
+            <div id="dates">
+                <div id="health">
+                    <label id='heachdtla' class="dtselectla" for="heachdt">Schedule Your Health Checkup:</label><br>
+                    <input type="date" class="dtselect" id="heachdt" name="heath-date">
+                </div>
+                <div id="trainingd">
+                    <label id='trachdtla' class="dtselectla" for="trachdt">Schedule Your Training:</label><br>
+                    <input type="date" class="dtselect" id="trachdt" name="heath-date">
+                </div>
+
+                <button type="button" id="schedede" class="button-main" onclick="flight.viewReciept()">Schedule</button>
             </div>
+
+            <div id="schedleft">
+                <h1 id="flightname" class="showytex"></h1>
+                <!-- <br> -->
+                <h1 class="datedescriptor">Mission Start</h1>
+                <p class="datedescription" id="starttm"></p>
+                <h1 class="datedescriptor">Mission End</h1>
+                <p class="datedescription" id="endtm"></p>
+                <h1 class="datedescriptor">Mission Duration</h1>
+                <p class="datedescription" id="durationtm"></p>
+            </div>
+            
         </div>
+
+        <div class="content" id="confirmselect">
+                <h1 id="tyc" class="showytex"></h1>
+                <div id="confleft">
+                    <h1 class="datedescriptor">Mission Start</h1>
+                    <p class="datedescription" id="tmsc"></p>
+                    <h1 class="datedescriptor">Mission End</h1>
+                    <p class="datedescription" id="tmec"></p>
+                    <h1 class="datedescriptor">Mission Duration</h1>
+                    <p class="datedescription" id="durc"></p>
+                </div>
+                <div id="confright">
+                    <h1 class="datedescriptor">Health Checkup Date</h1>
+                    <p class="datedescription" id="tmhc"></p>
+                    <h1 class="datedescriptor">Training Date</h1>
+                    <p class="datedescription" id="tmtc"></p>
+                    <h1 class="datedescriptor">Room</h1>
+                    <p class="datedescription" id="rmc"></p>
+                </div>
+                <div id="prpay">
+                    <h1 id='prdesc' class="datedescriptor">Price</h1>
+                    <p id="prc">$</p>
+                </div>
+                <button type="button" id="payayay" class="button-main" onclick="flight.confRoom()">Pay Now</button>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4n5debpo.json" background="transparent" id="paye" speed="1" nocontrols></lottie-player>    
+            </div>
 
     </section>
 
@@ -196,9 +249,9 @@
 </body>
 
 <script src="https://kit.fontawesome.com/07f5345973.js" crossorigin="anonymous"></script>
-<script  async src="js/mobController.js"></script>
+<script src="js/mobController.js"></script>
 <script  async src="js/book.js"></script>
-<script  async src="js/loadelements.js"></script>
+<!-- <script  async src="js/loadelements.js"></script> -->
 <script  src="js/validateLogin.js"></script>
 <!-- <script  src="js/loadflights.js"></script> -->
 <script>

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
+    <!-- <script src="js/libraries/jquery-3.6.0.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="js/libraries/jquery.textfit.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .loadtank {
             position: fixed;
@@ -44,7 +48,7 @@
     </style>
 </head>
 
-<body id="mainpage" style="overflow-x: clip; scroll-snap-type: y mandatory;">
+<body id="mainpage" style="overflow-x: clip;"> <!-- style="overflow-x: clip; scroll-snap-type: y proximity;" --> 
     <div class="loadtank" id="loadtank">
         <div class="video-container">
             <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
@@ -99,24 +103,74 @@
         <button class='button-main' onclick="closeIntroModal()">Close</button>
     </div>
     <div class="main">
-        <div>
-    
-        </div>
         <section class='contentbox videobox full' id="ic0">
             <video disablePictureInPicture autoPlay muted loop id='myVideo'>
                     <source src="resources/videos/EarthVid.mp4.mp4" type="video/mp4"></source>
                 </video>
             <h1>A Trip Like No Other</h1>
-            <p>Travel the cosmos and expand your horizons beyond anything you've ever seen before.</p>
+            <p>Take the vacation of a lifetime. With comfortable amenities, grand views of Earth, and a complete experience in space, we are sure to elevate your expectations. Are you ready to experience space like never before?</p>
         </section>
-        <section class='contentbox full ' id=ic1>
-            <h1>Pre-Launch</h1>
-            <p>At Oxomo Space Center off the shores of Cancun, in Isla del Estrellas, you will be treated like royalty. As part of your experience, you get to spend a week in Cancun, with access to select resorts, restaurants, and attractions.</p>
+        <!-- <section class='contentbox' id=ic1>
+            <div class="cont">
+                <h1 class="showytex">Pre-Launch</h1>
+                <p>At Oxomo Space Center off the shores of Cancun, in Isla del Estrellas, you will be treated like royalty. As part of your experience, you get to spend a week in Cancun, with access to select resorts, restaurants, and attractions.</p>
+            </div>
+            <img src="resources/images/cancun.jpg" alt="cancun" />
+
         </section>
-        <section class='contentbox full ' id='ic2'>
-            <h1>Launch Day</h1>
-            <p>On launch day, you will be taken to one of the 4 launch pads, where you will be taken through the final launch procedures, and your travels will begin.</p>
-        </section>
+        <section class='contentbox' id='ic2'>
+            <div class="cont">
+                <h1  class="showytex">Launch Day</h1>
+                <p>On launch day, you will be taken to one of the 4 launch pads, where you will be taken through the final launch procedures, and your travels will begin.</p>    
+            </div>
+            <img src="resources/images/rock.jpg" alt="rocket" />
+        </section> -->
+    </div>
+
+    <div class="plaunch mobile">
+        <h1>Pre-Launch</h1>
+        <p>At Oxomo Space Center off the shores of Cancun, in Isla del Estrellas, you will be treated like royalty. As part of your experience, you get to spend a week in Cancun, with access to select resorts, restaurants, and attractions.</p>
+    </div>
+
+    <div class="plaunch mobile" id="foo">
+        <h1>Launch Day</h1>
+        <p>On launch day, you will be taken to one of the 4 launch pads, where you will be taken through the final launch procedures, and your travels will begin.</p>
+    </div>
+
+    <div id='ic1' class="pre desktop">
+        <div id="ic1lef" class="beachy">
+            <div id="cacun" class="beaches">
+            </div>
+        </div>
+        <div id='ic1righ' class="lunch">
+            <div class="duke">
+                <h1>Pre-Launch <span>Activities</span></h1>
+            </div>
+            <p class="dukie">
+                At Oxomo Space Center off the shores of Cancun, in Isla del Estrellas, you will be treated like royalty. As part of your experience, you get to spend a week in Cancun, with access to select resorts, restaurants, and attractions. Your experience on land will be just as epic as your stay in space!
+            </p>
+            <div class="OU" onclick="window.open('missions.html', '_self')">
+                <p>READ MORE ABOUT US</p>
+            </div>
+        </div>
+    </div>
+
+    <div id='ic2' class="pre desktop">
+        <div id="ic2lef" class="beachy">
+            <div id="rock" class="beaches">
+            </div>
+        </div>
+        <div id='ic2righ' class="lunch">
+            <div class="duke">
+                <h1>The<span><br>Launch</span></h1>
+            </div>
+            <p class="dukie">
+                On launch day, you will be taken to one of the 4 launch pads, where you will be taken through the final launch procedures, and your travels will begin.
+            </p>
+            <div onclick="window.open('leisure.html', '_self')" class="OU">
+                <p>LEARN MORE</p>
+            </div>
+        </div>
     </div>
     <!-- <div class="pagination-container desktop">
         <ul id="pagination">
@@ -131,6 +185,111 @@
             </li>
         </ul>
     </div> -->
+
+    <div class="reviews desktop">
+        <div class="rcard">
+            <div class="toppy">
+                <div class="mancirc" id="suresh"></div>
+                <div class="namee">
+                    <div class="namey" >Doug Fields</div>
+                    <div class="titles"><em>Flight Engineer</em><br><b>NASA</b></div>
+                </div>
+                
+            </div>
+            <div class="downny">
+                <div class="starry">
+                   
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <!-- <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div> -->
+                </div>
+                <p class="serious">
+                    Spaceflight can be scary. Especially as someone who has worked for nearly 45 years with NASA, helping the private sector jumpstart their services. In my years, no other company has the passion and knowledge of a good experience like Retrograde. Retrograde has become the only company I trust to safely and securely transport me and my family to a vacation in space.
+                </p>
+
+                
+            </div>
+        </div>
+        <div class="rcard">
+            <div class="toppy">
+                <div class="mancirc" id="roddink"></div>
+                <div class="namee">
+                    <div class="namey">Rod Dinker</div>
+                    <div class="titles"><em>Travel Specialist</em><br><b>New Jersey Times</b></div>
+                </div>
+                
+            </div>
+            <div class="downny">
+                <div class="starry">
+                   
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <!-- <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div> -->
+                </div>
+                <p class="serious">
+                    Retrograde is one of the best services I&apos;ve ever used! Competitors simply do not compare to the level of service and comfort that I find in every tier of their leisure options. It rivals the amenities and experiences provided by the most elite of airlines and resorts.
+                </p>
+
+                
+            </div>
+        </div>
+        <div class="rcard">
+            <div class="toppy">
+                <div class="mancirc" id="minister"></div>
+                <div class="namee">
+                    <div class="namey">James Lang</div>
+                    <div class="titles"><em>Engineer</em><br><b>Lowing Aerospace</b></div>
+                </div>
+                
+            </div>
+            <div class="downny">
+                <div class="starry">
+                   
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <!-- <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div>
+                    <div class="clip-star"></div> -->
+                </div>
+                <p class="serious">
+                    As an aerospace engineer, I am astonished by the level of artisanship and science that goes into the work at Retrograde. Every single seam is welded to perfection, every part of the rocket is streamlined to perfection. <b>I want a job here.</b>
+                </p>
+
+                
+            </div>
+        </div>
+        <div class="belie">
+            <blockquote>
+                <span class="showytex">Retrograde</span> is a revolutionary method for ordinary civilians to expand the horizons of their mind by first expanding their knowledge on the horizons of possibility through cheap and efficient spacetravel.
+            <footer>
+                <cite>
+                    NASA
+                </cite>
+            </footer>
+            </blockquote>
+        </div>
+    </div>
+
+
     <div class="footy">
 
         <div class="ifoot">
@@ -163,12 +322,12 @@
         </div>
     </div>
 
+   
 </body>
 
-<script async src="js/mobController.js"></script>
-<script async src="js/loadelements.js"></script>
+<script src="js/mobController.js"></script>
 <script async src="js/page-specific/index_page.js"></script>
-<script async src="js/index.js"></script>
+<script src="js/index.js"></script>
 <script>
     
     function toggleMenu() {

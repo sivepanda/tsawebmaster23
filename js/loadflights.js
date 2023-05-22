@@ -7,6 +7,8 @@ dates.set(5, "Thursday");
 dates.set(6, "Friday");
 dates.set(7, "Saturday");
 
+const daysLater = 95;
+
 
 //FLIGHT DATA------------------------------------------------------------------------------------------
 
@@ -25,10 +27,16 @@ class Flight {
     
         if(ty == "Savitir") {
             this.price = 20000
+            this.timeStart = "9&nbsp;AM"
+            this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Aether") {
             this.price = 100000
+            this.timeStart = "3&nbsp;PM"
+            this.timeEnd = "3&nbsp;PM"
         } else if (ty == "Heimdall") {
             this.price = 10000
+            this.timeStart = "2&nbsp;PM"
+            this.timeEnd = "8&nbsp;PM"
         }
     
     }
@@ -48,7 +56,9 @@ class Flight {
 
     /**Format Flight data as HTML to inject into the available flight data */
     format() {
-        return "<div class='flightinfo'> <div class='flightdtnm'>  <p class='type'>" + this.type + "</p> <p class='date'>" + this.dateBegin + " - " + this.dateEnd + "</p> </div> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
+        var dateString = this.timeStart + " <b>" + this.dateBegin + "</b> — " + this.timeEnd + " <b>" + this.dateEnd + "</b>";
+        // var times = (this.type == "Aether" ? "" : ("<p class='date'>" + this.timeStart + " - " + this.timeEnd + "</p>" + (this.type == "Heimdall" ? "<p class='date'>&nbsp;</p>" : "")));
+        return "<div class='flightinfo'>  <h1 class='type'>" + this.type + "</h1> <p>" + dateString + "</p> <button type='button' onclick='beginBook(this.value)' value=" + JSON.stringify(this) + "  class='button-main book'>Book</button> </div>"
     }
 
     setBegin(dtB) {
@@ -64,6 +74,7 @@ class Flight {
 */
 function newDayXApart(today, x) {
     let eObj = new Date()
+    eObj.setMonth(today.getMonth());
     eObj.setDate(today.getDate() + x);
     e = eObj.toLocaleDateString(undefined, {month:'numeric', day:'numeric'});
     return e;
@@ -77,9 +88,10 @@ function captialFirst(x) {
 /**creates the set of upcoming flights and injects HTML */
 function createFlights() {
     var today = new Date();
+    today.setDate(today.getDate() + daysLater);
     num = 0;
     htmlInject = ''
-    numEntries = 3 //number of entries on the page
+    numEntries = 8 //number of entries on the page
 
     while(num < numEntries) {
         currDt = String(today.getDate()).padStart(2, '0');
@@ -88,15 +100,15 @@ function createFlights() {
         let e = ''
         let ty = ''
         if(currDt % 7 == 1) { // Saturday launch
-            e = newDayXApart(today, 1);
+            e = newDayXApart(today, 0);
             ty = "Heimdall"
             num++
-        } else if (currDt % 7 == 4) { // Sunday launch
-            e = newDayXApart(today, 3);
+        } else if (currDt % 7 == 2) { // Sunday launch
+            e = newDayXApart(today, 1);
             ty = "Savitir"
             num++
         } else if (currDt % 7 == 6) { // Thursday launch
-            e = newDayXApart(today, 5);
+            e = newDayXApart(today, 8);
             ty = "Aether"
             num++
         }
@@ -122,12 +134,55 @@ function loadBookedFlights() {
     while(localStorage.getItem("bflight" + i) != null) {
         let flight = JSON.parse(localStorage.getItem("bflight" + i));
         if(flight.user == (JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")))).username)
-        htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>" + flight.dateBegin + " - " + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
+        htmlInject +=  "<hr><div class='flightinfo'> <div class='flightdtnm'> <p class='type'>" + flight.type + "</p> <p class='date'>"  + flight.timeStart + ' ' + flight.dateBegin + " - " + flight.timeEnd + ' ' + flight.dateEnd  + "  &emsp;|&emsp;  " + captialFirst(flight.room) + "</p> </div> </div>"
+        if(i == 0) {
+            document.getElementById("yalefhe") ? document.getElementById("yalefhe").innerHTML = 'Time Until Your Flight' : null;
+            document.getElementById("yabksome") ? document.getElementById("yabksome").style.display = 'none' : null;
+            document.getElementById("reminders") ? document.getElementById("reminders").style.display = 'flex' : null;
+            document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'hidden' : null;
+
+            let timeconv = flight.timeStart.split(" ")[1] == "AM" ? flight.timeStart.split(" ")[0] + ":00:00 GMT-0500" : (parseInt(flight.timeStart.split(" ")[0]) + 12) + ":00:00 GMT-0500"
+            let dtbg = parseInt(flight.dateBegin) < 10 ? '0' + flight.dateBegin : flight.dateBegin;
+            console.log('2023/' + dtbg + " " + timeconv)
+            let tmtil = new Date('2023/' + dtbg + " " + timeconv);
+            // document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = tmtil : null;
+
+            var countDownDate = tmtil.getTime();
+            var x = setInterval(function(){
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+        
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                let tmstr = days + ":" + hours + ':' + minutes +':' + seconds;
+            
+                if(distance < 0){
+                    clearInterval(x);
+                    document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = '00:00:00:00' : null;
+
+                } else {
+                    document.getElementById("flightm") ? document.getElementById("flightm").innerHTML = tmstr : null;
+                }
+            },1000);
+        } 
         i++;
     }
     if (i == 0) {
-        htmlInject += "<p>You haven't booked a vacation yet!</p>"
+        console.log("test");
+        document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'hidden' : null;
+        document.getElementById("yalefhe") ? document.getElementById("yalefhe").innerHTML = 'Book A Flight' : console.log("BAF not found");
+        document.getElementById("flightm") ? document.getElementById("flightm").style.display = 'none' : null;
+        document.getElementById("reminders").style.display = 'none';
+        document.getElementById("yabksome").style.display = 'static';
+        htmlInject += "<p>You haven't booked a vacation yet!</p>";
     }
+    if(i > 4) {
+        document.getElementById("yastatuses") ? document.getElementById("yastatuses").style.overflowY = 'scroll' : null;
+    }
+
     document.getElementById("yastatuses").innerHTML = htmlInject
 }
 

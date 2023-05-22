@@ -1,10 +1,9 @@
-
 var development = false;
 
 var title;
 
 String.prototype.toTitleCase = function () {
-    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();});
 };
 
 /**load logo and other header elements */
@@ -35,7 +34,6 @@ document.title = title + " - Retrograde"; //set site title
 var localWebStorage = window.localStorage;
 
 
-const header = document.getElementById("header");
 
 function closeBox(a, b, c, d) {
     a = document.getElementById(a);
@@ -69,7 +67,9 @@ var timerComplete = false;
 
 window.addEventListener('load', (event) => {
     isLoaded = true;
-    loaded();
+    var loadInterval = setInterval(function() {
+        loaded();
+    }, 10);
 });
 
 
@@ -77,7 +77,7 @@ window.addEventListener('load', (event) => {
 /*LOADING SCREEN */
 /**what happens when the page loads*/
 function loaded() {
-    if (isLoaded && timerComplete && document.getElementById("loadtank")) {
+    if (isLoaded && document.getElementById("loadtank")) {
         var load = document.getElementById("loadtank");
         load.remove();
         document.getElementById("ic0") ? document.querySelector("#ic0 h1").classList.add("showh1") : console.log('ic0 not found');
@@ -85,15 +85,24 @@ function loaded() {
         
         // REENABLE BELOW
         document.getElementById("")
-        window.clearTimeout(loadInterval);
+        // loadInterval ? window.clearTimeout(loadInterval) : null;
         console.log('Page loaded successfully');
+
+        const header = document.getElementById("header");
+
+        //Scroll event for when the full navbar transforms into the compact one
+        window.addEventListener("scroll", function(e) {
+            if (window.scrollY > 50) {
+                header.classList.remove("fullheader");
+                header.classList.add("compactheader");
+            } else {
+                header.classList.remove("compactheader");
+                header.classList.add("fullheader");
+
+            }
+        });
     }
 }
-
-var loadInterval = setInterval(function() {
-    timerComplete = true;
-    loaded();
-}, 1500);
 
 /**Triggered when element is in viewport
  * @param el - parameter being watched
@@ -118,17 +127,7 @@ function elementInViewport(el) {
     );
 }
 
-//Scroll event for when the full navbar transforms into the compact one
-window.addEventListener("scroll", function(e) {
-    if (window.scrollY > 50) {
-        header.classList.remove("fullheader");
-        header.classList.add("compactheader");
-    } else {
-        header.classList.remove("compactheader");
-        header.classList.add("fullheader");
 
-    }
-});
 
 // for (page in document.getElementsByClassName("mnuele")) {
 //     if (document.getElementsByClassName("mnuele")[page].getAttribute("href") == path) {

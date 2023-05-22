@@ -5,6 +5,12 @@ const newslinks = document.querySelectorAll('.timeline-item');
 for(links of newslinks) {
     links.addEventListener('click', function (e) {
         e.preventDefault();
+
+        var popups = document.querySelectorAll('.popup');
+        for (var i = 0; i < popups.length; i++) {
+            popups[i].style.display = 'none';
+        }
+
         var popupId = this.getAttribute('data-popup');
         document.querySelector(popupId) ? document.querySelector(popupId).style.display = 'block' : console.log(popupId, 'does not exist');
         t = true

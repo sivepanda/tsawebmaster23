@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 
 <head>
+    <script src="js/mobController.js"></script>
+    <script src="js/loadelements.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
         .loadtank {
@@ -44,7 +48,9 @@
     </style>
 </head>
 
-<body id="mainpage" style="overflow-x: clip; scroll-snap-type: y mandatory;">
+<!-- LEFT SIDE COUNTDOWN -->
+
+<body style="overflow-x: clip; scroll-snap-type: y mandatory;">
     <div class="loadtank" id="loadtank">
         <div class="video-container">
             <video disablePictureInPicture muted loop infinite autoplay id="promo" class="loadingvid">
@@ -69,8 +75,9 @@
             <video disablePictureInPicture autoPlay muted loop id='bkvid'>
                     <source src="resources/videos/The_Earth_in_4k_.mp4" type="video/mp4"></source> <!-- remove controls -->
             </video>
+            
             <div class="contentbox" id="ya0content">
-                <h1 id="yacwelcome">Welcome, </h1>
+                <h1 id="yacwelcome"><span class="showytex">Welcome</span>, </h1>
                 <button type="button" class="button-main" id="yalogout" onclick="logOut()">Log Out</button>
                 <div id="yastatus" class="win-btn">
                     <h1>Your Vacations</h1>
@@ -79,6 +86,32 @@
                     </div>
                     
                 </div>
+
+                <div id="tmtilflight" class="win-btn">
+                    <h1 id="yalefhe"></h1>
+                    
+                    <button type="button" class="button-main" id="yabksome" onclick="window.scrollTo({top: (window.innerHeight - (0.05 * window.innerHeight)), behavior: 'smooth',});">Book a Flight</button>
+                    <div id="flightm">
+                        ...
+                    </div>
+                    <br><br>
+                    <div id="reminders">
+                        <h1>Quick Reminders</h1>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span><ion-icon name="bag-remove"></ion-icon></span>
+                            <p style="padding-left: 10px;">Make sure you are packed and ready to go!</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span><ion-icon name="heart"></ion-icon></span>
+                            <p style="padding-left: 10px;">Don&apos;t forget to do your health checkup!</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span><ion-icon name="airplane"></ion-icon></span>
+                            <p style="padding-left: 10px;">Ensure you have transportation to Cancun!</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="yaavail" class="win-btn">
                     <h1>Available Flights</h1>
                     <div id="aflightlist">
@@ -87,8 +120,25 @@
                 </div>
             </div>    
             
+            <div class="allinfo">
+                <div class="sideinf">
+                    <ul>
+                        <li>ACCOUNT INFORMATION</li>
+                        <li>MY ORDERS</li>
+                        <li>NEWSLETTER SUBSCRIPTION</li>
+                        <li>MY WISHLIST</li>
+                        <li>CHANGE PASSWORD</li>
+                    </ul>
+                </div>
+                <div class="actualinf">
+        
+                </div>
+            </div>
             <!-- <p id="yaslogan">Ad Astra</p> -->
+
+        
     </div>
+    
 
 
     <div class="footy">
@@ -124,8 +174,7 @@
     </div>
 </body>
 
-<script async src="js/mobController.js"></script>
-<script async src="js/loadelements.js"></script>
+<script src="js/mobController.js"></script>
 <script src="js/validateLogin.js"></script>
 <script src="js/loadflights.js"></script>
 <script>
