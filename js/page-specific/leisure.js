@@ -3,7 +3,9 @@ const displayOff = 'none';
 
 const allAmenDisOn = 'block';
 
-openMod('info')
+openMod('info');
+$( "#awefasd" ).textfit('bestfit');
+
 
 function openMod(v) {
     console.log(v)
@@ -73,3 +75,4 @@ function openMod(v) {
             break;
     } 
 }
+

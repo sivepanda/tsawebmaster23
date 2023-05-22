@@ -3,6 +3,8 @@ var width = window.innerWidth;
 
 var isDesktop = (width / height) > (7 / 6);
 
+var iter = 0;
+
 loadMissions();
 
 window.addEventListener("resize", loadMissions());
@@ -173,16 +175,36 @@ function loadMissions() {
         var fields = document.getElementsByClassName("infoss");
         var miss = document.getElementById("missbkg");
 
+        var injs = document.getElementsByClassName('inj-item');
+        
+        if(iter == 0) {
+            for (inj in injs) {
+                let y = parseInt(inj);
+                if(y < injs.length) {
+                    injs[y].addEventListener('mouseup', (e) => {
+                        console.log("a",y)
+                        injs[y].classList.toggle('active');
+                        // clks++;
+                    });
+                }
+            }
+            iter++;
+        }
+
+        // $( "#mppl0" ).textfit('bestfit');
+
+        
+
         const map = new Map();
 
-        map.set('plan', 'night-photograph-gf6a42c2d1_1920.jpg');
-        map.set('train', '6549968087_72d08feb11_h.jpg');
-        map.set('vehic', 'pexels-pixabay-2163.jpg');
-        map.set('safet', 'soyuz-ga20620eb0_1920.jpg');
-        map.set('launc', 'bill-jelen-NVWyN8GamCk-unsplash.jpg'); //change
-        map.set('recov', 'soyuz-ga20620eb0_1920.jpg'); //change
+        map.set('plan', 'linear-gradient(0deg, rgba(24,24,24,1) 94%, rgba(54,0,0,1) 100%)');
+        map.set('train', 'linear-gradient(0deg, rgba(24,24,24,1) 94%, rgba(54,37,0,1) 100%)');
+        map.set('vehic', 'linear-gradient(0deg, rgba(24,24,24,1) 94%, rgba(0,54,16,1) 100%)');
+        map.set('safet', 'linear-gradient(0deg, rgba(24,24,24,1) 94%, rgba(0,51,54,1) 100%)');
+        map.set('launc', 'linear-gradient(0deg, rgba(24,24,24,1) 94%, rgba(12,0,54,1) 100%)'); //change
+        map.set('recov', 'linear-gradient(0deg, rgba(24,24,24,1) 94%, rgba(54,0,47,1) 100%)'); //change
 
-        // miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get('plan') + ')';
+        miss.style.background = map.get('plan');
         miss.style.backgroundSize = 'cover';
 
         for(button in buttons) {
@@ -190,7 +212,7 @@ function loadMissions() {
                 let x = button;
                 buttons[x].addEventListener('click', () => {
                     let val = (buttons[x].getAttribute('value'));
-                    // miss.style.background = 'linear-gradient( rgba(1, 0, 0, 0.5) 0%, rgba(1, 0, 0, 0.5) 90%, rgba(1, 0, 0, 1) 100%), url(../resources/images/' + map.get(val) + ')';
+                    miss.style.background = map.get(val);
                     miss.style.backgroundSize = 'cover';
                     miss.style.backgroundPosition = 'bottom';
 
